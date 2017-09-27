@@ -1,0 +1,7 @@
+@book{DK15,
+   author* = {Harm Derksen and Gregor Kemper},
+   year = {2015},
+   title = {Computation Invariant Theory}
+   publisher = {Springer-Verlag},
+   address = {Berlin Heidelberg}
+}

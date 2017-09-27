@@ -1,0 +1,107 @@
+\documentclass{article}
+\title{Cayley's $\Omega$-Process And The Reynolds Operator}
+\author{Bert Lorke}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+In a seminar, I discussed Hilbert's finiteness theorem for the group $GL_n$.
+The proof I presented was a version of Hilbert's non-constructive proof, which, apparently (it is not known how true this is), was responsible for Gordan's famous quote ``Das ist Theologie und nicht Mathematik''.
+The central idea of the proof is the existence of the Reynolds Operator.
+After the dirty work is done and some useful properties are shown, the proof of the theorem is very straightforward.
+In fact, if we are able to contruct finite homogenious generators of the nullcone, all that is left to do is apply the Reynolds Operator to each generator, and the resulting polynomials will be generators of the invariant ring.
+But even this step is easier said then done.
+In my presentation at the seminar, I constructed a Haar measure, which gives me a unitary $GL_n$-invariant inner product, which allows us to define the Reynolds Operator. If one wants to explicitly calculate the image under the Reynolds Operator of a concrete polynomial, following these steps is not really feasible.
+For the group $GL_n$, there is an operator called \textit{Cayley's $\Omega$-Process} which allows us to compute the Reynold's Operator.
+This is the main focus of my work.
+
+\section{Pre-work}
+In this section, we will define an algebra structure on $\mathbb{C}[GL_n]^\ast$ and construct an action $\mathbb{C}[GL_n]^\ast \times V \longrightarrow V$.
+
+\bigskip
+Define the multiplication, denoted by $\ast$ as follows:  For $\alpha, \beta \in \mathbb{C}[GL_n]^\ast$:  
+\begin{equation}
+  \alpha \ast \beta := \left( \alpha \otimes \beta \right) \circ m^\ast
+\end{equation}
+Here, $m$ denotes the group multiplication and ``$^\ast$'' is the pullback.
+More slowly: Since $m$ is associative, we can view the pullback of $m$ as a map $m^\ast : \mathbb{C}[GL_n] \longrightarrow \mathbb{C}[GL_n] \otimes \mathbb{C}[GL_n]$, which makes sense, because $\otimes$ is associative (in a way).
+For $f \in \mathbb{C}[GL_n]$ we get $m^\ast \left( f \right) = \Sigma_i g_i \otimes h_i$ (with $g_i , h_i \in \mathbb{C}[GL_n]$), therefore the Kronecker-product gives us
+\begin{equation}
+  \left( \alpha \ast \beta \right) \left( f \right) = \Sigma_i \alpha \left( g_i \right) \otimes \beta \left( h_i \right) = \Sigma_i \alpha \left( g_i \right) \beta \left( h_i \right)
+\end{equation}
+As usual, we identify $\mathbb{C} \otimes \mathbb{C}$ with $\mathbb{C}$ canonically.  
+
+Let us look at this more concretely.
+Let $f \in \mathbb{C}[GL_n]$, $\alpha,\beta \in \mathbb{C}[GL_n]^\ast$.
+Write $f= \Sigma_{\left( E,e \right) \in \mathbb{N}^{n \times n} \times \mathbb{N}} \quad \lambda_{\left( E,e \right)} \cdot X^E \cdot det\left( X \right)^{-e}$.
+Then we can compute:
+\begin{equation}
+  m^\ast \left( f \right) = \sum_{E \in \mathbb{N}^{n \times n}} \lambda_E \cdot X^E \cdot det\left( X \right)^{-e} \otimes X^E \cdot det\left( X \right)^{-e}
+\end{equation}
+Note that $det$ is multiplicative.
+We then conclude:
+\begin{equation}
+  \left( \alpha \ast \beta \right) \left( f \right) = \sum_{E \in \mathbb{N}^{n \times n} } \lambda_E \cdot \alpha \left( X^E \cdot det\left( X \right)^{-e} \right) \cdot \beta \left( X^E \cdot det\left( X \right)^{-e} \right)
+\end{equation}
+We here see that $\alpha \ast \beta \in \mathbb{C}[GL_n]^\ast$.
+
+\textbf{Claim:} The multiplication $\ast$ makes $\mathbb{C}[GL_n]^\ast$ into an associative algebra with the neutral element $\epsilon_e$ (Note: $\epsilon_\sigma \left( f \right) = f \left( \sigma \right)$).
+
+\textit{Proof:} First, a small observation:
+\begin{equation}
+  \left(m^\ast \otimes id \right) \circ m^\ast = \left( id \otimes m^\ast \right) \circ m^\ast
+\end{equation}
+This holds true because $m$ is associative.
+Then, for $\delta, \gamma, \varphi \in \mathbb{C}[GL_n]^\ast$:
+\begin{equation}
+  \begin{aligned}
+  \left( \delta \ast \gamma \right) \ast \varphi
+  = \left( \left( \left( \delta \otimes \gamma \right) \circ m^\ast \right) \otimes \varphi \right) \circ m^\ast
+  = \left( \delta \otimes \gamma \otimes \varphi \right) \circ \left( m^\ast \otimes id \right) \circ m^\ast \\
+  = \left( \delta \otimes \gamma \otimes \varphi \right) \circ \left( id \otimes m^\ast \right) \circ m^\ast
+  = \left( \delta \left( \left( \gamma \otimes \varphi \right) \circ m^\ast \right) \right) \circ m^\ast
+  = \delta \ast \left( \gamma \ast \varphi \right)
+  \end{aligned}
+\end{equation}
+showing the associativity.
+The second equation is easily checked \textbf{(??? Ick we{\ss} wie dit jeht aba zu ditte hia kann mal och ma mehr zu sagen wa?)}.
+One also easily checks tha $\epsilon$ is the neutral element. This concludes that $\mathbb{C}[GL_n]^\ast$ is an associative algebra, \textit{which was to show}.
+
+\smallskip
+In our given situation, we have a rational representation $\mu : GL_n \times V \longrightarrow V$.
+
+\textbf{Claim:} There is a linear map $\mu^\ast : V \longrightarrow \mathbb{C}[GL_n] \otimes V$ with $ \mu \left( \sigma , v \right) = \left( \left( \epsilon_\sigma \otimes id \right) \circ \mu^\ast \right) \left(v\right)$.
+
+\textit{Proof:} Let $\{ v_1 , \ldots , v_N \}$ be a basis of $V$.
+By our assumption, we have a rational representation, therefore there exist polynomials $p_{i,j} \in \mathbb{C}[GL_n]$ such that $\mu\left( \sigma, v_j \right) = \Sigma_{i=1}^{N} p_{i,j}\left(\sigma\right) \cdot v_i$.
+Define $\mu^\ast \left( v_j \right) := \Sigma_{i=1}^{N} p_{i,j} \otimes v_i$.
+Now we easily see:
+\begin{equation}
+  \begin{aligned}
+    \mu\left(\sigma,v\right)
+    &= \mu \left(\sigma, \Sigma_{j=1}^N \lambda_j v_j \right) \\
+    &= \sum_{j=1}^N \lambda_j  \sum_{i=1}^N p_{i,j}\left(\sigma\right) \cdot v_i \\
+    &= \sum_{j=1}^N \lambda_j \left(\left(\epsilon_\sigma \otimes id \right) \circ \mu^\ast \right) \left(v_j \right)
+    &= \left(\left(\epsilon_\sigma \otimes id \right) \circ \mu^\ast \right) \left(v \right)
+  \end{aligned}
+\end{equation}
+\textit{which was to show.}
+
+\smallskip
+Now, with this $\mu^\ast$, we can extend the operation from $\{\ \epsilon_\sigma \mid \sigma \in GL_n \}\ $ to $\mathbb{C}[GL_n]^\ast$, defining an action $\mathbb{C}[GL_n]^\ast \times V \longrightarrow V$:
+\begin{equation}
+  \delta \cdot v := \left(\left( \delta \otimes id \right) \circ \mu^\ast \right) \left(v\right)
+\end{equation}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

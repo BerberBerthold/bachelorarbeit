@@ -1,0 +1,331 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=prv_roughdraft 2017.9.23)  23 SEP 2017 20:21
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**&prv_roughdraft _region_.tex
+(./_region_.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+CUSTOMISED FORMAT. Preloaded files:
+        .
+ article.cls    2014/09/29 v1.4h Standard LaTeX document class
+  size10.clo    2014/09/29 v1.4h Standard LaTeX file (size option)
+ amssymb.sty    2013/01/14 v3.01 AMS font symbols
+amsfonts.sty    2013/01/14 v3.01 Basic AMSFonts support
+ amsmath.sty    2013/01/14 v2.14 AMS math features
+ amstext.sty    2000/06/29 v2.01
+  amsgen.sty    1999/11/30 v2.0
+  amsbsy.sty    1999/11/29 v1.2d
+  amsopn.sty    1999/12/14 v2.01 operator names
+  amsthm.sty    2015/03/04 v2.20.2
+    cite.sty    2015/02/27  v 5.5
+mathtools.sty    2015/05/11 v1.16 mathematical typesetting tools
+  keyval.sty    2014/10/28 v1.15 key=value parser (DPC)
+    calc.sty    2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+ mhsetup.sty    2010/01/21 v1.2a programming setup (MH)
+    umsa.fd    2013/01/14 v3.01 AMS symbols A
+    umsb.fd    2013/01/14 v3.01 AMS symbols B
+        .
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+(/home/bert/.emacs.d/elpa/auctex-11.91.0/latex/preview.sty
+Package: preview 2017/04/24 11.91 (AUCTeX/preview-latex)
+
+(/home/bert/.emacs.d/elpa/auctex-11.91.0/latex/prtightpage.def
+\PreviewBorder=\dimen121
+)
+(/home/bert/.emacs.d/elpa/auctex-11.91.0/latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count107
+\hfuzz=\dimen122
+(/home/bert/.emacs.d/elpa/auctex-11.91.0/latex/prauctex.cfg))
+(/home/bert/.emacs.d/elpa/auctex-11.91.0/latex/prfootnotes.def)
+\pr@snippet=\count108
+\pr@box=\box28
+\pr@output=\toks27
+
+Preview: Fontsize 10pt
+Preview: PDFoutput 1
+) (/usr/local/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/usr/local/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count109
+
+(/usr/local/share/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count110
+\scratchdimen=\dimen123
+\scratchbox=\box29
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen124
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks29
+))) (/usr/local/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+ !name(prozess.tex) !offset(-29) 
+! Preview: Snippet 1 started.
+<-><->
+      
+l.35  is isomorphic to $
+                        K \[ \lbrace X \rbrace_{i,j \in \lceil n \rceil} , d...
+
+Not a real error.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35  is isomorphic to $K \[
+                             \lbrace X \rbrace_{i,j \in \lceil n \rceil} , d...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
+                                                   \subseteq K \left( \lbrac...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
+                                                   \subseteq K \left( \lbrac...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Preview: Tightpage -32891 -32891 32891 32891
+! Preview: Snippet 1 ended.(690681+233018x9240591).
+<-><->
+      
+l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
+                                                   \subseteq K \left( \lbrac...
+
+Not a real error.
+
+[1{/usr/local/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
+
+! LaTeX Error: \begin{document} ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
+                                                   \subseteq K \left( \lbrac...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
+                                                   \subseteq K \left( \lbrac...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
+                                                   \subseteq K \left( \lbrac...
+Things are pretty mixed up, but I think the worst is over.
+
+! Extra \endgroup.
+\pr@parse% #1->#1\endgroup 
+                           
+l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
+                                                   \subseteq K \left( \lbrac...
+Things are pretty mixed up, but I think the worst is over.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 ...\lceil n \rceil} \right)^{-1} \] \subseteq
+                                                   K \left( \lbrace X \rbrac...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Preview: Snippet 2 started.
+<-><->
+      
+l.35 ...rbrace_{i,j \in \lceil n \rceil} \right) $
+                                                  
+Not a real error.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.36 \begin{definition}
+                       [Cayley's $\Omega$-Process]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.36 \begin{definition}
+                       [Cayley's $\Omega$-Process]
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Preview: Snippet 2 ended.(0+0x0).
+<-><->
+      
+l.36 \begin{definition}
+                       [Cayley's $\Omega$-Process]
+Not a real error.
+
+[2]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.36 \begin{definition}
+                       [Cayley's $\Omega$-Process]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Preview: Snippet 3 started.
+<-><->
+      
+l.36 \begin{definition}[Cayley's $\Omega$-Process]
+                                                  
+Not a real error.
+
+! Preview: Snippet 3 ended.(447828+0x473316).
+<-><->
+      
+l.36 \begin{definition}[Cayley's $\Omega$-Process]
+                                                  
+Not a real error.
+
+[3]  !name(roughdraft.tex) !offset(43)  ) 
+Here is how much of TeX's memory you used:
+ 1392 strings out of 491214
+ 20570 string characters out of 6113381
+ 106510 words of memory out of 5000000
+ 6688 multiletter control sequences out of 15000+600000
+ 7422 words of font info for 29 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 51i,5n,27p,271b,114s stack positions out of 5000i,2500n,10000p,300000b,80000s
+</usr/local/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/local/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
+sr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on _region_.pdf (3 pages, 54664 bytes).
+PDF statistics:
+ 42 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

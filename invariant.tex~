@@ -1,0 +1,65 @@
+\begin{definition}[Regular Action]
+  Let $G$ be a linear algebraic group, $X$ an affine variety.
+  We call an action $G \times X \longrightarrow X$ a \textbf{regular action}, iff it is a morphism of affine varieties.
+  We say \textbf{$ G $ acts regularly on $ X $}.
+\end{definition}
+
+\begin{definition}[Rational Representation]
+  Let $G$ be a linear algebraic group.
+  A representation $V$ of $G$ is called a \textbf{rational representation}, iff its corresponding action $ G \times V \longrightarrow V $ is a regular action.
+\end{definition}
+
+\begin{remark}
+  A rational representation $ G \longrightarrow GL\left(V\right) $ is of the following form:\\
+  If $ a_{i,j} : G \longrightarrow K $ is the function of the $\left( i,j \right) $-entry, $ a_{i,j} \in K\lbrack G\rbrack $.\\
+  In fact, it is equivalent to define a representation as rational, iff its map $ G \longrightarrow GL \left( V \right) $ is a map of affine varieties.
+\end{remark}
+
+\begin{definition}[Invariants]
+  Let $ G $ act on $ X $ regularly.
+  \begin{equation}
+    X^G := \{\, x \in X \mid \forall g \in G : g . x = x \,\}
+  \end{equation}
+  It defines a linear subspace.
+  This given action induces an action $ G \times K\lbrack X\rbrack \longrightarrow K\lbrack X\rbrack $, where $K\lbrack X\rbrack$ is the coordinate ring, as follows:
+  \begin{equation}
+    \left( g , f \right) \longmapsto g \cdot f :=
+    \left( x \mapsto f \left( \sigma^{-1} . x \right) \right)
+  \end{equation}
+  The \textbf{invariant ring} of the representation is defined as
+  \begin{equation}
+    K\lbrack X\rbrack^G := \lbrace \, f \in K\lbrack X\rbrack \mid \forall g \in G : g \cdot f = f \,\rbrace
+  \end{equation}
+  As the name implies, $ K\lbrack X\rbrack^G $ defines a subalgebra of $ K\lbrack X\rbrack^G $.
+\end{definition}
+
+The general theme of my work revolves around the question of whether the invariant ring $ K\lbrack X\rbrack^G $ is finitely generated.
+
+\textit{Hilbert's finiteness theorem} states that if the group $G$ is linearly reductive, $ K\lbrack V\rbrack^G $ is finitely generated.
+The strict definition of ``linearly reductive'' is quite tricky, but we will give an alternate equivalent definition shortly.
+
+\begin{definition}[Reynolds Operator]
+  Let $ V $ be a rational representation of a linear algebraic group $ G $.
+  A $ G $-invariant linear projection $ K\lbrack V\rbrack \longrightarrow K\lbrack V\rbrack^G $ is called a \textbf{Reynolds Operator}.
+\end{definition}
+
+\begin{remark}
+  If a Reynolds Operator exists, it is unique (\textbf{??}).
+  See \cite[p.39f]{DK15}: In the proof of the equivalences, in the step ``(b)$\implies$(c)'', only the existence of the Reynolds operator is needed.
+  Therefore, the existence of the Reynolds Operator already implies its uniqueness (\textbf{??}).
+\end{remark}
+
+\begin{definition}[linearly reductive]
+  A group G is called \textbf{linearly reductive} iff there exists a Reynolds operator for the regular action $ G \times G \longrightarrow G $ by left multiplication $ R_G : K\lbrack G \rbrack \longrightarrow K\lbrack G \rbrack^G = K $.
+\end{definition}
+
+\begin{remark}
+  We could have also defined linear reductive groups as such, for which every regular action has a Reynolds Operator.
+  We will prove that this is in fact equivalent.
+\end{remark}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "roughdraft"
+%%% End:

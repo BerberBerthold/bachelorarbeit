@@ -1,0 +1,45 @@
+First, how is $\operatorname{GL}_n$ an affine variety?
+Consider $ K^{n \times n} \times K $, and its coordinate ring $ K\left\lbrack \lbrace Z_{i,j} \rbrace_{i,j \in \lceil n \rceil} , D \right\rbrack$.
+Now define $ I := \left( \left( \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{ i \in \lceil n \rceil } Z_{i, \sigma \left( i \right) } \right) \cdot D - 1 \right)  = \left( \operatorname{det} \left( Z \right) \cdot D - 1 \right) $ , where $ Z := \left\lbrack Z_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $.
+Then $ V \left( I \right) = \lbrace \, \left( z , d \right) \mid z \in \operatorname{GL}_n , d = \operatorname{det} \left( z \right)^{-1} \, \rbrace $.
+Equipped with the componentwise multiplication ($\operatorname{GL}_n$ and $K \setminus \lbrace 0 \rbrace$, respectively), this is a linear algebraic group isomorphic to $\operatorname{GL}_n$.
+The coordinate ring $K\left\lbrack \operatorname{GL}_n\right\rbrack$ is isomorphic to $K \left\lbrack \lbrace Z_{i,j} \rbrace_{i,j \in \lceil n \rceil} , \operatorname{det} \left( Z \right)^{-1} \right\rbrack \subseteq K \left( \lbrace Z_{i,j} \rbrace_{i,j \in \lceil n \rceil} \right) $, and we will write it as such from now on.
+\begin{definition}[Cayley's $\Omega$-Process]
+  We call
+  \begin{equation}
+    \Omega := \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{ i \in \lceil n \rceil } \frac{\partial}{\partial z_{i , \sigma \left( i \right)}}
+  \end{equation}
+\end{definition}
+the \textbf{Cayley's $\Omega$-Process}.
+It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial}{\partial Z} \right) $, where $\frac{\partial}{\partial Z} := \left\lbrack \frac{\partial}{\partial z_{i,j}} \right\rbrack_{i,j \in \lceil n \rceil} $.
+
+\begin{lemma}
+  \begin{equation}
+    \left( \operatorname{det} \left( Z \right) ^{-1} \cdot \otimes \Omega \right) \circ m^\ast
+    = m^\ast \circ \Omega
+    = \left( \Omega \otimes \operatorname{det} \left( Z \right) ^{-1} \right) \circ m^\ast
+  \end{equation}
+  where I write ``$ p \cdot $'' for the operation \textit{multiply with $ p $} for a polynomial $ p \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ (but don't worry, this is the only time I will make use of this notation).
+\end{lemma}
+
+\begin{proof}
+  Here, we will follow the same convention as described in chapter 3: The ``left'' and ``right'' inputs of $ m $ will be represented by $ X = \left\lbrack X_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ and $ Y = \left\lbrack Y_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ in the occuring polynomials respectively, and the outputs $ m = \left\lbrack m_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ are indexed the same as the inputs of the polynomials in $ Z_{1,1} , Z_{1,2} , \ldots Z_{n,n} $.\\
+  Let $f \in K \left\lbrack \operatorname{GL}_n \right\rbrack $.
+  Then $ f \circ m \in K \left\lbrack \left\{ X_{i,j} \right\}_{i,j \in \lceil n \rceil} , \operatorname{det} \left( X \right)^{-1} , \left\{ Y_{i,j} \right\}_{i,j \in \lceil n \rceil} , \operatorname{det} \left( Y \right)^{-1} \right\rbrack $.
+  For fixed $i,j \in \lceil n \rceil $ we have
+  \begin{equation}
+    \begin{aligned}
+    \left( \operatorname{id} \otimes \frac{\partial}{\partial Z_{i,j}} \right) \left( m^\ast \left( f \right) \right) 
+    = t \left( \frac{\partial}{\partial Y_{i,j}} \left( f \circ m \right) \right) 
+    = t \left( \sum_{k,l \in \lceil n \rceil} \left( \left( \frac{\partial}{\partial Z_{k,l}} f \right) \circ m \right) \cdot \frac{\partial}{\partial Y_{i,j}} m_{k,l} \right) \\
+    = t \left( \sum_{k = 1}^n \left( \left( \frac{\partial}{\partial Z_{k,j}} f \right) \circ m \right) \cdot X_{k,i} \right) 
+    = \sum_{k=1}^n \left( Z_{k,i} \cdot \otimes \operatorname{id} \right) \left( m^\ast \left( \frac{\partial}{\partial Z_{k,j}} f \right) \right)
+    \end{aligned}
+  \end{equation}
+Note the use of $ t $ as described in chapter 3 to aid in rephrasing terms. 
+\end{proof}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "roughdraft"
+%%% End:

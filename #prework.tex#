@@ -1,0 +1,100 @@
+We denote by $m$ the group multiplication of the group $G$.
+We want to view the pullback of $m$ as a map $m^\ast : K[G] \longrightarrow K[G] \otimes K[G]$, which makes sense, because $m$ and $\otimes$ are associative.
+The strict pullback, which I will call $ \hat{m} $, should be a map of the type $ K[G] \longrightarrow K[ G \times G] $, where $ f \mapsto f \circ m $.
+If we want to give the variables names, we can equivalently say it is a map $ \left. K[Z] \right|_G \longrightarrow \left. K[X,Y] \right|_{G \times G} $, where $ Z = \lbrace Z_1 , \ldots , Z_k \rbrace $, $X$ and $Y$ analogously (here, $ m $ canonically takes its ``left'' input via $ X $ and its ``right'' input via $ Y $). Define
+\begin{equation}
+  \begin{aligned}
+   t : \left. K \left\lbrack X , Y \right\rbrack \right|_{G \times G} \longrightarrow \left. K \left\lbrack Z \right\rbrack \right|_G \otimes \left. K\left\lbrack Z \right\rbrack \right|_G \\
+    \sum_i \lambda_i \prod_j Z_{j}^{d_{i,j}} \prod_j Z_{j}^{e_{i,j}} \mapsto \sum_i \lambda_i \prod_j Z_{j}^{d_{i,j}} \otimes \prod_j Z_{j}^{e_{i,j}} 
+  \end{aligned}
+\end{equation}
+This is independant of the choice of the representatives and therefore well-defined.
+Now, finally, define $m^\ast := t \circ \hat{m} : K[G] \longrightarrow K[G] \otimes K[G]$.
+
+One might ask, why we want to look at these objects $ m^\ast \left( f \right) $ instead of $ \hat{m} \left( f \right) $.
+Really, these objects are hardly different, but it helps to formalize performing operations only on ``left part'' or the ``right part'', as we will see right now.
+
+Define the multiplication on $ K \left\lbrack G \right\rbrack^\ast $, denoted by $\ast$, as follows:  For $\alpha, \beta \in K \left\lbrack G \right\rbrack^\ast$:  
+\begin{equation}
+  \alpha \ast \beta := \left( \alpha \otimes \beta \right) \circ m^\ast
+\end{equation}
+More slowly: For $f \in K \left\lbrack G \right\rbrack$ we get $m^\ast \left( f \right) = \Sigma_i g_i \otimes h_i$ (with $g_i , h_i \in K \left\lbrack G \right\rbrack$), therefore the Kronecker-product gives us
+\begin{equation}
+  \left( \alpha \ast \beta \right) \left( f \right) = \Sigma_i \alpha \left( g_i \right) \otimes \beta \left( h_i \right) = \Sigma_i \alpha \left( g_i \right) \beta \left( h_i \right)
+\end{equation}
+As usual, we identify $K \otimes K$ with $K$ canonically.  
+% % BEGIN COMPLETE UTTER BULLSHIT PLEASE DON'T READ
+%
+% Let us look at this more concretely.
+% Let $f \in K \left\lbrack G \right\rbrack$, $\alpha,\beta \in K \left\lbrack G \right\rbrack^\ast$.
+% Write $f= \Sigma_{E \in \mathbb{N}^{n \times n}} \quad \lambda_E \cdot X^E \cdot \operatorname{det}\left( X \right)^{-e}$.
+% Then we can compute:
+% \begin{equation}
+%   m^\ast \left( f \right) = \sum_{E \in \mathbb{N}^{n \times n}} \lambda_E \cdot X^E \cdot \operatorname{det}\left( X \right)^{-e} \otimes X^E \cdot \operatorname{det}\left( X \right)^{-e}
+% \end{equation}
+% Note that $\operatorname{det}$ is multiplicative.
+% We then conclude:
+% \begin{equation}
+%   \left( \alpha \ast \beta \right) \left( f \right) = \sum_{E \in \mathbb{N}^{n \times n} } \lambda_E \cdot \alpha \left( X^E \cdot \operatorname{det}\left( X \right)^{-e} \right) \cdot \beta \left( X^E \cdot \operatorname{det}\left( X \right)^{-e} \right)
+% \end{equation}
+% We here see that $\alpha \ast \beta \in K \left\lbrack G \right\rbrack^\ast$.
+%
+% % END COMPLETE UTTER BULLSHIT ARIGATOU GOZAIMASU
+
+\textbf{Example:} TODO
+
+\smallskip
+\textbf{Claim:} The multiplication $\ast$ makes $K \left\lbrack G \right\rbrack^\ast$ into an associative algebra with the neutral element $ \epsilon := \epsilon_e$ (Note: $\epsilon_\sigma \left( f \right) = f \left( \sigma \right)$).
+
+\textit{Proof:} First, a small observation:
+\begin{equation}
+  \left(m^\ast \otimes \operatorname{id} \right) \circ m^\ast = \left( \operatorname{id} \otimes m^\ast \right) \circ m^\ast
+\end{equation}
+This is true because $m$ (and $ \otimes $) is associative.
+Then, for $\delta, \gamma, \varphi \in K \left\lbrack G \right\rbrack^\ast$:
+\begin{equation}
+  \begin{aligned}
+  \left( \delta \ast \gamma \right) \ast \varphi
+  = \left( \left( \left( \delta \otimes \gamma \right) \circ m^\ast \right) \otimes \varphi \right) \circ m^\ast
+  = \left( \delta \otimes \gamma \otimes \varphi \right) \circ \left( m^\ast \otimes \operatorname{id} \right) \circ m^\ast \\
+  = \left( \delta \otimes \gamma \otimes \varphi \right) \circ \left( \operatorname{id} \otimes m^\ast \right) \circ m^\ast
+  = \left( \delta \otimes \left( \left( \gamma \otimes \varphi \right) \circ m^\ast \right) \right) \circ m^\ast
+  = \delta \ast \left( \gamma \ast \varphi \right)
+  \end{aligned}
+\end{equation}
+showing the associativity.
+The second equation is easily checked (rewrite as described in the beginning of chapter 3).
+Also, it should be clear that $\epsilon$ is the neutral element.
+This concludes that $K \left\lbrack G \right\rbrack^\ast$ is an associative algebra, \textit{which was to show}.
+
+\smallskip
+\begin{definition}[rational representation]
+  Let $V$ be a vector space (not necessarily finite dimensional), and $ \mu : G \times V \longrightarrow V $ an action.
+  We call $ \mu $ \textbf{rational} iff there exists a linear map $ \mu^\ast : V \longrightarrow K[G] \otimes V $ such that $ \mu \left( \sigma , v \right) = \left( \left( \epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v\right) $. 
+\end{definition}
+\textbf{Claim:} If V is finite dimensional, the notions of Definition 
+
+\textit{Proof:} Let $\{ v_1 , \ldots , v_N \}$ be a basis of $V$.
+By our assumption, we have a rational representation, therefore there exist $p_{i,j} \in K \left\lbrack G \right\rbrack$ such that $\mu\left( \sigma, v_j \right) = \Sigma_{i=1}^{N} p_{i,j}\left(\sigma\right) \cdot v_i$.
+Define $\mu^\ast \left( v_j \right) := \Sigma_{i=1}^{N} p_{i,j} \otimes v_i$.
+Now we easily see:
+\begin{equation}
+  \begin{aligned}
+    \mu\left(\sigma,v\right)
+    &= \mu \left(\sigma, \Sigma_{j=1}^N \lambda_j v_j \right) \\
+    &= \sum_{j=1}^N \lambda_j  \sum_{i=1}^N p_{i,j}\left(\sigma\right) \cdot v_i \\
+    &= \sum_{j=1}^N \lambda_j \left(\left(\epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v_j \right)
+    &= \left(\left(\epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v \right)
+  \end{aligned}
+\end{equation}
+\textit{which was to show.}
+
+\smallskip
+Now, with this $\mu^\ast$, we can extend the operation from $\{\ \epsilon_\sigma \mid \sigma \in G \}\ $ to $K \left\lbrack G \right\rbrack^\ast$, defining an action $K \left\lbrack G \right\rbrack^\ast \times V \longrightarrow V$:
+\begin{equation}
+  \delta \cdot v := \left(\left( \delta \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v\right)
+\end{equation}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "roughdraft"
+%%% End:

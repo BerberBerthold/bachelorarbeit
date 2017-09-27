@@ -1,0 +1,88 @@
+\documentclass{article}
+\title{Cayley's $\Omega$-Process And The Reynolds Operator}
+\author{Bert Lorke}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{mathtools}
+
+\newtheoremstyle{prrt}
+  {\topsep}
+  {\topsep}
+  {}
+  {0pt}
+  {\bfseries}
+  {\\}
+  { }
+  {\thmname{#1}\thmnumber{ #2}\thmnote{: #3}}
+
+\theoremstyle{prrt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{remark}{Remark}[theorem]
+\newtheorem{cremark}{Remark}[corollary]
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\bibliographystyle{alpha}
+
+\maketitle
+
+\section{Introduction}
+
+In a seminar, I discussed Hilbert's finiteness theorem for the group $\operatorname{GL}_n$.
+The proof I presented was a version of Hilbert's non-constructive proof, which, apparently (it is not known how true this is), was responsible for Gordan's famous quote ``Das ist Theologie und nicht Mathematik''.
+The central idea of the proof is the existence of the Reynolds Operator.
+After the dirty work is done and some useful properties are shown, the proof of the theorem is very straightforward.
+In fact, if we are able to contruct finite homogenious generators of the nullcone, all that is left to do is apply the Reynolds Operator to each generator, and the resulting polynomials will be generators of the invariant ring.
+But even this step is easier said then done.
+In my presentation at the seminar, I constructed a Haar measure, which gives me a unitary $\operatorname{GL}_n$-invariant inner product, which allows us to define the Reynolds Operator. If one wants to explicitly calculate the image under the Reynolds Operator of a concrete polynomial, following these steps is not really feasible.
+For the group $\operatorname{GL}_n$, there is an operator called \textit{Cayley's $\Omega$-Process} which allows us to compute the Reynold's Operator.
+This is the main focus of my work.
+
+\section{Invariant Theory and the Reynolds Operator}
+
+In this section, we will explain and discuss some terminology and underlying theorems.
+This is very general, and since we really only focus on $\mathbb{C}[\operatorname{GL}_n]$, we can formulate a lot of this stuff more specifically and without the need to introduce some of these notions.
+Still though, I feel that it is beneficial to talk about the general framework to aid some readers to categorize this specific case.\\
+This loosely follows \cite[p.31]{DK15}.
+\input{invariant}
+
+\section{Pre-work}
+In this section, we will define an algebra structure on $K[G]^\ast$ and construct an action $K[G]^\ast \times V \longrightarrow V$.
+We closely follow \cite[p. 299-302]{DK15}.
+
+\bigskip
+
+\input{prework}
+
+\section{Invariant Theory, Hilbert's Finiteness Theorem And The Reynolds Operator}
+
+\input{invariant}
+
+\section{Cayley's $\Omega$-Process}
+
+We want to express the Reynolds Operator in a conrete way.
+For the Group $\operatorname{GL}_n$, we can explicitly formulate it with the help of Cayley's $\Omega$-Process.
+
+\input{prozess}
+
+\section{Test}
+
+This part of my master file is for testing my environment.
+
+\input{test}
+
+\bibliography{roughdraft}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
