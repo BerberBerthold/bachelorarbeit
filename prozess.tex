@@ -21,7 +21,7 @@ It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial
   \end{equation}
   where I write ``$ p \cdot $'' for the operation \textit{multiply with $ p $} for a polynomial $ p \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ (but don't worry, this is the only time I will make use of this notation).
 \end{lemma}
-
+a
 \begin{proof}
   Here, we will follow the same convention as described in chapter 3: The ``left'' and ``right'' inputs of $ m $ will be represented by $ X = \left\lbrack X_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ and $ Y = \left\lbrack Y_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ in the occuring polynomials respectively, and the outputs $ m = \left\lbrack m_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ are indexed the same as the inputs of the polynomials in $ Z_{1,1} , Z_{1,2} , \ldots Z_{n,n} $.\\
   Let $f \in K \left\lbrack \operatorname{GL}_n \right\rbrack $.
@@ -49,8 +49,72 @@ It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial
       = \left( \operatorname{det} (Z) \cdot \otimes \operatorname{id} \right) \left( m^\ast \left( \Omega (f) \right) \right)
     \end{aligned}
   \end{equation}
-  which immediately shows the first equality.
-  The second equality is proven analogously.
+  This immediately shows the first equality, and the second equality is proven analogously.
+\end{proof}
+
+\begin{lemma}
+  For $p \in \mathbb{N} $, $ c_{p,n} := \Omega^p \left( \operatorname{det} (Z)^p \right) = \operatorname{det} \left( \frac{\partial}{\partial Z}\right)^p \left( \operatorname{det} (Z)^p \right)$ is a nonnegative integer.
+\end{lemma}
+
+\begin{proof}
+  Write $ \operatorname{det} (Z)^p = \Sigma_i a_i m_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) $, where $a_i \in K$ and $m_i$ are (monic) monomials.
+  Then
+  \begin{equation}
+    \Omega^p \left( \operatorname{det} (Z)^p \right)
+    = \Sigma_i a_i m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( \Sigma_j a_j m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right)
+\end{equation}
+Notice that $ m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $. Therefore
+\begin{equation}
+  c_{p,n}
+  = \sum_i a_i^2 m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) \in \mathbb{N}_{>0}
+\end{equation}
+in particular $c_{p,n} \neq 0$.
+\end{proof}
+Now, finally, we have the tools to see the following way of expressing the Reynolds Operator.
+\begin{theorem}
+  For $ p \in \mathbb{N} $ and $ \tilde{f} \in K \left\lbrack \left\{ Z_{i,j} \right\}_{k,l \in \lceil n \rceil} \right\rbrack_{pn} $, define for $ f = \frac{\tilde{f}}{\operatorname{det}(Z)^p}$:
+  \begin{equation}
+    R \left( f \right) := \frac{\Omega^p \tilde{f}}{c_{p,n}}
+  \end{equation}
+  The linear extension of this (mapping anything else in $K \left\lbrack GL_n \right\rbrack$ to zero), defines a (the) Reynolds Operator of $GL_n$.
+\end{theorem}
+
+\begin{proof}
+  First, check that this is well defined:
+  For any such term, expanding the fraction by $ \operatorname{det} (Z)^q $ will yield the same result.
+  Also, $\Omega^p$ is linear for any $p \in \mathbb{N}$.
+  Now we show that $R$ is $GL_n$-invariant.
+  First, I will introduce a notation:
+  For $f \in K \left\lbrack GL_n \right\rbrack $ and $\alpha \in GL_n$, define $ \alpha \dot{\phantom{.}} f := \left( x \mapsto f \left( x \alpha^{-1} \right) \right) $.
+  This is \textit{not} an action, but a right action (normal actions should be called ``left actions'').
+  Let $p \in \mathbb{N}$, $ \tilde{f} \in K \left\lbrack GL_n \right\rbrack_{pn} $ and $ f := \frac{\tilde{f}}{\operatorname{det}(Z)^p} $.
+  For $ \beta , \gamma \in GL_n $, we notice
+  \begin{equation}
+    \begin{aligned}
+      R \left( \beta . f \right) (\gamma)
+      = R \left( \frac{ \operatorname{det} (\beta)^p \cdot \beta . \tilde{f}}{\operatorname{det} (Z)^p} \right) (\gamma)
+      = \frac{ \operatorname{det} (\beta)^p \cdot \Omega^p \left( \beta . \tilde{f} \right) (\gamma) }{ c_{p,n} } \\
+      = \frac{1}{c_{p,n}} \cdot \left( \epsilon_{\beta^{-1}} \otimes \epsilon_\gamma \right) \left( \left( \left( \operatorname{det}(Z)^{-p} \cdot \otimes \Omega^p \right) \circ m^\ast \right) \left( \tilde{f} \right) \right) \\
+      = \frac{1}{c_{p,n}} \cdot \left( \epsilon_{\beta^{-1}} \otimes \epsilon_\gamma \right) \left( \left( \left( \Omega^p \otimes \operatorname{det}(Z)^{-p} \cdot \right) \circ m^\ast \right) \left( \tilde{f} \right) \right) \\
+      = \frac{ \Omega^p \left( \gamma^{-1} \dot{\phantom{.}} \tilde{f} \right) (\beta^{-1}) \cdot \operatorname{det} \left (\gamma^{-1} \right)^p }{ c_{p,n} }
+      = R \left( \frac{ \gamma^{-1} \dot{\phantom{.}} \tilde{f} \cdot \operatorname{det} \left( \gamma^{-1} \right)^p }{\operatorname{det} (Z)^p} \right) \left( \beta^{-1} \right) \\
+      = R \left( \gamma^{-1} \dot{\phantom{.}} f \right) \left( \beta^{-1} \right)
+    \end{aligned}
+  \end{equation}
+  Since each $ \frac {\partial}{ \partial Z_{i,j} } $ lowers the degree of a monomial by one or maps it to zero, $R$ maps to $K$, and therefore for $ \delta \in GL_n $ and $ g \in K \left\lbrack GL_n \right\rbrack $ we have $ R(g)(\delta) = R(g) \in K $.
+  We then get for all $ \alpha \in GL_n $
+  \begin{equation}
+    \begin{aligned}
+      R \left( \alpha . f \right)
+      = R \left( \alpha . f \right) \left( I_n \right)
+      = R \left( I_n^{-1} \dot{\phantom{.}} f \right) \left( \alpha^{-1} \right) \\
+      = R \left( I_n^{-1} \dot{\phantom{.}} f \right)
+      = R \left( I_n \dot{\phantom{.}} f \right) 
+      = R (f)
+  \end{aligned}
+  \end{equation}
+  which shows the $GL_n$-invariance.
+  Finally, the definition immediately gives us that $R$ restricted to $K$ is the identity.
 \end{proof}
 
 %%% Local Variables:

@@ -70,13 +70,10 @@ This concludes that $K \left\lbrack G \right\rbrack^\ast$ is an associative alge
 \smallskip
 \begin{definition}[rational representation]
   Let $V$ be a vector space (not necessarily finite dimensional), and $ \mu : G \times V \longrightarrow V $ an action.
-  We call $ \mu $ \textbf{rational} iff there exists a linear map $ \mu^\ast : V \longrightarrow K[G] \otimes V $ such that $ \mu \left( \sigma , v \right) = \left( \left( \epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v\right) $. 
+  We call $ \mu $ a \textbf{rational representation} iff there exists a linear map $ \mu^\ast : V \longrightarrow K[G] \otimes V $ such that $ \mu \left( \sigma , v \right) = \left( \left( \epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v\right) $. 
 \end{definition}
-In our given situation, we have a rational representation $\mu : G \times V \longrightarrow V$.
-
-\textbf{Claim:} There is a linear map $\mu^\ast : V \longrightarrow K \left\lbrack G \right\rbrack \otimes V$ with $ \mu \left( \sigma , v \right) = \left( \left( \epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v\right)$.
-
-\textit{Proof:} Let $\{ v_1 , \ldots , v_N \}$ be a basis of $V$.
+\textbf{Claim:} If V is finite dimensional, the notions of the definitions coincide.\\
+\textit{Proof:} First, let V be a rational representation of G with basis $\{ v_1 , \ldots , v_N \}$ be a basis of $V$.
 By our assumption, we have a rational representation, therefore there exist $p_{i,j} \in K \left\lbrack G \right\rbrack$ such that $\mu\left( \sigma, v_j \right) = \Sigma_{i=1}^{N} p_{i,j}\left(\sigma\right) \cdot v_i$.
 Define $\mu^\ast \left( v_j \right) := \Sigma_{i=1}^{N} p_{i,j} \otimes v_i$.
 Now we easily see:
@@ -92,7 +89,7 @@ Now we easily see:
 \textit{which was to show.}
 
 \smallskip
-Now, with this $\mu^\ast$, we can extend the operation from $\{\ \epsilon_\sigma \mid \sigma \in G \}\ $ to $K \left\lbrack G \right\rbrack^\ast$, defining an action $K \left\lbrack G \right\rbrack^\ast \times V \longrightarrow V$:
+Now, with this $\mu^\ast$, we can extend the operation from $\{\, \epsilon_\sigma \mid \sigma \in G \, \} $ to $K \left\lbrack G \right\rbrack^\ast$, defining an action $K \left\lbrack G \right\rbrack^\ast \times V \longrightarrow V$:
 \begin{equation}
   \delta \cdot v := \left(\left( \delta \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v\right)
 \end{equation}

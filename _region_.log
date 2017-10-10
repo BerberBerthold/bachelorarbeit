@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=prv_roughdraft 2017.9.23)  23 SEP 2017 20:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=prv_roughdraft 2017.9.27)  27 SEP 2017 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -148,184 +148,948 @@ e
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
 )
- !name(prozess.tex) !offset(-29) 
+ !name(prework.tex) !offset(-34) 
 ! Preview: Snippet 1 started.
 <-><->
       
-l.35  is isomorphic to $
-                        K \[ \lbrace X \rbrace_{i,j \in \lceil n \rceil} , d...
-
+l.35 We denote by $
+                   m$ the group multiplication of the group $G$.
 Not a real error.
 
-
-! LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35  is isomorphic to $K \[
-                             \lbrace X \rbrace_{i,j \in \lceil n \rceil} , d...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
-                                                   \subseteq K \left( \lbrac...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
-                                                   \subseteq K \left( \lbrac...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 Preview: Tightpage -32891 -32891 32891 32891
-! Preview: Snippet 1 ended.(690681+233018x9240591).
+! Preview: Snippet 1 ended.(282168+0x575415).
 <-><->
       
-l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
-                                                   \subseteq K \left( \lbrac...
-
+l.35 We denote by $m$
+                      the group multiplication of the group $G$.
 Not a real error.
 
 [1{/usr/local/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
-
-! LaTeX Error: \begin{document} ended by \end{equation*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
-                                                   \subseteq K \left( \lbrac...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
-                                                   \subseteq K \left( \lbrac...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
-                                                   \subseteq K \left( \lbrac...
-Things are pretty mixed up, but I think the worst is over.
-
-! Extra \endgroup.
-\pr@parse% #1->#1\endgroup 
-                           
-l.35 ..._{i,j \in \lceil n \rceil} \right)^{-1} \]
-                                                   \subseteq K \left( \lbrac...
-Things are pretty mixed up, but I think the worst is over.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.35 ...\lceil n \rceil} \right)^{-1} \] \subseteq
-                                                   K \left( \lbrace X \rbrac...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
 ! Preview: Snippet 2 started.
 <-><->
       
-l.35 ...rbrace_{i,j \in \lceil n \rceil} \right) $
-                                                  
+l.35 ...m$ the group multiplication of the group $
+                                                  G$.
 Not a real error.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.36 \begin{definition}
-                       [Cayley's $\Omega$-Process]
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.36 \begin{definition}
-                       [Cayley's $\Omega$-Process]
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Preview: Snippet 2 ended.(0+0x0).
+! Preview: Snippet 2 ended.(447828+0x515276).
 <-><->
       
-l.36 \begin{definition}
-                       [Cayley's $\Omega$-Process]
+l.35 ... the group multiplication of the group $G$
+                                                  .
 Not a real error.
 
 [2]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.36 \begin{definition}
-                       [Cayley's $\Omega$-Process]
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
 ! Preview: Snippet 3 started.
 <-><->
       
-l.36 \begin{definition}[Cayley's $\Omega$-Process]
-                                                  
+l.36 We want to view the pullback of $
+                                      m$ as a map $m^\ast : K[G] \longrighta...
+
 Not a real error.
 
-! Preview: Snippet 3 ended.(447828+0x473316).
+! Preview: Snippet 3 ended.(282168+0x575415).
 <-><->
       
-l.36 \begin{definition}[Cayley's $\Omega$-Process]
-                                                  
+l.36 We want to view the pullback of $m$
+                                         as a map $m^\ast : K[G] \longrighta...
+
 Not a real error.
 
-[3]  !name(roughdraft.tex) !offset(43)  ) 
+[3]
+! Preview: Snippet 4 started.
+<-><->
+      
+l.36 ...ant to view the pullback of $m$ as a map $
+                                                  m^\ast : K[G] \longrightar...
+
+Not a real error.
+
+! Preview: Snippet 4 ended.(491520+163840x8092286).
+<-><->
+      
+l.36 ... : K[G] \longrightarrow K[G] \otimes K[G]$
+                                                  , which makes sense, becau...
+
+Not a real error.
+
+[4]
+! Preview: Snippet 5 started.
+<-><->
+      
+l.36 ...otimes K[G]$, which makes sense, because $
+                                                  m$ and $\otimes$ are assoc...
+
+Not a real error.
+
+! Preview: Snippet 5 ended.(282168+0x575415).
+<-><->
+      
+l.36 ...imes K[G]$, which makes sense, because $m$
+                                                   and $\otimes$ are associa...
+
+Not a real error.
+
+[5]
+! Preview: Snippet 6 started.
+<-><->
+      
+l.36 ...[G]$, which makes sense, because $m$ and $
+                                                  \otimes$ are associative.
+Not a real error.
+
+! Preview: Snippet 6 ended.(382293+54613x509726).
+<-><->
+      
+l.36 ...ich makes sense, because $m$ and $\otimes$
+                                                   are associative.
+Not a real error.
+
+[6]
+! Preview: Snippet 7 started.
+<-><->
+      
+l.37 The strict pullback, which I will call $
+                                              \hat{m} $, should be a map of ...
+
+Not a real error.
+
+! Preview: Snippet 7 ended.(455111+0x575415).
+<-><->
+      
+l.37 ...ct pullback, which I will call $ \hat{m} $
+                                                  , should be a map of the t...
+
+Not a real error.
+
+[7]
+! Preview: Snippet 8 started.
+<-><->
+      
+l.37 ...$ \hat{m} $, should be a map of the type $
+                                                   K[G] \longrightarrow K[ G...
+
+Not a real error.
+
+! Preview: Snippet 8 ended.(491520+163840x5701895).
+<-><->
+      
+l.37 ...pe $ K[G] \longrightarrow K[ G \times G] $
+                                                  , where $ f \mapsto f \cir...
+
+Not a real error.
+
+[8]
+! Preview: Snippet 9 started.
+<-><->
+      
+l.37 ... \longrightarrow K[ G \times G] $, where $
+                                                   f \mapsto f \circ m $.
+Not a real error.
+
+! Preview: Snippet 9 ended.(455111+127431x2996597).
+<-><->
+      
+l.37 ...\times G] $, where $ f \mapsto f \circ m $
+                                                  .
+Not a real error.
+
+[9]
+! Preview: Snippet 10 started.
+<-><->
+      
+l.38 ...mes, we can equivalently say it is a map $
+                                                   \left. K[Z] \right|_G \lo...
+
+Not a real error.
+
+! Preview: Snippet 10 ended.(491520+251221x7445262).
+<-><->
+      
+l.38 ...arrow \left. K[X,Y] \right|_{G \times G} $
+                                                  , where $ Z = \lbrace Z_1 ...
+
+Not a real error.
+
+[10]
+! Preview: Snippet 11 started.
+<-><->
+      
+l.38 ...ft. K[X,Y] \right|_{G \times G} $, where $
+                                                   Z = \lbrace Z_1 , \ldots ...
+
+Not a real error.
+
+! Preview: Snippet 11 ended.(491520+163840x4990965).
+<-><->
+      
+l.38 ...$ Z = \lbrace Z_1 , \ldots , Z_k \rbrace $
+                                                  , $X$ and $Y$ analogously ...
+
+Not a real error.
+
+[11]
+! Preview: Snippet 12 started.
+<-><->
+      
+l.38 ... = \lbrace Z_1 , \ldots , Z_k \rbrace $, $
+                                                  X$ and $Y$ analogously (he...
+
+Not a real error.
+
+! Preview: Snippet 12 ended.(447828+0x594374).
+<-><->
+      
+l.38 ... \lbrace Z_1 , \ldots , Z_k \rbrace $, $X$
+                                                   and $Y$ analogously (here...
+
+Not a real error.
+
+[12]
+! Preview: Snippet 13 started.
+<-><->
+      
+l.38 ...ce Z_1 , \ldots , Z_k \rbrace $, $X$ and $
+                                                  Y$ analogously (here, $ m ...
+
+Not a real error.
+
+! Preview: Snippet 13 ended.(447828+0x526109).
+<-><->
+      
+l.38 ... Z_1 , \ldots , Z_k \rbrace $, $X$ and $Y$
+                                                   analogously (here, $ m $ ...
+
+Not a real error.
+
+[13]
+! Preview: Snippet 14 started.
+<-><->
+      
+l.38 ...rbrace $, $X$ and $Y$ analogously (here, $
+                                                   m $ canonically takes its...
+
+Not a real error.
+
+! Preview: Snippet 14 ended.(282168+0x575415).
+<-><->
+      
+l.38 ...ce $, $X$ and $Y$ analogously (here, $ m $
+                                                   canonically takes its ``l...
+
+Not a real error.
+
+[14]
+! Preview: Snippet 15 started.
+<-><->
+      
+l.38 ...canonically takes its ``left'' input via $
+                                                   X $ and its ``right'' inp...
+
+Not a real error.
+
+! Preview: Snippet 15 ended.(447828+0x594374).
+<-><->
+      
+l.38 ...nically takes its ``left'' input via $ X $
+                                                   and its ``right'' input v...
+
+Not a real error.
+
+[15]
+! Preview: Snippet 16 started.
+<-><->
+      
+l.38 ...ut via $ X $ and its ``right'' input via $
+                                                   Y $). Define
+Not a real error.
+
+! Preview: Snippet 16 ended.(447828+0x526109).
+<-><->
+      
+l.38 ...ia $ X $ and its ``right'' input via $ Y $
+                                                  ). Define
+Not a real error.
+
+[16]
+! Preview: Snippet 17 started.
+<-><->
+      
+l.39 \begin{equation}
+                     
+Not a real error.
+
+! Preview: Snippet 17 ended.(2679970+0x22609920).
+<-><->
+      
+l.44 \end{equation}
+                   
+Not a real error.
+
+[17]
+! Preview: Snippet 18 started.
+<-><->
+      
+l.46 Now, finally, define $
+                           m^\ast := t \circ \hat{m} : K[G] \longrightarrow ...
+
+Not a real error.
+
+! Preview: Snippet 18 ended.(491520+163840x10579155).
+<-><->
+      
+l.46 ... : K[G] \longrightarrow K[G] \otimes K[G]$
+                                                  .
+Not a real error.
+
+[18]
+! Preview: Snippet 19 started.
+<-><->
+      
+l.48 ...sk, why we want to look at these objects $
+                                                   m^\ast \left( f \right) $...
+
+Not a real error.
+
+! Preview: Snippet 19 ended.(491520+163840x1887047).
+<-><->
+      
+l.48 ... these objects $ m^\ast \left( f \right) $
+                                                   instead of $ \hat{m} \lef...
+
+Not a real error.
+
+[19]
+! Preview: Snippet 20 started.
+<-><->
+      
+l.48 ...s $ m^\ast \left( f \right) $ instead of $
+                                                   \hat{m} \left( f \right) $.
+Not a real error.
+
+! Preview: Snippet 20 ended.(491520+163840x1585763).
+<-><->
+      
+l.48 ... $ instead of $ \hat{m} \left( f \right) $
+                                                  .
+Not a real error.
+
+[20]
+! Preview: Snippet 21 started.
+<-><->
+      
+l.51 Define the multiplication on $
+                                    K \left\lbrack G \right\rbrack^\ast $, d...
+
+Not a real error.
+
+! Preview: Snippet 21 ended.(542949+163840x1893351).
+<-><->
+      
+l.51 ...on $ K \left\lbrack G \right\rbrack^\ast $
+                                                  , denoted by $\ast$, as fo...
+
+Not a real error.
+
+[21]
+! Preview: Snippet 22 started.
+<-><->
+      
+l.51 ...brack G \right\rbrack^\ast $, denoted by $
+                                                  \ast$, as follows:  For $\...
+
+Not a real error.
+
+! Preview: Snippet 22 ended.(304925+0x327681).
+<-><->
+      
+l.51 ... G \right\rbrack^\ast $, denoted by $\ast$
+                                                  , as follows:  For $\alpha...
+
+Not a real error.
+
+[22]
+! Preview: Snippet 23 started.
+<-><->
+      
+l.51 ...t $, denoted by $\ast$, as follows:  For $
+                                                  \alpha, \beta \in K \left\...
+
+Not a real error.
+
+! Preview: Snippet 23 ended.(542949+163840x3812545).
+<-><->
+      
+l.51 ...a \in K \left\lbrack G \right\rbrack^\ast$
+                                                  :
+Not a real error.
+
+[23]
+! Preview: Snippet 24 started.
+<-><->
+      
+l.52 \begin{equation}
+                     
+Not a real error.
+
+! Preview: Snippet 24 ended.(655360+0x22609920).
+<-><->
+      
+l.54 \end{equation}
+                   
+Not a real error.
+
+[24]
+! Preview: Snippet 25 started.
+<-><->
+      
+l.55 More slowly: For $
+                       f \in K \left\lbrack G \right\rbrack$ we get $m^\ast ...
+
+Not a real error.
+
+! Preview: Snippet 25 ended.(491520+163840x2784453).
+<-><->
+      
+l.55 ...For $f \in K \left\lbrack G \right\rbrack$
+                                                   we get $m^\ast \left( f \...
+
+Not a real error.
+
+[25]
+! Preview: Snippet 26 started.
+<-><->
+      
+l.55 ...n K \left\lbrack G \right\rbrack$ we get $
+                                                  m^\ast \left( f \right) = ...
+
+Not a real error.
+
+! Preview: Snippet 26 ended.(491520+163840x5379900).
+<-><->
+      
+l.55 ...eft( f \right) = \Sigma_i g_i \otimes h_i$
+                                                   (with $g_i , h_i \in K \l...
+
+Not a real error.
+
+[26]
+! Preview: Snippet 27 started.
+<-><->
+      
+l.55 ...right) = \Sigma_i g_i \otimes h_i$ (with $
+                                                  g_i , h_i \in K \left\lbra...
+
+Not a real error.
+
+! Preview: Snippet 27 ended.(491520+163840x3810877).
+<-><->
+      
+l.55 ... , h_i \in K \left\lbrack G \right\rbrack$
+                                                  ), therefore the Kronecker...
+
+Not a real error.
+
+[27]
+! Preview: Snippet 28 started.
+<-><->
+      
+l.56 \begin{equation}
+                     
+Not a real error.
+
+! Preview: Snippet 28 ended.(655360+0x22609920).
+<-><->
+      
+l.58 \end{equation}
+                   
+Not a real error.
+
+[28]
+! Preview: Snippet 29 started.
+<-><->
+      
+l.59 As usual, we identify $
+                            K \otimes K$ with $K$ canonically.
+Not a real error.
+
+! Preview: Snippet 29 ended.(447828+54613x2007944).
+<-><->
+      
+l.59 As usual, we identify $K \otimes K$
+                                         with $K$ canonically.
+Not a real error.
+
+[29]
+! Preview: Snippet 30 started.
+<-><->
+      
+l.59 As usual, we identify $K \otimes K$ with $
+                                               K$ canonically.
+Not a real error.
+
+! Preview: Snippet 30 ended.(447828+0x603477).
+<-><->
+      
+l.59 As usual, we identify $K \otimes K$ with $K$
+                                                  canonically.
+Not a real error.
+
+[30]
+! Preview: Snippet 31 started.
+<-><->
+      
+l.81 \textbf{Claim:} The multiplication $
+                                         \ast$ makes $K \left\lbrack G \righ...
+
+Not a real error.
+
+! Preview: Snippet 31 ended.(304925+0x327681).
+<-><->
+      
+l.81 \textbf{Claim:} The multiplication $\ast$
+                                               makes $K \left\lbrack G \righ...
+
+Not a real error.
+
+[31]
+! Preview: Snippet 32 started.
+<-><->
+      
+l.81 ...{Claim:} The multiplication $\ast$ makes $
+                                                  K \left\lbrack G \right\rb...
+
+Not a real error.
+
+! Preview: Snippet 32 ended.(542949+163840x1893351).
+<-><->
+      
+l.81 ...akes $K \left\lbrack G \right\rbrack^\ast$
+                                                   into an associative algeb...
+
+Not a real error.
+
+[32]
+! Preview: Snippet 33 started.
+<-><->
+      
+l.81 ...ciative algebra with the neutral element $
+                                                   \epsilon := \epsilon_e$ (...
+
+Not a real error.
+
+! Preview: Snippet 33 ended.(282168+98303x1869296).
+<-><->
+      
+l.81 ... neutral element $ \epsilon := \epsilon_e$
+                                                   (Note: $\epsilon_\sigma \...
+
+Not a real error.
+
+[33]
+! Preview: Snippet 34 started.
+<-><->
+      
+l.81 ...element $ \epsilon := \epsilon_e$ (Note: $
+                                                  \epsilon_\sigma \left( f \...
+
+Not a real error.
+
+! Preview: Snippet 34 ended.(491520+163840x3911427).
+<-><->
+      
+l.81 ...left( f \right) = f \left( \sigma \right)$
+                                                  ).
+Not a real error.
+
+[34]
+! Preview: Snippet 35 started.
+<-><->
+      
+l.84 \begin{equation}
+                     
+Not a real error.
+
+! Preview: Snippet 35 ended.(655360+0x22609920).
+<-><->
+      
+l.86 \end{equation}
+                   
+Not a real error.
+
+[35]
+! Preview: Snippet 36 started.
+<-><->
+      
+l.87 This is true because $
+                           m$ (and $ \otimes $) is associative.
+Not a real error.
+
+! Preview: Snippet 36 ended.(282168+0x575415).
+<-><->
+      
+l.87 This is true because $m$
+                              (and $ \otimes $) is associative.
+Not a real error.
+
+[36]
+! Preview: Snippet 37 started.
+<-><->
+      
+l.87 This is true because $m$ (and $
+                                     \otimes $) is associative.
+Not a real error.
+
+! Preview: Snippet 37 ended.(382293+54613x509726).
+<-><->
+      
+l.87 This is true because $m$ (and $ \otimes $
+                                              ) is associative.
+Not a real error.
+
+[37]
+! Preview: Snippet 38 started.
+<-><->
+      
+l.88 Then, for $
+                \delta, \gamma, \varphi \in K \left\lbrack G \right\rbrack^\...
+
+Not a real error.
+
+! Preview: Snippet 38 ended.(542949+163840x4360965).
+<-><->
+      
+l.88 ...i \in K \left\lbrack G \right\rbrack^\ast$
+                                                  :
+Not a real error.
+
+[38]
+! Preview: Snippet 39 started.
+<-><->
+      
+l.89 \begin{equation}
+                     
+Not a real error.
+
+! Preview: Snippet 39 ended.(1769472+0x22609920).
+<-><->
+      
+l.98 \end{equation}
+                   
+Not a real error.
+
+[39]
+! Preview: Snippet 40 started.
+<-><->
+      
+l.101 Also, it should be clear that $
+                                     \epsilon$ is the neutral element.
+Not a real error.
+
+! Preview: Snippet 40 ended.(282168+0x266013).
+<-><->
+      
+l.101 Also, it should be clear that $\epsilon$
+                                               is the neutral element.
+Not a real error.
+
+[40]
+! Preview: Snippet 41 started.
+<-><->
+      
+l.102 This concludes that $
+                           K \left\lbrack G \right\rbrack^\ast$ is an associ...
+
+Not a real error.
+
+! Preview: Snippet 41 ended.(542949+163840x1893351).
+<-><->
+      
+l.102 ...hat $K \left\lbrack G \right\rbrack^\ast$
+                                                   is an associative algebra...
+
+Not a real error.
+
+[41]
+! Preview: Snippet 42 started.
+<-><->
+      
+l.106   Let $
+             V$ be a vector space (not necessarily finite dimensional), and ...
+
+Not a real error.
+
+! Preview: Snippet 42 ended.(447828+0x527929).
+<-><->
+      
+l.106   Let $V$
+                be a vector space (not necessarily finite dimensional), and ...
+
+Not a real error.
+
+[42]
+! Preview: Snippet 43 started.
+<-><->
+      
+l.106 ...ot necessarily finite dimensional), and $
+                                                   \mu : G \times V \longrig...
+
+Not a real error.
+
+! Preview: Snippet 43 ended.(447828+127431x4733078).
+<-><->
+      
+l.106 ...nd $ \mu : G \times V \longrightarrow V $
+                                                   an action.
+Not a real error.
+
+[43]
+! Preview: Snippet 44 started.
+<-><->
+      
+l.107   We call $
+                  \mu $ \textbf{rational} iff there exists a linear map $ \m...
+
+Not a real error.
+
+! Preview: Snippet 44 ended.(282168+127431x394886).
+<-><->
+      
+l.107   We call $ \mu $
+                        \textbf{rational} iff there exists a linear map $ \m...
+
+Not a real error.
+
+[44]
+! Preview: Snippet 45 started.
+<-><->
+      
+l.107 ...rational} iff there exists a linear map $
+                                                   \mu^\ast : V \longrightar...
+
+Not a real error.
+
+! Preview: Snippet 45 ended.(491520+163840x6001929).
+<-><->
+      
+l.107 ...\ast : V \longrightarrow K[G] \otimes V $
+                                                   such that $ \mu \left( \s...
+
+Not a real error.
+
+[45]
+! Preview: Snippet 46 started.
+<-><->
+      
+l.107 ...ngrightarrow K[G] \otimes V $ such that $
+                                                   \mu \left( \sigma , v \ri...
+
+Not a real error.
+
+! Preview: Snippet 46 ended.(491520+163840x8142431).
+<-><->
+      
+l.107 ...) \circ \mu^\ast \right) \left(v\right) $
+                                                  .
+Not a real error.
+
+[46]
+! Preview: Snippet 47 started.
+<-><->
+      
+l.110 \textit{Proof:} Let $
+                           \{ v_1 , \ldots , v_N \}$ be a basis of $V$.
+Not a real error.
+
+! Preview: Snippet 47 ended.(491520+163840x3538119).
+<-><->
+      
+l.110 ...it{Proof:} Let $\{ v_1 , \ldots , v_N \}$
+                                                   be a basis of $V$.
+Not a real error.
+
+[47]
+! Preview: Snippet 48 started.
+<-><->
+      
+l.110 ...\{ v_1 , \ldots , v_N \}$ be a basis of $
+                                                  V$.
+Not a real error.
+
+! Preview: Snippet 48 ended.(447828+0x527929).
+<-><->
+      
+l.110 ... v_1 , \ldots , v_N \}$ be a basis of $V$
+                                                  .
+Not a real error.
+
+[48]
+! Preview: Snippet 49 started.
+<-><->
+      
+l.111 ...l representation, therefore there exist $
+                                                  p_{i,j} \in K \left\lbrack...
+
+Not a real error.
+
+! Preview: Snippet 49 ended.(491520+187504x3339991).
+<-><->
+      
+l.111 ...{i,j} \in K \left\lbrack G \right\rbrack$
+                                                   such that $\mu\left( \sig...
+
+Not a real error.
+
+[49]
+! Preview: Snippet 50 started.
+<-><->
+      
+l.111 ...\left\lbrack G \right\rbrack$ such that $
+                                                  \mu\left( \sigma, v_j \rig...
+
+Not a real error.
+
+! Preview: Snippet 50 ended.(551306+187504x7462408).
+<-><->
+      
+l.111 ...{N} p_{i,j}\left(\sigma\right) \cdot v_i$
+                                                  .
+Not a real error.
+
+[50]
+! Preview: Snippet 51 started.
+<-><->
+      
+l.112 Define $
+              \mu^\ast \left( v_j \right) := \Sigma_{i=1}^{N} p_{i,j} \otime...
+
+Not a real error.
+
+! Preview: Snippet 51 ended.(551306+187504x6603620).
+<-><->
+      
+l.112 ... := \Sigma_{i=1}^{N} p_{i,j} \otimes v_i$
+                                                  .
+Not a real error.
+
+[51]
+! Preview: Snippet 52 started.
+<-><->
+      
+l.114 \begin{equation}
+                      
+Not a real error.
+
+! Preview: Snippet 52 ended.(5611965+0x22609920).
+<-><->
+      
+l.122 \end{equation}
+                    
+Not a real error.
+
+[52]
+! Preview: Snippet 53 started.
+<-><->
+      
+l.126 Now, with this $
+                      \mu^\ast$, we can extend the operation from $\{\ \epsi...
+
+Not a real error.
+
+! Preview: Snippet 53 ended.(451272+127431x696170).
+<-><->
+      
+l.126 Now, with this $\mu^\ast$
+                               , we can extend the operation from $\{\ \epsi...
+
+Not a real error.
+
+[53]
+! Preview: Snippet 54 started.
+<-><->
+      
+l.126 ...\ast$, we can extend the operation from $
+                                                  \{\ \epsilon_\sigma \mid \...
+
+Not a real error.
+
+! Preview: Snippet 54 ended.(491520+163840x3971582).
+<-><->
+      
+l.126 ...\ \epsilon_\sigma \mid \sigma \in G \}\ $
+                                                   to $K \left\lbrack G \rig...
+
+Not a real error.
+
+[54]
+! Preview: Snippet 55 started.
+<-><->
+      
+l.126 ...silon_\sigma \mid \sigma \in G \}\ $ to $
+                                                  K \left\lbrack G \right\rb...
+
+Not a real error.
+
+! Preview: Snippet 55 ended.(542949+163840x1893351).
+<-><->
+      
+l.126 ... to $K \left\lbrack G \right\rbrack^\ast$
+                                                  , defining an action $K \l...
+
+Not a real error.
+
+[55]
+! Preview: Snippet 56 started.
+<-><->
+      
+l.126 ...\right\rbrack^\ast$, defining an action $
+                                                  K \left\lbrack G \right\rb...
+
+Not a real error.
+
+! Preview: Snippet 56 ended.(542949+163840x5170142).
+<-><->
+      
+l.126 ...t\rbrack^\ast \times V \longrightarrow V$
+                                                  :
+Not a real error.
+
+[56]
+! Preview: Snippet 57 started.
+<-><->
+      
+l.127 \begin{equation}
+                      
+Not a real error.
+
+! Preview: Snippet 57 ended.(655360+0x22609920).
+<-><->
+      
+l.129 \end{equation}
+                    
+Not a real error.
+
+[57]  !name(roughdraft.tex) !offset(-52)  ) 
 Here is how much of TeX's memory you used:
  1392 strings out of 491214
  20570 string characters out of 6113381
- 106510 words of memory out of 5000000
+ 110510 words of memory out of 5000000
  6688 multiletter control sequences out of 15000+600000
  7422 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,5n,27p,271b,114s stack positions out of 5000i,2500n,10000p,300000b,80000s
-</usr/local/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb></usr/local/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi7.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
-sr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on _region_.pdf (3 pages, 54664 bytes).
+ 51i,13n,27p,371b,170s stack positions out of 5000i,2500n,10000p,300000b,80000s
+</usr/local/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb></usr/local/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi5.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on _region_.pdf (57 pages, 87854 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
+ 221 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
