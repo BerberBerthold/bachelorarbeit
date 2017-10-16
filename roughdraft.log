@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.6.13)  5 OCT 2017 08:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  10 OCT 2017 18:54
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -150,7 +150,11 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \c@remark=\count105
 \c@cremark=\count106
 
-(./roughdraft.aux)
+(./roughdraft.aux
+
+LaTeX Warning: Label `unique' multiply defined.
+
+)
 \openout1 = `roughdraft.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -167,6 +171,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
  (/usr/local/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/local/share/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
@@ -284,32 +289,42 @@ Overfull \hbox (35.136pt too wide) detected at line 38
 [] []
  []
 
-[6] [7]) (./test.tex [8]) (./roughdraft.bbl) [9] (./roughdraft.aux) ) 
+[6] [7]
+Overfull \hbox (19.06372pt too wide) in paragraph at lines 132--137
+[][]\OT1/cmr/m/n/10 First, we will show $\OML/cmm/m/it/10 K [][] \OT1/cmr/m/n/1
+0 = \OML/cmm/m/it/10 K []$\OT1/cmr/m/n/10 . Let $\OML/cmm/m/it/10 g \OMS/cmsy/m
+/n/10 2 \OML/cmm/m/it/10 K [][]$\OT1/cmr/m/n/10 ,
+ []
+
+[8]) (./test.tex) (./roughdraft.bbl) [9] (./roughdraft.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3138 strings out of 493093
- 43077 string characters out of 6138120
- 113658 words of memory out of 5000000
- 6560 multiletter control sequences out of 15000+600000
+ 3139 strings out of 493093
+ 43085 string characters out of 6138120
+ 114709 words of memory out of 5000000
+ 6561 multiletter control sequences out of 15000+600000
  14036 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,14n,27p,559b,199s stack positions out of 5000i,2500n,10000p,300000b,80000s
-</usr/loca
-l/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi5.pfb></usr/local/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi7.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy5.pfb></usr/local/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmti10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msbm10.pfb>
-Output written on roughdraft.pdf (9 pages, 207264 bytes).
+</usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb></usr/local/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/
+local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmti10.pfb></usr/local/share/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msbm10.pfb>
+Output written on roughdraft.pdf (9 pages, 209710 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream

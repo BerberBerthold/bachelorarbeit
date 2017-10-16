@@ -76,19 +76,19 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
   \begin{equation}
     R \left( f \right) := \frac{\Omega^p \tilde{f}}{c_{p,n}}
   \end{equation}
-  The linear extension of this (mapping anything else in $K \left\lbrack GL_n \right\rbrack$ to zero), defines a (the) Reynolds Operator of $GL_n$.
+  The linear extension of this (mapping anything else in $K \left\lbrack \operatorname{GL}_n \right\rbrack$ to zero), defines the Reynolds Operator $R_{\operatorname{GL}_n}$.
 \end{theorem}
 
 \begin{proof}
   First, check that this is well defined:
   For any such term, expanding the fraction by $ \operatorname{det} (Z)^q $ will yield the same result.
   Also, $\Omega^p$ is linear for any $p \in \mathbb{N}$.
-  Now we show that $R$ is $GL_n$-invariant.
+  Now we show that $R$ is $\operatorname{GL}_n$-invariant.
   First, I will introduce a notation:
-  For $f \in K \left\lbrack GL_n \right\rbrack $ and $\alpha \in GL_n$, define $ \alpha \dot{\phantom{.}} f := \left( x \mapsto f \left( x \alpha^{-1} \right) \right) $.
+  For $f \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ and $\alpha \in \operatorname{GL}_n$, define $ \alpha \dot{\phantom{.}} f := \left( x \mapsto f \left( x \alpha^{-1} \right) \right) $.
   This is \textit{not} an action, but a right action (normal actions should be called ``left actions'').
-  Let $p \in \mathbb{N}$, $ \tilde{f} \in K \left\lbrack GL_n \right\rbrack_{pn} $ and $ f := \frac{\tilde{f}}{\operatorname{det}(Z)^p} $.
-  For $ \beta , \gamma \in GL_n $, we notice
+  Let $p \in \mathbb{N}$, $ \tilde{f} \in K \left\lbrack \operatorname{GL}_n \right\rbrack_{pn} $ and $ f := \frac{\tilde{f}}{\operatorname{det}(Z)^p} $.
+  For $ \beta , \gamma \in \operatorname{GL}_n $, we notice
   \begin{equation}
     \begin{aligned}
       R \left( \beta . f \right) (\gamma)
@@ -101,8 +101,8 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
       = R \left( \gamma^{-1} \dot{\phantom{.}} f \right) \left( \beta^{-1} \right)
     \end{aligned}
   \end{equation}
-  Since each $ \frac {\partial}{ \partial Z_{i,j} } $ lowers the degree of a monomial by one or maps it to zero, $R$ maps to $K$, and therefore for $ \delta \in GL_n $ and $ g \in K \left\lbrack GL_n \right\rbrack $ we have $ R(g)(\delta) = R(g) \in K $.
-  We then get for all $ \alpha \in GL_n $
+  Since each $ \frac {\partial}{ \partial Z_{i,j} } $ lowers the degree of a monomial by one or maps it to zero, $R$ maps to $K$, and therefore for $ \delta \in \operatorname{GL}_n $ and $ g \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ we have $ R(g)(\delta) = R(g) \in K $.
+  We then get for all $ \alpha \in \operatorname{GL}_n $
   \begin{equation}
     \begin{aligned}
       R \left( \alpha . f \right)
@@ -113,8 +113,38 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
       = R (f)
   \end{aligned}
   \end{equation}
-  which shows the $GL_n$-invariance.
-  Finally, the definition immediately gives us that $R$ restricted to $K$ is the identity.
+  which shows the $\operatorname{GL}_n$-invariance.
+  Finally, the definition immediately gives us that $R$ restricted to $K$ is the identity.  As mentioned in \ref{unique}, the uniqueness of the Reynolds Operator implies $ R = R_{\operatorname{GL}_n} $.
+\end{proof}
+
+Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
+
+\begin{corollary}
+  With the convention of $ K \left\lbrack \operatorname{GL}_n \right\rbrack = K \left\lbrack \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} , \operatorname{det} (Z) ^{-1} \right\rbrack $, view $ K \left\lbrack \operatorname{SL}_n \right\rbrack = K \left\lbrack \operatorname{GL}_n \right\rbrack / I $ where $ I = \left( \operatorname{det} (Z) -1 \right) $.
+  Now, for $ p \in \mathbb{N} $ and $ \tilde{f} \in K \left\lbrack \left\{ Z_{i,j} \right\}_{k,l \in \lceil n \rceil} \right\rbrack_{pn} $ define for $ f = \frac{\tilde{f}}{\operatorname{det}(Z)^p} $:
+  \begin{equation}
+    R \left( f \right) := \frac{\Omega^p \tilde{f}}{c_{p,n}} + I
+  \end{equation}
+  The linear extension of this (mapping anything else in $K \left\lbrack \operatorname{SL}_n \right\rbrack$ to zero), defines the Reynolds Operator $R_{\operatorname{SL}_n}$.
+\end{corollary}
+
+\begin{proof}
+  First, we will show $ K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} = K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $ (action by left multiplication).
+  Let $g \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{ \operatorname{SL}_n }$, and let $ \alpha \in \operatorname{GL}_n $.
+  Note that $ \frac{1}{n \operatorname{det} (\alpha)} \alpha \in \operatorname{SL}_n $.
+  Define $ h := \beta \mapsto g \left( n \operatorname{det} (\beta) I_n \right) \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
+  Now
+  \begin{equation}
+    \begin{aligned}
+      g ( \alpha )
+      = \left( \frac{1}{n \operatorname{det} (\alpha)} \alpha \right) . g \, (\alpha)
+      = g \left( n \operatorname{det} (\alpha) \alpha ^{-1} \alpha \right) \\
+      = g \left( n \operatorname{det} (\alpha) I_n \right)
+      = h (\alpha)
+    \end{aligned}
+  \end{equation}
+  Therefore $ g = h \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
+  Conversely it is easy to see that $ K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack \subseteq K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n } $.
 \end{proof}
 
 %%% Local Variables:
