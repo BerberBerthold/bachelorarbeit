@@ -3,9 +3,11 @@
  (lambda ()
    (TeX-run-style-hooks
     "latex2e"
+    "introduction"
     "prework"
     "reynolds"
     "prozess"
+    "examples"
     "article"
     "art10"
     "amssymb"
@@ -13,6 +15,8 @@
     "amsthm"
     "cite"
     "mathtools")
+   (LaTeX-add-labels
+    "pw")
    (LaTeX-add-bibliographies)
    (LaTeX-add-amsthm-newtheorems
     "theorem"
@@ -21,7 +25,9 @@
     "proposition"
     "corollary"
     "remark"
-    "cremark")
+    "cremark"
+    "example"
+    "dexample")
    (LaTeX-add-amsthm-newtheoremstyles
     "prrt"))
  :latex)

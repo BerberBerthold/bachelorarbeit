@@ -2,6 +2,7 @@
  "reynolds"
  (lambda ()
    (LaTeX-add-labels
-    "unique"))
+    "unique"
+    "da"))
  :latex)
 

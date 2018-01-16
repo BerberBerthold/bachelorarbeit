@@ -4,9 +4,9 @@
 \end{definition}
 
 \begin{remark}\label{unique}
-  If a Reynolds Operator exists, it is unique (\textbf{??}).
+  If a Reynolds Operator exists, it is unique (?).
   See \cite[p.39f]{DK15}: In the proof of the equivalences, in the step ``(b)$\implies$(c)'', only the existence of the Reynolds operator is needed.
-  Therefore, the existence of the Reynolds Operator already implies its uniqueness (\textbf{??}).
+  Therefore, the existence of the Reynolds Operator already implies its uniqueness (?).
 \end{remark}
 
 \begin{definition}[linearly reductive]
@@ -18,17 +18,19 @@
   We will prove that this is in fact equivalent.
 \end{remark}
 
-Now we want to define an algebra structure on bla and an action bla.
+Now we want to define an algebra structure on bla $K[G]$.
 
-Define the multiplication on $ K \left\lbrack G \right\rbrack^\ast $, denoted by $\ast$, as follows:  For $\alpha, \beta \in K \left\lbrack G \right\rbrack^\ast$:  
-\begin{equation}
-  \alpha \ast \beta := \left( \alpha \otimes \beta \right) \circ m^\ast
-\end{equation}
-More slowly: For $f \in K \left\lbrack G \right\rbrack$ we get $m^\ast \left( f \right) = \Sigma_i g_i \otimes h_i$ (with $g_i , h_i \in K \left\lbrack G \right\rbrack$), therefore the Kronecker-product gives us
-\begin{equation}
-  \left( \alpha \ast \beta \right) \left( f \right) = \Sigma_i \alpha \left( g_i \right) \otimes \beta \left( h_i \right) = \Sigma_i \alpha \left( g_i \right) \beta \left( h_i \right)
-\end{equation}
-As usual, we identify $K \otimes K$ with $K$ canonically.  
+\begin{definition}
+  Define the multiplication on $ K \left\lbrack G \right\rbrack^\ast $, denoted by $\ast$, as follows:  For $\alpha, \beta \in K \left\lbrack G \right\rbrack^\ast$:  
+  \begin{equation}
+    \alpha \ast \beta := \left( \alpha \otimes \beta \right) \circ m^\ast
+  \end{equation}
+  More slowly: For $f \in K \left\lbrack G \right\rbrack$ we get $m^\ast \left( f \right) = \Sigma_i g_i \otimes h_i$ (with $g_i , h_i \in K \left\lbrack G \right\rbrack$), therefore the Kronecker-product gives us
+  \begin{equation}
+    \left( \alpha \ast \beta \right) \left( f \right) = \Sigma_i \alpha \left( g_i \right) \otimes \beta \left( h_i \right) = \Sigma_i \alpha \left( g_i \right) \beta \left( h_i \right)
+  \end{equation}
+  As usual, we identify $K \otimes K$ with $K$ canonically.  
+\end{definition}
 % % BEGIN COMPLETE UTTER BULLSHIT PLEASE DON'T READ
 %
 % Let us look at this more concretely.
@@ -49,36 +51,89 @@ As usual, we identify $K \otimes K$ with $K$ canonically.
 
 \textbf{Example:} TODO
 
-\smallskip
-\textbf{Claim:} The multiplication $\ast$ makes $K \left\lbrack G \right\rbrack^\ast$ into an associative algebra with the neutral element $ \epsilon := \epsilon_e$ (Note: $\epsilon_\sigma \left( f \right) = f \left( \sigma \right)$).
+\begin{proposition}
+The multiplication $\ast$ makes $K \left\lbrack G \right\rbrack^\ast$ into an associative algebra with the neutral element $ \epsilon := \epsilon_e$ (Note: $\epsilon_\sigma \left( f \right) = f \left( \sigma \right)$).
+\end{proposition}
 
-\textit{Proof:} First, a small observation:
-\begin{equation}
-  \left(m^\ast \otimes \operatorname{id} \right) \circ m^\ast = \left( \operatorname{id} \otimes m^\ast \right) \circ m^\ast
-\end{equation}
-This is true because $m$ (and $ \otimes $) is associative.
-Then, for $\delta, \gamma, \varphi \in K \left\lbrack G \right\rbrack^\ast$:
-\begin{equation}
-  \begin{aligned}
-  \left( \delta \ast \gamma \right) \ast \varphi
-  = \left( \left( \left( \delta \otimes \gamma \right) \circ m^\ast \right) \otimes \varphi \right) \circ m^\ast
-  = \left( \delta \otimes \gamma \otimes \varphi \right) \circ \left( m^\ast \otimes \operatorname{id} \right) \circ m^\ast \\
-  = \left( \delta \otimes \gamma \otimes \varphi \right) \circ \left( \operatorname{id} \otimes m^\ast \right) \circ m^\ast
-  = \left( \delta \otimes \left( \left( \gamma \otimes \varphi \right) \circ m^\ast \right) \right) \circ m^\ast
-  = \delta \ast \left( \gamma \ast \varphi \right)
-  \end{aligned}
-\end{equation}
-showing the associativity.
-The second equation is easily checked (rewrite as described in the beginning of chapter 3).
-Also, it should be clear that $\epsilon$ is the neutral element.
-This concludes that $K \left\lbrack G \right\rbrack^\ast$ is an associative algebra, \textit{which was to show}.
+\begin{proof}
+  First, a small observation:
+  \begin{equation}
+    \left(m^\ast \otimes \operatorname{id} \right) \circ m^\ast = \left( \operatorname{id} \otimes m^\ast \right) \circ m^\ast
+  \end{equation}
+  This is true because $m$ (and $ \otimes $) is associative.
+  Then, for $\delta, \gamma, \varphi \in K \left\lbrack G \right\rbrack^\ast$:
+  \begin{equation}
+    \begin{aligned}
+      \left( \delta \ast \gamma \right) \ast \varphi
+      = \left( \left( \left( \delta \otimes \gamma \right) \circ m^\ast \right) \otimes \varphi \right) \circ m^\ast
+      = \left( \delta \otimes \gamma \otimes \varphi \right) \circ \left( m^\ast \otimes \operatorname{id} \right) \circ m^\ast \\
+      = \left( \delta \otimes \gamma \otimes \varphi \right) \circ \left( \operatorname{id} \otimes m^\ast \right) \circ m^\ast
+      = \left( \delta \otimes \left( \left( \gamma \otimes \varphi \right) \circ m^\ast \right) \right) \circ m^\ast
+      = \delta \ast \left( \gamma \ast \varphi \right)
+    \end{aligned}
+  \end{equation}
+  showing the associativity.
+  The second equation is easily checked %(rewrite as described in the beginning of chapter \ref{pw})
+  .
+  Also, it should be clear that $\epsilon$ is the neutral element.
+  This concludes that $K \left\lbrack G \right\rbrack^\ast$ is an associative algebra.
+\end{proof}
 
-Now, with this $\mu^\ast$, we can extend the operation from $\{\, \epsilon_\sigma \mid \sigma \in G \, \} $ to $K \left\lbrack G \right\rbrack^\ast$, defining an action $K \left\lbrack G \right\rbrack^\ast \times V \longrightarrow V$:
-\begin{equation}
-  \delta \cdot v := \left(\left( \delta \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v\right)
+Now we can formally define $K [G]^\ast$-actions.
+
+\begin{definition}\label{da}
+  Let $G$ act regularly on a vectorspace $V$ via $\mu$, from which we retrieve $\mu^\ast$ as described in definition \ref{rr}.  $K[G]^\ast$ then acts on $V$ as follows:
+  \begin{equation}
+    \delta \cdot v := \left(\left( \delta \otimes \operatorname{id} \right) \circ \mu^\prime \right) \left(v\right)
+  \end{equation}
+\end{definition}
+
+\begin{remark}
+  If we look at definition \ref{rr}, we can see that this newly defined $K[G]^\ast$-action is an extension of the given $G$-action in the following way:
+  The subgroup $\left\{\, \epsilon_\sigma \mid \sigma \in G \,\right\}$ of $K[G]^\ast$ is isomorphic to $G$, and its induced action coincides with the given action:
+  For $\sigma \in G$ and for $v \in V$ we have:
+  \begin{equation}
+    \sigma . v = \epsilon_\sigma \cdot v
+  \end{equation}
+\end{remark}
+
+\begin{remark}
+  The subalgebra
+  \begin{equation}
+    \left\{\, \delta \in K[G]^\ast \mid \forall f,g \in K[G] : \delta (fg) = \delta (f) g(e) + f(e)\delta (g) \,\right\}
+  \end{equation}
+  is called the \textbf{Lie algebra}.
+\end{remark}
+
+\begin{proposition}
+  Let $G$ be linearly reductive, and let $G$ act regularly on an affine variety $X$, which induces a rational $G$-action on $K[X]$ (maybe prove this? easy...).
+  Then, the following the map
+  \begin{align}
+    R \colon K[X] \longrightarrow K[X]^G && f \mapsto R_G \cdot f
+  \end{align}
+  defines a Reynolds operator.
+\end{proposition}
+
+\begin{proof}
+  As per our construction from definition \ref{da}, the linearity of this map should be clear.
+  Let us now check that $R$ does map polynomials to invariant polynomials.
+  For this, let $f \in K[X]$, $\sigma \in G$ and $x \in X$.
+  Write $\mu^\prime (f) = \Sigma_i p_i \otimes g_i \in K[G] \otimes K[X] $.
+  Now we compute:
+  \begin{equation}
+    \begin{aligned}
+      &\sigma . \left( R_G \cdot f \right) (x)
+      &=& \left( R_G \otimes id \right) \left( \mu^\prime(f) \right) \left( \sigma^{-1}.x \right) \\
+      &&=& \Sigma_i R_G \left( p_i \right)  g_i \left( \sigma^{-1} . x \right) \\
+      &&=& \Sigma_i R_G (p_i) \cdot (\sigma . g_i) (x)\\
+      &&=& \Sigma_i R_G (\sigma \dot{\phantom{.}} p_i) \cdot (\sigma.g_i) (x)\\
+      &&=&(R_G \otimes \operatorname{id}) \left( \Sigma_i \sigma \dot{\phantom{.}} p_i \otimes \sigma.g_i \right) (x) \\ 
+      &&=& 
+    \end{aligned}
 \end{equation}
 
-Now here blibla show that reynolds operator exists always blabla
+  not done yet pls finish
+\end{proof}
 
 then show lemmas and hilberts finiteness theorem...
 

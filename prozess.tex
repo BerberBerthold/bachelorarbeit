@@ -10,7 +10,7 @@ The coordinate ring $K\left\lbrack \operatorname{GL}_n\right\rbrack$ is isomorph
     \Omega := \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{ i \in \lceil n \rceil } \frac{\partial}{\partial z_{i , \sigma \left( i \right)}}
   \end{equation}
 \end{definition}
-the \textbf{Cayley's $\Omega$-Process}.
+\textbf{Cayley's $\Omega$-Process}.
 It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial}{\partial Z} \right) $, where $\frac{\partial}{\partial Z} := \left\lbrack \frac{\partial}{\partial z_{i,j}} \right\rbrack_{i,j \in \lceil n \rceil} $.
 
 \begin{lemma}
@@ -19,7 +19,7 @@ It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial
     = m^\ast \circ \Omega
     = \left( \Omega \otimes \operatorname{det} \left( Z \right) ^{-1} \cdot \right) \circ m^\ast
   \end{equation}
-  where I write ``$ p \cdot $'' for the operation \textit{multiply with $ p $} for a polynomial $ p \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ (but don't worry, this is the only time I will make use of this notation).
+  where I write ``$ p \cdot $'' for the operation \textit{multiply with $ p $} for a polynomial $ p \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ (but the reader must not worry, this is the only time I will make use of this notation).
 \end{lemma}
 
 \begin{proof}
@@ -63,12 +63,11 @@ It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial
     \Omega^p \left( \operatorname{det} (Z)^p \right)
     = \Sigma_i a_i m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( \Sigma_j a_j m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right)
 \end{equation}
-Notice that $ m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $. Therefore
+Notice that $ m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $. Therefore in particular
 \begin{equation}
   c_{p,n}
   = \sum_i a_i^2 m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) \in \mathbb{N}_{>0}
 \end{equation}
-in particular $c_{p,n} \neq 0$.
 \end{proof}
 Now, finally, we have the tools to see the following way of expressing the Reynolds Operator.
 \begin{theorem}
@@ -85,7 +84,7 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
   Also, $\Omega^p$ is linear for any $p \in \mathbb{N}$.
   Now we show that $R$ is $\operatorname{GL}_n$-invariant.
   First, I will introduce a notation:
-  For $f \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ and $\alpha \in \operatorname{GL}_n$, define $ \alpha \dot{\phantom{.}} f := \left( x \mapsto f \left( x \alpha^{-1} \right) \right) $.
+  For $f \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ and $\alpha \in \operatorname{GL}_n$, define $ \alpha \dot{\phantom{.}} f := \left( x \mapsto f \left( x \alpha^{-1} \right) \right) $ (again, I assure the reader that this proof contains the only occurence of this notation).
   This is \textit{not} an action, but a right action (normal actions should be called ``left actions'').
   Let $p \in \mathbb{N}$, $ \tilde{f} \in K \left\lbrack \operatorname{GL}_n \right\rbrack_{pn} $ and $ f := \frac{\tilde{f}}{\operatorname{det}(Z)^p} $.
   For $ \beta , \gamma \in \operatorname{GL}_n $, we notice
@@ -106,9 +105,9 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
   \begin{equation}
     \begin{aligned}
       R \left( \alpha . f \right)
-      = R \left( \alpha . f \right) \left( I_n \right)
+      &= R \left( \alpha . f \right) \left( I_n \right)
       = R \left( I_n^{-1} \dot{\phantom{.}} f \right) \left( \alpha^{-1} \right) \\
-      = R \left( I_n^{-1} \dot{\phantom{.}} f \right)
+     & = R \left( I_n^{-1} \dot{\phantom{.}} f \right)
       = R \left( I_n \dot{\phantom{.}} f \right) 
       = R (f)
   \end{aligned}
@@ -120,10 +119,12 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
 Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
 
 \begin{corollary}
-  With the convention of $ K \left\lbrack \operatorname{GL}_n \right\rbrack = K \left\lbrack \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} , \operatorname{det} (Z) ^{-1} \right\rbrack $, view $ K \left\lbrack \operatorname{SL}_n \right\rbrack = K \left\lbrack \operatorname{GL}_n \right\rbrack / I $ where $ I = \left( \operatorname{det} (Z) -1 \right) $.
+  With the identification $ K \left\lbrack \operatorname{GL}_n \right\rbrack = K \left\lbrack \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} , \operatorname{det} (Z) ^{-1} \right\rbrack $, view $ K \left\lbrack \operatorname{SL}_n \right\rbrack = K \left\lbrack \operatorname{GL}_n \right\rbrack / I $ where $ I = \left( \operatorname{det} (Z) -1 \right) $.
   Now, for $ p \in \mathbb{N} $ and $ \tilde{f} \in K \left\lbrack \left\{ Z_{i,j} \right\}_{k,l \in \lceil n \rceil} \right\rbrack_{pn} $ define for $ f = \frac{\tilde{f}}{\operatorname{det}(Z)^p} + I $:
   \begin{equation}
-    R \left( f \right) := \frac{\Omega^p \tilde{f}}{c_{p,n}} + I
+    R \left( f \right)
+    := R_{\operatorname{GL}_n} \left( \frac{\tilde{f}}{\operatorname{det}(Z)^p} \right) + I
+    = \frac{\Omega^p \tilde{f}}{c_{p,n}} + I
   \end{equation}
   The linear extension of this (mapping anything else in $K \left\lbrack \operatorname{SL}_n \right\rbrack$ to zero), defines the Reynolds Operator $R_{\operatorname{SL}_n}$, making $\operatorname{SL}_n$ \textit{linearly reductive}.
 \end{corollary}
@@ -131,22 +132,23 @@ Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
 \begin{proof}
   First, we will show $ K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} = K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $ (action by left multiplication).
   Let $g \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{ \operatorname{SL}_n }$, and let $ \alpha \in \operatorname{GL}_n $.
-  Note that $ \frac{1}{n \operatorname{det} (\alpha)} \alpha \in \operatorname{SL}_n $.
-  Define $ h := \left( \beta \mapsto g \left( n \operatorname{det} (\beta) I_n \right) \right) \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
+  Now for $x \in K \setminus \{0\}$, define $M(z) = [z_{i,j}]_{i,j \in [n]} \in \operatorname{GL}_n$ to be the matrix with $z_{1,1} = z$ and $z_{i,j} = \delta_{i,j}$ for $(i,j) \neq (1,1)$.
+  Note that $M \left( \operatorname{det}(\alpha) \right)^{-1} \alpha \in \operatorname{SL}_n$.
+  Define $ h := \left( \beta \mapsto g \left( M(\operatorname{det}(\beta)) \right) \right) \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
   Now
   \begin{equation}
     \begin{aligned}
       g ( \alpha )
-      = \left( \frac{1}{n \operatorname{det} (\alpha)} \alpha \right) . g \, (\alpha)
-      = g \left( n \operatorname{det} (\alpha) \alpha ^{-1} \alpha \right) \\
-      = g \left( n \operatorname{det} (\alpha) I_n \right)
+      = \left( M \left( \operatorname{det}(\alpha) \right)^{-1} \alpha \right) . g \, (\alpha)
+      = g \left( M \left( \operatorname{det}(\alpha) \right) \alpha ^{-1} \alpha \right) \\
+      = g \left( M \left( \operatorname{det}(\alpha) \right) \right)
       = h (\alpha)
     \end{aligned}
   \end{equation}
   Therefore $ g = h \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
   Conversely it is easy to see that $ K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack \subseteq K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n } $.
 
-  Now, define $\hat{R} \colon K \left\lbrack \operatorname{GL}_n \right\rbrack \longrightarrow \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $ as follows: \\
+  Now, define $\hat{R} \colon K \left\lbrack \operatorname{GL}_n \right\rbrack \longrightarrow K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $ as follows: \\
   For $ p,r \in \mathbb{N} $, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in \lceil n \rceil} \right\rbrace \right\rbrack_{rn} $, and $ f = \frac{\tilde{f}}{\operatorname{det} (Z)^p } $, define
   \begin{equation}
     \hat{R} (f) := \operatorname{det} (Z)^{r-p} \cdot \frac{ \Omega^r \tilde{f} }{ c_{r,n} }
@@ -163,11 +165,11 @@ Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
   \begin{equation}
     \begin{aligned}
       \hat{R} (\alpha . f)
-      = \hat{R} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det} (Z)^p } \right) 
-      = \operatorname{det} (Z)^{r-p} \cdot \hat{R}_{\operatorname{GL}_n} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det}(Z)^r } \right) \\
-      = \operatorname{det} (Z)^{r-p} \cdot \hat{R}_{\operatorname{GL}_n} \left( \frac{ \operatorname{det} (\alpha)^r \cdot \alpha . \tilde{f} }{ \operatorname{det}(Z)^r } \right) \\
-      = \operatorname{det} (Z)^{r-p} \cdot \hat{R}_{\operatorname{GL}_n} \left( \alpha . \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right) \right) \\
-      = \operatorname{det} (Z)^{r-p} \cdot \hat{R}_{\operatorname{GL}_n} \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right)
+      &= \hat{R} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det} (Z)^p } \right) 
+      = \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det}(Z)^r } \right) \\
+      &= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{ \operatorname{det} (\alpha)^r \cdot \alpha . \tilde{f} }{ \operatorname{det}(Z)^r } \right) \\
+      &= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \alpha . \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right) \right) \\
+      &= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right)
       = \hat{R} (f)
     \end{aligned}
   \end{equation}
