@@ -21,7 +21,7 @@ It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial
   \end{equation}
   where I write ``$ p \cdot $'' for the operation \textit{multiply with $ p $} for a polynomial $ p \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ (but don't worry, this is the only time I will make use of this notation).
 \end{lemma}
-a
+
 \begin{proof}
   Here, we will follow the same convention as described in chapter 3: The ``left'' and ``right'' inputs of $ m $ will be represented by $ X = \left\lbrack X_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ and $ Y = \left\lbrack Y_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ in the occuring polynomials respectively, and the outputs $ m = \left\lbrack m_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ are indexed the same as the inputs of the polynomials in $ Z_{1,1} , Z_{1,2} , \ldots Z_{n,n} $.\\
   Let $f \in K \left\lbrack \operatorname{GL}_n \right\rbrack $.
@@ -76,7 +76,7 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
   \begin{equation}
     R \left( f \right) := \frac{\Omega^p \tilde{f}}{c_{p,n}}
   \end{equation}
-  The linear extension of this (mapping anything else in $K \left\lbrack \operatorname{GL}_n \right\rbrack$ to zero), defines the Reynolds Operator $R_{\operatorname{GL}_n}$.
+  The linear extension of this (mapping anything else in $K \left\lbrack \operatorname{GL}_n \right\rbrack$ to zero), defines the Reynolds Operator $R_{\operatorname{GL}_n}$, which makes $\operatorname{GL}_n$ \textit{linearly reductive}.
 \end{theorem}
 
 \begin{proof}
@@ -121,18 +121,18 @@ Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
 
 \begin{corollary}
   With the convention of $ K \left\lbrack \operatorname{GL}_n \right\rbrack = K \left\lbrack \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} , \operatorname{det} (Z) ^{-1} \right\rbrack $, view $ K \left\lbrack \operatorname{SL}_n \right\rbrack = K \left\lbrack \operatorname{GL}_n \right\rbrack / I $ where $ I = \left( \operatorname{det} (Z) -1 \right) $.
-  Now, for $ p \in \mathbb{N} $ and $ \tilde{f} \in K \left\lbrack \left\{ Z_{i,j} \right\}_{k,l \in \lceil n \rceil} \right\rbrack_{pn} $ define for $ f = \frac{\tilde{f}}{\operatorname{det}(Z)^p} $:
+  Now, for $ p \in \mathbb{N} $ and $ \tilde{f} \in K \left\lbrack \left\{ Z_{i,j} \right\}_{k,l \in \lceil n \rceil} \right\rbrack_{pn} $ define for $ f = \frac{\tilde{f}}{\operatorname{det}(Z)^p} + I $:
   \begin{equation}
     R \left( f \right) := \frac{\Omega^p \tilde{f}}{c_{p,n}} + I
   \end{equation}
-  The linear extension of this (mapping anything else in $K \left\lbrack \operatorname{SL}_n \right\rbrack$ to zero), defines the Reynolds Operator $R_{\operatorname{SL}_n}$.
+  The linear extension of this (mapping anything else in $K \left\lbrack \operatorname{SL}_n \right\rbrack$ to zero), defines the Reynolds Operator $R_{\operatorname{SL}_n}$, making $\operatorname{SL}_n$ \textit{linearly reductive}.
 \end{corollary}
 
 \begin{proof}
   First, we will show $ K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} = K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $ (action by left multiplication).
   Let $g \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{ \operatorname{SL}_n }$, and let $ \alpha \in \operatorname{GL}_n $.
   Note that $ \frac{1}{n \operatorname{det} (\alpha)} \alpha \in \operatorname{SL}_n $.
-  Define $ h := \beta \mapsto g \left( n \operatorname{det} (\beta) I_n \right) \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
+  Define $ h := \left( \beta \mapsto g \left( n \operatorname{det} (\beta) I_n \right) \right) \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
   Now
   \begin{equation}
     \begin{aligned}
@@ -145,6 +145,36 @@ Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
   \end{equation}
   Therefore $ g = h \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
   Conversely it is easy to see that $ K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack \subseteq K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n } $.
+
+  Now, define $\hat{R} \colon K \left\lbrack \operatorname{GL}_n \right\rbrack \longrightarrow \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $ as follows: \\
+  For $ p,r \in \mathbb{N} $, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in \lceil n \rceil} \right\rbrace \right\rbrack_{rn} $, and $ f = \frac{\tilde{f}}{\operatorname{det} (Z)^p } $, define
+  \begin{equation}
+    \hat{R} (f) := \operatorname{det} (Z)^{r-p} \cdot \frac{ \Omega^r \tilde{f} }{ c_{r,n} }
+    = \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{\tilde{f}}{\operatorname{det} (Z) ^r} \right)
+  \end{equation}
+  and as before we define the images of the other elements by linear extension.
+  Well-definedness follows from the same observations as in the proof of the theorem (and $ r-p = (r+q)-(p+q) $ for $ q \in \mathbb{N} $).
+  This map is the identity on $ K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n }$:
+  If $ f \in K \left\lbrack \left\lbrace Z_{k,l \in \lceil n \rceil} \right\rbrace \right\rbrack_{rn} $ and $ f \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $, then $ \tilde{f} = \lambda \operatorname{det} (Z)^r $ with $ \lambda \in K $.
+  Therefore we can say w.l.o.g. either $p=0$ or $r=0$.
+  Then it is quite clear that then $f$ gets mapped to $f$.
+  Finally, the $\operatorname{SL}_n$-invariance also follows from the last theorem: Let $\alpha \in \operatorname{SL}_n$.
+  Then
+  \begin{equation}
+    \begin{aligned}
+      \hat{R} (\alpha . f)
+      = \hat{R} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det} (Z)^p } \right) 
+      = \operatorname{det} (Z)^{r-p} \cdot \hat{R}_{\operatorname{GL}_n} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det}(Z)^r } \right) \\
+      = \operatorname{det} (Z)^{r-p} \cdot \hat{R}_{\operatorname{GL}_n} \left( \frac{ \operatorname{det} (\alpha)^r \cdot \alpha . \tilde{f} }{ \operatorname{det}(Z)^r } \right) \\
+      = \operatorname{det} (Z)^{r-p} \cdot \hat{R}_{\operatorname{GL}_n} \left( \alpha . \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right) \right) \\
+      = \operatorname{det} (Z)^{r-p} \cdot \hat{R}_{\operatorname{GL}_n} \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right)
+      = \hat{R} (f)
+    \end{aligned}
+  \end{equation}
+  where we used $ \operatorname{det} (\alpha)^p = 1 = \operatorname{det} (\alpha)^r $ and the $\operatorname{GL}_n$-invariance of $R_{\operatorname{GL}_n}$.
+  Thus we have shown that $\hat{R}$ is the Reynolds-Operator for the action of $\operatorname{SL}_n$ on $\operatorname{GL}_n$ by left-multiplication.
+
+  Lastly, this shows our proposed statement $ R = R_{\operatorname{SL}_n} $, since $ \operatorname{det} (Z) \sim 1 $.
 \end{proof}
 
 %%% Local Variables:
