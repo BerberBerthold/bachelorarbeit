@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  16 JAN 2018 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  16 JAN 2018 20:26
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -267,14 +267,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/usr/local/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}])
-(./prework.tex [2] [3]
-Overfull \hbox (0.51068pt too wide) in paragraph at lines 70--73
+(./prework.tex [2]
+Overfull \hbox (0.51068pt too wide) in paragraph at lines 75--78
 []\OT1/cmr/m/n/10 from which we im-me-di-ately no-tice that $\OML/cmm/m/it/10 D
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 []\
 OT1/cmr/m/n/10 (\OML/cmm/m/it/10 W\OT1/cmr/m/n/10 )$. There-fore $[][]$
  []
 
-[4])
+[3]) [4]
 Overfull \hbox (2.37299pt too wide) in paragraph at lines 67--67
 []\OT1/cmr/bx/n/14.4 Linearly Re-duc-tive Groups, The Reynolds Op-
  []
@@ -285,24 +285,24 @@ Overfull \hbox (8.66666pt too wide) in paragraph at lines 1--7
 r/m/n/10 := [] =
  []
 
-
+[7]
 Overfull \hbox (23.55684pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 K [
 ]$\OT1/cmr/m/n/10 . Then $\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 ^^N \OML/cmm/m/it
 /10 m \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 K []$\OT1/cmr/m/n/10 .
  []
 
-[7]
+
 Overfull \hbox (35.136pt too wide) detected at line 38
 [] []
  []
 
-[8] [9] [10]) (./examples.tex
+[8] [9] [10]) (./examples.tex [11]
 Overfull \hbox (157.06522pt too wide) detected at line 43
 [] []
  []
 
-[11] [12]) (./roughdraft.bbl) [13] (./roughdraft.aux) ) 
+[12] [13]) (./roughdraft.bbl) [14] (./roughdraft.aux) ) 
 Here is how much of TeX's memory you used:
  3156 strings out of 493093
  43259 string characters out of 6138120
@@ -329,10 +329,10 @@ fb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/
 local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/sha
 re/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/share/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on roughdraft.pdf (13 pages, 264166 bytes).
+Output written on roughdraft.pdf (14 pages, 267470 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 126 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

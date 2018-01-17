@@ -1,20 +1,23 @@
 In the following, $K$ is a field of characteristic $0$ and $G$ a linear algebraic group, that is a group whose set is an affine variety, and whose multiplcation and inversion are morphisms of affine varieties.
 
-\begin{definition}
-We denote by $m$ the group multiplication of the group $G$.
-We want to view the pullback of $m$ as a map $m^\ast : K[G] \longrightarrow K[G] \otimes K[G]$, which makes sense, because $m$ and $\otimes$ are associative.
-The strict pullback, which I will call $ \hat{m} $, should be a map of the type $ K[G] \longrightarrow K[ G \times G] $, where $ f \mapsto f \circ m $.
-If we want to give the variables names, we can equivalently say it is a map $ \left. K[Z] \right|_G \longrightarrow \left. K[X,Y] \right|_{G \times G} $, where $ Z = \lbrace Z_1 , \ldots , Z_k \rbrace $, $X$ and $Y$ analogously (here, $ m $ canonically takes its left input via $ X $ and its right input via $ Y $).
-Define
-\begin{equation}
-  \begin{aligned}
-   t \colon \left. K \left\lbrack X , Y \right\rbrack \right|_{G \times G} \longrightarrow \left. K \left\lbrack Z \right\rbrack \right|_G \otimes \left. K\left\lbrack Z \right\rbrack \right|_G \\
-    \sum_i \lambda_i \prod_j X_{j}^{d_{i,j}} \prod_j Y_{j}^{e_{i,j}} \mapsto \sum_i \lambda_i \prod_j Z_{j}^{d_{i,j}} \otimes \prod_j Z_{j}^{e_{i,j}} 
-  \end{aligned}
-\end{equation}
-This is independant of the choice of the representatives and therefore well-defined.
-It is even an isomorphism.
-Now, finally, define $m^\ast := t \circ \hat{m} : K[G] \longrightarrow K[G] \otimes K[G]$.
+\begin{definition}[Algebraic Cohomomorphism]
+% We denote by $m$ the group multiplication of the group $G$.
+% We want to view the pullback of $m$ as a map $m^\ast : K[G] \longrightarrow K[G] \otimes K[G]$, which makes sense, because $m$ and $\otimes$ are associative.
+% The strict pullback, which I will call $ \hat{m} $, should be a map of the type $ K[G] \longrightarrow K[ G \times G] $, where $ f \mapsto f \circ m $.
+% If we want to give the variables names, we can equivalently say it is a map $ \left. K[Z] \right|_G \longrightarrow \left. K[X,Y] \right|_{G \times G} $, where $ Z = \lbrace Z_1 , \ldots , Z_k \rbrace $, $X$ and $Y$ analogously (here, $ m $ canonically takes its left input via $ X $ and its right input via $ Y $).
+  Let $m \colon U_1 \times U_2 \longrightarrow W$ be a morphism of affine varieties.
+  The strict pullback, which we shall call $\hat{m}$, is a map of the type $K[W] \longrightarrow K[U_1 \times U_2]$.
+  If we want to give the variables names, we can equivalently say it is a map $ \left. K[Z] \right|_W \longrightarrow \left. K[X,Y] \right|_{U_1 \times U_2} $, where $ Z = \lbrace Z_1 , \ldots , Z_k \rbrace $, $X$ and $Y$ analogously (here, $ m $ canonically takes its left input via $ X $ and its right input via $ Y $).
+  \begin{equation}
+    \begin{aligned}
+      t \colon \left. K \left\lbrack X , Y \right\rbrack \right|_{U_1 \times U_2} &\longrightarrow \left. K \left\lbrack Z \right\rbrack \right|_{U_1} \otimes \left. K\left\lbrack Z \right\rbrack \right|_{U_2} \\
+      \sum_i \lambda_i \prod_j X_{j}^{d_{i,j}} \prod_j Y_{j}^{e_{i,j}} &\longmapsto \sum_i \lambda_i \prod_j Z_{j}^{d_{i,j}} \otimes \prod_j Z_{j}^{e_{i,j}}
+    \end{aligned}
+  \end{equation}
+  This is independent of the choice of the representatives and therefore well-defined.
+  It is even an isomorphism.
+  Now, finally, define $m^\ast := t \circ \hat{m} : K[W] \longrightarrow K[U_1] \otimes K[U_2]$.
+  We call $m^\ast$ the \textit{algebraic cohomomorphism of $m$}.
 \end{definition}
 
 \begin{remark}
@@ -25,25 +28,27 @@ To give a very simple example:
 If $f \in \left. K[Z] \right|_G$, we will write $\operatorname{id} \otimes \frac{\partial}{\partial Z_i} (m^\ast f)$ as in \cite{DK15}, whereas \cite{Stu08} would write $\frac{\partial}{\partial Y_i} f(XY)$.
 \end{remark}
 
+\begin{definition}[Regular Action, Regular Representation]
+  Let $G$ be a linear algebraic group, $X$ an affine variety.
+  We call an action $G \times X \longrightarrow X$ a \textbf{regular action}, iff $\mu$ is a morphism of affine varieties.
+  We say \textbf{$ G $ acts regularly on $ X $}, and we also call $X$ a \textbf{$G$-variety}.
+
+  For a finite-dimensional vector space $V$, if $\mu \colon G \times V \longrightarrow V$ is a representation in the classical sense, that is for all $g \in G$ we have $D_\mu (g) := (v \mapsto g.v) \in \operatorname{GL}(V)$, we call $\mu$ a \textbf{regular representation} iff it is regular.
+  
+  % For a finite dimensional vector space $V$ we call $D \colon G \longrightarrow \operatorname{GL}(V)$ a \textbf{regular representation} iff $\mu_D := ((g,v) \mapsto D(g)(v))$ is a regular action.
+  % If an action $\mu \colon G \times V \longrightarrow V$ is given such that $D_\mu (g) := (v \mapsto g.v) \in \operatorname{GL}(V)$, we also call $\mu$ a regular representation (such $\mu$ and $D$ are in bijection).
+\end{definition}
 
 \begin{definition}[Rational Representation]\label{rr}
   Let $V$ be a vector space (not necessarily finite dimensional), and $ \mu : G \times V \longrightarrow V $ an action.
   We call $ \mu $ a \textbf{rational representation} iff there exists a linear map $ \mu^\prime \colon V \longrightarrow K[G] \otimes V $ such that $ \mu \left( \sigma , v \right) = \left( \left( \epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\prime \right) \left(v\right) $.
 \end{definition}
 
-\begin{remark}
-  If $\tilde{\mu}$ is the action defined by $ \tilde{\mu} (\sigma,x) = \mu (\sigma^{-1},x)$, then $ \mu^\prime = \tilde{\mu}^\ast $, where $\mu^\ast$ denotes the algebraic cohomomorphism.
-\end{remark}
-
-\begin{definition}[Regular Action, Regular Representation]
-  Let $G$ be a linear algebraic group, $X$ an affine variety.
-  We call an action $G \times X \longrightarrow X$ a \textbf{regular action}, iff it is a morphism of affine varieties.
-  We say \textbf{$ G $ acts regularly on $ X $}.
-
-  For a finite-dimensional vector space $V$, if $\mu \colon G \times V \longrightarrow V$ is a representation in the classical sense, that is for all $g \in G$ we have $D_\mu (g) := (v \mapsto g.v) \in \operatorname{GL}(V)$, we call $\mu$ a \textbf{regular representation} iff it is regular.
-  
-  % For a finite dimensional vector space $V$ we call $D \colon G \longrightarrow \operatorname{GL}(V)$ a \textbf{regular representation} iff $\mu_D := ((g,v) \mapsto D(g)(v))$ is a regular action.
-  % If an action $\mu \colon G \times V \longrightarrow V$ is given such that $D_\mu (g) := (v \mapsto g.v) \in \operatorname{GL}(V)$, we also call $\mu$ a regular representation (such $\mu$ and $D$ are in bijection).
+\begin{definition}
+  Let $\mu \colon G \times X \longrightarrow X$ be a regular action.
+  We define an action $\bar{\mu} \colon G \times K[X] \longrightarrow K[X]$ via $\sigma.f (x) = f( \sigma^{-1}.x )$, where  $\sigma \in G$, $f \in K[X]$ and $x \in X$.
+  This action is obviously regular, but it is also easily shown that it is in fact a rational representation:
+  If $\tilde{\mu}$ is the action defined by $ \tilde{\mu} (\sigma,x) = \mu (\sigma^{-1},x)$ ($\sigma \in G$, $x \in X$), then we can define $ \bar{\mu}^\prime = \tilde{\mu}^\ast $ with the desired properties.
 \end{definition}
 
 \begin{proposition}
@@ -55,10 +60,10 @@ If $f \in \left. K[Z] \right|_G$, we will write $\operatorname{id} \otimes \frac
 
   Assume that $\mu$ is a rational representation.
   Let $v \in V$.
-  We can write $\mu^\ast (v) = \Sigma_{i=1}^l f_i \otimes v_i$. %with $f_i$ linearly independant over $K$.
+  We can write $\mu^\prime (v) = \Sigma_{i=1}^l f_i \otimes v_i$. %with $f_i$ linearly independant over $K$.
   We then easily see that $K(G.v) \subseteq \operatorname{span}\{v_i\}_{i=1}^l$, showing that the action is locally finite.
   Now let $W$ be a finite-dimensional subrepresentation with the basis $\{w_i\}_{i=1}^r$.
-  By assummption, we have $p_{i,j} \in K[G]$ with $ \mu^\ast (w_j) = \Sigma_{i=1}^r p_{i,j} \otimes w_i$.
+  We have $p_{i,j} \in K[G]$ with $ \mu^\prime (w_j) = \Sigma_{i=1}^r p_{i,j} \otimes w_i$.
   Now let $w = \Sigma_{j=1}^r \lambda_j w_j \in W$.
   Then for all $\sigma \in G$ we have
   \begin{equation}
@@ -71,9 +76,10 @@ If $f \in \left. K[Z] \right|_G$, we will write $\operatorname{id} \otimes \frac
   from which we immediately notice that $D_{\left. \mu \right|_{G \times W}} (\sigma) \in \operatorname{GL}(W)$.
   Therefore $\left. \mu \right|_{G\times W}$ is a regular representation.
 
-  Now let $\mu$ be an action such that for every finite-dimensional $G$-stable subspace $W$, $\left. \mu \right|_{G\times W}$ is a regular representation.
+  Now let $\mu$ be a locally finite action such that for every finite-dimensional $G$-stable subspace $W$, $\left. \mu \right|_{G\times W}$ is a regular representation.
   Let $v \in V$.
-  There exists a 
+  By assumption there exists a finite-dimensional vector space $W \subseteq V$ such that $v \in W$.
+  
 \end{proof}
 
 \begin{definition}[Rational Representation]
