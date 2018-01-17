@@ -1,0 +1,55 @@
+A very important concept in mathematics is the idea of an \textit{invariant}:
+An object which does not change under a certain action.
+In 1872, Felix Klein came up with a then new method of describing geometries with group theory, which he called the Klein Erlangen program.
+Here, the central idea of a geometry is characterized by its associated symmetry group, the group of transformations which leaves certain objects unchanged, for example: angles.
+We look at the group of all transformations which leave angles unchanged, which are called conformal transformations.
+The study of these transformations is called conformal geometry.
+
+Let us discuss the following important example in projective geometry:
+Consider all transformations which map lines to lines, id est, such transformations under which the the property of being a line is invariant.
+In real projective geometry, the fundamental theorem of projective geometry gives us that these maps are exactly the projective transformations.
+
+\textbf{Conversely}, we can now just consider projective transformations as our given group of transformations.
+\textbf{Invariant theory asks: What invariants exist?}
+We can loosely notice a kind of duality between geometries viewed as in the Klein Erlangen program and invariant theory.
+This discipline of mathematics usually only looks at invariants described with so called regular terms, or more specifically:  In invariant theory, we try to find invariant polynomial-like functions.
+
+One of the most important concept is the cross ratio:
+The cross ratio is a rational polynomial which takes as its input four collinear points.
+This is invariant under projective transformations.
+Is this the only invariant polynomial?
+How can we find other invariants?
+How big is the set (this will be a ring) of all invariants?
+
+\textit{Hilbert's finiteness theorem} states that for certain groups, such that are \textit{linearly reductive}, the invariant ring is finitely generated.
+If we can find these finite generators, we have a grasp of what all invariants look like.
+Hilbert's first proof for this theorem was non-constructive.
+It is claimed\footnote{I read somewhere that it is not certain} that this proof was responsible for Gordan's famous quote ``Das ist Theologie und nicht Mathematik''.
+The central idea of this proof is the existence of a Reynolds operator.
+
+One of the most important and most common groups is the general linear group $\operatorname{GL}_n$.
+It would be great if this group were linearly reductive.
+But it is!
+There are multiple ways to see this.
+In a seminar I held, with the help of the Haar measure, I discussed a way to see that a module complement exists for every representation, making $\operatorname{GL}_n$ linearly reductive.
+One can also show linear reductivity by the Schur-Weyl-dualty:  The symmetric group is finite, and therefore we can see that rational $\operatorname{GL}_n$ representations are semisimple, from which we can again construct module complements.
+
+Here, we will show that $\operatorname{GL}_n$ is linear reductive in an even different way.
+For one, we want to show that a Reynolds Operator exists, which already means that $\operatorname{GL}_n$ is linearly reductive.
+But we want even more than just the existence!
+What does it help for our motivation to get a grasp of what all (or even just some) invariants look like, if we merely prove the existence of a finite generator set for the invariants?
+This operator projects polynomials to invariant polynomials.
+If we can find an explicit formula for computing the Reynolds operator applied to a polynomial, we can more easily receive concrete invariants.
+
+\textbf{This is possible with \textit{Cayley's $\Omega$-process}!}
+This is the main focus of my work.
+
+I say ``more easily'' receive invariants, because if we take a polynomial at random and apply the Reynolds Operator, we might very likely just get the a constant polynomial, which is not a very interesting invariant, and we also want to know if there are more invariants.
+Similar to the first proof of Hilbert's finiteness theorem (by Hilbert himself), we can show that there are certain finitely many polynomials whose images under the Reynolds operator will generate the invariant ring.
+Although this is not what I will be discussing in detail in my work, there is in fact an algorithm to compute these certain polynomials.
+With the help of Cayley's $\Omega$-process, we then get a complete algorithm that gives us the generators of the invariant ring.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "roughdraft"
+%%% End:

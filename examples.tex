@@ -1,0 +1,158 @@
+Let us apply the Reynolds operator with respect to an action on concrete polynomials.
+Before we look at finite generators of Hilbert's nullcone (which we will talk about later), we will just look at generators of the polynomial ring.
+
+\begin{example}
+  Consider the group $G = \operatorname{SL}_2$ and the vector space $ V = \left\{ \, A \in \mathbb{R}^{2 \times 2} \mid A^T = A \, \right\} $.
+  Now we will look at the following action:
+  \begin{equation}
+    \begin{aligned}
+      \mu \colon && \operatorname{SL}_2 & \times & V && \longrightarrow & V \\
+      & ( & S & , &  A & ) & \longmapsto & SAS^T
+    \end{aligned}
+  \end{equation}
+  Now consider the following for $S \in \operatorname{SL}_2$ and $A \in V$:
+  \begin{equation}
+    \begin{aligned}
+      S &=
+      \begin{bmatrix}
+        s_{1,1} & s_{1,2} \\
+        s_{2,1} & s_{2,2}
+      \end{bmatrix}
+      & A &=
+      \begin{bmatrix}
+        a_{1,1} & a_{1,2} \\
+        a_{2,1} & a_{2,2}
+      \end{bmatrix}
+      \\
+      S^{-1} &=
+      \begin{bmatrix}
+        s_{2,2} & -s_{1,2} \\
+        -s_{2,1} & s_{1,1}
+      \end{bmatrix}
+    \end{aligned}
+  \end{equation}
+  We then have
+  \begin{equation}
+    \begin{aligned}
+      &S^{-1}.A = S^{-1}A\left(S^{-1}\right)^T  \\ &=
+      \begin{bmatrix}
+        a_{1,1}s_{2,2}^2 - 2a_{1,2}s_{1,2}s_{2,2} + a_{2,2}s_{1,2}^2 & -a_{1,1}s_{2,1}s_{2,2} + a_{1,2}s_{1,1}s_{2,2} + a_{1,2}s_{1,2}s_{2,1} - a_{2,2}s_{1,1}s_{1,2} \\
+        - a_{1,1}s_{2,1}s_{2,2} + a_{1,2}s_{1,1}s_{2,2} + a_{1,2}s_{1,2}s_{2,1} - a_{2,2}s_{1,1}s_{1,2} & a_{1,1}s_{2,1}^2 - 2a_{1,2}s_{1,1}s_{2,1} + a_{2,2}s_{1,1}^2
+      \end{bmatrix}
+    \end{aligned}
+  \end{equation}
+  Notice that we also have
+  \begin{equation}
+    \begin{aligned}
+      &\operatorname{det}\left( \frac{\partial}{\partial S} \right)^n
+      &&= \left( \frac{\partial}{\partial S_{1,1}} \frac{\partial}{\partial S_{2,2}} - \frac{\partial}{\partial S_{1,2}} \frac{\partial}{\partial S_{2,1}} \right)^n \\
+      &&&= \sum_{k=0}^n (-1)^k \binom{n}{k} \frac{\partial}{\partial S_{1,1}}^{n-k} \frac{\partial}{\partial S_{1,2}}^k \frac{\partial}{\partial S_{2,1}}^k \frac{\partial}{\partial S_{2,2}}^{n-k}
+    \end{aligned}
+  \end{equation}
+  Now consider a monomial $ f = A_{1,1}^{r_{1,1}} A_{1,2}^{r_{1,2}} A_{2,2}^{r_{2,2}} \in K[V] $.
+  We then have
+  \begin{equation}
+    \begin{aligned}
+      & \mu^\ast (f) \\
+      =& \sum_{|t_{1,1}| = r_{1,1}} \, \sum_{|t_{1,2}| = r_{1,2}} \, \sum_{|t_{2,2}| = r_{2,2}} \binom{r_{1,1}}{t_{1,1}} \binom{r_{1,2}}{t_{1,2}} \binom{r_{2,2}}{t_{2,2}}\\
+      =& \sum s_{1,1}^{ t_{1,2}^{(2)} + t_{1,2}^{(4)} + t_{2,2}^{(2)} + 2t_{2,2}^{(3)}}
+    \end{aligned}
+  \end{equation}
+\end{example}
+
+\begin{example}
+  Consider the cross ratio.
+  We can view its domain as the affine variety
+  \begin{equation}
+    \begin{aligned}
+      &X&:=&\{\, (a,b,c,d) \in (\mathbb{K}^2)^4 \mid (b_1c_2 - b_2c_1)(d_1a_2 - d_2a_1) \neq 0 \,\}\\
+      &&=& \{\, (a,b,c,d) \in (\mathbb{K}^2)^4 \mid \operatorname{det}(b,c)\operatorname{det}(d,a) \neq 0 \,\}
+    \end{aligned}
+  \end{equation}
+  as described in [\textbf{yaboi}].
+  Now consider the action of $\operatorname{GL}_2$ on $X$ via pointwise application.
+  The \textit{cross ratio} $\operatorname{cr} \in K[X]$ defined as follows
+  \begin{equation}
+    \begin{aligned}
+      \operatorname{cr} \colon&&X&\longrightarrow K \\
+      &&(a,b,c,d) &\longmapsto \frac{\operatorname{det}(a,b)\operatorname{det}(c,d)}{\operatorname{det}(b,c)\operatorname{det}(d,a)}
+    \end{aligned}
+  \end{equation}
+  is an invariant under this action, as is easily seen.
+  Exactly this $\operatorname{GL}_2$-invariance guarantees a coordinate-independent definition of the cross ratio in the projective space.
+  The invariant ring $K[X]^{\operatorname{GL}_n}$ is finitely generated, though we can't apply the Reynolds operator directly, since $X$ is not a vector space.
+\end{example}
+
+\begin{example}
+  \textbf{($K$ needs to be algebraically closed for Zariski-denseness of diagonizable matrices...)}
+  
+  Consider $\operatorname{GL}_n$ viewed as the group of all change-of-coordinates transformations for endomorphisms on $K^n$, that is the rational representation
+  \begin{equation}
+    \begin{aligned}
+      \mu \colon && \operatorname{GL}_n \times K^{n.n} & \longrightarrow K^{n,n} \\
+      && (\sigma,A) &\longmapsto \sigma A \sigma^{-1}
+    \end{aligned}
+  \end{equation}
+  What are its invariants?
+  The invariants are exaclty those polynomials that are independent of the choice of the basis.
+  The most well-known invariant is the determinant.
+  From this obvservation we can find even more:
+  We can follow that the characteristic polynomial of a matrix $A$, that is $\operatorname{det} (tI_n - A)$, does not change under a change of coordinates.
+  If we write
+  \begin{equation}
+    \begin{aligned}
+      \operatorname{det} (tI_n - A) = \sum_{i=0}^n p_{n,i} (A) t^i
+    \end{aligned}
+  \end{equation}
+  this means that every $p_{n,i}$ is an invariant polynomial in $K[K^{n.n}]$!
+  This is how one usually proves that the trace is an invariant polynomial after observing that $p_{n,n-1} = \operatorname{tr}_n$.
+  Are there other invariants than these $p_{n,i}$?
+  No!
+  To see this, we will use a little trick:
+  Consider $D := \{\, \delta \in K^{n,n} \mid \delta \operatorname{diagonalizable} \,\} \subseteq K^{n,n}$.
+  Since $V$ is Zariski-dense in $K^{n,n}$, we have $K[K^{n,n}] \simeq \left. K[K^{n,n}] \right|_{D}$ via $p \mapsto \left. p \right|_{D}$.
+  For this reason, we will look at the evaluation of an invariant polynomial $p \in K[K^{n.n}] $ only on elements in $D$, and can deduce what polynomial it is.
+
+  Let $p \in K[K^{n,n}]^{\operatorname{GL_n}}$.
+  We define a projection onto the diagonal:
+  $\pi \colon K^{n,n} \longrightarrow K^n , [A_{i,j}]_{i,j \in [n]} \longmapsto (X_{i,i})_{i \in [n]} $.
+  % Now, for $A \in D$, there exists a $\sigma_A \in \operatorname{GL}_n$ such that $\sigma_A . A $ is diagonal.
+  % If $\tilde{p} = p \left( [ \delta_{i,j} Z_{i,j}]_{i,j \in [n]} \right) \in K[K^n]$, then, since $p$ is an invariant, for all $A \in D$ we have
+  % \begin{equation}
+  %   \begin{aligned}
+  %     &p(A)&=& \sigma_A^{-1} . p (A)\\
+  %     &&=& p(\sigma_A .A)\\
+  %     &&=&  \tilde{p} ( \pi  (\sigma_A . A))
+  %   \end{aligned}
+  % \end{equation}
+  % As long as $\sigma .A$ is diagonal, this is true regardless of the choice of $\sigma_A$.
+  Consider $\tilde{p} = p \left( [ \delta_{i,j} Z_{i,j}]_{i,j \in [n]} \right) \in K[K^n]$.
+  $\tilde{p}$ is $S_n$-invariant:
+  If $M_\tau \in \operatorname{GL}_n$ is the matrix corresponding to $\tau \in S_n$, then for all $\tau \in S_n$ and for all $X \in K^n$ we have
+  \begin{equation}
+    \begin{aligned}
+      &\tau.\tilde{p} (X) &=& \tilde{p} (\tau^{-1}.X)\\
+      &&=& \tilde{p} (\pi (\operatorname{diag} (\tau^{-1} . X) ))\\
+      &&=& p ( \operatorname{diag}(\tau^{-1}.X)\\
+      &&=& M_\tau . p (\operatorname{diag}(X))\\
+      &&=& p (\operatorname{diag}(X))&=& \tilde{p} (X)
+    \end{aligned}
+  \end{equation}
+  From the fundamental theorem of symmetric polynomials we can follow that $\tilde{p} \in \operatorname{span}\{\,e_n^i \mid i \in [n]\,\}$, say $\tilde{p} = \Sigma_{i=1}^n \lambda_i e_{n,i}$, where $e_{n,i}$ are the elementary symmetric polynomials of dimension $n$.
+  Now, for a choice (!) of $\sigma_A \in \operatorname{GL}_n$ such that $\sigma_A . A$ is diagonal, we easily see that for $s(A) := \sigma_A . A$ get $p = \tilde{p} \circ \pi \circ s$, therefore $p = \Sigma_{i=1}^n \lambda_i e_{n,i} \circ \pi \circ s$.
+  Now we want to show that $e_{n,i} \circ \pi \circ s = p_{n,i}$, which would conclude our claim.
+  For all $A\in D$ we have
+  \begin{equation}
+    \begin{aligned}
+      &\sum_{i=1}^n (e_{n,i} \circ \pi \circ s)(A)t^i&=&\operatorname{det}(t-\sigma_A.A)\\
+      &&=&\operatorname{det}(t-A)
+      &=&\sum_{i=1}^n p_{n,i}(A)t^i\\
+    \end{aligned}
+  \end{equation}
+  Note that this is independent of the choice of $s$, which means that we don't need the axiom of choice (rigorously, as usual, rewrite $s$ as a relation for all possible $s$ instead of a choice of a function\ldots).
+\end{example}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "roughdraft"
+%%% End:
