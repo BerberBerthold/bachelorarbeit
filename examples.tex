@@ -49,15 +49,74 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
       &&&= \sum_{k=0}^n (-1)^k \binom{n}{k} \frac{\partial}{\partial S_{1,1}}^{n-k} \frac{\partial}{\partial S_{1,2}}^k \frac{\partial}{\partial S_{2,1}}^k \frac{\partial}{\partial S_{2,2}}^{n-k}
     \end{aligned}
   \end{equation}
-  Now consider a monomial $ f = A_{1,1}^{r_{1,1}} A_{1,2}^{r_{1,2}} A_{2,2}^{r_{2,2}} \in K[V] $.
-  We then have
+  It is quite cumbersome to calculate the Reynolds Operator of general polynomials.
+  We will look at the monomial $A_{1,1}^2$, for which we have
   \begin{equation}
     \begin{aligned}
-      & \mu^\ast (f) \\
-      =& \sum_{|t_{1,1}| = r_{1,1}} \, \sum_{|t_{1,2}| = r_{1,2}} \, \sum_{|t_{2,2}| = r_{2,2}} \binom{r_{1,1}}{t_{1,1}} \binom{r_{1,2}}{t_{1,2}} \binom{r_{2,2}}{t_{2,2}}\\
-      =& \sum s_{1,1}^{ t_{1,2}^{(2)} + t_{1,2}^{(4)} + t_{2,2}^{(2)} + 2t_{2,2}^{(3)}}
+      &&&\mu^\prime (A_{1,1}^2) \\
+      &&=& S_{2,2}^4 \otimes A_{1,1}^2 - 4S_{1,2}S_{2,2}^3 \otimes A_{1,1}A_{1,2} + 2S_{1,2}^2 S_{2,2}^2 \otimes A_{1,1}A_{2,2} \\
+      &&& + 4S_{1,2}^2 S_{2,2}^2 \otimes A_{1,2}^2 - 4S_{1,2}^3 S_{2,2} \otimes A_{1,2}A_{2,2} + S_{1,2}^4 \otimes A_{2,2}^2\\
+      &&=& \frac{S_{2,2}^4}{\operatorname{det}(S)^2} \otimes A_{1,1}^2 - \frac{4S_{1,2}S_{2,2}^3}{\operatorname{det}(S)^2} \otimes A_{1,1}A_{1,2} \\
+      &&& + \frac{2S_{1,2}^2 S_{2,2}^2}{\operatorname{det}(S)^2} \otimes A_{1,1}A_{2,2} + \frac{4S_{1,2}^2 S_{2,2}^2}{\operatorname{det}(S)^2} \otimes A_{1,2}^2 \\
+      &&& - \frac{4S_{1,2}^3 S_{2,2}}{\operatorname{det}(S)^2} \otimes A_{1,2}A_{2,2} + \frac{S_{1,2}^4}{\operatorname{det}(S)^2} \otimes A_{2,2}^2
     \end{aligned}
   \end{equation}
+  We can now apply the Reynolds operator in the way we discussed it in proposition \ref{ro} in combination with Cayley's $\Omega$-process.
+  Since all terms in $K[\operatorname{SL}_2]$ are already of degree $2$, apply the same derivatives to each summand and calculate:
+  \begin{equation}
+    \begin{aligned}
+      & R_G \cdot A_{1,1}^2 \\
+      =& \left( \frac{\partial}{\partial S_{1,1}}^2 \frac{\partial}{\partial S_{2,2}}^2 - 2 \frac{\partial}{\partial S_{1,1}} \frac{\partial}{\partial S_{1,2}} \frac{\partial}{\partial S_{2,1}} \frac{\partial}{\partial S_{2,2}} + \frac{\partial}{\partial S_{1,2}}^2\frac{\partial}{\partial S_{2,1}}^2 \right) \cdot A_{1,1}^2 \\
+      =& 0
+    \end{aligned}
+  \end{equation}
+  The zero-polynomial is not very interesting, so applying the Reynolds Operator to any polynomial will not always produce interesting results.
+  We will try again for the polynomial $A_{1,2}^2$.
+  We calculate
+  \begin{equation}
+    \begin{aligned}
+      &\mu^\prime ( A_{1,2}^2 ) \\
+      =& S_{2,1}^2 S_{2,2}^2 \otimes A_{1,1}^2
+      - 2S_{1,1}S_{2,1}S_{2,2}^2 \otimes A_{1,1}A_{1,2} \\
+      &- 2S_{1,2}S_{2,1}^2S_{2,2} \otimes A_{1,2}^2 
+      + 2S_{1,1}S_{1,2}S_{2,1}S_{2,2} \otimes A_{1,1}A_{2,2}\\
+      &+ S_{1,1}^2S_{2,2}^2 \otimes A_{1,2}^2
+      + 2S_{1,1}S_{1,2}S_{2,1}S_{2,2} \otimes A_{1,2}^2 \\
+      &- 2S_{1,1}^2S_{1,2}S_{2,2} \otimes A_{1,2}A_{2,2}
+      + S_{1,2}^2S_{2,1}^2 \otimes A_{1,2}^2 \\
+      &- 2S_{1,1}S_{1,2}^2S_{2,1} \otimes A_{1,2}A_{2,2}
+      + S_{1,1}^2S_{1,2}^2 \otimes A_{2,2}^2\\
+      =& \frac{S_{2,1}^2 S_{2,2}^2}{\operatorname{det}(S)^2} \otimes A_{1,1}^2
+      - \frac{2S_{1,1}S_{2,1}S_{2,2}^2}{\operatorname{det}(S)^2} \otimes A_{1,1}A_{1,2} \\
+      &- \frac{2S_{1,2}S_{2,1}^2S_{2,2}}{\operatorname{det}(S)^2} \otimes A_{1,2}^2 
+      + \frac{2S_{1,1}S_{1,2}S_{2,1}S_{2,2}}{\operatorname{det}(S)^2} \otimes A_{1,1}A_{2,2}\\
+      &+ \frac{S_{1,1}^2S_{2,2}^2}{\operatorname{det}(S)^2} \otimes A_{1,2}^2
+      + \frac{2S_{1,1}S_{1,2}S_{2,1}S_{2,2}}{\operatorname{det}(S)^2} \otimes A_{1,2}^2 \\
+      &- \frac{2S_{1,1}^2S_{1,2}S_{2,2}}{\operatorname{det}(S)^2} \otimes A_{1,2}A_{2,2}
+      + \frac{S_{1,2}^2S_{2,1}^2}{\operatorname{det}(S)^2} \otimes A_{1,2}^2 \\
+      &- \frac{2S_{1,1}S_{1,2}^2S_{2,1}}{\operatorname{det}(S)^2} \otimes A_{1,2}A_{2,2}
+      + \frac{S_{1,1}^2S_{1,2}^2}{\operatorname{det}(S)^2} \otimes A_{2,2}^2\\      
+    \end{aligned}
+  \end{equation}
+  Again, all $K[\operatorname{SL}_2]$ terms are of degree $2$, therefore we can simplify and calculate
+  \begin{equation}
+    \begin{aligned}
+      &R_G \cdot A_{1,2}^2\\
+      =& \left( \frac{\partial}{\partial S_{1,1}}^2 \frac{\partial}{\partial S_{2,2}}^2 - 2 \frac{\partial}{\partial S_{1,1}} \frac{\partial}{\partial S_{1,2}} \frac{\partial}{\partial S_{2,1}} \frac{\partial}{\partial S_{2,2}} + \frac{\partial}{\partial S_{1,2}}^2\frac{\partial}{\partial S_{2,1}}^2 \right) \cdot A_{1,2}^2 \\
+      =& - \frac{4}{12} A_{1,1}A_{2,2} + \frac{4}{12} A_{1,2}^2 - \frac{4}{12} A_{1,2}^2 + \frac{4}{12} A_{1,2}^2 \\
+      =& -\frac{1}{3}\operatorname{det}(A)
+    \end{aligned}
+  \end{equation}
+  This is in line with what we expect: $K[V]^{\operatorname{SL}_n} = K[\operatorname{det}(A)]$.
+  % Now consider a monomial $ f = A_{1,1}^{r_{1,1}} A_{1,2}^{r_{1,2}} A_{2,2}^{r_{2,2}} \in K[V] $.
+  % We then have
+  % \begin{equation}
+  %   \begin{aligned}
+  %     & \mu^\ast (f) \\
+  %     =& \sum_{|t_{1,1}| = r_{1,1}} \, \sum_{|t_{1,2}| = r_{1,2}} \, \sum_{|t_{2,2}| = r_{2,2}} \binom{r_{1,1}}{t_{1,1}} \binom{r_{1,2}}{t_{1,2}} \binom{r_{2,2}}{t_{2,2}}\\
+  %     =& \sum s_{1,1}^{ t_{1,2}^{(2)} + t_{1,2}^{(4)} + t_{2,2}^{(2)} + 2t_{2,2}^{(3)}}
+  %   \end{aligned}
+  % \end{equation}
 \end{example}
 
 \begin{example}
@@ -110,12 +169,12 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
   No!
   To see this, we will use a little trick:
   Consider $D := \{\, \delta \in K^{n,n} \mid \delta \operatorname{diagonalizable} \,\} \subseteq K^{n,n}$.
-  Since $V$ is Zariski-dense in $K^{n,n}$, we have $K[K^{n,n}] \simeq \left. K[K^{n,n}] \right|_{D}$ via $p \mapsto \left. p \right|_{D}$.
+  Since $V$ is Zariski-dense in $K^{n,n}$, we have $K[K^{n,n}] \simeq \left. K[K^{n,n}] \right|_{D}$ via $p \leftrightarrow \left. p \right|_{D}$.
   For this reason, we will look at the evaluation of an invariant polynomial $p \in K[K^{n.n}] $ only on elements in $D$, and can deduce what polynomial it is.
 
   Let $p \in K[K^{n,n}]^{\operatorname{GL_n}}$.
   We define a projection onto the diagonal:
-  $\pi \colon K^{n,n} \longrightarrow K^n , [A_{i,j}]_{i,j \in [n]} \longmapsto (X_{i,i})_{i \in [n]} $.
+  $\pi \colon K^{n,n} \longrightarrow K^n , [A_{i,j}]_{i,j \in [n]} \longmapsto (A_{i,i})_{i \in [n]} $.
   % Now, for $A \in D$, there exists a $\sigma_A \in \operatorname{GL}_n$ such that $\sigma_A . A $ is diagonal.
   % If $\tilde{p} = p \left( [ \delta_{i,j} Z_{i,j}]_{i,j \in [n]} \right) \in K[K^n]$, then, since $p$ is an invariant, for all $A \in D$ we have
   % \begin{equation}
@@ -128,7 +187,7 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
   % As long as $\sigma .A$ is diagonal, this is true regardless of the choice of $\sigma_A$.
   Consider $\tilde{p} = p \left( [ \delta_{i,j} Z_{i,j}]_{i,j \in [n]} \right) \in K[K^n]$.
   $\tilde{p}$ is $S_n$-invariant:
-  If $M_\tau \in \operatorname{GL}_n$ is the matrix corresponding to $\tau \in S_n$, then for all $\tau \in S_n$ and for all $X \in K^n$ we have
+  If $M_\tau \in \operatorname{GL}_n$ is the matrix corresponding to $\tau \in S_n$, then for all $\tau \in S_n$ and for all $ X \in K^n$ we have
   \begin{equation}
     \begin{aligned}
       &\tau.\tilde{p} (X) &=& \tilde{p} (\tau^{-1}.X)\\
@@ -138,17 +197,18 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
       &&=& p (\operatorname{diag}(X))&=& \tilde{p} (X)
     \end{aligned}
   \end{equation}
-  From the fundamental theorem of symmetric polynomials we can follow that $\tilde{p} \in \operatorname{span}\{\,e_n^i \mid i \in [n]\,\}$, say $\tilde{p} = \Sigma_{i=1}^n \lambda_i e_{n,i}$, where $e_{n,i}$ are the elementary symmetric polynomials of dimension $n$.
-  Now, for a choice (!) of $\sigma_A \in \operatorname{GL}_n$ such that $\sigma_A . A$ is diagonal, we easily see that for $s(A) := \sigma_A . A$ get $p = \tilde{p} \circ \pi \circ s$, therefore $p = \Sigma_{i=1}^n \lambda_i e_{n,i} \circ \pi \circ s$.
+  From the fundamental theorem of symmetric polynomials we can follow that $\tilde{p} \in \operatorname{span}\{e_{n,i}\}_{i=0}^n$, say $\tilde{p} = \Sigma_{i=0}^n \lambda_i e_{n,i}$, where $\{ e_{n,i} \}_{i=0}^n$ are the elementary symmetric polynomials of dimension $n$.
+  Now, for a choice (!) of $\sigma_A \in \operatorname{GL}_n$ such that $\sigma_A . A$ is diagonal, we easily see that for $s(A) := \sigma_A . A$ we get $p = p \circ s = \tilde{p} \circ \pi \circ s$, therefore $p = \Sigma_{i=0}^n \lambda_i e_{n,i} \circ \pi \circ s$.
   Now we want to show that $e_{n,i} \circ \pi \circ s = p_{n,i}$, which would conclude our claim.
   For all $A\in D$ we have
   \begin{equation}
     \begin{aligned}
-      &\sum_{i=1}^n (e_{n,i} \circ \pi \circ s)(A)t^i&=&\operatorname{det}(t-\sigma_A.A)\\
+      &\sum_{i=0}^n (e_{n,i} \circ \pi \circ s)(A)t^i&=&\operatorname{det}(t-\sigma_A.A)\\
       &&=&\operatorname{det}(t-A)
-      &=&\sum_{i=1}^n p_{n,i}(A)t^i\\
+      &=&\sum_{i=0}^n p_{n,i}(A)t^i\\
     \end{aligned}
   \end{equation}
+  which shows our claim.
   Note that this is independent of the choice of $s$, which means that we don't need the axiom of choice (rigorously, as usual, rewrite $s$ as a relation for all possible $s$ instead of a choice of a function\ldots).
 \end{example}
 

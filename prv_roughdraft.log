@@ -1,16 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  5 DEC 2017 21:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  26 FEB 2018 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**&pdflatex prv_roughdraft.ini \nonstopmode\nofiles\PassOptionsToPackage{active
-,tightpage,auctex}{preview}\AtBeginDocument{\ifx\ifPreview\undefined\RequirePac
-kage[displaymath,floats,graphics,textmath,sections,footnotes]{preview}[2004/11/
-05]\fi} \input roughdraft.tex
+**&pdflatex prv_roughdraft.ini \nonstopmode\nofiles\PassOptionsToPackage{active,tightpage,auctex}{preview}\AtBeginDocument{\ifx\ifPreview\undefined\RequirePackage[displaymath,floats,graphics,textmath,sections,footnotes]{preview}[2004/11/05]\fi} \input roughdraft.tex
 (./prv_roughdraft.ini
 LaTeX2e <2015/01/01> patch level 2
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/local/share/texmf-dist/tex/latex/carlisle/mylatex.ltx)
-(/usr/local/share/texmf-dist/tex/latex/tools/.tex File ignored))
+(/usr/local/share/texmf-dist/tex/latex/carlisle/mylatex.ltx) (/usr/local/share/texmf-dist/tex/latex/tools/.tex File ignored))
 No auxiliary output files.
 
 (./roughdraft.tex (/usr/local/share/texmf-dist/tex/latex/base/article.cls
@@ -29,36 +25,30 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(/usr/local/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/local/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (/usr/local/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks14
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/local/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+)) (/usr/local/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/share/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
-
-(/usr/local/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/local/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
 \ex@=\dimen103
-))
-(/usr/local/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
-)
-(/usr/local/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
@@ -98,8 +88,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
-)
-(/usr/local/share/texmf-dist/tex/latex/amscls/amsthm.sty
+) (/usr/local/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks20
 \thm@bodyfont=\toks21
@@ -110,20 +99,16 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@postskip=\skip47
 \thm@headsep=\skip48
 \dth@everypar=\toks25
-)
-(/usr/local/share/texmf-dist/tex/latex/cite/cite.sty
+) (/usr/local/share/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-)
-(/usr/local/share/texmf-dist/tex/latex/mathtools/mathtools.sty
+) (/usr/local/share/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2015/05/11 v1.16 mathematical typesetting tools
-
-(/usr/local/share/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/local/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks26
-)
-(/usr/local/share/texmf-dist/tex/latex/tools/calc.sty
+) (/usr/local/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count99
 \calc@Bcount=\count100
@@ -135,8 +120,7 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count101
 \calc@Cskip=\skip51
-)
-(/usr/local/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
+) (/usr/local/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
@@ -152,27 +136,28 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_intertext_sep=\dimen118
 \l_MT_above_shortintertext_sep=\dimen119
 \l_MT_below_shortintertext_sep=\dimen120
+) (/usr/local/share/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2014/10/28 v3.00 enumerate extensions (DPC)
+\@enLab=\toks27
 )
 \c@theorem=\count103
 \c@corollary=\count104
 \c@remark=\count105
 \c@cremark=\count106
 \c@dexample=\count107
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
-
-(/usr/local/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+ (/usr/local/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
-
-(/usr/local/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+ (/usr/local/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) )
 Beginning to dump on file prv_roughdraft.fmt
- (preloaded format=prv_roughdraft 2017.12.5)
-8795 strings of total length 136707
-76306 memory locations dumped; current usage is 281&75580
-5388 multiletter control sequences
+ (preloaded format=prv_roughdraft 2018.2.26)
+8814 strings of total length 136975
+76676 memory locations dumped; current usage is 281&75950
+5405 multiletter control sequences
 \font\nullfont=nullfont
 \font\OMX/cmex/m/n/10=cmex10
 \font\tenln=line10

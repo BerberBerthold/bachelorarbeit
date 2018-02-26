@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  16 JAN 2018 20:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  26 FEB 2018 14:07
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -145,29 +145,34 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen119
 \l_MT_below_shortintertext_sep=\dimen120
 )
+(/usr/local/share/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2014/10/28 v3.00 enumerate extensions (DPC)
+\@enLab=\toks27
+)
 \c@theorem=\count103
 \c@corollary=\count104
 \c@remark=\count105
 \c@cremark=\count106
 \c@dexample=\count107
-
-(./roughdraft.aux)
+ (./roughdraft.aux)
 \openout1 = `roughdraft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
- (/usr/local/share/texmf-dist/tex/latex/graphics/graphicx.sty
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+
+(/usr/local/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/local/share/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
@@ -197,12 +202,12 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \scratchbox=\box28
 \nofMPsegments=\count110
 \nofMParguments=\count111
-\everyMPshowfont=\toks27
+\everyMPshowfont=\toks28
 \MPscratchCnt=\count112
 \MPscratchDim=\dimen122
 \MPnumerator=\count113
 \makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks28
+\everyMPtoPDFconversion=\toks29
 ))) (/usr/local/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -254,38 +259,67 @@ e
 \Gin@req@height=\dimen123
 \Gin@req@width=\dimen124
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
 
 (/usr/local/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (/usr/local/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./introduction.tex
-[1
+) (./roughdraft.toc
+Overfull \hbox (13.0775pt too wide) in paragraph at lines 5--5
+ [][] []\OT1/cmr/bx/n/10 Linearly Re-duc-tive Groups, The Reynolds Op-er-a-tor 
+And Hilbert's 
+ []
 
-{/usr/local/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}])
-(./prework.tex [2]
-Overfull \hbox (0.51068pt too wide) in paragraph at lines 75--78
+)
+\tf@toc=\write3
+\openout3 = `roughdraft.toc'.
+
+ (./introduction.tex [1
+
+{/usr/local/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2]) (./prewo
+rk.tex [3] [4]
+Overfull \hbox (0.51068pt too wide) in paragraph at lines 136--139
 []\OT1/cmr/m/n/10 from which we im-me-di-ately no-tice that $\OML/cmm/m/it/10 D
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 []\
 OT1/cmr/m/n/10 (\OML/cmm/m/it/10 W\OT1/cmr/m/n/10 )$. There-fore $[][]$
  []
 
-[3]) [4]
-Overfull \hbox (2.37299pt too wide) in paragraph at lines 67--67
+[5])
+Overfull \hbox (2.37299pt too wide) in paragraph at lines 71--71
 []\OT1/cmr/bx/n/14.4 Linearly Re-duc-tive Groups, The Reynolds Op-
  []
 
-(./reynolds.tex [5] [6]) (./prozess.tex
+(./reynolds.tex
+Overfull \hbox (10.74722pt too wide) in paragraph at lines 1--1
+[]\OT1/cmr/bx/n/12 The Reynolds Op-er-a-tor And Lin-early Re-duc-tive Groups 
+ []
+
+[6]
+Overfull \hbox (18.56248pt too wide) in paragraph at lines 61--101
+\OT1/cmr/m/n/10 This fol-lows im-me-di-ately from (c): Let $\OML/cmm/m/it/10 X$
+ \OT1/cmr/m/n/10 be an affine $\OML/cmm/m/it/10 G$\OT1/cmr/m/n/10 -variety and 
+$\OML/cmm/m/it/10 R[]; R[] [] [] K\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X\OT1/cmr/m
+/n/10 ] \U/msa/m/n/10 ^^P
+ []
+
+[7]
+Overfull \hbox (1.31578pt too wide) in paragraph at lines 127--142
+\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 V$ \OT1/cmr/m/n/10 be a fi-nite ra-tio-na
+l rep-re-sen-ta-tion of $\OML/cmm/m/it/10 G$\OT1/cmr/m/n/10 . Con-sider the sub
+-space $((\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 )[])[] \OMS/cmsy/m/n/10 ^^R
+ []
+
+[8] [9] [10] [11]) (./prozess.tex
 Overfull \hbox (8.66666pt too wide) in paragraph at lines 1--7
 \OML/cmm/m/it/10 K []$\OT1/cmr/m/n/10 . Now de-fine $\OML/cmm/m/it/10 I \OT1/cm
 r/m/n/10 := [] =
  []
 
-[7]
+[12]
 Overfull \hbox (23.55684pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 K [
 ]$\OT1/cmr/m/n/10 . Then $\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 ^^N \OML/cmm/m/it
@@ -297,42 +331,43 @@ Overfull \hbox (35.136pt too wide) detected at line 38
 [] []
  []
 
-[8] [9] [10]) (./examples.tex [11]
+[13] [14] [15]) (./examples.tex [16]
 Overfull \hbox (157.06522pt too wide) detected at line 43
 [] []
  []
 
-[12] [13]) (./roughdraft.bbl) [14] (./roughdraft.aux) ) 
+[17] [18] [19]) (./roughdraft.bbl) [20] (./roughdraft.aux) ) 
 Here is how much of TeX's memory you used:
- 3156 strings out of 493093
- 43259 string characters out of 6138120
- 115800 words of memory out of 5000000
- 6576 multiletter control sequences out of 15000+600000
- 14395 words of font info for 56 fonts, out of 8000000 for 9000
+ 3185 strings out of 493093
+ 43613 string characters out of 6138120
+ 119245 words of memory out of 5000000
+ 6600 multiletter control sequences out of 15000+600000
+ 14702 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,14n,27p,559b,252s stack positions out of 5000i,2500n,10000p,300000b,80000s
-</usr/local/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbxti10.pfb></usr/local/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi5.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
-/usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr6.pfb></usr/local/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/
-local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/sha
-re/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/share/texmf
--dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on roughdraft.pdf (14 pages, 267470 bytes).
+</usr/local/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmex10.pfb></usr/local/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi5.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr6.pfb></usr/local/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr7.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><
+/usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loca
+l/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/share/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/share/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on roughdraft.pdf (20 pages, 305650 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 150 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

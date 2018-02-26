@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Preliminary Work}{3}
+\contentsline {subsection}{\numberline {2.1}Concepts From Algebraic Geometry}{3}
+\contentsline {subsection}{\numberline {2.2}Concepts From Invariant Theory}{4}
+\contentsline {section}{\numberline {3}Linearly Reductive Groups, The Reynolds Operator And Hilbert's Finiteness Theorem}{6}
+\contentsline {subsection}{\numberline {3.1}The Reynolds Operator And Linearly Reductive Groups}{6}
+\contentsline {subsection}{\numberline {3.2}Hilbert's Finiteness Theorem}{9}
+\contentsline {subsection}{\numberline {3.3}The Reynolds Operator Of A Linear Algebraic Group}{11}
+\contentsline {section}{\numberline {4}Cayley's $\Omega $-Process}{12}
+\contentsline {section}{\numberline {5}Examples (not a section in the final version)}{16}
+\contentsline {section}{\numberline {6}Further Discussion}{20}

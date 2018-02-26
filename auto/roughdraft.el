@@ -14,7 +14,8 @@
     "amsmath"
     "amsthm"
     "cite"
-    "mathtools")
+    "mathtools"
+    "enumerate")
    (LaTeX-add-labels
     "pw")
    (LaTeX-add-bibliographies)

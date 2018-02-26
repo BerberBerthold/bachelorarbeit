@@ -2,7 +2,10 @@
  "reynolds"
  (lambda ()
    (LaTeX-add-labels
-    "unique"
-    "da"))
+    "dual"
+    "lamm"
+    "equiv"
+    "da"
+    "ro"))
  :latex)
 

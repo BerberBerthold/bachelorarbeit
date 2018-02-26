@@ -2,6 +2,9 @@
  "prework"
  (lambda ()
    (LaTeX-add-labels
-    "rr"))
+    "rr"
+    "funrep"
+    "rara"
+    "locfin"))
  :latex)
 

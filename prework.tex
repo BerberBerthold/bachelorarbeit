@@ -1,4 +1,26 @@
+\subsection{Concepts From Algebraic Geometry}
+
 In the following, $K$ is a field of characteristic $0$ and $G$ a linear algebraic group, that is a group whose set is an affine variety, and whose multiplcation and inversion are morphisms of affine varieties.
+
+\begin{proposition}
+  let $V = K^n$ for some $n \in \mathbb{N}$.
+  For a polynomial $p \in K[V] = K[\{X_i\}_{i\in[n]}]$, the set $ X_p := \{\, v \in V \mid p(v) \neq 0 \,\}$ is an affine variety with the coordinate ring $K[X_p] = K[\{X_i\}_{i \in [n]}, p^{-1}]$.
+\end{proposition}
+
+\begin{proof}
+  The set $X_p$ is not an algebraic set itself.
+  The trick is to consider $X_p$ as a subset of $K \times V$.
+  We do this as follows:
+  Consider $\tilde{X}_p := Z \left( X_0 \cdot p -1 \right) \subseteq K \times V$.
+  We see that $X_p$ corresponds to $\tilde{X}_p$ by noticing that $\tilde{X}_p = \{\, (1/p(v), v) \in K \times V \mid v \in X_p \,\}$, which therefore means we have the one-to-one correspondence $(1/p(v),v) \leftrightarrow v$.
+  By definition $\tilde{X}_p$ is an affine variety, and it is also easy to see that $K[X_p] \cong K[\tilde{X}_p] = K[K\times V] / (X_0 \cdot p -1)$ via $X_0 \leftrightarrow 1/p$, including evaluations with the above described correspondence of points, which is easy to check.
+\end{proof}
+
+\begin{example}[The General Linear Group $\operatorname{GL}_n$]
+  One of the most important examples is the general linear group $\operatorname{GL}_n$, which will be an essential theme in my work.
+  By the above proposition this group is an affine variety via $p = \operatorname{det}$ with the coordinate ring $K[\{X_{i,j}\}_{i,j \in [n]}, \operatorname{det}]$.
+  This makes $\operatorname{GL}_n$ into a \textit{linear algebraic group}, that is a group which is an affine variety whose group operations of the multiplication and inversion are morphisms of affine varieties.
+\end{example}
 
 \begin{definition}[Algebraic Cohomomorphism]
 % We denote by $m$ the group multiplication of the group $G$.
@@ -7,16 +29,26 @@ In the following, $K$ is a field of characteristic $0$ and $G$ a linear algebrai
 % If we want to give the variables names, we can equivalently say it is a map $ \left. K[Z] \right|_G \longrightarrow \left. K[X,Y] \right|_{G \times G} $, where $ Z = \lbrace Z_1 , \ldots , Z_k \rbrace $, $X$ and $Y$ analogously (here, $ m $ canonically takes its left input via $ X $ and its right input via $ Y $).
   Let $m \colon U_1 \times U_2 \longrightarrow W$ be a morphism of affine varieties.
   The strict pullback, which we shall call $\hat{m}$, is a map of the type $K[W] \longrightarrow K[U_1 \times U_2]$.
-  If we want to give the variables names, we can equivalently say it is a map $ \left. K[Z] \right|_W \longrightarrow \left. K[X,Y] \right|_{U_1 \times U_2} $, where $ Z = \lbrace Z_1 , \ldots , Z_k \rbrace $, $X$ and $Y$ analogously (here, $ m $ canonically takes its left input via $ X $ and its right input via $ Y $).
-  \begin{equation}
+  We have $ K[U_1 \times U_2] = K[\{X_k\}_{k\in[r]},\{Y_l\}_{l\in[s]}]$, where $\{X_k\}_{k\in[r]}$ and $\{Y_l\}_{l\in[s]}$ are generators of $K[U_1]$ and $K[U_2]$ respectively.
+  % If we want to give the variables names, we can equivalently say it is a map $ \left. K[Z] \right|_W \longrightarrow \left. K[X,Y] \right|_{U_1 \times U_2} $, where $ Z = \lbrace Z_1 , \ldots , Z_k \rbrace $ $X$ and $Y$ analogously (here, $ m $ canonically takes its left input via $ X $ and its right input via $ Y $).
+  We define the following map:
+  % \begin{equation}
+  %   \begin{aligned}
+  %     t \colon K[\{X_k\}_{k\in[r]},\{Y_l\}_{l\in[s]}]
+  %     & \longrightarrow K[\{X_k\}_{k\in[r]}] \otimes K[\{Y_l\}_{l\in[s]}] \\
+  %     \sum_i \lambda_i \prod_j X_{j}^{d_{i,j}} \prod_k Y_{k}^{e_{i,k}} &\longmapsto \sum_i \lambda_i \prod_j X_{j}^{d_{i,j}} \otimes \prod_k Y_{k}^{e_{i,k}}
+  %   \end{aligned}
+  % \end{equation}
+    \begin{equation}
     \begin{aligned}
-      t \colon \left. K \left\lbrack X , Y \right\rbrack \right|_{U_1 \times U_2} &\longrightarrow \left. K \left\lbrack Z \right\rbrack \right|_{U_1} \otimes \left. K\left\lbrack Z \right\rbrack \right|_{U_2} \\
-      \sum_i \lambda_i \prod_j X_{j}^{d_{i,j}} \prod_j Y_{j}^{e_{i,j}} &\longmapsto \sum_i \lambda_i \prod_j Z_{j}^{d_{i,j}} \otimes \prod_j Z_{j}^{e_{i,j}}
+      t \colon K[U_1 \times U_2]
+      & \longrightarrow K[U_1] \otimes K[U_2]\\
+      \sum_i \lambda_i \prod_j X_{j}^{d_{i,j}} \prod_k Y_{k}^{e_{i,k}} &\longmapsto \sum_i \lambda_i \prod_j X_{j}^{d_{i,j}} \otimes \prod_k Y_{k}^{e_{i,k}}
     \end{aligned}
   \end{equation}
-  This is independent of the choice of the representatives and therefore well-defined.
+  This is independent of the choice of generators and independent of the representatives and therefore well-defined.
   It is even an isomorphism.
-  Now, finally, define $m^\ast := t \circ \hat{m} : K[W] \longrightarrow K[U_1] \otimes K[U_2]$.
+  Now, finally, we define $m^\ast := t \circ \hat{m} : K[W] \longrightarrow K[U_1] \otimes K[U_2]$.
   We call $m^\ast$ the \textit{algebraic cohomomorphism of $m$}.
 \end{definition}
 
@@ -28,85 +60,126 @@ To give a very simple example:
 If $f \in \left. K[Z] \right|_G$, we will write $\operatorname{id} \otimes \frac{\partial}{\partial Z_i} (m^\ast f)$ as in \cite{DK15}, whereas \cite{Stu08} would write $\frac{\partial}{\partial Y_i} f(XY)$.
 \end{remark}
 
-\begin{definition}[Regular Action, Regular Representation]
+\subsection{Concepts From Invariant Theory}
+
+\begin{definition}[Regular Action, Finite Rational Representation]
   Let $G$ be a linear algebraic group, $X$ an affine variety.
   We call an action $G \times X \longrightarrow X$ a \textbf{regular action}, iff $\mu$ is a morphism of affine varieties.
   We say \textbf{$ G $ acts regularly on $ X $}, and we also call $X$ a \textbf{$G$-variety}.
 
-  For a finite-dimensional vector space $V$, if $\mu \colon G \times V \longrightarrow V$ is a representation in the classical sense, that is for all $g \in G$ we have $D_\mu (g) := (v \mapsto g.v) \in \operatorname{GL}(V)$, we call $\mu$ a \textbf{regular representation} iff it is regular.
+  For a finite-dimensional vector space $V$, let $\mu \colon G \times V \longrightarrow V$ be a representation in the classical sense, that is for all $g \in G$ we have $D_\mu (g) := (v \mapsto \mu(g,v)) \in \operatorname{GL}(V)$.
+  We call $\mu$ a \textit{finite rational representation} if and only if it is regular.
+  % We can view $V$ as an affine variety with respect to a basis.
+  % We call $\mu$ a \textbf{finite rational representation} iff it is regular with respect to any basis.
   
   % For a finite dimensional vector space $V$ we call $D \colon G \longrightarrow \operatorname{GL}(V)$ a \textbf{regular representation} iff $\mu_D := ((g,v) \mapsto D(g)(v))$ is a regular action.
   % If an action $\mu \colon G \times V \longrightarrow V$ is given such that $D_\mu (g) := (v \mapsto g.v) \in \operatorname{GL}(V)$, we also call $\mu$ a regular representation (such $\mu$ and $D$ are in bijection).
 \end{definition}
+
+% \begin{remark}
+%   If $V$ is a finite-dimensional vector-space and $\mu \colon G \times V \longrightarrow V$ is a representation of $G$, then $\mu$ is a finite rational representation if and only if it is regular with respect to a single basis.
+%   Really, one can define 
+% \end{remark}
 
 \begin{definition}[Rational Representation]\label{rr}
   Let $V$ be a vector space (not necessarily finite dimensional), and $ \mu : G \times V \longrightarrow V $ an action.
   We call $ \mu $ a \textbf{rational representation} iff there exists a linear map $ \mu^\prime \colon V \longrightarrow K[G] \otimes V $ such that $ \mu \left( \sigma , v \right) = \left( \left( \epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\prime \right) \left(v\right) $.
 \end{definition}
 
-\begin{definition}
+\begin{definition}\label{funrep}
   Let $\mu \colon G \times X \longrightarrow X$ be a regular action.
-  We define an action $\bar{\mu} \colon G \times K[X] \longrightarrow K[X]$ via $\sigma.f (x) = f( \sigma^{-1}.x )$, where  $\sigma \in G$, $f \in K[X]$ and $x \in X$.
+  We define an action $\bar{\mu} \colon G \times K[X] \longrightarrow K[X]$ via $\bar{\mu}(\sigma,f)(x) := f(\mu(\sigma^{-1},x))$, or $\sigma.f (x)\ref{da} := f( \sigma^{-1}.x )$, where  $\sigma \in G$, $f \in K[X]$ and $x \in X$.
   This action is obviously regular, but it is also easily shown that it is in fact a rational representation:
-  If $\tilde{\mu}$ is the action defined by $ \tilde{\mu} (\sigma,x) = \mu (\sigma^{-1},x)$ ($\sigma \in G$, $x \in X$), then we can define $ \bar{\mu}^\prime = \tilde{\mu}^\ast $ with the desired properties.
+  If $\tilde{\mu}$ is the algebraic map (it is in fact a left action) defined by $ \tilde{\mu} (\sigma,x) := \mu (\sigma^{-1},x)$, ($\sigma \in G$, $x \in X$), then we can define $ \bar{\mu}^\prime := \tilde{\mu}^\ast $ with the desired properties.
 \end{definition}
 
-\begin{proposition}
-  An action $\mu \colon G \times V \longrightarrow V$ is a rational representation if and only if the action is locally finite (id est for every $v \in V$, $\operatorname{span}(G.v)$ is finite-dimensional), and every finite-dimensional $G$-stable subspace $W$, $\left. \mu \right|_{G\times W}$ is a regular representation.
+\begin{proposition}\label{rara}
+  If we have $\bar{\mu}^\prime (f) = \Sigma_i p_i \otimes g_i$, then for $\sigma \in G$ we get $\bar{\mu}^\prime (\sigma.f) = \Sigma_i p_i \otimes \sigma.g_i$.
+\end{proposition}
+
+\begin{definition}[locally finite]
+  For a vector-space $V$, we call an action $\mu \colon G \times V \longrightarrow V$ \textbf{locally finite}, iff for every $v \in V$ there exists a $G$-stable finite-dimensional vector space $U \subseteq V$ such that $v \in U$.
+\end{definition}
+
+\begin{definition}
+  Let $V$ be a vector-space and $\mu \colon G \times V \longrightarrow V$ an action.
+  For $v \in V$ we define $V_v := \operatorname{span} G.v$.
+\end{definition}
+
+\begin{remark}
+  $V_v$ is always a $G$-stable subspace of $V$.
+  For any $G$-stable subspace $W \subseteq V$ we have $V_v \subseteq W$.
+  Therefore, an action $\mu \colon G \times V \longrightarrow V$ is locally finite if and only if $V_v$ is finite-dimensional.
+\end{remark}
+
+\begin{proposition}\label{locfin}
+  An action $\mu \colon G \times V \longrightarrow V$ is a rational representation if and only if the action is locally finite, and every finite-dimensional $G$-stable subspace $W$, $\left. \mu \right|_{G\times W}$ is a finite rational representation.
 \end{proposition}
 
 \begin{proof}
-  See \cite[A.1.8]{DK15} and \cite[2.2.5(b)$\implies$(c),2.2.6]{DK15}
+  See \cite[A.1.8]{DK15} and \cite[2.2.5(b)$\implies$(c), 2.2.6]{DK15}
 
   Assume that $\mu$ is a rational representation.
   Let $v \in V$.
   We can write $\mu^\prime (v) = \Sigma_{i=1}^l f_i \otimes v_i$. %with $f_i$ linearly independant over $K$.
-  We then easily see that $K(G.v) \subseteq \operatorname{span}\{v_i\}_{i=1}^l$, showing that the action is locally finite.
-  Now let $W$ be a finite-dimensional subrepresentation with the basis $\{w_i\}_{i=1}^r$.
+  We then easily see that $V_v \subseteq \operatorname{span}\{v_i\}_{i=1}^l$, showing that the action is locally finite.
+  Now let $W$ be a finite-dimensional $G$-stable subspace of $V$ with the basis $\{w_i\}_{i=1}^r$.
   We have $p_{i,j} \in K[G]$ with $ \mu^\prime (w_j) = \Sigma_{i=1}^r p_{i,j} \otimes w_i$.
   Now let $w = \Sigma_{j=1}^r \lambda_j w_j \in W$.
   Then for all $\sigma \in G$ we have
   \begin{equation}
     \begin{aligned}
       &\mu (\sigma,w)
-      &=& \left(\left(\epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(w \right) \\
-      &&=& \sum_{j=1}^N \lambda_j  \sum_{i=1}^N p_{i,j}\left(\sigma\right) \cdot w_i \\
+      &=& \left(\left(\epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\prime \right) \left(w \right) \\
+      &&=& \sum_{j=1}^r \lambda_j  \sum_{i=1}^r p_{i,j}\left(\sigma\right) \cdot w_i \\
     \end{aligned}
   \end{equation}
   from which we immediately notice that $D_{\left. \mu \right|_{G \times W}} (\sigma) \in \operatorname{GL}(W)$.
-  Therefore $\left. \mu \right|_{G\times W}$ is a regular representation.
+  Therefore $\left. \mu \right|_{G\times W}$ is a finite rational representation.
 
-  Now let $\mu$ be a locally finite action such that for every finite-dimensional $G$-stable subspace $W$, $\left. \mu \right|_{G\times W}$ is a regular representation.
+  Now let $\mu$ be a locally finite action such that for every finite-dimensional $G$-stable subspace $W$, $\left. \mu \right|_{G\times W}$ is a finite rational representation.
   Let $v \in V$.
-  By assumption there exists a finite-dimensional vector space $W \subseteq V$ such that $v \in W$.
+  By assumption there exists a finite-dimensional $G$-stable vector space $W \subseteq V$ such that $v \in W$.
+  Choose a basis $\{w_1, \ldots, w_r\}$ of $W$, where $w_1 = v$ (this is done to make some terms easier, but choosing any basis also works).
+  Since $\left. \mu \right|_{G\times W}$ is a regular representation, we have $D_\mu (\sigma) \in \operatorname{GL}(W)$ for all $\sigma \in G$, and since our action is also regular, for $i \in [r]$ there exist $p_i \in K[G]$ such that for all $\sigma \in G$ we have $\mu(\sigma, v) = D_\mu(\sigma)(v) = \Sigma_{i=1}^r p_i(\sigma) \cdot w_i$.
+  Now define $\mu^\prime (v) := \Sigma_{i=1}^r p_i \otimes w_i$.
+  We shall now check that this is well-defined:
+  
+  PROOF NOT DONE YET
   
 \end{proof}
 
-\begin{definition}[Rational Representation]
-  Let $G$ be a linear algebraic group.
-  A representation $V$ of $G$ is called a \textbf{rational representation}, iff its corresponding action $ G \times V \longrightarrow V $ is a regular action.
-\end{definition}
+% \begin{definition}[Rational Representation]
+%   Let $G$ be a linear algebraic group.
+%   A representation $V$ of $G$ is called a \textbf{rational representation}, iff its corresponding action $ G \times V \longrightarrow V $ is a regular action.
+% \end{definition}
 
-\textbf{Claim:} If $V$ is finite dimensional, the notions of the definitions coincide.\\
-\textit{Proof:} First, let $V$ be a rational representation of $G$ with basis $\{ v_1 , \ldots , v_N \}$ be a basis of $V$.
-By our assumption, we have a rational representation, therefore there exist $p_{i,j} \in K \left\lbrack G \right\rbrack$ such that $\mu\left( \sigma, v_j \right) = \Sigma_{i=1}^{N} p_{i,j}\left(\sigma\right) \cdot v_i$.
-Define $\mu^\ast \left( v_j \right) := \Sigma_{i=1}^{N} p_{i,j} \otimes v_i$.
-Now we easily see:
-\begin{equation}
-  \begin{aligned}
-    \mu\left(\sigma,v\right)
-    &= \mu \left(\sigma, \Sigma_{j=1}^N \lambda_j v_j \right) \\
-    &= \sum_{j=1}^N \lambda_j  \sum_{i=1}^N p_{i,j}\left(\sigma\right) \cdot v_i \\
-    &= \sum_{j=1}^N \lambda_j \left(\left(\epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v_j \right)
-    &= \left(\left(\epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v \right)
-  \end{aligned}
-\end{equation}
-\textit{which was to show.}
+% \textbf{Claim:} If $V$ is finite dimensional, the notions of the definitions coincide.\\
+% \textit{Proof:} First, let $V$ be a rational representation of $G$ with basis $\{ v_1 , \ldots , v_N \}$ be a basis of $V$.
+% By our assumption, we have a rational representation, therefore there exist $p_{i,j} \in K \left\lbrack G \right\rbrack$ such that $\mu\left( \sigma, v_j \right) = \Sigma_{i=1}^{N} p_{i,j}\left(\sigma\right) \cdot v_i$.
+% Define $\mu^\ast \left( v_j \right) := \Sigma_{i=1}^{N} p_{i,j} \otimes v_i$.
+% Now we easily see:
+% \begin{equation}
+%   \begin{aligned}
+%     \mu\left(\sigma,v\right)
+%     &= \mu \left(\sigma, \Sigma_{j=1}^N \lambda_j v_j \right) \\
+%     &= \sum_{j=1}^N \lambda_j  \sum_{i=1}^N p_{i,j}\left(\sigma\right) \cdot v_i \\
+%     &= \sum_{j=1}^N \lambda_j \left(\left(\epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v_j \right)
+%     &= \left(\left(\epsilon_\sigma \otimes \operatorname{id} \right) \circ \mu^\ast \right) \left(v \right)
+%   \end{aligned}
+% \end{equation}
+% \textit{which was to show.}
 
 \begin{remark}
-  A rational representation $ G \longrightarrow \operatorname{GL}\left(V\right) $ is of the following form:\\
-  If $ a_{i,j} : G \longrightarrow K $ is the function of the $\left( i,j \right) $-entry, then $ a_{i,j} \in K\lbrack G\rbrack $.\\
-  In fact, it is equivalent to define a representation as rational, iff its map $ G \longrightarrow \operatorname{GL} \left( V \right) $ is a map of affine varieties.
+  This shows that for a finite-dimensional vector space $V$, an action is a rational representation if and only if it is a finite rational representation.
+  In other words, we have shown that finite rational representations are exactly the rational representations that are finite dimensional, which justifies the choice of the names of our definitions.
+\end{remark}
+
+\begin{remark}
+  A finite rational representation $\mu \colon G \times V \longmapsto V$ is of the following form:\\
+  Consider $D_{\mu} \colon G \longmapsto \operatorname{GL}(V)$.
+  If then $ a_{i,j} : G \longrightarrow K $ is the function of the $\left( i,j \right) $-entry of $D_{\mu}$, then $ a_{i,j} \in K\lbrack G\rbrack $.\\
+  In fact, it is equivalent to define a representation $\mu \colon G \times V \longrightarrow V$ ($V$ finite dimensional) as rational, iff $D_{\mu} \colon G \longrightarrow \operatorname{GL}(V)$ is a map of affine varieties.
 \end{remark}
 
 \begin{definition}[Invariants]
@@ -114,15 +187,15 @@ Now we easily see:
   \begin{equation}
     X^G := \left\{\, x \in X \mid \forall g \in G : g . x = x \,\right\}
   \end{equation}
-  It defines a linear subspace.
-  This given action induces an action $ G \times K\lbrack X\rbrack \longrightarrow K\lbrack X\rbrack $, where $K\lbrack X\rbrack$ is the coordinate ring, as follows:
-  \begin{equation}
-    \left( g , f \right) \longmapsto g \cdot f :=
-    \left( x \mapsto f \left( \sigma^{-1} . x \right) \right)
-  \end{equation}
+  This defines a linear subspace.
+  The given action induces an action $ \bar{\mu} \colon G \times K\lbrack X\rbrack \longrightarrow K\lbrack X\rbrack $ as per definition \ref{funrep}.
+  % \begin{equation}
+  %   \left( g , f \right) \longmapsto g \cdot f :=
+  %   \left( x \mapsto f \left( \sigma^{-1} . x \right) \right)
+  % \end{equation}
   The \textbf{invariant ring} of the representation is defined as
   \begin{equation}
-    K\lbrack X\rbrack^G := \left\{ \, f \in K\lbrack X \rbrack \mid \forall g \in G : g \cdot f = f \, \right\}
+    K\lbrack X\rbrack^G := \left\{ \, f \in K\lbrack X \rbrack \mid \forall g \in G : g . f = f \, \right\}
   \end{equation}
   As the name implies, $ K\lbrack X\rbrack^G $ defines a subalgebra of $ K\lbrack X\rbrack^G $.
 \end{definition}

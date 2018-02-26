@@ -57,17 +57,18 @@ It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial
 \end{lemma}
 
 \begin{proof}
-  Write $ \operatorname{det} (Z)^p = \Sigma_i a_i m_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) $, where $a_i \in K$ and $m_i$ are (monic) monomials.
+  Write $ \operatorname{det} (Z)^p = \Sigma_i a_i m_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) $, where $a_i \in \mathbb{Z} \setminus \{0\}$ and $m_i$ are (monic) monomials.
   Then
   \begin{equation}
     \Omega^p \left( \operatorname{det} (Z)^p \right)
-    = \Sigma_i a_i m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( \Sigma_j a_j m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right)
-\end{equation}
-Notice that $ m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $. Therefore in particular
-\begin{equation}
-  c_{p,n}
-  = \sum_i a_i^2 m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) \in \mathbb{N}_{>0}
-\end{equation}
+    = \sum_i a_i m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( \sum_j a_j m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right)
+  \end{equation}
+  Notice that $ m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $.
+  Therefore in particular
+  \begin{equation}
+    c_{p,n}
+    = \sum_i a_i^2 m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) \in \mathbb{N}_{>0}
+  \end{equation}
 \end{proof}
 Now, finally, we have the tools to see the following way of expressing the Reynolds Operator.
 \begin{theorem}
@@ -107,13 +108,12 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
       R \left( \alpha . f \right)
       &= R \left( \alpha . f \right) \left( I_n \right)
       = R \left( I_n^{-1} \dot{\phantom{.}} f \right) \left( \alpha^{-1} \right) \\
-     & = R \left( I_n^{-1} \dot{\phantom{.}} f \right)
-      = R \left( I_n \dot{\phantom{.}} f \right) 
+      & = R \left( I_n^{-1} \dot{\phantom{.}} f \right)
       = R (f)
-  \end{aligned}
+    \end{aligned}
   \end{equation}
   which shows the $\operatorname{GL}_n$-invariance.
-  Finally, the definition immediately gives us that $R$ restricted to $K$ is the identity.  As mentioned in \ref{unique}, the uniqueness of the Reynolds Operator implies $ R = R_{\operatorname{GL}_n} $.
+  Finally, the definition immediately gives us that $R$ restricted to $K$ is the identity.  As mentioned in lemma \ref{lamm}(e), the uniqueness of the Reynolds Operator implies $ R = R_{\operatorname{GL}_n} $.
 \end{proof}
 
 Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
@@ -157,7 +157,7 @@ Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
   and as before we define the images of the other elements by linear extension.
   Well-definedness follows from the same observations as in the proof of the theorem (and $ r-p = (r+q)-(p+q) $ for $ q \in \mathbb{N} $).
   This map is the identity on $ K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n }$:
-  If $ f \in K \left\lbrack \left\lbrace Z_{k,l \in \lceil n \rceil} \right\rbrace \right\rbrack_{rn} $ and $ f \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $, then $ \tilde{f} = \lambda \operatorname{det} (Z)^r $ with $ \lambda \in K $.
+  If $f = \frac{\tilde{f}}{\operatorname{det}(Z)^p}$, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in \lceil n \rceil} \right\rbrace \right\rbrack_{rn} $ and $ \tilde{f} \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $, then $ \tilde{f} = \lambda \operatorname{det} (Z)^r $ with $ \lambda \in K $.
   Therefore we can say w.l.o.g. either $p=0$ or $r=0$.
   Then it is quite clear that then $f$ gets mapped to $f$.
   Finally, the $\operatorname{SL}_n$-invariance also follows from the last theorem: Let $\alpha \in \operatorname{SL}_n$.
