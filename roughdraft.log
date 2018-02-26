@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  26 FEB 2018 14:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  26 FEB 2018 15:49
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -331,20 +331,48 @@ Overfull \hbox (35.136pt too wide) detected at line 38
 [] []
  []
 
-[13] [14] [15]) (./examples.tex [16]
+[13]
+./prozess.tex:64: Undefined control sequence.
+l.64     = \suq
+               _i a_i q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./prozess.tex:64: Undefined control sequence.
+l.64 ...l \in \lceil n \rceil} \right) \left( \suq
+                                                  _j a_j q_j \left( \left\{ ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./prozess.tex:70: Undefined control sequence.
+l.70     = \suq
+               _i a_i^2 q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[14] [15]) (./examples.tex [16]
 Overfull \hbox (157.06522pt too wide) detected at line 43
 [] []
  []
 
 [17] [18] [19]) (./roughdraft.bbl) [20] (./roughdraft.aux) ) 
 Here is how much of TeX's memory you used:
- 3185 strings out of 493093
- 43613 string characters out of 6138120
- 119245 words of memory out of 5000000
- 6600 multiletter control sequences out of 15000+600000
+ 3186 strings out of 493093
+ 43618 string characters out of 6138120
+ 119255 words of memory out of 5000000
+ 6601 multiletter control sequences out of 15000+600000
  14702 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,14n,27p,559b,252s stack positions out of 5000i,2500n,10000p,300000b,80000s
+ 51i,14n,27p,577b,252s stack positions out of 5000i,2500n,10000p,300000b,80000s
 </usr/local/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/share/texmf-dist/fonts/
@@ -364,7 +392,7 @@ y10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><
 l/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/share/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/share/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on roughdraft.pdf (20 pages, 305650 bytes).
+Output written on roughdraft.pdf (20 pages, 306118 bytes).
 PDF statistics:
  150 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams

@@ -19,11 +19,11 @@ It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial
     = m^\ast \circ \Omega
     = \left( \Omega \otimes \operatorname{det} \left( Z \right) ^{-1} \cdot \right) \circ m^\ast
   \end{equation}
-  where I write ``$ p \cdot $'' for the operation \textit{multiply with $ p $} for a polynomial $ p \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ (but the reader must not worry, this is the only time I will make use of this notation).
+  where we write ``$ p \cdot $'' for the operation \textit{multiply with $ p $} for a polynomial $ p \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ (but the reader must not worry, this is the only time we will make use of this notation).
 \end{lemma}
 
 \begin{proof}
-  Here, we will follow the same convention as described in chapter 3: The ``left'' and ``right'' inputs of $ m $ will be represented by $ X = \left\lbrack X_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ and $ Y = \left\lbrack Y_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ in the occuring polynomials respectively, and the outputs $ m = \left\lbrack m_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ are indexed the same as the inputs of the polynomials in $ Z_{1,1} , Z_{1,2} , \ldots Z_{n,n} $.\\
+  Here, we will follow the same convention as described in definition \ref{coh}: The ``left'' and ``right'' inputs of $ m $ will be represented by $ X = \left\lbrack X_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ and $ Y = \left\lbrack Y_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ in the occuring polynomials respectively, and the outputs $ m = \left\lbrack m_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ are indexed in the same way as the inputs of the polynomials in $ Z_{1,1} , Z_{1,2} , \ldots Z_{n,n} $.\\
   Let $f \in K \left\lbrack \operatorname{GL}_n \right\rbrack $.
   Then $ f \circ m \in K \left\lbrack \left\{ X_{i,j} \right\}_{i,j \in \lceil n \rceil} , \operatorname{det} \left( X \right)^{-1} , \left\{ Y_{i,j} \right\}_{i,j \in \lceil n \rceil} , \operatorname{det} \left( Y \right)^{-1} \right\rbrack $.
   For fixed $i,j \in \lceil n \rceil $ we have
@@ -36,7 +36,7 @@ It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial
     = \sum_{k=1}^n \left( Z_{k,i} \cdot \otimes \operatorname{id} \right) \left( m^\ast \left( \frac{\partial}{\partial Z_{k,j}} f \right) \right)
     \end{aligned}
   \end{equation}
-  Note the use of $ t $ as described in chapter 3 to aid in rephrasing terms.
+  Note the use of $ t $ as described in definition \ref{coh} to aid in rephrasing terms.
   Successively applying this yields
   \begin{equation}
     \begin{aligned}
@@ -57,17 +57,17 @@ It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial
 \end{lemma}
 
 \begin{proof}
-  Write $ \operatorname{det} (Z)^p = \Sigma_i a_i m_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) $, where $a_i \in \mathbb{Z} \setminus \{0\}$ and $m_i$ are (monic) monomials.
+  Write $ \operatorname{det} (Z)^p = \Sigma_i a_i q_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) $, where $a_i \in \mathbb{Z} \setminus \{0\}$ and $q_i$ are (monic) monomials.
   Then
   \begin{equation}
     \Omega^p \left( \operatorname{det} (Z)^p \right)
-    = \sum_i a_i m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( \sum_j a_j m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right)
+    = \suq_i a_i q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( \suq_j a_j q_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right)
   \end{equation}
-  Notice that $ m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $.
+  Notice that $ q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( q_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $.
   Therefore in particular
   \begin{equation}
     c_{p,n}
-    = \sum_i a_i^2 m_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( m_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) \in \mathbb{N}_{>0}
+    = \suq_i a_i^2 q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( q_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) \in \mathbb{N}_{>0}
   \end{equation}
 \end{proof}
 Now, finally, we have the tools to see the following way of expressing the Reynolds Operator.
@@ -157,7 +157,10 @@ Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
   and as before we define the images of the other elements by linear extension.
   Well-definedness follows from the same observations as in the proof of the theorem (and $ r-p = (r+q)-(p+q) $ for $ q \in \mathbb{N} $).
   This map is the identity on $ K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n }$:
-  If $f = \frac{\tilde{f}}{\operatorname{det}(Z)^p}$, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in \lceil n \rceil} \right\rbrace \right\rbrack_{rn} $ and $ \tilde{f} \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $, then $ \tilde{f} = \lambda \operatorname{det} (Z)^r $ with $ \lambda \in K $.
+  If $f \in K[\operatorname{GL}_n]^{\operatorname{SL}_n}$, then $f$ must be a linear combination of terms of the form $\frac{\operatorname{det}(Z)^r}{\operatorname{det}(Z)^p}$.
+  Without loss of generality we can assume that either $p=0$ or $r=0$.
+  Then it should be clear that $f$ gets mapped to itself.
+  % If $f = \frac{\tilde{f}}{\operatorname{det}(Z)^p}$, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in \lceil n \rceil} \right\rbrace \right\rbrack_{rn} $ and $ \tilde{f} \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $, then $ \tilde{f} = \lambda \operatorname{det} (Z)^r $ with $ \lambda \in K $.
   Therefore we can say w.l.o.g. either $p=0$ or $r=0$.
   Then it is quite clear that then $f$ gets mapped to $f$.
   Finally, the $\operatorname{SL}_n$-invariance also follows from the last theorem: Let $\alpha \in \operatorname{SL}_n$.

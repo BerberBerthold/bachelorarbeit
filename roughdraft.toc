@@ -7,5 +7,5 @@
 \contentsline {subsection}{\numberline {3.2}Hilbert's Finiteness Theorem}{9}
 \contentsline {subsection}{\numberline {3.3}The Reynolds Operator Of A Linear Algebraic Group}{11}
 \contentsline {section}{\numberline {4}Cayley's $\Omega $-Process}{12}
-\contentsline {section}{\numberline {5}Examples (not a section in the final version)}{16}
+\contentsline {section}{\numberline {5}Examples (not a section in the final version)}{17}
 \contentsline {section}{\numberline {6}Further Discussion}{20}
