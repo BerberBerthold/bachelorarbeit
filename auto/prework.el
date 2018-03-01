@@ -2,6 +2,7 @@
  "prework"
  (lambda ()
    (LaTeX-add-labels
+    "rabbi"
     "coh"
     "rr"
     "funrep"

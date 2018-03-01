@@ -120,31 +120,56 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
 \end{example}
 
 \begin{example}
-  Consider the cross ratio.
-  We can view its domain as the affine variety
+  We will now discuss the cross ratio.
+  Consider $(K^2)^4$ and with the coordinate functions $\{(X_i)_k\}_{i \in [4], k \in [2]}$.
+  (We write $X_i = \binom{(X_i)_1}{(X_i)_2}$ for $i \in [4]$.)
+  Define $q := \prod_{i,j \in [r], i<j} \operatorname{det}(X_i,X_j)$.
+  As described in \ref{rabbi}, we have an affine variety
   \begin{equation}
-    \begin{aligned}
-      &X&:=&\{\, (a,b,c,d) \in (\mathbb{K}^2)^4 \mid (b_1c_2 - b_2c_1)(d_1a_2 - d_2a_1) \neq 0 \,\}\\
-      &&=& \{\, (a,b,c,d) \in (\mathbb{K}^2)^4 \mid \operatorname{det}(b,c)\operatorname{det}(d,a) \neq 0 \,\}
-    \end{aligned}
+    % \begin{aligned}
+    %   &X&:=&\{\, (a,b,c,d) \in (K^2)^4 \mid (b_1c_2 - b_2c_1)(d_1a_2 - d_2a_1) \neq 0 \,\}\\
+    %   &&=& \{\, (a,b,c,d) \in (K^2)^4 \mid \operatorname{det}(b,c)\operatorname{det}(d,a) \neq 0 \,\}
+    % \end{aligned}
+    X := \{\, (x_1,x_2,x_3,x_4) \in (K^2)^4 \mid q(x_1,x_2,x_3,x_4) \neq 0 \,\}
   \end{equation}
-  as described in [\textbf{yaboi}].
+  with the coordinate ring $K[X] = K[\{(X_i)_k\}_{i \in [4], k \in [2]},q^{-1}]$.
+  Nothe that $q(x_1,x_2,x_3,x_4) \neq 0$ is equivalent to saying that for $i\neq j$ we have $x_i \notin \operatorname{span}{x_j}$, or rather in projective terms $[x_i] \neq [x_j]$.
   Now consider the action of $\operatorname{GL}_2$ on $X$ via pointwise application.
   The \textit{cross ratio} $\operatorname{cr} \in K[X]$ defined as follows
   \begin{equation}
     \begin{aligned}
       \operatorname{cr} \colon&&X&\longrightarrow K \\
-      &&(a,b,c,d) &\longmapsto \frac{\operatorname{det}(a,b)\operatorname{det}(c,d)}{\operatorname{det}(b,c)\operatorname{det}(d,a)}
+      &&(x_1,x_2,x_3,x_4) &\longmapsto \frac{\operatorname{det}(x_1,x_2)\operatorname{det}(x_3,x_4)}{\operatorname{det}(x_2,x_3)\operatorname{det}(x_4,x_1)}
     \end{aligned}
   \end{equation}
-  is an invariant under this action, as is easily seen.
-  Exactly this $\operatorname{GL}_2$-invariance guarantees a coordinate-independent definition of the cross ratio in the projective space.
-  The invariant ring $K[X]^{\operatorname{GL}_n}$ is finitely generated, though we can't apply the Reynolds operator directly, since $X$ is not a vector space.
+  is an invariant under this action, as well as the same map with permuted inputs, as is easily seen.
+  Together with the fact that the condition $q(x_1,x_2,x_3,x_4) \neq 0$ is also $\operatorname{GL}_2$-invariant, this actually guarantees us a coordinate-free definition of the cross ratio for any two-dimensional vector-space.
+  The invariant ring $K[X]^{\operatorname{GL}_n}$ is finitely generated, as we know by Hilbert's finiteness theorem.
+  In fact, we don't have more invariants than polynomials in the cross ratio: $K[X]^{\operatorname{GL}_n} = K[\{\operatorname{cr}(X_{\pi_1},X_{\pi_2},X_{\pi_3},X_{\pi_4})\}_{\pi \in S_4}]$.
+  We actually have $K[\{\operatorname{cr}(X_{\pi_1},X_{\pi_2},X_{\pi_3},X_{\pi_4})\}_{\pi \in S_4}] = K[\operatorname{cr},(\operatorname{cr}(\operatorname{cr} -1))^{-1}] $, since we can calculate that for any permutation $\pi in S_4$ we have $ \operatorname{cr}(X_{\pi_1},X_{\pi_2},X_{\pi_3},X_{\pi_4}) \in \left\{ \operatorname{cr}, \operatorname{cr}^{-1}, 1 - \operatorname{cr}, (1-\operatorname{cr})^{-1}, \operatorname{cr}^{-1}(\operatorname{cr}-1)\right\}$.
+  % This might look surprising because the cross ratio with permuted inputs doesn't seem like it is included, and also $(\operatorname{cr}(\operatorname{cr} -1))^{-1}$ doesn't look like it is an element of the coordinate ring $K[X]$.
+  % But these are just illusions (pardon my playful phrasing):
+  % We can calculate that for $x_1,x_2,x_3,x_4 \in X$ we have $\operatorname{cr}(x_1,x_2,x_3,x_4) = \operatorname{cr}(x_1,x_2,x_4,x_3)^{-1} = 1 - \operatorname{cr}(x_1,x_3,x_2,x_4) = 1 - \operatorname{cr}(x_1,x_3,x_4,x_2)^{-1} = (1 - \operatorname{cr}(x_1,x_4,x_2,x_3))^{-1} = (1 - \operatorname{cr}(x_1,x_4,x_3,x_2)^{-1})^{-1}$.
+  % All other permutations of the inputs are one of these six terms.
+  To see that the invariant ring looks like what we claimed, we need some results from the projective geometry.
+  The cross ratio is also defined in the projective space:
+  Let $Y$ be defined as those points in $P(K^2)^4$ that are pairwise distinct.
+  $Y$ is equal to $P(X)$, and $X$ itself is already a cone.
+  The projective cross ratio $\operatorname{cr}_P$ is then well-defined since it is independent of the choice of representatives because the determinant is multilinear.
+  This means that for any $ (a,b,c,d) \in X $ we have $\operatorname{cr}(a,b,c,d) = \operatorname{cr}_P([a],[b],[c],[d]) $.
+  For the same reasons as before, this projective cross ratio is also $\operatorname{PGL}(K^2)$-invariant.
+  If $x_1,x_2,x_3,y_1,y_2,y_3 \in P(K^2)$ with $x_1$, $x_2$ and $x_3$ pairwise distinct and pairwise $y_1$, $y_2$ and $y_3$ distinct, then an important theorem in projective geometry is that there exists a (unique) projective transformation $ \mathrm{R} \in \operatorname{PGL}(K^2)$ such that $\mathrm{R} (x_1) = y_1$, $\mathrm{R}(x_2) = y_2$ and $\mathrm{R}(x_3) = y_3$.
+  Let $A,B,C,D \in Y$, which implies that $B,C,D$ are pairwise distinct.
+    For $x \in K $ we define $x_P := \left[\binom{x}{1}\right]$ and $\infty_P := \left[\binom{1}{0}\right]$.
+  There then exists a $\mathrm{R}_{B,C,D} \in \operatorname{PGL}(K^2)$ such that $\mathrm{R}_{B,C,D} (B) = 0_P$, $\mathrm{R}_{B,C,D} (C) = 1_P$ and $\mathrm{R}_{B,C,D} (D) = \infty_P$.
+  We then compute $\mathrm{R} (A) = \operatorname{cr}(\mathrm{R}(A),0_P,1_P,\infty_P) = \operatorname{cr}(\mathrm{R}(A),\mathrm{R}(B),\mathrm{R}(C),\mathrm{R}(D)) = \operatorname{cr}(A,B,C,D)$.
+  Now let us look at our affine case.
+  If $(a,b,c,d) \in X$, we have that $[b]$, $[c]$ and $[d]$ are pairwise distinct.
 \end{example}
 
 \begin{example}
-  \textbf{($K$ needs to be algebraically closed for Zariski-denseness of diagonizable matrices...)}
-  
+  % \textbf{($K$ needs to be algebraically closed for Zariski-denseness of diagonizable matrices...)}
+  Let $K$ be an algebraically-closed field.
   Consider $\operatorname{GL}_n$ viewed as the group of all change-of-coordinates transformations for endomorphisms on $K^n$, that is the rational representation
   \begin{equation}
     \begin{aligned}
@@ -168,13 +193,15 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
   Are there other invariants than these $p_{n,i}$?
   No!
   To see this, we will use a little trick:
-  Consider $D := \{\, \delta \in K^{n,n} \mid \delta \operatorname{diagonalizable} \,\} \subseteq K^{n,n}$.
-  Since $V$ is Zariski-dense in $K^{n,n}$, we have $K[K^{n,n}] \simeq \left. K[K^{n,n}] \right|_{D}$ via $p \leftrightarrow \left. p \right|_{D}$.
+  Consider $D := \{\, \delta \in K^{n,n} \mid \delta \operatorname{diagonalizable} \,\} \subseteq K[K^{n,n}]$.
+  Since $K$ is algebraically closed, $D$ is Zariski-dense in $K^{n,n}$, and we have $K[K^{n,n}] \simeq = \left. K[K^{n,n}] \right|_{D}$ via $p \leftrightarrow \left. p \right|_{D}$.
   For this reason, we will look at the evaluation of an invariant polynomial $p \in K[K^{n.n}] $ only on elements in $D$, and can deduce what polynomial it is.
 
   Let $p \in K[K^{n,n}]^{\operatorname{GL_n}}$.
   We define a projection onto the diagonal:
-  $\pi \colon K^{n,n} \longrightarrow K^n , [A_{i,j}]_{i,j \in [n]} \longmapsto (A_{i,i})_{i \in [n]} $.
+  $\pi \colon K^{n,n} \twoheadrightarrow K^n , [A_{i,j}]_{i,j \in [n]} \longmapsto (A_{i,i})_{i \in [n]} $.
+  % We also define an inclusion of $K^n$ into $K^{n,n}$:
+  % $\iota \colon K^n \hookrightarrow K^{n,n}$, $(A_i)_{i \in [n]} \mapsto $
   % Now, for $A \in D$, there exists a $\sigma_A \in \operatorname{GL}_n$ such that $\sigma_A . A $ is diagonal.
   % If $\tilde{p} = p \left( [ \delta_{i,j} Z_{i,j}]_{i,j \in [n]} \right) \in K[K^n]$, then, since $p$ is an invariant, for all $A \in D$ we have
   % \begin{equation}
@@ -185,16 +212,16 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
   %   \end{aligned}
   % \end{equation}
   % As long as $\sigma .A$ is diagonal, this is true regardless of the choice of $\sigma_A$.
-  Consider $\tilde{p} = p \left( [ \delta_{i,j} Z_{i,j}]_{i,j \in [n]} \right) \in K[K^n]$.
+  Consider $\tilde{p} := p \circ \operatorname{diag}_n$
   $\tilde{p}$ is $S_n$-invariant:
-  If $M_\tau \in \operatorname{GL}_n$ is the matrix corresponding to $\tau \in S_n$, then for all $\tau \in S_n$ and for all $ X \in K^n$ we have
+  If $M_\tau \in \operatorname{GL}_n$ is the permutation matrix corresponding to $\tau \in S_n$, then for all $\tau \in S_n$ and for all $ X \in K^n$ we have
   \begin{equation}
     \begin{aligned}
       &\tau.\tilde{p} (X) &=& \tilde{p} (\tau^{-1}.X)\\
-      &&=& \tilde{p} (\pi (\operatorname{diag} (\tau^{-1} . X) ))\\
-      &&=& p ( \operatorname{diag}(\tau^{-1}.X)\\
-      &&=& M_\tau . p (\operatorname{diag}(X))\\
-      &&=& p (\operatorname{diag}(X))&=& \tilde{p} (X)
+      &&=& p ( \operatorname{diag}_n(\tau^{-1}.X)\\
+      &&=& p( M_\tau^{-1} \cdot \operatorname{diag}_n (X))\\
+      &&=& M_\tau . p (\operatorname{diag}_n(X))\\
+      &&=& p (\operatorname{diag}_n(X))&=& \tilde{p} (X)
     \end{aligned}
   \end{equation}
   From the fundamental theorem of symmetric polynomials we can follow that $\tilde{p} \in \operatorname{span}\{e_{n,i}\}_{i=0}^n$, say $\tilde{p} = \Sigma_{i=0}^n \lambda_i e_{n,i}$, where $\{ e_{n,i} \}_{i=0}^n$ are the elementary symmetric polynomials of dimension $n$.

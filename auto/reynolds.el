@@ -5,6 +5,7 @@
     "dual"
     "lamm"
     "equiv"
+    "decomp"
     "da"
     "ro"))
  :latex)
