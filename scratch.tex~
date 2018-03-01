@@ -1,0 +1,77 @@
+% Created 2018-03-01 Thu 00:53
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\date{}
+\title{scratch}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\section*{Introduction}
+\label{sec-1}
+\section*{Preliminary Work}
+\label{sec-2}
+\subsection*{Algebraic Geometry}
+\label{sec-2-1}
+\begin{itemize}
+\item affine varieties
+\item linear algebraic groups, example GL
+\item algebraic cohomomorphism, example multiplication
+\end{itemize}
+\subsection*{Invariant Theory}
+\label{sec-2-2}
+\begin{itemize}
+\item regular action, example, cross ratio maybe
+\item rational representation, example coordinate rings, conjugation
+\item invariants, example cross ratio
+\end{itemize}
+\section*{Linearly Reductive Groups, The Reynolds Operator And Hilbert's Finiteness Theorem}
+\label{sec-3}
+\subsection*{The Reynolds Operator And Linearly Reductive Groups}
+\label{sec-3-1}
+\begin{itemize}
+\item equivalences of "linearly reductive"
+\end{itemize}
+\subsection*{Hilbert's Finiteness Theorem}
+\label{sec-3-2}
+\begin{itemize}
+\item theorem
+\item embeddings, example cross ratio
+\end{itemize}
+\subsection*{The Reynolds Operator Of A Linear Algebraic Group}
+\label{sec-3-3}
+\begin{itemize}
+\item K[G]* as an associative K-algebra
+\item existence Reynolds operator of group implies linearly reductive
+\end{itemize}
+\section*{Cayley's Omega Process}
+\label{sec-4}
+\begin{itemize}
+\item everything
+\item examples from prof, conjugation and cross ratio
+\end{itemize}
+\section*{Further Discussion}
+\label{sec-5}
+\begin{itemize}
+\item an algorithm for computing the generators of the invariant ring
+\end{itemize}
+% Emacs 25.3.1 (Org mode 8.2.10)
+\end{document}

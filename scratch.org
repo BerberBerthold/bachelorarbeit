@@ -1,0 +1,25 @@
+#+OPTIONS: toc:nil num:nil -:t e:t ^:t author:nil date:nil
+** Introduction
+** Preliminary Work
+*** Algebraic Geometry
+- affine varieties
+- linear algebraic groups, example GL
+- algebraic cohomomorphism, example multiplication and regular actions
+*** Invariant Theory
+- regular action, example, cross ratio maybe
+- rational representation, example coordinate rings, conjugation
+- invariants, example cross ratio
+** Linearly Reductive Groups, The Reynolds Operator And Hilbert's Finiteness Theorem
+*** The Reynolds Operator And Linearly Reductive Groups
+- equivalences of "linearly reductive"
+*** Hilbert's Finiteness Theorem
+- theorem
+- embeddings, example cross ratio
+*** The Reynolds Operator Of A Linear Algebraic Group
+- K[G]* as an associative K-algebra
+- existence Reynolds operator of group implies linearly reductive
+** Cayley's Omega Process
+- everything
+- examples conjugation and cross ratio
+** Further Discussion
+- an algorithm for computing the generators of the invariant ring
