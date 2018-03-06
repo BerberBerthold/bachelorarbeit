@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  1 MAR 2018 00:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  6 MAR 2018 09:09
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -282,7 +282,7 @@ And Hilbert's
 
 {/usr/local/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2]) (./prewo
 rk.tex [3] [4]
-Overfull \hbox (0.51068pt too wide) in paragraph at lines 151--168
+Overfull \hbox (0.51068pt too wide) in paragraph at lines 160--177
 []\OT1/cmr/m/n/10 from which we im-me-di-ately no-tice that $\OML/cmm/m/it/10 D
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 []\
 OT1/cmr/m/n/10 (\OML/cmm/m/it/10 W\OT1/cmr/m/n/10 )$. There-fore $[][]$
@@ -298,7 +298,7 @@ Overfull \hbox (10.74722pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/12 The Reynolds Op-er-a-tor And Lin-early Re-duc-tive Groups 
  []
 
-[6]
+[6] [7]
 Overfull \hbox (18.56248pt too wide) in paragraph at lines 61--101
 \OT1/cmr/m/n/10 This fol-lows im-me-di-ately from (c): Let $\OML/cmm/m/it/10 X$
  \OT1/cmr/m/n/10 be an affine $\OML/cmm/m/it/10 G$\OT1/cmr/m/n/10 -variety and 
@@ -306,14 +306,14 @@ $\OML/cmm/m/it/10 R[]; R[] [] [] K\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X\OT1/cmr/m
 /n/10 ] \U/msa/m/n/10 ^^P
  []
 
-[7] [8]
+[8]
 Overfull \hbox (1.31578pt too wide) in paragraph at lines 127--142
 \OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 V$ \OT1/cmr/m/n/10 be a fi-nite ra-tio-na
 l rep-re-sen-ta-tion of $\OML/cmm/m/it/10 G$\OT1/cmr/m/n/10 . Con-sider the sub
 -space $((\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 )[])[] \OMS/cmsy/m/n/10 ^^R
  []
 
-[9] [10] [11] [12] [13]) (./prozess.tex
+[9] [10] [11] [12] [13] [14]) (./prozess.tex
 Overfull \hbox (8.66666pt too wide) in paragraph at lines 1--7
 \OML/cmm/m/it/10 K []$\OT1/cmr/m/n/10 . Now de-fine $\OML/cmm/m/it/10 I \OT1/cm
 r/m/n/10 := [] =
@@ -326,18 +326,18 @@ Overfull \hbox (23.55684pt too wide) in paragraph at lines 26--30
 /10 m \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 K []$\OT1/cmr/m/n/10 .
  []
 
-[14]
+
 Overfull \hbox (35.136pt too wide) detected at line 38
 [] []
  []
 
-[15] [16] [17]) (./examples.tex
+[15] [16] [17] [18]) (./examples.tex
 Overfull \hbox (157.06522pt too wide) detected at line 43
 [] []
  []
 
-[18] [19]
-Overfull \hbox (37.82326pt too wide) in paragraph at lines 134--139
+[19] [20]
+Overfull \hbox (37.82326pt too wide) in paragraph at lines 135--140
 []\OT1/cmr/m/n/10 with the co-or-di-nate ring $\OML/cmm/m/it/10 K\OT1/cmr/m/n/1
 0 [\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 ] = \OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OM
 S/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 )[]\OMS/cms
@@ -346,8 +346,8 @@ y/m/n/10 g[]\OML/cmm/m/it/10 ; q[]\OT1/cmr/m/n/10 ]$. Nothe that $\OML/cmm/m/it
 /cmsy/m/n/10 6\OT1/cmr/m/n/10 =
  []
 
-[20]
-Overfull \hbox (34.04999pt too wide) in paragraph at lines 144--168
+[21]
+Overfull \hbox (34.04999pt too wide) in paragraph at lines 145--171
 \OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OMS/cmsy/m/n/10 f[]\OT1/cmr/m/n/10 (\OML/cm
 m/m/it/10 X[]; X[]; X[]; X[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g[]\OT1/cmr/m/n/1
 0 ]$. We ac-tu-ally have $\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OMS/cmsy/m/n/10 f
@@ -355,15 +355,36 @@ m/m/it/10 X[]; X[]; X[]; X[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g[]\OT1/cmr/m/n/1
 y/m/n/10 g[]\OT1/cmr/m/n/10 ] =
  []
 
-[21]) (./roughdraft.bbl [22]) [23] (./roughdraft.aux) ) 
+
+Overfull \hbox (8.44241pt too wide) in paragraph at lines 145--171
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT
+1/cmr/m/n/10 )\OML/cmm/m/it/10 ; ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B\OT1/c
+mr/m/n/10 )\OML/cmm/m/it/10 ; ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/
+m/n/10 )\OML/cmm/m/it/10 ; ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D\OT1/cmr/m/n
+/10 ))[] = [](\OML/cmm/m/it/10 A; B; C; D\OT1/cmr/m/n/10 )[]$. This means
+ []
+
+
+Overfull \hbox (87.6039pt too wide) in paragraph at lines 145--171
+\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 ][]$. We h
+ave $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b; c; d\OT1/cmr/m/n
+/10 ) = \OML/cmm/m/it/10 r[]:f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b; c; d\OT1/
+cmr/m/n/10 ) = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r[]\OT1/cmr/
+m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; r[]\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; r[]\OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 c\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; r[]\OT1/cmr/m/n/10 (\OML/cm
+m/m/it/10 d\OT1/cmr/m/n/10 )) =$ 
+ []
+
+[22]) (./roughdraft.bbl [23]) [24] (./roughdraft.aux) ) 
 Here is how much of TeX's memory you used:
- 3188 strings out of 493093
- 43633 string characters out of 6138120
- 121276 words of memory out of 5000000
- 6603 multiletter control sequences out of 15000+600000
+ 3192 strings out of 493093
+ 43663 string characters out of 6138120
+ 118323 words of memory out of 5000000
+ 6607 multiletter control sequences out of 15000+600000
  14702 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,14n,27p,577b,264s stack positions out of 5000i,2500n,10000p,300000b,80000s
+ 51i,14n,27p,577b,262s stack positions out of 5000i,2500n,10000p,300000b,80000s
 </usr/local/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/share/texmf-dist/fonts/type1
@@ -383,10 +404,10 @@ local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/sha
 re/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/share/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/share/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on roughdraft.pdf (23 pages, 320519 bytes).
+Output written on roughdraft.pdf (24 pages, 326510 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 162 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

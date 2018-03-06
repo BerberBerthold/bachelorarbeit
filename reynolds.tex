@@ -11,7 +11,7 @@
 
 \begin{proof}
   We shall first show that $\operatorname{dim}(V^\ast)^G = \operatorname{dim}V^G$.
-  Let $\{v_1, \ldots , v_r \}$ be a basis of $V^G$, and expand this to a basis $\{v_1, \ldots , v_m \}$ of $V$.
+  Let $\{v_1, \ldots , v_r \}$ be a basis of $V^G$, and extend this to a basis $\{v_1, \ldots , v_m \}$ of $V$.
   We define $\{ f_1 , \ldots , f_n \}$ to be the basis of $V^\ast$ which is dual to $\{v_1, \ldots , v_n \}$, that is we have $ f_i (v_j) = \delta_{i,j} $.
   It should be clear that $\{f_1, \ldots , f_r \} \subseteq (V^\ast)^G$.
   Now let $f \notin \operatorname{span} \{ f_1, \ldots, f_r\}$, that is we have $f = \Sigma_{i=1}^n \lambda_i f_i $, and there exists a $j > r$ such that $ \lambda_j \neq 0$.
@@ -222,9 +222,9 @@
 
 \begin{proof}
   Let $f \in K[X]^G$ and $g \in K[X]$.
-  We can decompose $V_g = V_g^G \oplus W_g$ uniquely, where $W_g$ is a subrepresentation of $V_g$.
-  We have $(fW)^G = {0}$:
-  Let $h \in (fW)^G$, say $h = fw$ where $w \in W$.
+  by theorem \ref{equiv}, we can decompose $V_g = V_g^G \oplus W_g$ uniquely, where $W_g$ is a subrepresentation of $V_g$, and we also have $(W_g^\ast)^G = \{0\}$.
+  $fV_g$ is also a representation of $G$ with subrepresentations $fV_g^G$ and $fW_g$ of $G$ and we notice that $(fV_g)^G = fV_g^G$.
+  We easily check that the map $R_{V_g}^\prime \colon fV_g \longrightarrow fV_g$, $fh \mapsto f R(h)$ is a $G$-invariant linear map with $\left. R_{fV_g}^\prime \right|_{(fV_g)^G} = \operatorname{id}_{(fV_g)^G}$, which by lemma \ref{lamm}(b) means that we have $R_{(fV_g)}^\prime = R_{(fV_g)}$, which means that we have $R(fg) = fR(g)$.
 \end{proof}
 
 % \begin{lemma}\label{dl}
@@ -235,7 +235,7 @@
 %   \end{enumerate}
 % \end{lemma}
 
-\begin{theorem}[Hilbert's Finiteness Theorem]
+\begin{theorem}[Hilbert's Finiteness Theorem]\label{hilbert}
   If $G$ is linearly reductive and $V$ is a finite-dimensional rational $G$-representation, the invariant ring $K[V]^G$ is finitely generated.
 \end{theorem}
 
@@ -264,30 +264,48 @@
   We have $K[V]^G = K[\{f_i\}_{i \in [r]}]$ which means that $K[V]^G$ is finitely generated, which was to show.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{bloblo}
   See \cite[2.2.8]{DK15}
 
   Let $K$ be an algebraically closed filed and $V$ and $W$ be finite rational representations of a linearly reductuve group $G$.
-  For a surjective $G$-equivariant map $A \colon V \twoheadrightarrow W$ we then have $A(V^G) = W^G$
+  For a surjective $G$-equivariant linear map $A \colon V \twoheadrightarrow W$ we then have $A(V^G) = W^G$
 \end{lemma}
 
 \begin{proof}
-  Let $A \colon V \twoheadrightarrow W$ be a surjective $G$-equivariant map.
+  Let $A \colon V \twoheadrightarrow W$ be a surjective $G$-equivariant linear map.
   Let $Z := \operatorname{ker}A$, which is a subrepresentation of $V$ since $A$ is $G$-equivariant.
   Since $G$ is linearly reductive and since $K$ is algebraically closed, we can apply theorem \ref{decomp} and get a subrepresentation $W^\prime$ of $V$ such that $V = Z \oplus W^\prime$.
-  this yields an isomorphism of representations $\left. A \right|_{W^\prime} \colon W^\prime \xrightarrow{\sim} W$, which implies $A(V^G) = A(Z^G + {W^\prime}^G) = A({W^\prime}^G) = A(W^\prime)^G = W^G$.
+  This yields an isomorphism of representations $\left. A \right|_{W^\prime} \colon W^\prime \xrightarrow{\sim} W$, which implies $A(V^G) = A(Z^G + {W^\prime}^G) = A({W^\prime}^G) = A(W^\prime)^G = W^G$.
 \end{proof}
 
-\begin{lemma}
-  See \cite[2.2.9]{DK15}
-
-  Let $G$ be a linearly reductive group and let $X$ be an affine $G$-variety.
+\begin{lemma}\label{emb}
+  See \cite[A1.9]{DK15}.
+  
+  Let $X$ be an affine $G$-variety.
   Then there exists a finite rational representation $V$ of $G$ and a $G$-equivariant embedding $i \colon X \hookrightarrow V$.
-  Also, for every such embedding $i$ we have that the algebraic cohomomorphism $\hat{i} \colon K[V] \twoheadrightarrow K[X]$ satisfies $\hat{i}(K[V]^G) = K[X]^G$.
 \end{lemma}
 
 \begin{proof}
+  We choose generators $\{f_i\}_{i \in [r]}$ of $K[X]$ and define $W := \sum_{i \in [r]} V_{f_i}$, which is a finite-dimensional $G$-stable subspace of $K[X]$ containing $\{f_i\}_{i \in [r]}$.
+  This gives us the $G$-invariant morphism of affine varieties $i \colon X \longrightarrow W^\ast$, $x \mapsto (w \mapsto w(x))$.
+  This is injective, since $W$ contains a generating set of $K[X]$, which means that $i$ is an embedding.
+\end{proof}
+
+\begin{lemma}\label{foremb}
+  See \cite[2.2.9]{DK15}.
   
+  Assume that $K$ is algebraically closed and that $G$ is linearly reductive.
+  Let $X$ be an affine $G$-variety, $V$ a finite rational representation of $G$ and $i \colon X \hookrightarrow V$ a $G$-equivariant embedding.
+  The surjective $G$-equivariant ring homomorphism $i^\ast \colon K[V] \twoheadrightarrow K[X]$ then has the property $i^\ast (K[V]^G) = K[X]^G$.
+\end{lemma}
+
+\begin{proof}
+  We obviously have $i^\ast(K[X]^G) \subseteq K[V]^G$.
+  let $f \in K[V]^G$.
+  Since $i^\ast$ is surjective, there are $ \{g_i\}_{i \in [r]} \subseteq K[V]$ such that $\{i^\ast(g_i)\}_{i \in [r]}$ form a basis of $V_f$.
+  Since $i^\ast$ is $G$-equivariant, $Z := \operatorname{span}\{g_i\}$ is a $G$-stable subspace of $K[V]$ with $i^\ast(Z) = V_f$.
+  By lemma \ref{bloblo} we have $i^\ast (Z^G) = V_f^G$, in particular $f \in i^\ast (Z^G) \subseteq i^\ast(K[V]^G)$.
+  This concludes $i^\ast(K[V]^G) = K[X]^G$.
 \end{proof}
 
 \begin{theorem}[Hilbert's Finiteness Theorem For Affine Varieties]
@@ -295,7 +313,9 @@
 \end{theorem}
 
 \begin{proof}
-  
+  By lemma \ref{emb}, there exists a rational representation $V$ of $G$ and and an embedding $i \colon X \hookrightarrow V$.
+  By theorem \ref{hilbert} there exist $ \{f_i\}_{i \in [r]} \subseteq K[V]$ such that $K[V]^G = K[\{f_i\}_{i \in [r]}]$.
+  By lemma \ref{foremb} we have $K[X]^G = i^\ast (K[V]^G) = i^\ast (K[\{f_i\}_{i \in [r]}]) = K[\{i^\ast\}_{i \in [r]}]$, which shows that $K[X]^G$ is finitely generated.
 \end{proof}
 
 \subsection{The Reynolds Operator Of A Linear Algebraic Group}
@@ -373,11 +393,20 @@ The multiplication $\ast$ makes $K \left\lbrack G \right\rbrack^\ast$ into an as
 Now we can formally define $K [G]^\ast$-actions.
 
 \begin{definition}\label{da}
-  Let $G$ act regularly on a vector-space $V$ via $\mu$, from which we retrieve $\mu^\prime$ as described in definition \ref{rr}.  $K[G]^\ast$ then acts on $V$ as follows:
+  Let $V$ be a rational representation of $G$ via $\mu$, from which we retrieve $\mu^\prime$ as described in definition \ref{rr}.
+  Then $V$ is a $K[G]^\prime$-module as follows:
   \begin{equation}
     \delta \cdot v := \left(\left( \delta \otimes \operatorname{id} \right) \circ \mu^\prime \right) \left(v\right)
   \end{equation}
 \end{definition}
+
+\begin{proposition}
+  The above described definition is a representation.
+\end{proposition}
+
+\begin{proof}
+  
+\end{proof}
 
 \begin{remark}
   If we look at definition \ref{rr}, we can see that this newly defined $K[G]^\ast$-action is an extension of the given $G$-action in the following way:
@@ -396,14 +425,14 @@ Now we can formally define $K [G]^\ast$-actions.
   is called the \textbf{Lie algebra}.
 \end{remark}
 
-\begin{proposition}\label{ro}
+\begin{theorem}\label{ro}
   Let $G$ be linearly reductive, and let $G$ act regularly on an affine variety $X$, which induces a rational $G$-action on $K[X]$ as described in definition \ref{funrep}.
   Then, the following the map
   \begin{align}
     R \colon K[X] \longrightarrow K[X]^G && f \mapsto R_G \cdot f
   \end{align}
   defines a Reynolds operator.
-\end{proposition}
+\end{theorem}
 
 \begin{proof}
   As per our construction from definition \ref{da}, the linearity of this map should be clear.
@@ -442,6 +471,11 @@ Now we can formally define $K [G]^\ast$-actions.
   
   not done yet pls finish
 \end{proof}
+
+\begin{corollary}
+  $G$ is linearly reductive if and only if the Reynolds operator of $G$ exists.
+  The Reynolds operator of $G$ is unique.
+\end{corollary}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "roughdraft"

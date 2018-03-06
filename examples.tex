@@ -121,6 +121,7 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
 
 \begin{example}
   We will now discuss the cross ratio.
+  Since the projective line isn't an affine variety, we will look at points in $K^2$ to make the situation affine, which will make some things different.
   Consider $(K^2)^4$ and with the coordinate functions $\{(X_i)_k\}_{i \in [4], k \in [2]}$.
   (We write $X_i = \binom{(X_i)_1}{(X_i)_2}$ for $i \in [4]$.)
   Define $q := \prod_{i,j \in [r], i<j} \operatorname{det}(X_i,X_j)$.
@@ -156,15 +157,17 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
   Let $Y$ be defined as those points in $P(K^2)^4$ that are pairwise distinct.
   $Y$ is equal to $P(X)$, and $X$ itself is already a cone.
   The projective cross ratio $\operatorname{cr}_P$ is then well-defined since it is independent of the choice of representatives because the determinant is multilinear.
-  This means that for any $ (a,b,c,d) \in X $ we have $\operatorname{cr}(a,b,c,d) = \operatorname{cr}_P([a],[b],[c],[d]) $.
+  This means that for any $ (a,b,c,d) \in X $ we are allowed to write $\operatorname{cr}(a,b,c,d) = \operatorname{cr}([a],[b],[c],[d]) $.
   For the same reasons as before, this projective cross ratio is also $\operatorname{PGL}(K^2)$-invariant.
-  If $x_1,x_2,x_3,y_1,y_2,y_3 \in P(K^2)$ with $x_1$, $x_2$ and $x_3$ pairwise distinct and pairwise $y_1$, $y_2$ and $y_3$ distinct, then an important theorem in projective geometry is that there exists a (unique) projective transformation $ \mathrm{R} \in \operatorname{PGL}(K^2)$ such that $\mathrm{R} (x_1) = y_1$, $\mathrm{R}(x_2) = y_2$ and $\mathrm{R}(x_3) = y_3$.
+  If $x_1,x_2,x_3,y_1,y_2,y_3 \in P(K^2)$ with $x_1$, $x_2$ and $x_3$ pairwise distinct and pairwise $y_1$, $y_2$ and $y_3$ distinct, then an important theorem in projective geometry is that there exists a (unique) projective transformation $ \rho \in \operatorname{PGL}(K^2)$ such that $\rho (x_1) = y_1$, $\rho(x_2) = y_2$ and $\rho(x_3) = y_3$.
   Let $A,B,C,D \in Y$, which implies that $B,C,D$ are pairwise distinct.
-    For $x \in K $ we define $x_P := \left[\binom{x}{1}\right]$ and $\infty_P := \left[\binom{1}{0}\right]$.
-  There then exists a $\mathrm{R}_{B,C,D} \in \operatorname{PGL}(K^2)$ such that $\mathrm{R}_{B,C,D} (B) = 0_P$, $\mathrm{R}_{B,C,D} (C) = 1_P$ and $\mathrm{R}_{B,C,D} (D) = \infty_P$.
-  We then compute $\mathrm{R} (A) = \operatorname{cr}(\mathrm{R}(A),0_P,1_P,\infty_P) = \operatorname{cr}(\mathrm{R}(A),\mathrm{R}(B),\mathrm{R}(C),\mathrm{R}(D)) = \operatorname{cr}(A,B,C,D)$.
-  Now let us look at our affine case.
-  If $(a,b,c,d) \in X$, we have that $[b]$, $[c]$ and $[d]$ are pairwise distinct.
+  For $x \in K $ we define $x_P := \left[\binom{x}{1}\right]$ and $\infty_P := \left[\binom{1}{0}\right]$.
+  There then exists a $\rho_{B,C,D} \in \operatorname{PGL}(K^2)$ such that $\rho_{B,C,D} (B) = 0_P$, $\rho_{B,C,D} (C) = 1_P$ and $\rho_{B,C,D} (D) = \infty_P$.
+  Since $A$ is distinct from $D$ we know $\rho_{B,C,D} (A) \neq \infty_P$, and therefore there exists some $a \in K$ such that $\rho_{B,C,D}(A) = [\binom{a}{1}]$.
+  We then compute $\rho_{B,C,D} (A) = [\binom{a},1] = \operatorname{cr}([\binom{a}{1}],[\binom{0}{1}],[\binom{1,1}],[\binom{1,0}])_P = \operatorname{cr}(\rho_{B,C,D}(A),\rho_{B,C,D}(B),\rho_{B,C,D}(C),\rho_{B,C,D}(D))_P = \operatorname{cr}(A,B,C,D)_P$.
+  This means that for $(a,b,c,d) \in X$ we have $\rho_{[b],[c],[d]} ([a]) = \operatorname{cr}(a,b,c,d)$, so we can choose a representative $r_{a,b,c,d} \in \rho_{[b],[c],[d]}$ such that $r_{a,b,c,d}(a) = \binom{\operatorname{cr}(a,b,c,d)}{1}$.
+  Let $f \in K[X]^{\operatorname{GL}_2}$.
+  We have $f(a,b,c,d) = r_{a,b,c,d}^{-1}.f (a,b,c,d) = f(r_{a,b,c,d}(a),r_{a,b,c,d}(b),r_{a,b,c,d}(c),r_{a,b,c,d}(d)) = $
 \end{example}
 
 \begin{example}

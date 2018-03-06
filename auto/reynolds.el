@@ -6,6 +6,10 @@
     "lamm"
     "equiv"
     "decomp"
+    "hilbert"
+    "bloblo"
+    "emb"
+    "foremb"
     "da"
     "ro"))
  :latex)
