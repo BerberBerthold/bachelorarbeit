@@ -1,7 +1,10 @@
 - chapter: notation
 - preliminaries, refer to book
-- K[X]_{d} is a subrepresentation
+- K[X]_{d} is a subrepresentation YEAH
 - coordinate rings, bars over polynomials/coordinate functions etc for a non euclidean coordinate function.
 - W* iso to W always? 
-- action K[X]* really an action
-- R_G maps to invariant ring
+- action K[X]* really an action 3.16 DONE
+- R_G maps to invariant ring DONE
+- dim V^G = dim V*^G a lot is missing...
+- hilberts finiteness theorem f_i linearly independent
+- R_G \dot{m} invariant (from right blabla

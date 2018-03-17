@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  17 MAR 2018 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (Web2C 2015) (preloaded format=pdflatex 2017.10.5)  12 MAR 2018 11:47
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**\input roughdraft.tex
-(./roughdraft.tex (/usr/local/share/texmf-dist/tex/latex/base/article.cls
+**\input bachelorarbeit.tex
+(./bachelorarbeit.tex (/usr/local/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/share/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -154,8 +154,9 @@ Package: enumerate 2014/10/28 v3.00 enumerate extensions (DPC)
 \c@remark=\count105
 \c@cremark=\count106
 \c@dexample=\count107
- (./roughdraft.aux)
-\openout1 = `roughdraft.aux'.
+
+(./bachelorarbeit.aux)
+\openout1 = `bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
@@ -268,7 +269,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (/usr/local/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./roughdraft.toc
+) (./bachelorarbeit.toc
 Overfull \hbox (13.0775pt too wide) in paragraph at lines 6--6
  [][] []\OT1/cmr/bx/n/10 Linearly Re-duc-tive Groups, The Reynolds Op-er-a-tor 
 And Hilbert's 
@@ -276,43 +277,71 @@ And Hilbert's
 
 )
 \tf@toc=\write3
-\openout3 = `roughdraft.toc'.
+\openout3 = `bachelorarbeit.toc'.
 
  (./introduction.tex [1
 
 {/usr/local/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2]) (./prewo
-rk.tex [3] [4] [5] [6])
+rk.tex [3] [4]
+
+LaTeX Warning: Reference `funrep' on page 5 undefined on input line 129.
+
+)
 Overfull \hbox (2.37299pt too wide) in paragraph at lines 71--71
 []\OT1/cmr/bx/n/14.4 Linearly Re-duc-tive Groups, The Reynolds Op-
  []
 
 (./reynolds.tex
-Overfull \hbox (10.74722pt too wide) in paragraph at lines 2--2
+Overfull \hbox (10.74722pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/12 The Reynolds Op-er-a-tor And Lin-early Re-duc-tive Groups 
  []
 
-[7]
-Overfull \hbox (18.56248pt too wide) in paragraph at lines 66--106
+[5]
+Overfull \hbox (18.56248pt too wide) in paragraph at lines 61--101
 \OT1/cmr/m/n/10 This fol-lows im-me-di-ately from (c): Let $\OML/cmm/m/it/10 X$
  \OT1/cmr/m/n/10 be an affine $\OML/cmm/m/it/10 G$\OT1/cmr/m/n/10 -variety and 
 $\OML/cmm/m/it/10 R[]; R[] [] [] K\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X\OT1/cmr/m
 /n/10 ] \U/msa/m/n/10 ^^P
  []
 
-[8] [9] [10] [11] [12] [13]
-Overfull \hbox (5.30365pt too wide) in paragraph at lines 406--411
-\OT1/cmr/m/n/10 tio-nal lin-ear ac-tion of $[][]$ on $\OML/cmm/m/it/10 X$ \OT1/
-cmr/m/n/10 via point-wise ap-pli-ca-tion, that is $\OML/cmm/m/it/10 ^^V [] []  
-[][] \OMS/cmsy/m/n/10 ^^B\OML/cmm/m/it/10 X [][]\OMS/cmsy/m/n/10 !
+[6] [7]
+Overfull \hbox (1.31578pt too wide) in paragraph at lines 133--148
+\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 V$ \OT1/cmr/m/n/10 be a fi-nite ra-tio-na
+l rep-re-sen-ta-tion of $\OML/cmm/m/it/10 G$\OT1/cmr/m/n/10 . Con-sider the sub
+-space $((\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 )[])[] \OMS/cmsy/m/n/10 ^^R
  []
 
-[14] [15] [16] [17]) (./prozess.tex
+[8] [9] [10]
+Overfull \hbox (37.82326pt too wide) in paragraph at lines 320--326
+[]\OT1/cmr/m/n/10 with the co-or-di-nate ring $\OML/cmm/m/it/10 K\OT1/cmr/m/n/1
+0 [\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 ] = \OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OM
+S/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 )[]\OMS/cms
+y/m/n/10 g[]\OML/cmm/m/it/10 ; q[]\OT1/cmr/m/n/10 ]$. Nothe that $\OML/cmm/m/it
+/10 q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; x[]; x[]; x[]\OT1/cmr/m/n/10 ) \OMS
+/cmsy/m/n/10 6\OT1/cmr/m/n/10 =
+ []
+
+[11]
+
+LaTeX Warning: Reference `funrep' on page 12 undefined on input line 377.
+
+
+LaTeX Warning: Reference `da' on page 12 undefined on input line 386.
+
+
+LaTeX Warning: Reference `rara' on page 12 undefined on input line 401.
+
+[12]
+
+LaTeX Warning: Reference `roro' on page 13 undefined on input line 417.
+
+) (./prozess.tex
 Overfull \hbox (8.66666pt too wide) in paragraph at lines 1--7
 \OML/cmm/m/it/10 K []$\OT1/cmr/m/n/10 . Now de-fine $\OML/cmm/m/it/10 I \OT1/cm
 r/m/n/10 := [] =
  []
 
-[18]
+[13]
 Overfull \hbox (23.55684pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 K [
 ]$\OT1/cmr/m/n/10 . Then $\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 ^^N \OML/cmm/m/it
@@ -324,12 +353,12 @@ Overfull \hbox (35.136pt too wide) detected at line 38
 [] []
  []
 
-[19] [20] [21]) (./examples.tex
+[14] [15] [16]) (./examples.tex
 Overfull \hbox (157.06522pt too wide) detected at line 43
 [] []
  []
 
-[22] [23]
+[17] [18]
 Overfull \hbox (37.82326pt too wide) in paragraph at lines 135--140
 []\OT1/cmr/m/n/10 with the co-or-di-nate ring $\OML/cmm/m/it/10 K\OT1/cmr/m/n/1
 0 [\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 ] = \OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OM
@@ -339,57 +368,71 @@ y/m/n/10 g[]\OML/cmm/m/it/10 ; q[]\OT1/cmr/m/n/10 ]$. Nothe that $\OML/cmm/m/it
 /cmsy/m/n/10 6\OT1/cmr/m/n/10 =
  []
 
-[24]
-Overfull \hbox (6.88048pt too wide) in paragraph at lines 145--171
-[]\OT1/cmr/m/n/10 ([[]]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 [[]]\OML/cmm/m/it/10 
-; \OT1/cmr/m/n/10 [[]]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 [[]])[] = [](\OML/cmm/
-m/it/10 ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 )\OML/cmm/m/it/
-10 ; ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 
-; ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; ^
-^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D\OT1/cmr/m/n/10 ))[] =
+[19]
+Overfull \hbox (34.04999pt too wide) in paragraph at lines 145--171
+\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OMS/cmsy/m/n/10 f[]\OT1/cmr/m/n/10 (\OML/cm
+m/m/it/10 X[]; X[]; X[]; X[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g[]\OT1/cmr/m/n/1
+0 ]$. We ac-tu-ally have $\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OMS/cmsy/m/n/10 f
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]; X[]; X[]; X[]\OT1/cmr/m/n/10 )\OMS/cms
+y/m/n/10 g[]\OT1/cmr/m/n/10 ] =
  []
 
 
-Overfull \hbox (26.84566pt too wide) in paragraph at lines 145--171
-\OML/cmm/m/it/10 r[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ) = []$.
- Let $\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [
-\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 ][]$. We have $\OML/cmm/m/it/10 f\OT1/cmr/m/n
-/10 (\OML/cmm/m/it/10 a; b; c; d\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 r[]:f\OT1/
-cmr/m/n/10 (\OML/cmm/m/it/10 a; b; c; d\OT1/cmr/m/n/10 ) =
+Overfull \hbox (8.44241pt too wide) in paragraph at lines 145--171
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT
+1/cmr/m/n/10 )\OML/cmm/m/it/10 ; ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B\OT1/c
+mr/m/n/10 )\OML/cmm/m/it/10 ; ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/
+m/n/10 )\OML/cmm/m/it/10 ; ^^Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D\OT1/cmr/m/n
+/10 ))[] = [](\OML/cmm/m/it/10 A; B; C; D\OT1/cmr/m/n/10 )[]$. This means
  []
 
-[25]) (./roughdraft.bbl [26]) [27] (./roughdraft.aux) ) 
+
+Overfull \hbox (87.6039pt too wide) in paragraph at lines 145--171
+\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 ][]$. We h
+ave $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b; c; d\OT1/cmr/m/n
+/10 ) = \OML/cmm/m/it/10 r[]:f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b; c; d\OT1/
+cmr/m/n/10 ) = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r[]\OT1/cmr/
+m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; r[]\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; r[]\OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 c\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; r[]\OT1/cmr/m/n/10 (\OML/cm
+m/m/it/10 d\OT1/cmr/m/n/10 )) =$ 
+ []
+
+[20]) (./bachelorarbeit.bbl [21]) [22] (./bachelorarbeit.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3196 strings out of 493093
- 43687 string characters out of 6138120
- 118371 words of memory out of 5000000
- 6611 multiletter control sequences out of 15000+600000
+ 3191 strings out of 493093
+ 43709 string characters out of 6138120
+ 120269 words of memory out of 5000000
+ 6606 multiletter control sequences out of 15000+600000
  14702 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,14n,27p,577b,252s stack positions out of 5000i,2500n,10000p,300000b,80000s
-</usr/local/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbxti10.pfb></usr/local/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi5.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
-/usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr6.pfb></usr/local/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/
-local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/sha
-re/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/share/texmf
--dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/share/texmf-di
-st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on roughdraft.pdf (27 pages, 340604 bytes).
+ 51i,14n,27p,581b,264s stack positions out of 5000i,2500n,10000p,300000b,80000s
+</usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi5.pfb></usr/local/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
+usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/local/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy5.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy7.pfb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb></usr/local/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+</usr/local/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on bachelorarbeit.pdf (22 pages, 322275 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+ 156 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

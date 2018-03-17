@@ -2,16 +2,14 @@
  "reynolds"
  (lambda ()
    (LaTeX-add-labels
+    "dual"
     "lamm"
     "equiv"
     "decomp"
     "hilbert"
     "bloblo"
     "emb"
-    "domcr"
     "foremb"
-    "rinv"
-    "da"
     "ro"))
  :latex)
 

@@ -146,7 +146,7 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
   is an invariant under this action, as well as the same map with permuted inputs, as is easily seen.
   Together with the fact that the condition $q(x_1,x_2,x_3,x_4) \neq 0$ is also $\operatorname{GL}_2$-invariant, this actually guarantees us a coordinate-free definition of the cross ratio for any two-dimensional vector-space.
   The invariant ring $K[X]^{\operatorname{GL}_n}$ is finitely generated, as we know by Hilbert's finiteness theorem.
-  In fact, we don't have more invariants than polynomials in the cross ratio (NOT TRUE!): $K[X]^{\operatorname{GL}_n} = K[\{\operatorname{cr}(X_{\pi_1},X_{\pi_2},X_{\pi_3},X_{\pi_4})\}_{\pi \in S_4}]$.
+  In fact, we don't have more invariants than polynomials in the cross ratio: $K[X]^{\operatorname{GL}_n} = K[\{\operatorname{cr}(X_{\pi_1},X_{\pi_2},X_{\pi_3},X_{\pi_4})\}_{\pi \in S_4}]$.
   We actually have $K[\{\operatorname{cr}(X_{\pi_1},X_{\pi_2},X_{\pi_3},X_{\pi_4})\}_{\pi \in S_4}] = K[\operatorname{cr},(\operatorname{cr}(\operatorname{cr} -1))^{-1}] $, since we can calculate that for any permutation $\pi in S_4$ we have $ \operatorname{cr}(X_{\pi_1},X_{\pi_2},X_{\pi_3},X_{\pi_4}) \in \left\{ \operatorname{cr}, \operatorname{cr}^{-1}, 1 - \operatorname{cr}, (1-\operatorname{cr})^{-1}, \operatorname{cr}^{-1}(\operatorname{cr}-1)\right\}$.
   % This might look surprising because the cross ratio with permuted inputs doesn't seem like it is included, and also $(\operatorname{cr}(\operatorname{cr} -1))^{-1}$ doesn't look like it is an element of the coordinate ring $K[X]$.
   % But these are just illusions (pardon my playful phrasing):
@@ -164,7 +164,7 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
   For $x \in K $ we define $x_P := \left[\binom{x}{1}\right]$ and $\infty_P := \left[\binom{1}{0}\right]$.
   There then exists a $\rho_{B,C,D} \in \operatorname{PGL}(K^2)$ such that $\rho_{B,C,D} (B) = 0_P$, $\rho_{B,C,D} (C) = 1_P$ and $\rho_{B,C,D} (D) = \infty_P$.
   Since $A$ is distinct from $D$ we know $\rho_{B,C,D} (A) \neq \infty_P$, and therefore there exists some $a \in K$ such that $\rho_{B,C,D}(A) = [\binom{a}{1}]$.
-  We then compute $\rho_{B,C,D} (A) = [\binom{a}{1}] = \operatorname{cr}([\binom{a}{1}],[\binom{0}{1}],[\binom{1}{1}],[\binom{1}{0}])_P = \operatorname{cr}(\rho_{B,C,D}(A),\rho_{B,C,D}(B),\rho_{B,C,D}(C),\rho_{B,C,D}(D))_P = \operatorname{cr}(A,B,C,D)_P$.
+  We then compute $\rho_{B,C,D} (A) = [\binom{a}{1}] = \operatorname{cr}([\binom{a}{1}],[\binom{0}{1}],[\binom{1,1}],[\binom{1,0}])_P = \operatorname{cr}(\rho_{B,C,D}(A),\rho_{B,C,D}(B),\rho_{B,C,D}(C),\rho_{B,C,D}(D))_P = \operatorname{cr}(A,B,C,D)_P$.
   This means that for $(a,b,c,d) \in X$ we have $\rho_{[b],[c],[d]} ([a]) = \operatorname{cr}(a,b,c,d)$, so we can choose a representative $r_{a,b,c,d} \in \rho_{[b],[c],[d]}$ such that $r_{a,b,c,d}(a) = \binom{\operatorname{cr}(a,b,c,d)}{1}$.
   Let $f \in K[X]^{\operatorname{GL}_2}$.
   We have $f(a,b,c,d) = r_{a,b,c,d}^{-1}.f (a,b,c,d) = f(r_{a,b,c,d}(a),r_{a,b,c,d}(b),r_{a,b,c,d}(c),r_{a,b,c,d}(d)) = $
@@ -173,7 +173,7 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
 \begin{example}
   % \textbf{($K$ needs to be algebraically closed for Zariski-denseness of diagonizable matrices...)}
   Let $K$ be an algebraically-closed field.
-  Consider $\operatorname{GL}_n$ viewed as the group of all change-of-coordinates transformations on endomorphisms of $K^n$, that is the rational representation
+  Consider $\operatorname{GL}_n$ viewed as the group of all change-of-coordinates transformations for endomorphisms on $K^n$, that is the rational representation
   \begin{equation}
     \begin{aligned}
       \mu \colon && \operatorname{GL}_n \times K^{n.n} & \longrightarrow K^{n,n} \\
@@ -181,7 +181,7 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
     \end{aligned}
   \end{equation}
   What are its invariants?
-  The invariants are exaclty those polynomials that are independent of the choice of basis.
+  The invariants are exaclty those polynomials that are independent of the choice of the basis.
   The most well-known invariant is the determinant.
   From this obvservation we can find even more:
   We can follow that the characteristic polynomial of a matrix $A$, that is $\operatorname{det} (tI_n - A)$, does not change under a change of coordinates.

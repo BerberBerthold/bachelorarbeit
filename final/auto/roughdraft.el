@@ -1,0 +1,36 @@
+(TeX-add-style-hook
+ "roughdraft"
+ (lambda ()
+   (TeX-run-style-hooks
+    "latex2e"
+    "introduction"
+    "prework"
+    "reynolds"
+    "prozess"
+    "examples"
+    "article"
+    "art10"
+    "amssymb"
+    "amsmath"
+    "amsthm"
+    "cite"
+    "mathtools"
+    "enumerate")
+   (LaTeX-add-labels
+    "pw")
+   (LaTeX-add-bibliographies
+    "bachelorarbeit")
+   (LaTeX-add-amsthm-newtheorems
+    "theorem"
+    "definition"
+    "lemma"
+    "proposition"
+    "corollary"
+    "remark"
+    "cremark"
+    "example"
+    "dexample")
+   (LaTeX-add-amsthm-newtheoremstyles
+    "prrt"))
+ :latex)
+
