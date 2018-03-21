@@ -6,10 +6,10 @@
     "coh"
     "rr"
     "funrep"
+    "rara"
     "back"
     "rac"
     "roro"
-    "rara"
     "locfin"))
  :latex)
 

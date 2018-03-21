@@ -1,9 +1,28 @@
-\begin{thebibliography}{DK15}
+\begin{thebibliography}{Aud03}
+
+\bibitem[Aud03]{Aud03}
+Mich\`ele Audin.
+\newblock {\em Geometry}.
+\newblock Springer-Verlag, Berlin Heidelberg, 2003.
 
 \bibitem[DK15]{DK15}
 Harm Derksen and Gregor Kemper.
 \newblock {\em Computational Invariant Theory}.
 \newblock Springer-Verlag, Berlin Heidelberg, 2015.
+
+\bibitem[FH91]{FH91}
+William Fulton and Joe Harris.
+\newblock {\em Representation Theory; A First Course}.
+\newblock Springer-Verlag, New York, 1991.
+
+\bibitem[Kle93]{Kle93}
+Felix Klein.
+\newblock A comparative review of recent researches in geometry, 1893.
+
+\bibitem[Rab30]{Rab30}
+J.L. Rabinowitsch.
+\newblock Zum hilbertschen nullstellensatz.
+\newblock {\em Annalen der Mathematik}, 120:520, 1930.
 
 \bibitem[Stu08]{Stu08}
 Bernd Sturmfels.

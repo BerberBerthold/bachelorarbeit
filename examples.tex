@@ -53,7 +53,7 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
   We will look at the monomial $A_{1,1}^2$, for which we have
   \begin{equation}
     \begin{aligned}
-      &&&\bar{mu}^\prime (A_{1,1}^2) \\
+      &&&\bar{\mu}^\prime (A_{1,1}^2) \\
       &&=& S_{2,2}^4 \otimes A_{1,1}^2 - 4S_{1,2}S_{2,2}^3 \otimes A_{1,1}A_{1,2} + 2S_{1,2}^2 S_{2,2}^2 \otimes A_{1,1}A_{2,2} \\
       &&& + 4S_{1,2}^2 S_{2,2}^2 \otimes A_{1,2}^2 - 4S_{1,2}^3 S_{2,2} \otimes A_{1,2}A_{2,2} + S_{1,2}^4 \otimes A_{2,2}^2\\
       &&=& \frac{S_{2,2}^4}{\operatorname{det}(S)^2} \otimes A_{1,1}^2 - \frac{4S_{1,2}S_{2,2}^3}{\operatorname{det}(S)^2} \otimes A_{1,1}A_{1,2} \\
@@ -62,7 +62,7 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
     \end{aligned}
   \end{equation}
   We can now apply the Reynolds operator in the way we discussed it in proposition \ref{ro} in combination with Cayley's $\Omega$-process.
-  Since all terms in $K[\operatorname{SL}_2]$ are already of degree $2$, apply the same derivatives to each summand and calculate:
+  Since all terms in $K[\operatorname{SL}_2]$ are already of degree $2$, we apply the same to each summand and calculate:
   \begin{equation}
     \begin{aligned}
       & R_G \cdot A_{1,1}^2 \\
@@ -215,16 +215,16 @@ Before we look at finite generators of Hilbert's nullcone (which we will talk ab
   %   \end{aligned}
   % \end{equation}
   % As long as $\sigma .A$ is diagonal, this is true regardless of the choice of $\sigma_A$.
-  Consider $\tilde{p} := p \circ \operatorname{diag}_n$
-  $\tilde{p}$ is $S_n$-invariant:
+  Consider $\tilde{p} := p \circ \operatorname{diag}$.
+  We claim that $\tilde{p}$ is $S_n$-invariant:
   If $M_\tau \in \operatorname{GL}_n$ is the permutation matrix corresponding to $\tau \in S_n$, then for all $\tau \in S_n$ and for all $ X \in K^n$ we have
   \begin{equation}
     \begin{aligned}
       &\tau.\tilde{p} (X) &=& \tilde{p} (\tau^{-1}.X)\\
-      &&=& p ( \operatorname{diag}_n(\tau^{-1}.X)\\
-      &&=& p( M_\tau^{-1} \cdot \operatorname{diag}_n (X))\\
-      &&=& M_\tau . p (\operatorname{diag}_n(X))\\
-      &&=& p (\operatorname{diag}_n(X))&=& \tilde{p} (X)
+      &&=& p ( \operatorname{diag}(\tau^{-1}.X)\\
+      &&=& p( M_\tau^{-1} \cdot \operatorname{diag} (X))\\
+      &&=& M_\tau . p (\operatorname{diag}(X))\\
+      &&=& p (\operatorname{diag}(X))&=& \tilde{p} (X)
     \end{aligned}
   \end{equation}
   From the fundamental theorem of symmetric polynomials we can follow that $\tilde{p} \in \operatorname{span}\{e_{n,i}\}_{i=0}^n$, say $\tilde{p} = \Sigma_{i=0}^n \lambda_i e_{n,i}$, where $\{ e_{n,i} \}_{i=0}^n$ are the elementary symmetric polynomials of dimension $n$.

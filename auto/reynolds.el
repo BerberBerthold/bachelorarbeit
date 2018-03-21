@@ -6,11 +6,13 @@
     "equiv"
     "decomp"
     "hilbert"
+    "quad"
     "bloblo"
     "emb"
     "domcr"
     "foremb"
-    "rinv"
+    "crinv"
+    "rengr"
     "da"
     "ro"))
  :latex)

@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: roughdraft.aux
 The style file: alpha.bst
 Database file #1: roughdraft.bib
-Warning--I didn't find a database entry for "DK02"
-You've used 2 entries,
+You've used 6 entries,
             2543 wiz_defined-function locations,
-            572 strings with 4614 characters,
-and the built_in function-call counts, 630 in all, are:
-= -- 54
-> -- 27
-< -- 1
-+ -- 8
-- -- 8
-* -- 36
-:= -- 118
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 9
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 31
-empty$ -- 51
-format.name$ -- 11
-if$ -- 125
+            595 strings with 4906 characters,
+and the built_in function-call counts, 1794 in all, are:
+= -- 161
+> -- 70
+< -- 4
++ -- 21
+- -- 20
+* -- 100
+:= -- 314
+add.period$ -- 17
+call.type$ -- 6
+change.case$ -- 28
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 88
+empty$ -- 151
+format.name$ -- 30
+if$ -- 363
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 4
-newline$ -- 13
-num.names$ -- 6
-pop$ -- 16
+missing$ -- 9
+newline$ -- 32
+num.names$ -- 18
+pop$ -- 45
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 38
 quote$ -- 0
-skip$ -- 22
+skip$ -- 66
 stack$ -- 0
-substring$ -- 14
-swap$ -- 2
-text.length$ -- 1
-text.prefix$ -- 1
+substring$ -- 52
+swap$ -- 6
+text.length$ -- 4
+text.prefix$ -- 4
 top$ -- 0
-type$ -- 8
+type$ -- 32
 warning$ -- 0
-while$ -- 5
-width$ -- 4
-write$ -- 28
-(There was 1 warning)
+while$ -- 15
+width$ -- 9
+write$ -- 77

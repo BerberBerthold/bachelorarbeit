@@ -1,52 +1,45 @@
-First, how is $\operatorname{GL}_n$ an affine variety?
-Consider $ K^{n \times n} \times K $, and its coordinate ring $ K\left\lbrack \lbrace Z_{i,j} \rbrace_{i,j \in \lceil n \rceil} , D \right\rbrack$.
-Now define $ I := \left( \left( \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{ i \in \lceil n \rceil } Z_{i, \sigma \left( i \right) } \right) \cdot D - 1 \right)  = \left( \operatorname{det} \left( Z \right) \cdot D - 1 \right) $ , where $ Z := \left\lbrack Z_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $.
-Then $ V \left( I \right) = \lbrace \, \left( z , d \right) \mid z \in \operatorname{GL}_n , d = \operatorname{det} \left( z \right)^{-1} \, \rbrace $.
-Equipped with the componentwise multiplication ($\operatorname{GL}_n$ and $K \setminus \lbrace 0 \rbrace$, respectively), this is a linear algebraic group isomorphic to $\operatorname{GL}_n$.
-The coordinate ring $K\left\lbrack \operatorname{GL}_n\right\rbrack$ is isomorphic to $K \left\lbrack \lbrace Z_{i,j} \rbrace_{i,j \in \lceil n \rceil} , \operatorname{det} \left( Z \right)^{-1} \right\rbrack \subseteq K \left( \lbrace Z_{i,j} \rbrace_{i,j \in \lceil n \rceil} \right) $, and we will write it as such from now on.
 \begin{definition}[Cayley's $\Omega$-Process]
   We call
   \begin{equation}
-    \Omega := \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{ i \in \lceil n \rceil } \frac{\partial}{\partial z_{i , \sigma \left( i \right)}}
+    \Omega := \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{ i \in [ n ] } \frac{\partial}{\partial z_{i , \sigma \left( i \right)}}
   \end{equation}
 \end{definition}
 \textbf{Cayley's $\Omega$-Process}.
-It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial}{\partial Z} \right) $, where $\frac{\partial}{\partial Z} := \left\lbrack \frac{\partial}{\partial z_{i,j}} \right\rbrack_{i,j \in \lceil n \rceil} $.
+It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial}{\partial Z} \right) $, where $\frac{\partial}{\partial Z} := \left\lbrack \frac{\partial}{\partial z_{i,j}} \right\rbrack_{i,j \in [ n ]} $.
 
 \begin{lemma}
   \begin{equation}
-    \left( \operatorname{det} \left( Z \right) ^{-1} \cdot \otimes \Omega \right) \circ m^\ast
+    \left( \operatorname{det} \left( Z \right) ^{-1} {\cdot} \otimes \Omega \right) \circ m^\ast
     = m^\ast \circ \Omega
-    = \left( \Omega \otimes \operatorname{det} \left( Z \right) ^{-1} \cdot \right) \circ m^\ast
+    = \left( \Omega \otimes \operatorname{det} \left( Z \right) ^{-1} {\cdot} \right) \circ m^\ast
   \end{equation}
-  where we write ``$ p \cdot $'' for the operation \textit{multiply with $ p $} for a polynomial $ p \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ (but the reader must not worry, this is the only time we will make use of this notation).
+  where we write ``$ p {\cdot} $'' for the operation \textit{multiply with $ p $} for a polynomial $ p \in K \left\lbrack \operatorname{GL}_n \right\rbrack $, that is for $p,f \in K[\operatorname{GL}_n]$ we have $p{\cdot}(f) = pf$.
 \end{lemma}
 
 \begin{proof}
-  Here, we will follow the same convention as described in definition \ref{coh}: The ``left'' and ``right'' inputs of $ m $ will be represented by $ X = \left\lbrack X_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ and $ Y = \left\lbrack Y_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ in the occuring polynomials respectively, and the outputs $ m = \left\lbrack m_{i,j} \right\rbrack_{i,j \in \lceil n \rceil} $ are indexed in the same way as the inputs of the polynomials in $ Z_{1,1} , Z_{1,2} , \ldots Z_{n,n} $.\\
+  % Here, we will follow the same convention as described in definition \ref{coh}: The ``left'' and ``right'' inputs of $ m $ will be represented by $ X = \left\lbrack X_{i,j} \right\rbrack_{i,j \in [ n ]} $ and $ Y = \left\lbrack Y_{i,j} \right\rbrack_{i,j \in [ n ]} $ in the occuring polynomials respectively, and the outputs $ m = \left\lbrack m_{i,j} \right\rbrack_{i,j \in [ n ]} $ are indexed in the same way as the inputs of the polynomials in $ Z_{1,1} , Z_{1,2} , \ldots Z_{n,n} $.  \\
   Let $f \in K \left\lbrack \operatorname{GL}_n \right\rbrack $.
-  Then $ f \circ m \in K \left\lbrack \left\{ X_{i,j} \right\}_{i,j \in \lceil n \rceil} , \operatorname{det} \left( X \right)^{-1} , \left\{ Y_{i,j} \right\}_{i,j \in \lceil n \rceil} , \operatorname{det} \left( Y \right)^{-1} \right\rbrack $.
-  For fixed $i,j \in \lceil n \rceil $ we have
+  We view $ m^\ast(f) \in K \left\lbrack \left\{ X_{i,j} \right\}_{i,j \in [ n ]} , \operatorname{det} \left( X \right)^{-1} , \left\{ Y_{i,j} \right\}_{i,j \in [ n ]} , \operatorname{det} \left( Y \right)^{-1} \right\rbrack $. where the $X_{i,j}$ are associated with the ``left'' input of $m$ and the $Y_{i,j}$ are associated with the ``right'' input of $m$.
+  For fixed $i,j \in [ n ] $ we have
   \begin{equation}
     \begin{aligned}
-    \left( \operatorname{id} \otimes \frac{\partial}{\partial Z_{i,j}} \right) \left( m^\ast \left( f \right) \right) 
-    = t \left( \frac{\partial}{\partial Y_{i,j}} \left( f \circ m \right) \right) 
-    = t \left( \sum_{k,l \in \lceil n \rceil} \left( \left( \frac{\partial}{\partial Z_{k,l}} f \right) \circ m \right) \cdot \frac{\partial}{\partial Y_{i,j}} m_{k,l} \right) \\
-    = t \left( \sum_{k = 1}^n \left( \left( \frac{\partial}{\partial Z_{k,j}} f \right) \circ m \right) \cdot X_{k,i} \right) 
-    = \sum_{k=1}^n \left( Z_{k,i} \cdot \otimes \operatorname{id} \right) \left( m^\ast \left( \frac{\partial}{\partial Z_{k,j}} f \right) \right)
+    &\left( \operatorname{id} \otimes \frac{\partial}{\partial Z_{i,j}} \right) \left( m^\ast \left( f \right) \right)
+    &&= \frac{\partial}{\partial Y_{i,j}} \left( f \circ m \right)\\
+    &&&= \sum_{k,l \in [ n ]} \left( \left( \frac{\partial}{\partial Z_{k,l}} f \right) \circ m \right) \cdot \frac{\partial}{\partial Y_{i,j}} m_{k,l} \\
+    &&&= \sum_{k = 1}^n \left( \left( \frac{\partial}{\partial Z_{k,j}} f \right) \circ m \right) \cdot X_{k,i}\\
+    &&&= \sum_{k=1}^n \left( Z_{k,i} {\cdot} \otimes \operatorname{id} \right) \left( m^\ast \left( \frac{\partial}{\partial Z_{k,j}} f \right) \right)
     \end{aligned}
   \end{equation}
-  Note the use of $ t $ as described in definition \ref{coh} to aid in rephrasing terms.
   Successively applying this yields
   \begin{equation}
     \begin{aligned}
-      \left( \operatorname{id} \otimes \Omega \right) \left( m^\ast \left( f \right) \right)
-      = \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \left( \operatorname{id} \otimes \prod_{i=1}^n \frac{\partial}{\partial Z_{i,\sigma \left( i \right)}} \right) \left( m^\ast \left( f \right) \right) \\
-      = \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \sum_{k \in \lceil n \rceil^n} \left( \prod_{i=1}^n Z_{k(i),i} \cdot \otimes \operatorname{id} \right) \left( m^\ast \left( \prod_{j=1}^n \frac{\partial}{\partial Z_{k(j),\sigma (j)}} f \right) \right) \\
-      = \sum_{k \in \lceil n \rceil^n} \left( \prod_{i=1}^n Z_{k(i),i} \cdot \otimes \operatorname{id} \right) \left( m^\ast \left( \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{j=1}^n \frac{\partial}{\partial Z_{k(j),\sigma (j)}} f \right) \right) \\
-      = \sum_{k \in S_n} \left( \prod_{i=1}^n Z_{k(i),i} \cdot \otimes \operatorname{id} \right) \left( m^\ast \left( \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{j=1}^n \frac{\partial}{\partial Z_{k(j),\sigma (j)}} f \right) \right) \\
-      = \sum_{k \in S_n} \left( \prod_{i=1}^n Z_{k(i),i} \cdot \otimes \operatorname{id} \right) \left( m^\ast \left( \operatorname{sgn} (k) \Omega (f) \right) \right)
-      = \left( \operatorname{det} (Z) \cdot \otimes \operatorname{id} \right) \left( m^\ast \left( \Omega (f) \right) \right)
+      &\left( \operatorname{id} \otimes \Omega \right) \left( m^\ast \left( f \right) \right)
+      &&= \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \left( \operatorname{id} \otimes \prod_{i=1}^n \frac{\partial}{\partial Z_{i,\sigma \left( i \right)}} \right) \left( m^\ast \left( f \right) \right) \\
+      &&&= \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \sum_{k \in [ n ]^n} \left( \prod_{i=1}^n Z_{k(i),i} {\cdot} \otimes \operatorname{id} \right) \left( m^\ast \left( \prod_{j=1}^n \frac{\partial}{\partial Z_{k(j),\sigma (j)}} f \right) \right) \\
+      &&&= \sum_{k \in [ n ]^n} \left( \prod_{i=1}^n Z_{k(i),i} {\cdot} \otimes \operatorname{id} \right) \left( m^\ast \left( \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{j=1}^n \frac{\partial}{\partial Z_{k(j),\sigma (j)}} f \right) \right) \\
+      &&&= \sum_{k \in S_n} \left( \prod_{i=1}^n Z_{k(i),i} {\cdot} \otimes \operatorname{id} \right) \left( m^\ast \left( \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{j=1}^n \frac{\partial}{\partial Z_{k(j),\sigma (j)}} f \right) \right) \\
+      &&&= \sum_{k \in S_n} \left( \prod_{i=1}^n Z_{k(i),i} {\cdot} \otimes \operatorname{id} \right) \left( m^\ast \left( \operatorname{sgn} (k) \Omega (f) \right) \right)\\
+      &&&= \left( \operatorname{det} (Z) {\cdot} \otimes \operatorname{id} \right) \left( m^\ast \left( \Omega (f) \right) \right)
     \end{aligned}
   \end{equation}
   This immediately shows the first equality, and the second equality is proven analogously.
@@ -57,22 +50,22 @@ It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial
 \end{lemma}
 
 \begin{proof}
-  Write $ \operatorname{det} (Z)^p = \Sigma_i a_i q_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) $, where $a_i \in \mathbb{Z} \setminus \{0\}$ and $q_i$ are (monic) monomials.
+  Write $ \operatorname{det} (Z)^p = \Sigma_i a_i q_i \left( \left\{ Z_{k,l} \right\}_{k,l \in [ n ]} \right) $, where $a_i \in \mathbb{Z} \setminus \{0\}$ and $q_i$ are (monic) monomials.
   Then
   \begin{equation}
     \Omega^p \left( \operatorname{det} (Z)^p \right)
-    = \sum_i a_i q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( \sum_j a_j q_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right)
+    = \sum_i a_i q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in [ n ]} \right) \left( \sum_j a_j q_j \left( \left\{ Z_{k,l} \right\}_{k,l \in [ n ]} \right) \right)
   \end{equation}
-  Notice that $ q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( q_j \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $.
+  Notice that $ q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in [ n ]} \right) \left( q_j \left( \left\{ Z_{k,l} \right\}_{k,l \in [ n ]} \right) \right) $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $.
   Therefore in particular
   \begin{equation}
     c_{p,n}
-    = \sum_i a_i^2 q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in \lceil n \rceil} \right) \left( q_i \left( \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} \right) \right) \in \mathbb{N}_{>0}
+    = \sum_i a_i^2 q_i \left( \left\{ \frac{\partial}{\partial Z_{k,l}} \right\}_{k,l \in [ n ]} \right) \left( q_i \left( \left\{ Z_{k,l} \right\}_{k,l \in [ n ]} \right) \right) \in \mathbb{N}_{>0}
   \end{equation}
 \end{proof}
 Now, finally, we have the tools to see the following way of expressing the Reynolds Operator.
 \begin{theorem}
-  For $ p \in \mathbb{N} $ and $ \tilde{f} \in K \left\lbrack \left\{ Z_{i,j} \right\}_{k,l \in \lceil n \rceil} \right\rbrack_{pn} $, define for $ f = \frac{\tilde{f}}{\operatorname{det}(Z)^p}$:
+  For $ p \in \mathbb{N} $ and $ \tilde{f} \in K \left\lbrack \left\{ Z_{i,j} \right\}_{k,l \in [ n ]} \right\rbrack_{pn} $, define for $ f = \frac{\tilde{f}}{\operatorname{det}(Z)^p}$:
   \begin{equation}
     R \left( f \right) := \frac{\Omega^p \tilde{f}}{c_{p,n}}
   \end{equation}
@@ -83,7 +76,7 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
   First, check that this is well defined:
   For any such term, expanding the fraction by $ \operatorname{det} (Z)^q $ will yield the same result.
   Also, $\Omega^p$ is linear for any $p \in \mathbb{N}$.
-  Now we show that $R$ is $\operatorname{GL}_n$-invariant.
+  We shall now show that $R$ is $\operatorname{GL}_n$-invariant from the left and from the right.
   % First, I will introduce a notation:
   % For $f \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ and $\alpha \in \operatorname{GL}_n$, define $ \alpha \dot{\phantom{.}} f := \left( x \mapsto f \left( x \alpha^{-1} \right) \right) $ (again, I assure the reader that this proof contains the only occurence of this notation).
   % This is \textit{not} an action, but a right action (normal actions should be called ``left actions'').
@@ -91,39 +84,37 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
   For $ \beta , \gamma \in \operatorname{GL}_n $, we notice
   \begin{equation}
     \begin{aligned}
-      R \left( \beta . f \right) (\gamma)
-      = R \left( \frac{ \operatorname{det} (\beta)^p \cdot \beta . \tilde{f}}{\operatorname{det} (Z)^p} \right) (\gamma)
-      = \frac{ \operatorname{det} (\beta)^p \cdot \Omega^p \left( \beta . \tilde{f} \right) (\gamma) }{ c_{p,n} } \\
-      = \frac{1}{c_{p,n}} \cdot \left( \epsilon_{\beta^{-1}} \otimes \epsilon_\gamma \right) \left( \left( \left( \operatorname{det}(Z)^{-p} \cdot \otimes \Omega^p \right) \circ m^\ast \right) \left( \tilde{f} \right) \right) \\
-      = \frac{1}{c_{p,n}} \cdot \left( \epsilon_{\beta^{-1}} \otimes \epsilon_\gamma \right) \left( \left( \left( \Omega^p \otimes \operatorname{det}(Z)^{-p} \cdot \right) \circ m^\ast \right) \left( \tilde{f} \right) \right) \\
-      = \frac{ \Omega^p \left( \gamma \dot{\phantom{.}} \tilde{f} \right) (\beta^{-1}) \cdot \operatorname{det} \left (\gamma^{-1} \right)^p }{ c_{p,n} }
-      = R \left( \frac{ \gamma \dot{\phantom{.}} \tilde{f} \cdot \operatorname{det} \left( \gamma^{-1} \right)^p }{\operatorname{det} (Z)^p} \right) \left( \beta^{-1} \right) \\
-      = R \left( \gamma \dot{\phantom{.}} f \right) \left( \beta^{-1} \right)
+      &R \left( \beta . f \right) (\gamma)
+      &&= R \left( \frac{ \operatorname{det} (\beta)^p \cdot \beta . \tilde{f}}{\operatorname{det} (Z)^p} \right) (\gamma)  \\
+      &&&= \frac{ \operatorname{det} (\beta)^p \cdot \Omega^p \left( \beta . \tilde{f} \right) (\gamma) }{ c_{p,n} } \\
+      &&&= \frac{1}{c_{p,n}} \cdot \left( \epsilon_{\beta^{-1}} \otimes \epsilon_\gamma \right) \left( \left( \left( \operatorname{det}(Z)^{-p} \cdot \otimes \Omega^p \right) \circ m^\ast \right) \left( \tilde{f} \right) \right) \\
+      &&&= \frac{1}{c_{p,n}} \cdot \left( \epsilon_{\beta^{-1}} \otimes \epsilon_\gamma \right) \left( \left( \left( \Omega^p \otimes \operatorname{det}(Z)^{-p} \cdot \right) \circ m^\ast \right) \left( \tilde{f} \right) \right) \\
+      &&&= \frac{ \Omega^p \left( \gamma \dot{\phantom{.}} \tilde{f} \right) (\beta^{-1}) \cdot \operatorname{det} \left (\gamma^{-1} \right)^p }{ c_{p,n} }  \\
+      &&&= R \left( \frac{ \gamma \dot{\phantom{.}} \tilde{f} \cdot \operatorname{det} \left( \gamma^{-1} \right)^p }{\operatorname{det} (Z)^p} \right) \left( \beta^{-1} \right)  \\
+      &&&= R \left( \gamma \dot{\phantom{.}} f \right) \left( \beta^{-1} \right)
     \end{aligned}
   \end{equation}
   Since each $ \frac {\partial}{ \partial Z_{i,j} } $ lowers the degree of a monomial by one or maps it to zero, $R$ maps to $K$, and therefore for $ \delta \in \operatorname{GL}_n $ and $ g \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ we have $ R(g)(\delta) = R(g) \in K $.
-  We then get for all $ \alpha \in \operatorname{GL}_n $
+  We then get for all $ \beta,\gamma \in \operatorname{GL}_n $
   \begin{equation}
-    \begin{aligned}
-      R \left( \alpha . f \right)
-      &= R \left( \alpha . f \right) \left( I_n \right)
-      = R \left( I_n \dot{\phantom{.}} f \right) \left( \alpha^{-1} \right) \\
-      & = R \left( I_n \dot{\phantom{.}} f \right)
-      = R (f)
-    \end{aligned}
+    R \left( \beta . f \right)
+    = R \left( \beta . f \right) \left( \gamma \right) 
+    = R \left( \gamma \dot{\phantom{.}} f \right) \left( \beta^{-1} \right) 
+    = R \left( \gamma \dot{\phantom{.}} f \right)
   \end{equation}
-  which shows the $\operatorname{GL}_n$-invariance.
-  Finally, the definition immediately gives us that $R$ restricted to $K$ is the identity.  As mentioned in lemma \ref{lamm}(e), the uniqueness of the Reynolds Operator implies $ R = R_{\operatorname{GL}_n} $.
+  This implies that for all $\sigma \in G$ and all $p \in K[\operatorname{GL}_n]$, we have $R(\sigma.p) = R(I_n\dot{\phantom{.}}p) = R(p)$ and $R(\sigma\dot{\phantom{.}}p) = R(I_n.p)=R(p)$, showing that $R$ is $\operatorname{GL}_n$-invariant from the left and from the right.
+  Finally, the definition immediately gives us that $R$ restricted to $K$ is the identity.  \\
+  This shows that $R$ is a Reynolds-operator, and as mentioned in lemma \ref{lamm}(e), the uniqueness of the Reynolds Operator implies that we can write $ R = R_{\operatorname{GL}_n} $.
 \end{proof}
 
 Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
 
-\begin{corollary}
-  With the identification $ K \left\lbrack \operatorname{GL}_n \right\rbrack = K \left\lbrack \left\{ Z_{k,l} \right\}_{k,l \in \lceil n \rceil} , \operatorname{det} (Z) ^{-1} \right\rbrack $, view $ K \left\lbrack \operatorname{SL}_n \right\rbrack = K \left\lbrack \operatorname{GL}_n \right\rbrack / I $ where $ I = \left( \operatorname{det} (Z) -1 \right) $.
-  Now, for $ p \in \mathbb{N} $ and $ \tilde{f} \in K \left\lbrack \left\{ Z_{i,j} \right\}_{k,l \in \lceil n \rceil} \right\rbrack_{pn} $ define for $ f = \frac{\tilde{f}}{\operatorname{det}(Z)^p} + I $:
+\begin{corollary}\label{esel}
+  With the identification $ K \left\lbrack \operatorname{GL}_n \right\rbrack = K \left\lbrack \left\{ Z_{k,l} \right\}_{k,l \in [ n ]} , \operatorname{det} (Z) ^{-1} \right\rbrack $, view $ K \left\lbrack \operatorname{SL}_n \right\rbrack = K \left\lbrack \operatorname{GL}_n \right\rbrack / I $ where $ I = \left( \operatorname{det} (Z) -1 \right) $.
+  Now, for $ p \in \mathbb{N} $ and $ f \in K \left\lbrack \left\{ Z_{i,j} \right\}_{k,l \in [ n ]} \right\rbrack_{pn} $ we define:
   \begin{equation}
-    R \left( f \right)
-    := R_{\operatorname{GL}_n} \left( \frac{\tilde{f}}{\operatorname{det}(Z)^p} \right) + I
+    R ( f + I )
+    := R_{\operatorname{GL}_n} \left( \frac{f}{\operatorname{det}(Z)^p} \right) + I
     = \frac{\Omega^p \tilde{f}}{c_{p,n}} + I
   \end{equation}
   The linear extension of this (mapping anything else in $K \left\lbrack \operatorname{SL}_n \right\rbrack$ to zero), defines the Reynolds Operator $R_{\operatorname{SL}_n}$, making $\operatorname{SL}_n$ \textit{linearly reductive}.
@@ -131,54 +122,164 @@ Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$.
 
 \begin{proof}
   First, we will show $ K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} = K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $ (action by left multiplication).
+  For $B \in K^{n,n}$, define $B^\prime := \operatorname{diag}(b_i)_{i\in[n]}$, where $b_1 := \operatorname{det}(\beta)$ and $b_i := 1$ for $2\leq i\leq n$.
+  % $M(z) = [z_{i,j}]_{i,j \in [n]} \in \operatorname{GL}_n$ to be the matrix with $z_{1,1} = z$ and $z_{i,j} = \delta_{i,j}$ for $(i,j) \neq (1,1)$.
   Let $g \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{ \operatorname{SL}_n }$, and let $ \alpha \in \operatorname{GL}_n $.
-  Now for $z \in K \setminus \{0\}$, define $M(z) = [z_{i,j}]_{i,j \in [n]} \in \operatorname{GL}_n$ to be the matrix with $z_{1,1} = z$ and $z_{i,j} = \delta_{i,j}$ for $(i,j) \neq (1,1)$.
-  Note that $\alpha M \left( \operatorname{det}(\alpha) \right)^{-1} \in \operatorname{SL}_n$.
-  Define $ h := \left( \beta \mapsto g \left( M(\operatorname{det}(\beta)) \right) \right) \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
-  Now
+  Note that $\alpha (\alpha^\prime)^{-1} \in \operatorname{SL}_n$.
+  Define $ h := \left( \beta \mapsto g \left(\beta^\prime \right) \right) \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
+  We claim that $g = h$.
+  This is seen as follows:
   \begin{equation}
     \begin{aligned}
       g ( \alpha )
-      = \alpha M \left( \operatorname{det}(\alpha) \right)^{-1} . g \, (\alpha)
-      = g \left( M \left( \operatorname{det}(\alpha) \right) \alpha ^{-1} \alpha \right) \\
-      = g \left( M \left( \operatorname{det}(\alpha) \right) \right)
+      = \alpha (\alpha^\prime)^{-1} . g \, (\alpha)
+      = g \left( \alpha^\prime \alpha ^{-1} \alpha \right) \\
+      = g \left( \alpha^\prime \right)
       = h (\alpha)
     \end{aligned}
   \end{equation}
-  Therefore $ g = h \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
+  This shows that $ g = h \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
   Conversely it is easy to see that $ K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack \subseteq K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n } $.
 
-  Now, define $\hat{R} \colon K \left\lbrack \operatorname{GL}_n \right\rbrack \longrightarrow K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $ as follows: \\
-  For $ p,r \in \mathbb{N} $, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in \lceil n \rceil} \right\rbrace \right\rbrack_{rn} $, and $ f = \frac{\tilde{f}}{\operatorname{det} (Z)^p } $, define
+  Now we define a map $\hat{R} \colon K \left\lbrack \operatorname{GL}_n \right\rbrack \longrightarrow K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $ as follows: \\
+  For $ p,r \in \mathbb{N} $, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in [ n ]} \right\rbrace \right\rbrack_{rn} $, and $ f = \frac{\tilde{f}}{\operatorname{det} (Z)^p } $, define
   \begin{equation}
     \hat{R} (f) := \operatorname{det} (Z)^{r-p} \cdot \frac{ \Omega^r \tilde{f} }{ c_{r,n} }
     = \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{\tilde{f}}{\operatorname{det} (Z) ^r} \right)
   \end{equation}
-  and as before we define the images of the other elements by linear extension.
+  As before we define the images of the other elements by linear extension.
   Well-definedness follows from the same observations as in the proof of the theorem.
   This map is the identity on $ K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n }$:
   If $f \in K[\operatorname{GL}_n]^{\operatorname{SL}_n}$, then $f$ must be a linear combination of terms of the form $\frac{\operatorname{det}(Z)^r}{\operatorname{det}(Z)^p}$.
   Without loss of generality we can assume that either $p=0$ or $r=0$.
   Then it should be clear that $f$ gets mapped to itself.
-  % If $f = \frac{\tilde{f}}{\operatorname{det}(Z)^p}$, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in \lceil n \rceil} \right\rbrace \right\rbrack_{rn} $ and $ \tilde{f} \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $, then $ \tilde{f} = \lambda \operatorname{det} (Z)^r $ with $ \lambda \in K $.
-  Finally, the $\operatorname{SL}_n$-invariance also follows from the last theorem: Let $\alpha \in \operatorname{SL}_n$.
+  % If $f = \frac{\tilde{f}}{\operatorname{det}(Z)^p}$, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in [ n ]} \right\rbrace \right\rbrack_{rn} $ and $ \tilde{f} \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $, then $ \tilde{f} = \lambda \operatorname{det} (Z)^r $ with $ \lambda \in K $.
+  Finally, we can see that $\hat{R}$ is $\operatorname{SL}_n$-invariant from the left and from the right:
+  Let $\alpha \in \operatorname{SL}_n$.
   Then
   \begin{equation}
     \begin{aligned}
-      \hat{R} (\alpha . f)
-      &= \hat{R} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det} (Z)^p } \right) 
-      = \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det}(Z)^r } \right) \\
-      &= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{ \operatorname{det} (\alpha)^r \cdot \alpha . \tilde{f} }{ \operatorname{det}(Z)^r } \right) \\
-      &= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \alpha . \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right) \right) \\
-      &= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right)
-      = \hat{R} (f)
+      &\hat{R} (\alpha . f)
+      &&= \hat{R} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det} (Z)^p } \right)  \\
+      &&&= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det}(Z)^r } \right)  \\
+      &&&= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{ \operatorname{det} (\alpha)^r \cdot \alpha . \tilde{f} }{ \operatorname{det}(Z)^r } \right)  \\
+      &&&= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \alpha . \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right) \right)  \\
+      &&&= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right)
+      &&= \hat{R} (f)
     \end{aligned}
   \end{equation}
-  where we used $ \operatorname{det} (\alpha)^p = 1 = \operatorname{det} (\alpha)^r $ and the $\operatorname{GL}_n$-invariance of $R_{\operatorname{GL}_n}$.
-  Thus we have shown that $\hat{R}$ is the Reynolds-Operator for the action of $\operatorname{SL}_n$ on $\operatorname{GL}_n$ by left-multiplication.
-
-  Lastly, this shows our proposed statement $ R = R_{\operatorname{SL}_n} $, since $ \operatorname{det} (Z) \sim 1 $.
+  We used $ \operatorname{det} (\alpha)^p = 1 = \operatorname{det} (\alpha)^r $ and the $\operatorname{GL}_n$-invariance of $R_{\operatorname{GL}_n}$.
+  The $\operatorname{GL}_n$-invariance from the right is shown analogously.
+  Thus we have shown that $\hat{R}$ is the Reynolds-Operator for the action of $\operatorname{SL}_n$ on $\operatorname{GL}_n$ by left-multiplication, which is also $\operatorname{SL}_n$-invariant from the right.\\
+  Noting that $ \operatorname{det} (Z) \sim 1 $, this shows our proposed statement that $ R = R_{\operatorname{SL}_n} $ does define the Reynolds operator of $\operatorname{\operatorname{SL}_n}$.
 \end{proof}
+
+\begin{example}\label{theex}
+We will apply Cayley's $\Omega$-process in the setting of example \ref{quad} for $n=2$, that is the group $G = \operatorname{SL}_2$ and the representation $ V = \left\{ \, A \in K^{2 \times 2} \mid A^T = A \, \right\} $ with the action
+  \begin{equation}
+    \begin{aligned}
+      &\mu \colon & \operatorname{SL}_2 &\times  V&&  \longrightarrow  V \\
+      && (  S  &,   A  )  &&\longmapsto  SAS^T
+    \end{aligned}
+  \end{equation}
+  Now consider the following for $S \in \operatorname{SL}_2$ and $A \in V$:
+  \begin{equation}
+    \begin{aligned}
+      S &=
+      \begin{bmatrix}
+        s_{1,1} & s_{1,2} \\
+        s_{2,1} & s_{2,2}
+      \end{bmatrix}
+      & A &=
+      \begin{bmatrix}
+        a_{1,1} & a_{1,2} \\
+        a_{2,1} & a_{2,2}
+      \end{bmatrix}
+      \\
+      S^{-1} &=
+      \begin{bmatrix}
+        s_{2,2} & -s_{1,2} \\
+        -s_{2,1} & s_{1,1}
+      \end{bmatrix}
+    \end{aligned}
+  \end{equation}
+  We then have
+  \begin{equation}
+    \begin{aligned}
+      &S^{-1}.A = S^{-1}A\left(S^{-1}\right)^T  \\ =&
+      \begin{bmatrix}
+        a_{1,1}s_{2,2}^2 - 2a_{1,2}s_{1,2}s_{2,2} & -a_{1,1}s_{2,1}s_{2,2} + a_{1,2}s_{1,1}s_{2,2}\\
+        + a_{2,2}s_{1,2}^2 &  + a_{1,2}s_{1,2}s_{2,1} - a_{2,2}s_{1,1}s_{1,2} \\
+        &\\
+        - a_{1,1}s_{2,1}s_{2,2} + a_{1,2}s_{1,1}s_{2,2} & a_{1,1}s_{2,1}^2 - 2a_{1,2}s_{1,1}s_{2,1}\\
+        + a_{1,2}s_{1,2}s_{2,1} - a_{2,2}s_{1,1}s_{1,2} & + a_{2,2}s_{1,1}^2
+      \end{bmatrix}
+    \end{aligned}
+  \end{equation}
+  Notice that we also have
+  \begin{equation}
+    \begin{aligned}
+      &\operatorname{det}\left( \frac{\partial}{\partial S} \right)^n
+      &&= \left( \frac{\partial}{\partial S_{1,1}} \frac{\partial}{\partial S_{2,2}} - \frac{\partial}{\partial S_{1,2}} \frac{\partial}{\partial S_{2,1}} \right)^n \\
+      &&&= \sum_{k=0}^n (-1)^k \binom{n}{k} \frac{\partial}{\partial S_{1,1}}^{n-k} \frac{\partial}{\partial S_{1,2}}^k \frac{\partial}{\partial S_{2,1}}^k \frac{\partial}{\partial S_{2,2}}^{n-k}
+    \end{aligned}
+  \end{equation}
+  It is quite cumbersome to calculate the Reynolds Operator of general polynomials.
+  We will look at the monomial $A_{1,1}^2$, for which we have
+  \begin{equation}
+    \begin{aligned}
+      &&&\bar{\mu}^\prime (A_{1,1}^2) \\
+      &&&= S_{2,2}^4 \otimes A_{1,1}^2 - 4S_{1,2}S_{2,2}^3 \otimes A_{1,1}A_{1,2} + 2S_{1,2}^2 S_{2,2}^2 \otimes A_{1,1}A_{2,2} \\
+      &&& + 4S_{1,2}^2 S_{2,2}^2 \otimes A_{1,2}^2 - 4S_{1,2}^3 S_{2,2} \otimes A_{1,2}A_{2,2} + S_{1,2}^4 \otimes A_{2,2}^2\\
+    \end{aligned}
+  \end{equation}
+  We can now apply the Reynolds operator in the way we discussed it in proposition \ref{ro} in combination with Cayley's $\Omega$-process.
+  Since all terms in $K[\operatorname{SL}_2]$ are already of degree $2$, we apply the same to each summand and calculate:
+  \begin{equation}
+    \begin{aligned}
+      & R_G \cdot A_{1,1}^2 \\
+      =& \left( \frac{\partial}{\partial S_{1,1}}^2 \frac{\partial}{\partial S_{2,2}}^2 - 2 \frac{\partial}{\partial S_{1,1}} \frac{\partial}{\partial S_{1,2}} \frac{\partial}{\partial S_{2,1}} \frac{\partial}{\partial S_{2,2}} + \frac{\partial}{\partial S_{1,2}}^2\frac{\partial}{\partial S_{2,1}}^2 \right) \cdot A_{1,1}^2 \\
+      =& 0
+    \end{aligned}
+  \end{equation}
+  The zero-polynomial is a trivial invariant, so we see that applying the Reynolds Operator to a polynomial will not always produce interesting results.
+  We will try again for the polynomial $A_{1,2}^2$.
+  We calculate
+  \begin{equation}
+    \begin{aligned}
+      &\mu^\prime ( A_{1,2}^2 ) \\
+      =& S_{2,1}^2 S_{2,2}^2 \otimes A_{1,1}^2
+      - 2S_{1,1}S_{2,1}S_{2,2}^2 \otimes A_{1,1}A_{1,2} \\
+      &- 2S_{1,2}S_{2,1}^2S_{2,2} \otimes A_{1,2}^2 
+      + 2S_{1,1}S_{1,2}S_{2,1}S_{2,2} \otimes A_{1,1}A_{2,2}\\
+      &+ S_{1,1}^2S_{2,2}^2 \otimes A_{1,2}^2
+      + 2S_{1,1}S_{1,2}S_{2,1}S_{2,2} \otimes A_{1,2}^2 \\
+      &- 2S_{1,1}^2S_{1,2}S_{2,2} \otimes A_{1,2}A_{2,2}
+      + S_{1,2}^2S_{2,1}^2 \otimes A_{1,2}^2 \\
+      &- 2S_{1,1}S_{1,2}^2S_{2,1} \otimes A_{1,2}A_{2,2}
+      + S_{1,1}^2S_{1,2}^2 \otimes A_{2,2}^2
+    \end{aligned}
+  \end{equation}
+  Again, all $K[\operatorname{SL}_2]$ terms are of degree $2$, therefore we can simplify and calculate
+  \begin{equation}
+    \begin{aligned}
+      &R_G \cdot A_{1,2}^2\\
+      =& \left( \frac{\partial}{\partial S_{1,1}}^2 \frac{\partial}{\partial S_{2,2}}^2 - 2 \frac{\partial}{\partial S_{1,1}} \frac{\partial}{\partial S_{1,2}} \frac{\partial}{\partial S_{2,1}} \frac{\partial}{\partial S_{2,2}} + \frac{\partial}{\partial S_{1,2}}^2\frac{\partial}{\partial S_{2,1}}^2 \right) \cdot A_{1,2}^2 \\
+      =& - \frac{4}{12} A_{1,1}A_{2,2} + \frac{4}{12} A_{1,2}^2 - \frac{4}{12} A_{1,2}^2 + \frac{4}{12} A_{1,2}^2 \\
+      =& -\frac{1}{3}\operatorname{det}(A)
+    \end{aligned}
+  \end{equation}
+  This is in line with what we expect: $K[V]^{\operatorname{SL}_n} = K[\operatorname{det}(A)]$.
+  % Now consider a monomial $ f = A_{1,1}^{r_{1,1}} A_{1,2}^{r_{1,2}} A_{2,2}^{r_{2,2}} \in K[V] $.
+  % We then have
+  % \begin{equation}
+  %   \begin{aligned}
+  %     & \mu^\ast (f) \\
+  %     =& \sum_{|t_{1,1}| = r_{1,1}} \, \sum_{|t_{1,2}| = r_{1,2}} \, \sum_{|t_{2,2}| = r_{2,2}} \binom{r_{1,1}}{t_{1,1}} \binom{r_{1,2}}{t_{1,2}} \binom{r_{2,2}}{t_{2,2}}\\
+  %     =& \sum s_{1,1}^{ t_{1,2}^{(2)} + t_{1,2}^{(4)} + t_{2,2}^{(2)} + 2t_{2,2}^{(3)}}
+  %   \end{aligned}
+  % \end{equation}  
+\end{example}
 
 %%% Local Variables:
 %%% mode: latex

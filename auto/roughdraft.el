@@ -7,7 +7,7 @@
     "prework"
     "reynolds"
     "prozess"
-    "examples"
+    "discussion"
     "article"
     "art10"
     "amssymb"
@@ -15,11 +15,11 @@
     "amsthm"
     "cite"
     "mathtools"
-    "enumerate")
+    "enumerate"
+    "perpage")
    (LaTeX-add-labels
     "pw")
-   (LaTeX-add-bibliographies)
-   (LaTeX-add-amsthm-newtheorems
+   (LaTeX-add-environments
     "theorem"
     "definition"
     "lemma"
@@ -29,7 +29,6 @@
     "cremark"
     "example"
     "dexample")
-   (LaTeX-add-amsthm-newtheoremstyles
-    "prrt"))
+   (LaTeX-add-bibliographies))
  :latex)
 
