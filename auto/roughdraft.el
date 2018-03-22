@@ -1,34 +1,15 @@
 (TeX-add-style-hook
  "roughdraft"
  (lambda ()
-   (TeX-run-style-hooks
-    "latex2e"
-    "introduction"
-    "prework"
-    "reynolds"
-    "prozess"
-    "discussion"
-    "article"
-    "art10"
-    "amssymb"
-    "amsmath"
-    "amsthm"
-    "cite"
-    "mathtools"
-    "enumerate"
-    "perpage")
-   (LaTeX-add-labels
-    "pw")
-   (LaTeX-add-environments
-    "theorem"
-    "definition"
-    "lemma"
-    "proposition"
-    "corollary"
-    "remark"
-    "cremark"
-    "example"
-    "dexample")
-   (LaTeX-add-bibliographies))
+   (LaTeX-add-bibitems
+    "Aud03"
+    "Bos13"
+    "DK15"
+    "FH91"
+    "Fis14"
+    "Kle93"
+    "Kra85"
+    "Rab30"
+    "Stu08"))
  :latex)
 

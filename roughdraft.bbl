@@ -5,6 +5,16 @@ Mich\`ele Audin.
 \newblock {\em Geometry}.
 \newblock Springer-Verlag, Berlin Heidelberg, 2003.
 
+\bibitem[Bos13]{Bos13}
+Siegfried Bosch.
+\newblock {\em Algebra}.
+\newblock Springer-Verlag, Berlin Heidelberg, 2013.
+
+\bibitem[Cay46]{Cay46}
+Arthur Cayley.
+\newblock On linear transformations.
+\newblock {\em The Cambridge and Dublin mathematical journal}, 1:104, 1846.
+
 \bibitem[DK15]{DK15}
 Harm Derksen and Gregor Kemper.
 \newblock {\em Computational Invariant Theory}.
@@ -12,16 +22,31 @@ Harm Derksen and Gregor Kemper.
 
 \bibitem[FH91]{FH91}
 William Fulton and Joe Harris.
-\newblock {\em Representation Theory; A First Course}.
+\newblock {\em Representation theory; a first course}.
 \newblock Springer-Verlag, New York, 1991.
+
+\bibitem[Fis14]{Fis14}
+Gerd Fischer.
+\newblock {\em Lineare {A}lgebra}.
+\newblock Springer Fachmedien, Wiesbaden, 2014.
+
+\bibitem[Hil90]{Hil90}
+David Hilbert.
+\newblock {\"U}ber die {T}heorie der algebraischen {F}ormen.
+\newblock {\em Annalen der Mathematik}, 36:473, 1890.
 
 \bibitem[Kle93]{Kle93}
 Felix Klein.
 \newblock A comparative review of recent researches in geometry, 1893.
 
+\bibitem[Kra85]{Kra85}
+Hanspeter Kraft.
+\newblock {\em {G}eometrische {M}ethoden in der {I}nvariantentheorie}.
+\newblock Friedr. Vieweg \& Sohn Verlagsgesellschaft mbH, Braunschweig, 1985.
+
 \bibitem[Rab30]{Rab30}
 J.L. Rabinowitsch.
-\newblock Zum hilbertschen nullstellensatz.
+\newblock {Z}um {H}ilbertschen {N}ullstellensatz.
 \newblock {\em Annalen der Mathematik}, 120:520, 1930.
 
 \bibitem[Stu08]{Stu08}

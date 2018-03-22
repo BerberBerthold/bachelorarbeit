@@ -14,6 +14,7 @@
     "crinv"
     "rengr"
     "da"
+    "do"
     "ro"))
  :latex)
 

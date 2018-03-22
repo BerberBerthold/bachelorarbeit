@@ -8,3 +8,8 @@
 - dim V^G = dim V*^G a lot is missing...
 - hilberts finiteness theorem f_i linearly independent
 - R_G \dot{m} invariant (from right blabla
+
+above should be done all yeye
+
+- Schur Weyl cite procesi lie groups chapter 9
+- W* iso W maybe
