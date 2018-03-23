@@ -2,7 +2,7 @@ A very important concept in mathematics is the idea of an \textit{invariant}:
 An object which does not change under a certain action.
 In 1872, Felix Klein came up with a then new method of describing geometries with group theory, called the Klein Erlangen program (see \cite{Kle93}).
 Here, the central idea of a geometry is characterized by its associated symmetry group, the group of transformations which leaves certain objects or properties unchanged, for example angles.
-The study of these transformations, for instance, is called conformal geometry.
+The study of these transformations is called conformal geometry.
 
 Let us discuss the following important example in geometry:
 Consider all transformations which map lines to lines, meaning such transformations under which the property of being a line is invariant.
@@ -22,14 +22,15 @@ How big is the ring of all invariants?
 \textit{Hilbert's finiteness theorem} states that for regular actions under certain groups, such that are \textit{linearly reductive}, the invariant ring is finitely generated.
 If we can find these finite generators, we have a grasp of what all invariants look like.
 Hilbert's first proof for this theorem, which he published in 1890 (see \cite{Hil90}) was non-constructive.
+It is claimed that this proof was responsible for Gordan's famous quote ``Das ist Theologie und nicht Mathematik'' (``This is theology and not mathematics'') (see \cite[p.42]{DK15}).
 The central idea of this proof is the existence of a Reynolds operator, which projects the coordinate ring to the invariant ring.
 
 One of the most important and most common groups is the general linear group $\operatorname{GL}_n$.
 This group is linearly reductive and there are multiple ways to see this.
 Motivated by averaging for finite groups, for compact groups it is possible to replace the sum by an integral with the Haar-measure, from which we can show that $\operatorname{GL}_n$ is linearly reductive (see \cite[p.~285-288]{Kra85}).
-One can also show linear reductivity by the Schur-Weyl-duality:  The symmetric group is finite, from which we can therefore see that in any rational $\operatorname{GL}_n$-representation we can again construct module complements (see \cite[p.~243]{Pro07}).
+One can also show linear reductivity by the Schur-Weyl-dualty:  The symmetric group is finite, from which we can therefore see that in any rational $\operatorname{GL}_n$-representation we can again construct module complements (see \cite[p.~243]{Pro07}).
 
-Here, we will show that $\operatorname{GL}_n$ is linearly reductive in an even different way.
+Here, we will show that $\operatorname{GL}_n$ is linear reductive in an even different way.
 For one, we want to show that a Reynolds Operator exists, which already means that $\operatorname{GL}_n$ is linearly reductive.
 But we want even more than just its existence.
 What does it do for our motivation to get a grasp of what all (or even just some) invariants look like, if we merely prove the existence of a finite generator set for the invariants?
@@ -38,7 +39,7 @@ Since this operator projects polynomials to invariant polynomials, if we can fin
 This is possible with \textit{Cayley's $\Omega$-process}, which Arthur Cayley came up with as early as 1846 (see \cite{Cay46}).
 
 If we take a polynomial at random and apply the Reynolds Operator, we might just get a constant polynomial, which is not a very interesting invariant.
-Similar to the first proof of Hilbert's finiteness theorem (by Hilbert himself, see \cite{Hil90}), we can show that there is a finite set of polynomials whose images under the Reynolds operator will generate the invariant ring.
+Similar to the first proof of Hilbert's finiteness theorem (by Hilbert himself, see \cite[p.41,42]{DK15}), we can show that there are certain finitely many polynomials whose images under the Reynolds operator will generate the invariant ring.
 Although this is not what we will be discussing in detail, there is in fact an algorithm to compute these certain polynomials.
 With the help of Cayley's $\Omega$-process, we then get a complete algorithm that gives us the generators of the invariant ring.
 (See \cite[4.1.9]{DK15})
@@ -57,14 +58,14 @@ For linearly reductive groups, this operator always exists, and this helps us to
 
 We then discuss a very useful condition for a linear algebraic group $G$ being linearly reductive:  If the Reynolds Operator $R_G$ of $G$ exists, we can express any Reynolds operator $R\colon K[X] \twoheadrightarrow K[X]^G$ in terms of $R_G$, which makes $G$ linearly reductive.
 
-For the general linear group $\operatorname{GL}_n$, we will concretely express the Reynolds Operator $R_{\operatorname{GL}_n}$ with Cayley's $\Omega$-process, to which we devote an entire section.
-We will then look at an example and calculate the Reynolds Operator applied to concrete polynomials to obtain invariants.
+For the general linear group $\operatorname{GL}_n$, we can concretely express the Reynolds Operator $R_{\operatorname{GL}_n}$ with Cayley's $\Omega$-process, to which we devote an entire section.
+We will then look at an example and calculate the Reynolds Operator applied to a concrete polynomial to obtain an invariant.
 
-Lastly, without going into great detail, we discuss a complete algorithm for computing the generators of the invariant ring $K[V]^{\operatorname{GL}_n}$ for a given $\operatorname{GL}_n$-representation $V$.
+Lastly, without going into detail, we discuss a complete algorithm for computing the generators of the invariant ring $K[V]^{\operatorname{GL}_n}$ for a given $\operatorname{GL}_n$-representation $V$.
 \vspace{0.5cm}
 
 The main source of this work is \textit{Computational invariant theory} by Harm Derksen and Gregor Kemper \cite{DK15}.
-Section 3 and section 4 are essentially monographs of chapters 2.2.1 and 4.5.3 in this book, respectively, while most definitions and notions are also borrowed from there.
+Section 3 and section 4 in essence monographs of chapters 2.2.1 and 4.5.3 in this book, respectively, while most definitions and notions are also borrowed from there.
 
 %%% Local Variables:
 %%% mode: latex

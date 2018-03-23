@@ -9,6 +9,7 @@
 \usepackage{enumerate}
 \usepackage{perpage}
 \usepackage{blindtext}
+% \usepackage{hyperref}
 
 \title{Cayley's $\Omega$-Process And The Reynolds Operator}
 \author{Berthold Lorke}
@@ -19,9 +20,9 @@
   {}
   {0pt}
   {\bfseries}
-  {\\}
+  {}
   { }
-  {\thmname{#1}\thmnumber{ #2}\thmnote{: #3}}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3):}}
 
 \theoremstyle{prrt}
 \newtheorem{theorem}{Theorem}[section]
@@ -34,7 +35,7 @@
 \newtheorem{example}[theorem]{Example}
 \newtheorem{dexample}{Example}[theorem]
 
-\setlength{\parindent}{0pt}
+% \setlength{\parindent}{0pt}
 
 \setcounter{tocdepth}{5}
 
@@ -69,18 +70,19 @@
 \end{titlepage}
 
 \section*{Eidesstattliche Erkl\"arung}
-Hiermit erkl\"are ich, dass ich die vorliegende Arbeit selbstst\"andig und eigenh\"andig sowie ohne unerlaubte fremde Hilfe und ausschließlich unter Verwendung der aufgef\"uhrten Quellen und Hilfsmittel angefertigt habe.
+
+Hiermit erkl\"are ich, dass ich die vorliegende Arbeit selbstst\"andig und eigenh\"andig sowie ohne unerlaubte fremde Hilfe und ausschlie{\ss}lich unter Verwendung der aufgef\"uhrten Quellen und Hilfsmittel angefertigt habe.
 
 \vspace{4cm}
-Die selbst\"andige und eigenst\"andige Anfertigung versichert an Eides statt:
+\noindent Die selbstst\"andige und eigenst\"andige Anfertigung versichert an Eides statt:
 
 \vspace{2cm}
-Berlin, den 23. M\"arz 2018
+\noindent Berlin, den 23. M\"arz 2018
 
 \vspace{1cm}
-\rule{5cm}{0.4pt}
+\noindent \rule{5cm}{0.4pt}
 
-Berthold Blatt Lorke
+\noindent Berthold Blatt Lorke
 \newpage
 \section*{Deutsche Zusammenfassung}
 
@@ -94,6 +96,7 @@ Berthold Blatt Lorke
 \section{Introduction}
 
 \input{introduction}
+\newpage
 
 \section{Preliminary work}\label{pw}
 
@@ -107,7 +110,7 @@ Berthold Blatt Lorke
 
 \input{prozess}
 
-\section{Further discussion and conclusion}
+\section{Further discussion}
 
 \input{discussion}
 

@@ -1,10 +1,37 @@
-Ein wichtiges Theorem in der Invariantentheorie ist \textit{Hilberts Endlichkeitssatz}:  Ist eine Gruppe $G$ linear reduktiv, so gilt f\"ur jede affine $G$-Variet\"at $X$, dass der Invariantenring $K[X]^G$ endlich erzeugt ist, das hei{\ss}t es gibt $\{f_i\}_{i\in[r]} \subseteq K[X]$ sodass $K[X]^G = K[\{f_i\}_{i\in[r]}]$.
+Ein wichtiges Theorem in der Invariantentheorie ist \textit{Hilberts Endlichkeitssatz}:  Ist eine Gruppe $G$ linear reduktiv, so gilt f\"ur jede affine $G$-Variet\"at $X$, dass der Invariantenring $K[X]^G$ endlich erzeugt ist, das hei{\ss}t es gibt $\{f_i\}_{i\in[r]} \subseteq K[X]$ sodass $K[X]^G = K[\{f_i\}_{i\in[r]}]$ (siehe \cite{Hil90}).
 Im Beweis ist die Zentrale Idee die Existenz eines \textit{Reynolds Operators} $R \colon K[X] \twoheadrightarrow K[X]^G$, eine $G$-invariante lineare Projektion von $K[X]$ auf $K[X]^G$.
-Dieser erm\"oeglicht uns, Invarianten zu finden.  \\
+Dieser erm\"oeglicht uns, Invarianten zu finden.
+
 Eine der wichtigsten Gruppen in der Mathematik ist die allgemeine lineare Gruppe $\operatorname{GL}_n$.
 Diese ist in der Tat linear reduktiv, was man auf verschiedene Weisen zeigen kann.
-Eine M\"oglichkeit die lineare Reduktivit\"at nachzuweisen, ist zu zeigen, dass ein Reynolds Operator der Gruppe existiert.
-Die Existenz dieses Reynolds Operators wird in dieser Arbeit konstruktiv mit Hilfe von \textit{Cayleys $\Omega$-Prozess} nachgewiesen, was nicht nur zur Folge hat, dass $\operatorname{GL}_n$ linear reduktiv ist, soncern auch, dass wir eine explizit Formel des Reynolds Operators haben, womit wir konkret Invarianten ausrechnen k\"onnen.
+Eine M\"oglichkeit, die lineare Reduktivit\"at nachzuweisen, ist zu zeigen, dass der Reynolds Operator der Gruppe existiert.
+Die Existenz dieses Operators wird in dieser Arbeit konstruktiv mit Hilfe von \textit{Cayleys $\Omega$-Prozess} nachgewiesen, welcher von Arthur Cayley im Jahre 1846 schon ver\"offentlicht wurde (siehe \cite{Cay46}).
+Dies hat nicht nur zur Folge, dass $\operatorname{GL}_n$ linear reduktiv ist, sondern auch, dass wir eine explizite Formel des Reynolds Operators haben, womit wir konkret Invarianten ausrechnen k\"onnen.
+
+Es werden in dieser Arbeit mehrere Konzepte abgedeckt, bevor Cayley's $\Omega$-Prozess behandelt wird.
+
+Als erstes werden die Grundz\"uge der Invariantentheorie besprochen.
+Wir geben affinen Variet\"aten die Struktur eine $G$-variet\"aet, und behandeln desweiteren rationale $G$-Darstellungen und $G$-Module.
+F\"ur eine linear reduktive Gruppe $G$ geben wir dem Koordinatenring $K[X]$ die Struktur einer affinen $G$-Variet\"at, was uns erlaubt den Invariantenring $K[X]^G$ zu beschreiben.
+Dies ist ein zentrales Objekt in dieser Arbeit.
+
+Motiviert von Hilberts Endlichkeitssatz, welcher besagt dass $K[X]^G$ endlich erzeugt ist f\"ur eine linear reduktive Gruppe $G$ und eine affine $G$-Variet\"at $X$, werden wir verschiedene Charakterisierungen des Begriffes einer linear reduktiven Gruppe besprechen.
+Es wird besonders auf den Reynolds Operator aufmerksam gemacht, welcher $K[X]$ auf den Invariantenring $K[X]^G$ projeziert f\"ur eine affine $G$-variet\"at $X$.
+F\"ur linear reduktive Gruppen existier dieser Operator immer, und dies ist zentral f\"ur den Beweis von Hilbert's Endlichkeitssatz.
+
+Daraufhin besprechen wir eine sehr n\"utzliches Resultat:  Wenn der Reynolds Operator $R_G$ der Gruppe $G$ existiert, k\"onnen wir den Reynolds Operator $R \colon K[X] \twoheadrightarrow K[X]^G$ f\"ur jede affine $G$-Variet\"at mithilfe von $R_G$ darstellen, was zeigt, dass $G$ linear reduktiv ist.
+
+Ein ganzer Abschnitt befasst sich mir der expliziten Darstellung von dem Reynolds Operator $R_{\operatorname{GL}_n}$ von der allgemeinen linearen Gruppe $\operatorname{GL}_n$ mithilfe von Cayley's $\Omega$-Prozess.
+Wir werden hiermit in einem Beispiel explizit die Anwendung des Reynolds Operators auf konkrete Polynome ausrechnen, womit wir Invarianten erhalten.
+
+Zuletzt wird oberfl\"achlich ein kompletter Algorithmus zur Berechnung der Erzeuger des Invariantenrings $K[V]^{\operatorname{GL}_n}$ einer gegebenen $\operatorname{GL}_n$-Darstellung $V$ thematisiert.
+\vspace{0.3cm}
+
+Die Hauptquelle dieser Arbeit ist das Buch \textit{Computational invariant theory} von Harm Derksen und Gregor Kemper \cite{DK15}.
+Abschnitt 3 und Abschnitt 4 sind im wesentlichen Monographien der Kapitel 2.2.1 und 4.5.3 in diesem Buch.
+Die meisten Definitionen sind ebenfalls hieraus entnommen.
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "roughdraft"

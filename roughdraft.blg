@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: roughdraft.aux
 The style file: alpha.bst
 Database file #1: roughdraft.bib
-You've used 11 entries,
+You've used 12 entries,
             2543 wiz_defined-function locations,
-            628 strings with 5340 characters,
-and the built_in function-call counts, 3214 in all, are:
-= -- 293
-> -- 110
-< -- 9
-+ -- 31
-- -- 30
-* -- 180
-:= -- 554
-add.period$ -- 32
-call.type$ -- 11
-change.case$ -- 50
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 166
-empty$ -- 276
-format.name$ -- 50
-if$ -- 653
+            634 strings with 5467 characters,
+and the built_in function-call counts, 3486 in all, are:
+= -- 317
+> -- 118
+< -- 10
++ -- 33
+- -- 32
+* -- 194
+:= -- 600
+add.period$ -- 35
+call.type$ -- 12
+change.case$ -- 54
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 182
+empty$ -- 301
+format.name$ -- 54
+if$ -- 709
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 17
-newline$ -- 57
-num.names$ -- 33
-pop$ -- 75
+missing$ -- 19
+newline$ -- 62
+num.names$ -- 36
+pop$ -- 83
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 74
 quote$ -- 0
-skip$ -- 118
+skip$ -- 128
 stack$ -- 0
-substring$ -- 105
-swap$ -- 11
-text.length$ -- 9
-text.prefix$ -- 9
+substring$ -- 112
+swap$ -- 12
+text.length$ -- 10
+text.prefix$ -- 10
 top$ -- 0
-type$ -- 60
+type$ -- 64
 warning$ -- 0
-while$ -- 27
-width$ -- 14
-write$ -- 142
+while$ -- 29
+width$ -- 15
+write$ -- 155
