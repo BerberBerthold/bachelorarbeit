@@ -22,13 +22,20 @@ Harm Derksen and Gregor Kemper.
 
 \bibitem[FH91]{FH91}
 William Fulton and Joe Harris.
-\newblock {\em Representation theory; a first course}.
+\newblock {\em Representation theory; {A} first course}.
 \newblock Springer-Verlag, New York, 1991.
 
 \bibitem[Fis14]{Fis14}
 Gerd Fischer.
 \newblock {\em Lineare {A}lgebra}.
 \newblock Springer Fachmedien, Wiesbaden, 2014.
+
+\bibitem[Gat17]{Gat17}
+Andreas Gathmann.
+\newblock Algebraic geometry; {N}otes for a class taught at the university of
+  {K}aiserslautern 2002/2003, November 12 2017.
+\newblock Available at
+  \url{http://www.mathematik.uni-kl.de/~gathmann/class/alggeom-2002/alggeom-2002.pdf}.
 
 \bibitem[Hil90]{Hil90}
 David Hilbert.

@@ -1,6 +1,6 @@
 In this section, we will abbreviate $Z := [Z_{i,j}]_{i,j \in [n]}$ and  $K[\{Z_{i,j}\}_{i,j \in[n]}] := K[Z]$.
 
-We want to express the Reynolds Operator in a concrete way.
+We want to express the Reynolds Operator of the group $\operatorname{GL}_n$ in a concrete way.
 For the group $\operatorname{GL}_n$, we can explicitly formulate it with the help of Cayley's $\Omega$-Process, which was published by Arthur Cayley in 1846 \cite{Cay46}.
 
 The idea is to express the Reynolds operator with formal derivatives of polynomials.
@@ -10,13 +10,13 @@ The linear extension of this defines a map $\frac{\partial}{\partial Z_{k,l}} \i
 We will from now on also abbreviate $\frac{\partial}{\partial Z} := \left\lbrack \frac{\partial}{\partial Z_{i,j}} \right\rbrack_{i,j \in [ n ]} $.
 \begin{definition}[Cayley's $\Omega$-process]
   We call
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       \Omega \colon && K[Z] && \longrightarrow &&&K[Z]  \\
       && f &&\longmapsto &&&\sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{ i =1 }^n \frac{\partial}{\partial Z_{i , \sigma \left( i \right)}} f
-    \end{aligned}
-  \end{equation}
-\textbf{Cayley's $\Omega$-process}\footnote{$\prod_{i=1}^n\frac{\partial}{\partial Z_{i , \sigma \left( i \right)}}$ here denotes the successive application of the formal partial derivatives.}.
+    \end{aligned} \; \footnote{$\prod_{i=1}^n\frac{\partial}{\partial Z_{i , \sigma \left( i \right)}}$ here denotes the successive application of the formal partial derivatives.}
+  \end{equation*}
+\textbf{Cayley's $\Omega$-process}.
 It can also be thought of as $ \Omega = \operatorname{det} \left( \frac{\partial}{\partial Z} \right) $, where \linebreak$\frac{\partial}{\partial Z} := \left\lbrack \frac{\partial}{\partial Z_{i,j}} \right\rbrack_{i,j \in [ n ]} $.  \\
 (See \cite[p.~193-194]{DK15})
 \end{definition}
@@ -27,11 +27,11 @@ The next two lemmas will prepare defining the Reynolds operator with Cayley's $\
 \begin{lemma}
   Consider Cayley's $\Omega$-process $\Omega \colon K[Z] \rightarrow K[Z]$ as described above and the algebraic cohomomorphism $m^\ast \colon K[Z] \rightarrow K[Z] \otimes K[Z]$ of the group multiplication $m \colon \operatorname{GL}_n\times \operatorname{GL}_n \rightarrow \operatorname{GL}_n$ restricted to $K[Z]$.
   We then have
-  \begin{equation}
+  \begin{equation*}
     \left( \operatorname{det} \left( Z \right) ^{-1} \otimes \Omega \right) \circ m^\ast
     = m^\ast \circ \Omega
-    = \left( \Omega \otimes \operatorname{det} \left( Z \right) ^{-1} \right) \circ m^\ast
-  \end{equation}
+    = \left( \Omega \otimes \operatorname{det} \left( Z \right) ^{-1} \right) \circ m^\ast \; .
+  \end{equation*}
   Here, for $p \in K[\operatorname{GL}_n]$, we also view $ p \colon K[\operatorname{GL}_n] \rightarrow K[\operatorname{GL}_n]$, $f \mapsto pf$ as the operation \textit{multiply with $ p $} for a polynomial $ p \in K \left\lbrack \operatorname{GL}_n \right\rbrack $, in this case $p = \operatorname{det}(Z)^{-1}$.  \\
   (See \cite[4.5.22]{DK15})
 \end{lemma}
@@ -44,7 +44,7 @@ The next two lemmas will prepare defining the Reynolds operator with Cayley's $\
   We have $m_{k,l} = \Sigma_{i=1}^n X_{k,i}Y_{i,l} \in K[\{X_{i,j}\}_{i,j\in[n]},\{Y_{i,j}\}_{i,j\in[n]}]$.
     
   For fixed $i,j \in [ n ] $ we calculate
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
     \left( \operatorname{id} \otimes \frac{\partial}{\partial Z_{i,j}} \right) \left( m^\ast \left( f \right) \right)
     &= \frac{\partial}{\partial Y_{i,j}} \left( f \circ m \right)\\
@@ -52,10 +52,10 @@ The next two lemmas will prepare defining the Reynolds operator with Cayley's $\
     &= \sum_{k = 1}^n \left( \left( \frac{\partial}{\partial Z_{k,j}} f \right) \circ m \right) \cdot X_{k,i}\\
     &= \sum_{k=1}^n \left( Z_{k,i} \otimes \operatorname{id} \right) \left( m^\ast \left( \frac{\partial}{\partial Z_{k,j}} f \right) \right) \; .
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   In the second equation, we made use of the chain rule.
   Successively applying this result yields
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       \left( \operatorname{id} \otimes \Omega \right) \left( m^\ast \left( f \right) \right)
       &= \sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \left( \operatorname{id} \otimes \prod_{i=1}^n \frac{\partial}{\partial Z_{i,\sigma \left( i \right)}} \right) \left( m^\ast \left( f \right) \right) \\
@@ -65,7 +65,7 @@ The next two lemmas will prepare defining the Reynolds operator with Cayley's $\
       &= \sum_{k \in S_n} \left( \prod_{i=1}^n Z_{k(i),i} \otimes \operatorname{id} \right) \left( m^\ast \left( \operatorname{sgn} (k) \Omega f \right) \right)\\
       &= \left( \operatorname{det} (Z) \otimes \operatorname{id} \right) \left( m^\ast \left( \Omega f \right) \right) \; .
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   In the fourth equation, we are able to eliminate all terms with $k \in [n]^n \setminus S_n$ since if there exist $i\neq j$ such that $k(i)=k(j)$, the term $\sum_{\sigma \in S_n} \operatorname{sgn} \left( \sigma \right) \prod_{j=1}^n \frac{\partial}{\partial Z_{k(j),\sigma (j)}} f$ consists of pairs of sums that cancel each other out, due to the nature of the sign function.
   
   This immediately shows the first equality, and the second equality is proven analogously.
@@ -79,23 +79,23 @@ The next two lemmas will prepare defining the Reynolds operator with Cayley's $\
 \begin{proof}
   Write $ \operatorname{det} (Z)^p = \Sigma_i a_i q_i \left( Z \right) $, where $a_i \in \mathbb{Z} \setminus \{0\}$ and $q_i$ are (monic) monomials.
   Then
-  \begin{equation}
+  \begin{equation*}
     \Omega^p  \operatorname{det} (Z)^p 
     = \sum_i a_i q_i \left( \frac{\partial}{\partial Z} \right)  \sum_j a_j q_j \left( Z \right) \; . 
-  \end{equation}
-  Notice that $ q_i \left(  \frac{\partial}{\partial Z} \right)  q_j \left( Z \right)  $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $.
+  \end{equation*}
+  Notice that $ q_i \left(  \frac{\partial}{\partial Z} \right)  q_j \left( Z \right)  $ is zero for $ i \neq j $ and a strictly positive integer for $ i = j $, since the formal partial derivative lowers the degree of a polynomial by exactly one or maps the polynomial to zero.
   Therefore in particular
-  \begin{equation}
+  \begin{equation*}
     c_{p,n}
     = \sum_i a_i^2 q_i \left(  \frac{\partial}{\partial Z} \right) q_i \left( Z  \right) \in \mathbb{N}_{>0} \; .
-  \end{equation}
+  \end{equation*}
 \end{proof}
 Now, finally, we have the tools to see the following way of expressing the Reynolds Operator.
 \begin{theorem}\label{cay}
   For $ p \in \mathbb{N} $ and $ \tilde{f} \in K \left\lbrack Z \right\rbrack_{pn} $,  we define for $ f = \frac{\tilde{f}}{\operatorname{det}(Z)^p}$
-  \begin{equation}
+  \begin{equation*}
     R \left( f \right) := \frac{\Omega^p \tilde{f}}{c_{p,n}} \; .
-  \end{equation}
+  \end{equation*}
   The linear extension of this (mapping any $g = \frac{\tilde{g}}{\operatorname{det}(Z)^p} \in K[\operatorname{GL}_n]$ to zero for $\tilde{g} \in K[Z]_m$ with $m \neq pn$), defines the Reynolds Operator $R_{\operatorname{GL}_n}$, which makes $\operatorname{GL}_n$ \textit{linearly reductive}.  \\
   (See \cite[4.5.27]{DK15})
 \end{theorem}
@@ -110,7 +110,7 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
   % This is \textit{not} an action, but a right action (normal actions should be called ``left actions'').
   Let $p \in \mathbb{N}$, $ \tilde{f} \in K \left\lbrack \operatorname{GL}_n \right\rbrack_{pn} $ and $ f := \frac{\tilde{f}}{\operatorname{det}(Z)^p} $.
   For $ \beta , \gamma \in \operatorname{GL}_n $, we notice
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       R \left( \beta . f \right) (\gamma)
       &= R \left( \frac{ \operatorname{det} (\beta)^p \cdot \beta . \tilde{f}}{\operatorname{det} (Z)^p} \right) (\gamma)  
@@ -121,74 +121,74 @@ Now, finally, we have the tools to see the following way of expressing the Reyno
       &= R \left( \frac{ \gamma \dot{\phantom{.}} \tilde{f} \cdot \operatorname{det} \left( \gamma^{-1} \right)^p }{\operatorname{det} (Z)^p} \right) \left( \beta^{-1} \right)  
       = R \left( \gamma \dot{\phantom{.}} f \right) \left( \beta^{-1} \right) \; .
     \end{aligned}
-  \end{equation}
-  Since each $ \frac {\partial}{ \partial Z_{i,j} } $ lowers the degree of a monomial by one or maps it to zero, $R$ maps to $K$, and therefore for $ \delta \in \operatorname{GL}_n $ and $ g \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ we have $ R(g)(\delta) = R(g) \in K $.
+  \end{equation*}
+  Since each $ \frac {\partial}{ \partial Z_{i,j} } $ lowers the degree of a monomial by one or maps it to zero, $R$ maps to $K$, and therefore for all $ \delta \in \operatorname{GL}_n $ and $ g \in K \left\lbrack \operatorname{GL}_n \right\rbrack $ we will write \linebreak$ R(g)(\delta) = R(g) \in K $.
   We then get for all $ \beta,\gamma \in \operatorname{GL}_n $
-  \begin{equation}
+  \begin{equation*}
     R \left( \beta . f \right)
     = R \left( \beta . f \right) \left( \gamma \right) 
     = R \left( \gamma \dot{\phantom{.}} f \right) \left( \beta^{-1} \right) 
     = R \left( \gamma \dot{\phantom{.}} f \right) \; .
-  \end{equation}
-  This implies that for all $\sigma \in G$ and all $p \in K[\operatorname{GL}_n]$, we have $R(\sigma.p) = R(I_n\dot{\phantom{.}}p) = R(p)$ and $R(\sigma\dot{\phantom{.}}p) = R(I_n.p)=R(p)$, showing that $R$ is $\operatorname{GL}_n$-invariant from the left and from the right.
+  \end{equation*}
+  This means that for $\sigma \in G$ and $p \in K[\operatorname{GL}_n]$, we have $R(\sigma.p) = R(I_n\dot{\phantom{.}}p) = R(p)$ and $R(\sigma\dot{\phantom{.}}p) = R(I_n.p)=R(p)$, showing that $R$ is $\operatorname{GL}_n$-invariant from the left and from the right.
   Finally, the definition immediately gives us that $R$ restricted to $K$ is the identity.
   
-  This shows that $R$ is a Reynolds-operator, and as mentioned in lemma \ref{lamm}(e), the uniqueness of the Reynolds Operator implies that we can write $ R = R_{\operatorname{GL}_n} $.
+  This shows that $R$ is a Reynolds-operator of $\operatorname{GL}_n$, and as mentioned in lemma \ref{lamm}(e), the uniqueness of the Reynolds Operator implies that we can write $ R = R_{\operatorname{GL}_n} $.
 \end{proof}
 
 Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$, which we can express in terms of $R_{\operatorname{GL}_n}$.
 
 \begin{corollary}\label{esel}
-  With the identification $ K \left\lbrack \operatorname{GL}_n \right\rbrack = K \left\lbrack \left\{ Z_{k,l} \right\}_{k,l \in [ n ]} , \operatorname{det} (Z) ^{-1} \right\rbrack $, view \linebreak$ K \left\lbrack \operatorname{SL}_n \right\rbrack = K \left\lbrack \operatorname{GL}_n \right\rbrack / I $ where $ I = \left( \operatorname{det} (Z) -1 \right) $.
+  With the identification $ K \left\lbrack \operatorname{GL}_n \right\rbrack = K \left\lbrack \left\{ Z_{k,l} \right\}_{k,l \in [ n ]} , \operatorname{det} (Z) ^{-1} \right\rbrack $, view $ K \left\lbrack \operatorname{SL}_n \right\rbrack = K \left\lbrack \operatorname{GL}_n \right\rbrack / I $, where $ I = \left( \operatorname{det} (Z) -1 \right) $.
   Now, for $ p \in \mathbb{N} $ and \linebreak$ f \in K \left\lbrack Z \right\rbrack_{pn} $ we define
-  \begin{equation}
+  \begin{equation*}
     R ( f \operatorname{mod} I )
     := R_{\operatorname{GL}_n} \left( \frac{f}{\operatorname{det}(Z)^p} \right) \operatorname{mod} I
     = \frac{\Omega^p \tilde{f}}{c_{p,n}} \operatorname{mod} I \in K[\operatorname{SL}_n] \; .
-  \end{equation}
+  \end{equation*}
   The linear extension of this (mapping $g \operatorname{mod}I$ to zero whenever $g \in K \left\lbrack Z \right\rbrack_m$ with $n \nmid m$), defines the Reynolds Operator $R_{\operatorname{SL}_n}$, making $\operatorname{SL}_n$ \textit{linearly reductive}.  \\
   (See \cite[4.5.28]{DK15})
 \end{corollary}
 
 \begin{proof}
   First, we will show $ K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} = K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $ (action by left multiplication).
+
   For $B \in K^{n,n}$, define $B^\prime := \operatorname{diag}(b_i)_{i\in[n]}$, where $b_1 := \operatorname{det}(\beta)$ and $b_i := 1$ for $2\leq i\leq n$.
   % $M(z) = [z_{i,j}]_{i,j \in [n]} \in \operatorname{GL}_n$ to be the matrix with $z_{1,1} = z$ and $z_{i,j} = \delta_{i,j}$ for $(i,j) \neq (1,1)$.
   Let $g \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{ \operatorname{SL}_n }$, and let $ \alpha \in \operatorname{GL}_n $.
   Note that $\alpha (\alpha^\prime)^{-1} \in \operatorname{SL}_n$.
   Define $ h := \left( \beta \mapsto g \left(\beta^\prime \right) \right) \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
-  We claim that $g = h$.
-  This is seen as follows:
-  \begin{equation}
+  We have
+  \begin{equation*}
     \begin{aligned}
       g ( \alpha )
       = \alpha (\alpha^\prime)^{-1} . g \, (\alpha)
       = g \left( \alpha^\prime \alpha ^{-1} \alpha \right) 
       = g \left( \alpha^\prime \right)
-      = h (\alpha)
+      = h (\alpha) \; ,
     \end{aligned}
-  \end{equation}
-  This shows that $ g = h \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
+  \end{equation*}
+  which shows that $ g = h \in K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack $.
   Conversely it is easy to see that $ K \left\lbrack \operatorname{det} (Z) , \operatorname{det} (Z) ^{-1} \right\rbrack \subseteq K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n } $.
 
-  Now we define a map $\hat{R} \colon K \left\lbrack \operatorname{GL}_n \right\rbrack \longrightarrow K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $ as follows:
+  Now we define a map $\hat{R} \colon K \left\lbrack \operatorname{GL}_n \right\rbrack \rightarrow K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $ as follows:
   For $ p,r \in \mathbb{N} $, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in [ n ]} \right\rbrace \right\rbrack_{rn} $, and $ f = \frac{\tilde{f}}{\operatorname{det} (Z)^p } $, define
-  \begin{equation}
+  \begin{equation*}
     \hat{R} (f) := \operatorname{det} (Z)^{r-p} \cdot \frac{ \Omega^r \tilde{f} }{ c_{r,n} }
     = \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{\tilde{f}}{\operatorname{det} (Z) ^r} \right) \; .
-  \end{equation}
+  \end{equation*}
   As before we define the images of the other elements by linear extension.
   
-  Well-definedness follows from the same observations as in the proof of theorem \ref{cay}.
+  Well-definedness follows from the same observations as in the proof of\linebreak theorem \ref{cay}.
   This map is the identity on $ K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n }$:
   If $f \in K[\operatorname{GL}_n]^{\operatorname{SL}_n}$, then $f$ must be a linear combination of terms of the form $\frac{\operatorname{det}(Z)^r}{\operatorname{det}(Z)^p}$.
-  Without loss of generality we can assume that either $p=0$ or $r=0$.
+  Without loss of \linebreak generality we can assume that either $p=0$ or $r=0$.
   Then it should be clear that $f$ gets mapped to itself.
   % If $f = \frac{\tilde{f}}{\operatorname{det}(Z)^p}$, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in [ n ]} \right\rbrace \right\rbrack_{rn} $ and $ \tilde{f} \in K \left\lbrack \operatorname{GL}_n \right\rbrack ^{\operatorname{SL}_n} $, then $ \tilde{f} = \lambda \operatorname{det} (Z)^r $ with $ \lambda \in K $.
   Finally, we can see that $\hat{R}$ is $\operatorname{SL}_n$-invariant from the left and from the right:
-  Let $\alpha \in \operatorname{SL}_n$.
-  Then
-  \begin{equation}
+  Let $ p,r \in \mathbb{N} $, $ \tilde{f} \in K \left\lbrack \left\lbrace Z_{k,l \in [ n ]} \right\rbrace \right\rbrack_{rn} $, and $ f = \frac{\tilde{f}}{\operatorname{det} (Z)^p } $.
+  Then for all $\alpha \in \operatorname{SL}_n$ we have
+  \begin{equation*}
     \begin{aligned}
       \hat{R} (\alpha . f)
       &= \hat{R} \left( \frac{ \operatorname{det} (\alpha)^p \cdot \alpha . \tilde{f} }{ \operatorname{det} (Z)^p } \right)  \\
@@ -198,7 +198,7 @@ Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$, which we ca
       &= \operatorname{det} (Z)^{r-p} \cdot R_{\operatorname{GL}_n} \left( \frac{ \tilde{f} }{ \operatorname{det} (Z)^r } \right)
       = \hat{R} (f) \; ,
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   where we used $ \operatorname{det} (\alpha)^p = 1 = \operatorname{det} (\alpha)^r $ and the $\operatorname{GL}_n$-invariance of $R_{\operatorname{GL}_n}$.
   The $\operatorname{GL}_n$-invariance from the right is shown analogously.
   Thus we have shown that $\hat{R}$ is the Reynolds-Operator for the action of $\operatorname{SL}_n$ on $\operatorname{GL}_n$ by left-multiplication, which is also $\operatorname{SL}_n$-invariant from the right.
@@ -207,15 +207,15 @@ Now we will look at the Reynolds Operator $R_{\operatorname{SL}_n}$, which we ca
 \end{proof}
 
 \begin{example}\label{theex}
-We will apply Cayley's $\Omega$-process in the setting of example \ref{quad} for $n=2$, that is the group $G = \operatorname{SL}_2$ and the representation $ V = \left\{ \, A \in K^{2 \times 2} \mid A^T = A \, \right\} $ with the action
-  \begin{equation}
+We will apply Cayley's $\Omega$-process in the setting of example \ref{quad} for $n=2$, that is the the $\operatorname{SL}_2$-representation $ V = \left\{ \, A \in K^{2 \times 2} \mid A^T = A \, \right\} $ with the action
+  \begin{equation*}
     \begin{aligned}
       &\mu \colon & \operatorname{SL}_2 &\times  V&&  \longrightarrow  V \\
-      && (  S  &,   A  )  &&\longmapsto  SAS^T
+      && (  S  &,   A  )  &&\longmapsto  SAS^T \; .
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   Now consider the following for $S \in \operatorname{SL}_2$ and $A \in V$:
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       S &=
       \begin{bmatrix}
@@ -234,9 +234,9 @@ We will apply Cayley's $\Omega$-process in the setting of example \ref{quad} for
         -s_{2,1} & s_{1,1}
       \end{bmatrix} \; .
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   We then have
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       S^{-1}.A &= S^{-1}A\left(S^{-1}\right)^T  \\ &=
       \begin{bmatrix}
@@ -247,37 +247,38 @@ We will apply Cayley's $\Omega$-process in the setting of example \ref{quad} for
         + a_{1,2}s_{1,2}s_{2,1} - a_{2,2}s_{1,1}s_{1,2} & + a_{2,2}s_{1,1}^2
       \end{bmatrix}
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   Notice that we also have
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       &\operatorname{det}\left( \frac{\partial}{\partial S} \right)^n
       &&= \left( \frac{\partial}{\partial S_{1,1}} \frac{\partial}{\partial S_{2,2}} - \frac{\partial}{\partial S_{1,2}} \frac{\partial}{\partial S_{2,1}} \right)^n \\
       &&&= \sum_{k=0}^n (-1)^k \binom{n}{k} \left(\frac{\partial}{\partial S_{1,1}}\right)^{n-k} \left(\frac{\partial}{\partial S_{1,2}}\right)^k \left(\frac{\partial}{\partial S_{2,1}}\right)^k \left(\frac{\partial}{\partial S_{2,2}}\right)^{n-k} \; .
     \end{aligned}
-  \end{equation}
-  It is quite cumbersome to calculate the Reynolds Operator of general polynomials.
+  \end{equation*}
+  It is quite cumbersome to calculate the Reynolds Operator of general\linebreak polynomials.
   We will look at the monomial $Z_{1,1}^2 \in K[V]$, for which we have
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       \bar{\mu}^\prime (Z_{1,1}^2) 
       = &S_{2,2}^4 \otimes Z_{1,1}^2 - 4S_{1,2}S_{2,2}^3 \otimes Z_{1,1}Z_{1,2} + 2S_{1,2}^2 S_{2,2}^2 \otimes Z_{1,1}Z_{2,2} \\
       & + 4S_{1,2}^2 S_{2,2}^2 \otimes Z_{1,2}^2 - 4S_{1,2}^3 S_{2,2} \otimes Z_{1,2}Z_{2,2} + S_{1,2}^4 \otimes Z_{2,2}^2 \; .
     \end{aligned}
-  \end{equation}
-  We can now apply the Reynolds operator in the way we discussed it in proposition \ref{ro} in combination with Cayley's $\Omega$-process.
+  \end{equation*}
+  We can now apply the Reynolds operator in the way we discussed it in\linebreak proposition \ref{ro} in combination with Cayley's $\Omega$-process.
   Since all terms in $K[\operatorname{SL}_2]$ are already of degree $2$, we apply the same to each summand and calculate:
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       & R_G \cdot Z_{1,1}^2 \\
       =& \left(\left( \frac{\partial}{\partial S_{1,1}}\right)^2 \left(\frac{\partial}{\partial S_{2,2}}\right)^2 - 2 \frac{\partial}{\partial S_{1,1}} \frac{\partial}{\partial S_{1,2}} \frac{\partial}{\partial S_{2,1}} \frac{\partial}{\partial S_{2,2}} + \left(\frac{\partial}{\partial S_{1,2}}\right)^2\left(\frac{\partial}{\partial S_{2,1}}\right)^2 \right) \cdot Z_{1,1}^2 \\
       =& \, 0 \; .
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   The zero-polynomial is a trivial invariant, so we see that applying the Reynolds Operator to a polynomial will not always produce interesting results.
+  
   We will try again for the polynomial $Z_{1,2}^2 \in K[V]$.
   We calculate
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       &\mu^\prime ( Z_{1,2}^2 ) \\
       =& \, S_{2,1}^2 S_{2,2}^2 \otimes Z_{1,1}^2
@@ -291,26 +292,26 @@ We will apply Cayley's $\Omega$-process in the setting of example \ref{quad} for
       &- 2S_{1,1}S_{1,2}^2S_{2,1} \otimes Z_{1,2}Z_{2,2}
       + S_{1,1}^2S_{1,2}^2 \otimes Z_{2,2}^2 \; .
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   Again, all $K[\operatorname{SL}_2]$ terms are of degree $2$, therefore we can simplify and calculate
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       &R_G \cdot Z_{1,2}^2\\
       =& \left( \frac{\partial}{\partial S_{1,1}}^2 \frac{\partial}{\partial S_{2,2}}^2 - 2 \frac{\partial}{\partial S_{1,1}} \frac{\partial}{\partial S_{1,2}} \frac{\partial}{\partial S_{2,1}} \frac{\partial}{\partial S_{2,2}} + \frac{\partial}{\partial S_{1,2}}^2\frac{\partial}{\partial S_{2,1}}^2 \right) \cdot Z_{1,2}^2 \\
       =& - \frac{4}{12} Z_{1,1}Z_{2,2} + \frac{4}{12} Z_{1,2}^2 - \frac{4}{12} Z_{1,2}^2 + \frac{4}{12} Z_{1,2}^2 \\
       =& -\frac{1}{3}\operatorname{det}(Z) \; .
     \end{aligned}
-  \end{equation}
-  This is in line with what we expect: $K[V]^{\operatorname{SL}_2} = K[\operatorname{det}(A)]$.
+  \end{equation*}
+  This is in line with what we showed in example \ref{quad}: $K[V]^{\operatorname{SL}_2} = K[\operatorname{det}(Z)]$.
   % Now consider a monomial $ f = Z_{1,1}^{r_{1,1}} Z_{1,2}^{r_{1,2}} Z_{2,2}^{r_{2,2}} \in K[V] $.
   % We then have
-  % \begin{equation}
+  % \begin{equation*}
   %   \begin{aligned}
   %     & \mu^\ast (f) \\
   %     =& \sum_{|t_{1,1}| = r_{1,1}} \, \sum_{|t_{1,2}| = r_{1,2}} \, \sum_{|t_{2,2}| = r_{2,2}} \binom{r_{1,1}}{t_{1,1}} \binom{r_{1,2}}{t_{1,2}} \binom{r_{2,2}}{t_{2,2}}\\
   %     =& \sum s_{1,1}^{ t_{1,2}^{(2)} + t_{1,2}^{(4)} + t_{2,2}^{(2)} + 2t_{2,2}^{(3)}}
   %   \end{aligned}
-  % \end{equation}  
+  % \end{equation*}  
 \end{example}
 
 %%% Local Variables:

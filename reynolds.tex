@@ -1,18 +1,22 @@
 An important theme in this work is the question of whether the invariant ring $ K\lbrack X\rbrack^G $ is finitely generated.
-
-The goal of this section is to prove \textit{Hilbert's finiteness theorem}, which states that if the group $G$ is linearly reductive, $ K\lbrack V\rbrack^G $ is finitely generated.
+The goal of this section is to prove \textit{Hilbert's\linebreak finiteness theorem}, which states that if the group $G$ is linearly reductive, $ K\lbrack V\rbrack^G $ is finitely generated.
 The strict definition of ``linearly reductive'' is a little unintuitive, but we will discuss alternate characterizations, which will lay the groundwork for the proof the theorem.
-
 This will also motivate Cayley's $\Omega$-process.
+
+This section closely follows chapter 2.2.1 in \cite{DK15}.
 
 \subsection{Linearly reductive groups and the Reynolds operator}
 
 
 \begin{definition}[Linearly reductive group]
   Let $G$ be a linear algebraic group.
-  We call $G$ \textbf{linearly reductive}, if and only if for any rational representation $V$, the spaces $(V^\ast)^G$ and $V^G$ are dual to each other with respect to the canonical pairing $b \colon V^\ast \times V \rightarrow K$, $(\varphi,v) \mapsto \varphi(v)$, that is $\left. b \right|_{(V^\ast)^G \times V^G}$ is non-degenerate.  \\
+  We call $G$ \textbf{linearly reductive} if and only if for any rational representation $V$, the spaces $(V^\ast)^G$ and $V^G$ are dual to each other with respect to the canonical pairing $b \colon V^\ast \times V \rightarrow K$, $(\varphi,v) \mapsto \varphi(v)$, that is $\left. b \right|_{(V^\ast)^G \times V^G}$ is non-degenerate.  \\
   (Compare to \cite[2.2.1, 2.2.5 (a)$\implies$(b)]{DK15})
 \end{definition}
+
+This definition might be a little unintuitive at first.
+We will soon learn that $G$ is linearly reductive if and only if for every rational $G$-representation $V$ there exists a unique subrepresentation $W$ such that $V = V^G \oplus W$, and we have $(W^\ast)^G = \{0\}$.
+We will also see that $G$ is linearly reductive if and only if for every affine $G$-variety there exists a Reynolds operator $R \colon K[X] \twoheadrightarrow K[X]^G$, whose definition we will give right now.
 
 % \begin{proposition}\label{dual}
 %   For a linearly reductive group $G$ and a rational representation $V$, $V^G$ and $(V^\ast)^G$ are dual to each other with respect to the non-degenerate bilinear form $ b\colon V^\ast \times V \rightarrow K, (f,v) \mapsto f(v)$.
@@ -38,15 +42,15 @@ This will also motivate Cayley's $\Omega$-process.
 %   For this subrepresentation $W$ we have $(W^\ast)^G = \{0\}$.
 % \end{proposition}
 
-\begin{definition}
-  If we have a given action of a group $G$ on a set $X$, we call a map $A \colon X \rightarrow Y$ \textbf{$G$-invariant} if and only if we have $A(\sigma.x) = A(x)$ for all $\sigma \in G$ and $x \in X$.
-\end{definition}
+
 
 \begin{definition}[Reynolds operator]
   Let $ X $ be an affine $G$-variety.
   A \textbf{Reynolds operator} is a $ G $-invariant linear projection $R \colon K\lbrack X \rbrack \twoheadrightarrow K\lbrack X \rbrack^G $, that is $R$ is a linear projection of $K[X]$ onto $K[X]^G$ satisfying $R(\sigma\cdot f) = R(f)$ for all $\sigma \in G$ and $f \in K[X]$.  \\
   (See \cite[2.2.2]{DK15})
 \end{definition}
+
+The following definition will give us the main tool with which we make the connection between linearly reductive groups and the existence of a Reynolds operator.
 
 \begin{definition}\label{reyrey}
   Assume that $V$ is a rational $G$-representation such that there exists a unique subrepresentation $W$ of $V$ with $V = V^G \oplus W$.
@@ -56,21 +60,24 @@ This will also motivate Cayley's $\Omega$-process.
 
 \begin{remark}
   $R_V$ is a $G$-invariant projection of $V$ onto $V^G$:
-  If for $v \in V$ we write $v = u + w$ with $u \in V^G$ and $w \in W$, then for $\sigma \in G$ we have $\sigma.v = \sigma.u + \sigma.w = u + \sigma.w$ and $\sigma.w \in W$, therefore we have $R_V(\sigma.v) = u = R_V(v)$.
+  If for $v \in V$ we write $v = u + w$ with $u \in V^G$ and $w \in W$, then for $\sigma \in G$ we have \linebreak$\sigma.v = \sigma.u + \sigma.w = u + \sigma.w$ and $\sigma.w \in W$, which therefore means that we have \linebreak$R_V(\sigma.v) = u = R_V(v)$.
 \end{remark}
 
 We will now show some important properties of the map $R_V$ as described in definition \ref{reyrey}.
 This will later help us to define a Reynolds Operator for linearly reductive groups.
 
 \begin{lemma}\label{lamm}
-  Assume that $G$ is a linear algebraic group with the following property:
+  Assume that $G$ is a linear algebraic group with the following \linebreak property:
   For every rational representation $V$ of $G$ there exists a unique subrepresentation $W$ of $V$ such that $V = V^G \oplus W$, and for this $W$ we have $(W^\ast)^G = \{0\}$.
   The following properties hold:
   \begin{enumerate}[(a)]
   \item If $V$ is a subrepresentation of a rational $G$-representation $V^\prime$, we then have $\left. R_{V^\prime} \right|_V = R_V$.
-  \item If $V$ is a rational representation of $G$ and $R^\prime_V \colon V \rightarrow Y$ is a $G$-invariant linear map with $V \subseteq Y$ for some vector space $Y$ and $ \left. R^\prime_V \right|_{V^G} = \operatorname{id}_{V^G}$, we have $R^\prime_V = R_V$, that is $R_V$ is unique with this property\footnote{We here view $R_V \colon V \rightarrow V^G$ as $R_V \colon V \rightarrow V$.}.
-  \item If $X$ is an affine $G$-variety and $R \colon K[X] \twoheadrightarrow K[X]^G$ is a Reynolds operator, then for every $G$-stable subspace $V$ of $K[X]$ we have $\left. R \right|_V = R_V$.
-  \item If $X$ is an affine $G$-variety, $R \colon K[X] \twoheadrightarrow K[X]^G$ a Reynolds operator and $W$ is any $G$-stable subspace of $K[X]$, we have $R(W) = W^G$.  (See \cite[2.2.7]{DK15})
+  \item Let $V$ be a rational $G$-representation.
+    Now assume that $R^\prime_V \colon V \rightarrow Y$ is a $G$-invariant linear map with $ \left. R^\prime_V \right|_{V^G} = \operatorname{id}_{V^G}$, where $Y$ is a $G$-module such that $V$ is a submodule of $Y$.
+    We then have $R^\prime_V = R_V$.
+    This means that $R_V$ is unique with this property\footnote{We here view $R_V \colon V \rightarrow V^G$ as $R_V \colon V \rightarrow V$.}.
+  \item If $X$ is an affine $G$-variety and $R \colon K[X] \twoheadrightarrow K[X]^G$ is a Reynolds \linebreak operator, then for every finite-dimensional $G$-submodule $V$ of $K[X]$ we have \linebreak$\left. R \right|_V = R_V$.
+  \item If $X$ is an affine $G$-variety, $R \colon K[X] \twoheadrightarrow K[X]^G$ a Reynolds operator and $W$ is any $G$-submodule of $K[X]$, we have $R(W) = W^G$.  (See \cite[2.2.7]{DK15})
   \item If $X$ is an affine $G$-variety, the Reynolds operator $R\colon K[X] \twoheadrightarrow K[X]^G$ is unique.  (See \cite[2.2.5 (b)$\implies$(c)]{DK15})
   \end{enumerate}
 \end{lemma}
@@ -78,20 +85,25 @@ This will later help us to define a Reynolds Operator for linearly reductive gro
 \begin{proof}
   (a) \; Let $V$ be a submodule of a rational representation $V^\prime$ of $G$.
   We decompose $V = V^G \oplus W$ and $V^\prime = (V^\prime)^G \oplus W^\prime$, where $W$ and $W^\prime$ are each the unique submodules of $V$ and $V^\prime$ respectively with this property as in our assumption.
+  We have $W \subseteq W^\prime$:
+  
   Let $w \in W$.
   We write $w = u^\prime + w^\prime$ where $u^\prime \in (V^\prime)^G$ and $w^\prime \in W^\prime$.
-  We choose a basis $\{u^\prime_i\}_{i \in [r]}$ of $(V^\prime)^G$ and $\{w^\prime_j\}_{j \in [s]}$ of $W^\prime$ and write $w = \Sigma_{i=1}^r \lambda_i u^\prime_i + \Sigma_{j=1}^s \mu_j w^\prime_j$.
+  We choose a basis $\{u^\prime_i\}_{i \in [r]}$ of $(V^\prime)^G$ and $\{w^\prime_j\}_{j \in [s]}$ of $W^\prime$ and write \linebreak$w = \Sigma_{i=1}^r \lambda_i u^\prime_i + \Sigma_{j=1}^s \mu_j w^\prime_j$.
   For $i \in [r]$, let us consider $\hat{u}^\prime_i \in (V^\prime)^\ast$, the dual basis element of $u^\prime_i$ with respect to the basis $\{u^\prime_i\}_{i \in [r]} \cup \{w^\prime_j\}_{j \in [s]}$ of $V^\prime$.
   Because of our assumption we have $(W^\ast)^G = \{0\}$, so we must have $\left. \hat{u}^\prime_i \right|_W = 0$, and therefore $\lambda_i = \hat{u}^\prime_i (w) = \left. \hat{u}^\prime_i \right|_W (w) = 0$.
-  We retrieve $u^\prime = 0$, implying $ w  = w^\prime \in W^\prime $.
-  We have now shown $W \subseteq W^\prime$.
-  Let $v \in V$.
+  This means $u^\prime = 0$, implying $ w  = w^\prime \in W^\prime $.
+  We have shown $W \subseteq W^\prime$.
+  
+  Now let $v \in V$.
   With $V^G \subseteq (V^\prime)^G$ and $R_V (v) - v \in W \subseteq W^\prime$, we obtain $R_{V^\prime}(v) - R_V (v) = R_{V^\prime}(v - R_V(v)) = 0$.
   This concludes $\left. R_{V^\prime} \right|_V = R_V$.
   
-  (b) \; Let $V$ be a rational representation of $G$, and let $R^\prime_V \colon V \rightarrow Y$ be a $G$-invariant linear map where $V \subseteq Y$.
+  (b) \; Let $V$ be a rational $G$-representation and let $R^\prime_V \colon V \rightarrow Y$ be a \linebreak$G$-invariant linear map with $ \left. R^\prime_V \right|_{V^G} = \operatorname{id}_{V^G}$, where $Y$ is a $G$-module such that $V$ is a submodule of $Y$.
   Via our assumption, we can find a unique submodule $W$ of $V$ such that $V = V^G \oplus W$.
   We obviously have $\left. R^\prime_V \right|_{V^G} = \operatorname{id}_{V^G} = \left. R_V \right|_{V^G}$.
+  We now want to show $\left. R^\prime_V \right|_W = 0 = \left. R_V \right|_W$.
+  
   Let $w \in W$.
   We choose a basis $\{w_i\}_{i \in [r]}$ of $U:= \operatorname{span}(W + R^\prime_V (w))$, and we write $R^\prime_V (w) = \Sigma_{i=1}^r \lambda_i w_i$.
   Let $\{w^\prime_i\}_{i \in [r]}$ be the basis of $U^\ast$ dual to the previously mentioned basis of $U$.
@@ -101,23 +113,23 @@ This will later help us to define a Reynolds Operator for linearly reductive gro
   This concludes that $R^\prime_V = R_V$.
   
   (c) \; This follows immediately from (b):
-  If $X$ is an affine $G$-variety and $R \colon K[X] \twoheadrightarrow K[X]^G$ is a Reynolds operator and $V$ is a submodule of $K[X]$, we have that $\left. R \right|_V \colon V \rightarrow K[X]$ is a linear map with $V \subseteq K[X]$ and $\left. R_V \right|_{V^G} = \operatorname{id}_{V^G}$.
+  If $X$ is an affine $G$-variety and $R \colon K[X] \twoheadrightarrow K[X]^G$ is a Reynolds operator and $V$ is a $G$-submodule of $K[X]$, we have that $\left. R \right|_V \colon V \rightarrow K[X]$ is a linear map with $V \subseteq K[X]$ and $\left. R_V \right|_{V^G} = \operatorname{id}_{V^G}$.
   Therefore we have $\left. R \right|_V = R_V$.
   
-  (d) \; Let $X$ be an affine $G$-variety, $R \colon K[X] \twoheadrightarrow K[X]^G$ a Reynolds operator and $W$ any submodule of $K[X]$.
+  (d) \; Let $X$ be an affine $G$-variety, $R \colon K[X] \twoheadrightarrow K[X]^G$ a Reynolds operator and $W$ any $G$-submodule of $K[X]$.
   now let $w \in W$.
-  Since $W$ is $G$-stable we have $V_w \subseteq W$ and with (c) therefore $R(w) = R_{V_w} (w) \in V_w^G \subseteq W^G$.
+  Since $W$ is $G$-stable we have $V_w \subseteq W$ and with (c) therefore $R(w) = R_{V_w} (w) \in V_w^G \subseteq W^G$. %yougee
   We have therefore shown $R(W) \subseteq W^G$.
   Also $\left. R \right|_{W^G} = \operatorname{id}_{W^G}$ since $W^G \subseteq K[X]^G$, concluding $R(W) = W^G$.
   
   (e) \; This follows immediately from (c):
   Let $X$ be an affine $G$-variety and $R_1,R_2 \colon K[X] \twoheadrightarrow K[X]^G$ each a Reynolds operator.
   Now let $f \in K[X]$.
-  Then $R_1(f) = R_{V_f} (f) = R_2 (f)$.
+  Then $R_1(f) = R_{V_f} (f) = R_2 (f)$. %yougee
 \end{proof}
 
 \begin{remark}
-  $K[V]_d$, that is the subspace of all homogeneous polynomials of degree $d$, is a finite-dimensional $G$-submodule of $K[V]$, meaning that $K[V]_d$ is a rational $G$-representation.
+  $K[V]_d$, that is the subspace of all homogeneous polynomials in $K[V]$ of degree $d$, is a finite-dimensional $G$-submodule of $K[V]$, meaning that $K[V]_d$ is a rational $G$-representation.
   Since $K[V] = \bigoplus_{d \geq 0} K[X]_d$, we therefore also have $K[V]^G = \bigoplus_{d \geq 0} K[V]_d^G$, which means that all $R_{K[X]_d}$ characterize $R$.
   This is important for the proof of Hilbert's finiteness theorem.
 \end{remark}
@@ -129,7 +141,7 @@ This will later help us to define a Reynolds Operator for linearly reductive gro
 
 We now come to the most important theorem of this section before we prove Hilbert's finiteness theorem.
 We characterize linearly reductive groups in three different ways, the most important one involving the Reynolds operator.
-Cayley's $\Omega$-process will later give us a concrete formula for the Reynolds operator.
+\linebreak Cayley's $\Omega$-process will later give us a concrete formula for the Reynolds\linebreak operator.
 
 % \begin{remark}
 %   If a Reynolds Operator exists, it is unique (?).
@@ -142,7 +154,7 @@ Cayley's $\Omega$-process will later give us a concrete formula for the Reynolds
   The following are equivalent:
   \begin{enumerate}[(a)]
   \item $G$ is linearly reductive
-  \item For every rational representation $V$ of $G$ there exists a unique subrepresentation $W$ with $V = V^G \oplus W$.
+  \item For every rational representation $V$ of $G$ there exists a unique submodule $W$ with $V = V^G \oplus W$.
     For this subrepresentation $W$ we have $(W^\ast)^G = \{0\}$.
     % This subrepresentation $W$ satisfies $\left( W^\ast \right)^G = \{0\}$.
   \item For every affine $G$-variety $X$ there exists a Reynolds operator \linebreak$R \colon K[X] \twoheadrightarrow K[X]^G $.
@@ -153,38 +165,40 @@ Cayley's $\Omega$-process will later give us a concrete formula for the Reynolds
 \begin{proof}
   (a)$\implies$(b) \; Let $V$ be a rational representation of $G$.
   Consider the subspace $ ((V^\ast)^G)^\bot \subseteq V $.
-  It is easily seen that this is a subrepresentation of $V$.
+  It is easily seen that this is a submodule of $V$.
   Since by (a) $(V^\ast)^G$ and $V^G$ are dual to each other, we have $V = V^G \oplus ((V^\ast)^G)^\bot $.
+  
   We have shown the existence, now we shall show uniqueness.
-  Let $W$ be a subrepresentation of $V$ with $V = V^G \oplus W $.
-  Again, it is easily seen that $W^\bot \subseteq V^\ast$ is a subrepresentation.
+  Let $W$ be a submodule of $V$ with $V = V^G \oplus W $.
+  Again, it is easily seen that $W^\bot \subseteq V^\ast$ is a submodule.
   $G$ must act trivially on $W^\bot \subseteq V^\ast$:
   Let $f \in W^\bot$, and let $\sigma \in G$.
   We have $\sigma\cdot f \in W^\bot$ and therefore $\sigma\cdot f - f \in W^\bot$.
   Now, let $v \in V$.
   We write $v = u + w$ for (unique) $u \in V^G$ and $w \in W$ and compute
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       (\sigma\cdot f -f)(v)&=(\sigma\cdot f -f)(u) + (\sigma\cdot f -f)(w)\\
       &=f(\sigma^{-1}.u) - f(u) + 0
       =f(u)-f(u) = 0 \quad ,
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   which implies that $\sigma\cdot f = f$.
   Hence $G$ does act trivially on $W^\bot$.
   This means that $W^\bot \subseteq (V^\ast)^G$.
-  But we also have $\operatorname{dim}W^\bot = \operatorname{dim}V^G = \operatorname{dim}(V^\ast)^G$, which implies $W^\bot = (V^\ast)^G$, and therefore also $W = (W^\bot)^\bot = ((V^\ast)^G)^\bot$, which concludes the claim of uniqueness.
-  Finally, we notice that $W$ and $W^\ast$ are isomorphic representations, which also means that $(W^\ast)^G$ and $W^G$ are isomorphic.
-  Since we have $W^G = \{0\}$, we therefore must also have $(W^\ast)^G = \{0\}$.
+  We also have $\operatorname{dim}W^\bot = \operatorname{dim}V^G = \operatorname{dim}(V^\ast)^G$, which implies $W^\bot = (V^\ast)^G$, and therefore also $W = (W^\bot)^\bot = ((V^\ast)^G)^\bot$, which concludes the claim of uniqueness.
+  
+  Finally, we notice that $W$ and $W^\ast$ are isomorphic $G$-modules, which also means that $(W^\ast)^G$ and $W^G$ are isomorphic as $G$-modules.
+  Since we have \linebreak$W^G = \{0\}$, we therefore must also have $(W^\ast)^G = \{0\}$.
   
   (b)$\implies$(c) \; Let $X$ be an affine $G$-variety.
   Let $f \in K[X]$.
-  We define the map \linebreak$R \colon K[X] \rightarrow K[X]^G $, $ f \mapsto R_{V_f}(f)$.
-  For $f \in K[X]$ we denote by $W_f$ the unique subrepresentation of $V_f$ such that $V_f = V_f^G \oplus W_f$ as in (b).
+  We define the map \linebreak$R \colon K[X] \rightarrow K[X]^G $, $ f \mapsto R_{V_f}(f)$. %yougee
+  For $f \in K[X]$ we denote by $W_f$ the unique subrepresentation of $V_f$ such that $V_f = V_f^G \oplus W_f$ as in (b). %yougee
   This map is linear:
   Let $f,g \in K[X]$ and $\lambda \in K$.
-  We notice that $V_f,V_g,V_{\lambda f + g} \subseteq V_f + V_g$, which together with lemma \ref{lamm}(a) gives us
-  \begin{equation}
+  We notice that $V_f,V_g,V_{\lambda f + g} \subseteq V_f + V_g$, which together with lemma \ref{lamm}(a) gives us %yougee
+  \begin{equation*}
     \begin{aligned}
       R(\lambda f +g)
       &= R_{V_{\lambda f +g}}(\lambda f+g)  
@@ -193,25 +207,29 @@ Cayley's $\Omega$-process will later give us a concrete formula for the Reynolds
       = \lambda R_{V_f} (f) + R_{V_g}(g)\\
       &= \lambda R(f) + R(g) \quad .
     \end{aligned}
-  \end{equation}
-  The map $R$ is a projection onto $K[X]^G$, since for each $f \in K[X]$ we have $V_f^G \subseteq K[X]^G$.
+  \end{equation*}
+  The map $R$ is a projection onto $K[X]^G$, since for each $f \in K[X]$ we have $V_f^G \subseteq K[X]^G$. %yougee
   $R$ is also $G$-invariant, since $R_{V_f}$ is $G$-invariant for all $f \in K[X]$ and  $V_f = V_{\sigma\cdot f}$ for all $\sigma \in G$.
   This concludes that $R$ is a Reynolds operator, which shows (c).
   
-  (c)$\implies$(a) \; Let $V$ be a rational representation of $G$ and let $v \in V^G \setminus \{0\}$.
+  (c)$\implies$(a) \; Let $V$ be a rational representation of $G$.
+  We now want to show that $\left. b\right|_{(V^\ast)^G \times V^G}$ is non-degenerate in the left variable.
+  
+  Let $v \in V^G \setminus \{0\}$.
   We choose a basis $\{v_i\}_{i\in [r]}$ of $V$ with $v_1 = v$.
   Let $\tilde{v} \in V^\ast$ be the dual basis vector of $v$ with respect the aforementioned basis.
   We now define $p_v \colon K[V^\ast] \rightarrow K$, $f \mapsto f(\tilde{v})$.
-  Consider the isomorphism of representations $\Phi \colon V \rightarrow (V^\ast)^\ast$, $w \mapsto (\varphi \mapsto \varphi (w))$.
+  Consider the isomorphism of $G$-modules $\Phi \colon V \rightarrow (V^\ast)^\ast$, $w \mapsto (\varphi \mapsto \varphi (w))$.
   We have $(V^\ast)^\ast \subseteq K[V^\ast]$.
   Since $V^\ast$ is a rational representation and since via our assumption (c) there exists a Reynolds operator $R \colon K[V^\ast] \twoheadrightarrow K[V^\ast]^G$, we can define $ \psi_v := p_v \circ R \circ \Phi \colon V \rightarrow K$.
   Since each map is linear, we have $\psi_v \in V^\ast$, and since the Reynolds operator is used, we can also see that we have $\psi_v \in (V^\ast)^G$.
-  We notice that since $v \in V^G$ we have $\Phi (v) \in K[V^\ast]^G$, implying $R(\Phi(v))=\Phi(v)$ and therefore $\psi_v (v) = p_v (\Phi(v)) = \Phi (v) (\tilde{v}) = \tilde{v} (v) = 1 \neq 0$.
+  We notice that since $v \in V^G$ we have $\Phi (v) \in K[V^\ast]^G$, implying $R(\Phi(v))=\Phi(v)$.
+  From this, we can calculate $\psi_v (v) = p_v (\Phi(v)) = \Phi (v) (\tilde{v}) = \tilde{v} (v) = 1 \neq 0$.
   This implies that $\left. b\right|_{(V^\ast)^G \times V^G}$ is non-degenerate in the left variable.
   
   By what we just showed, if we take any linear invariant $\varphi \in (V^\ast)^G \setminus \{0\}$, we receive an $A_\varphi \in ((V^\ast)^\ast)^G$ such that $A_\varphi(\varphi) = 1$.
-  Since $\Phi$ is an isomorphism of representations, we have $v_\varphi := \Phi^{-1}(A_\varphi) \in V^G$ and $\varphi (v_\varphi) = \varphi (\Phi^{-1}(A_\varphi)) = A_\varphi (\varphi) = 1$.
-  This shows that $\left. b\right|_{(V^\ast)^G \times V^G}$ is also non-degenerate in the second variable.
+  Since $\Phi$ is an isomorphism of \linebreak$G$-modules, we get $v_\varphi := \Phi^{-1}(A_\varphi) \in V^G$, from which we obtain \linebreak $\varphi (v_\varphi) = \varphi (\Phi^{-1}(A_\varphi)) = A_\varphi (\varphi) = 1 \neq 0$.
+  This shows that $\left. b\right|_{(V^\ast)^G \times V^G}$ is also non-degenerate in the right variable.
   
   This concludes that $G$ is linearly reductive, showing (a).
 \end{proof}
@@ -219,40 +237,39 @@ Cayley's $\Omega$-process will later give us a concrete formula for the Reynolds
 We will now learn of an additional characterization for linearly reductive groups over algebraically closed fields.
 
 \begin{theorem}\label{decomp}
-  If $K$ is an algebraically closed field, then a linear algebraic group $G$ is linearly reductive if and only if for every rational representation $V$ of $G$ and subrepresentation $W$ of $V$ there exists a subrepresentation $Z$ of $V$ such that $V = W \oplus Z$.  \\
+  If $K$ is an algebraically closed field, then a linear algebraic group $G$ is linearly reductive if and only if for every rational representation $V$ of $G$ and every submodule $W$ of $V$ there exists a submodule $Z$ of $V$ such that $V = W \oplus Z$.  \\
   (See \cite[2.2.5]{DK15})
 \end{theorem}
 
 \begin{proof}
   Assume that $G$ is linearly reductive and let $V$ be a rational representation of $G$.
   
-  Let us first assume that we have an irreducible subrepresentation $W$ of $V$.
+  Let us first assume that we have an irreducible\footnote{A $G$-module is called irreducible if and only if it doesn't have any non-trivial proper submodules.} submodule $W$ of $V$.
   We can identify $\operatorname{Hom}_K(W,V)^\ast$ with $\operatorname{Hom}_K(V,W)$ via the isomorphism
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       \Phi \colon &&\operatorname{Hom}_K(W,V)&&\longrightarrow&&& \operatorname{Hom}_K(V,W)^\ast  \\
-      &&B && \longmapsto&&& (A \mapsto \frac{1}{k}\operatorname{tr}(A \circ B)) \quad ,
+      &&B && \longmapsto&&& (A \mapsto \operatorname{tr}(A \circ B)) \quad ,
     \end{aligned}
-  \end{equation}
-where $k \in \mathbb{N}$ is the dimension of $W$.
-  If we let $G$ act on $ \operatorname{Hom}_K(W,V)$ by \linebreak$\sigma.B :=  w \mapsto \sigma . (B(w))$ and on $\operatorname{Hom}_K(V,W)$ by $ \sigma.A := v \mapsto A(\sigma^{-1}.v) $, we can then view $\Phi$ as an isomorphism of representations. %meaning $\operatorname{Hom}_K(V,W)^G$ corresponds to $(\operatorname{Hom}_K(W,V)^\ast)^G$.
+  \end{equation*}
+  If we let $G$ act on $ \operatorname{Hom}_K(W,V)$ by $\sigma.B :=  w \mapsto \sigma . (B(w))$ and on $\operatorname{Hom}_K(V,W)$ by $ \sigma.A := v \mapsto A(\sigma^{-1}.v) $, we can then view $\Phi$ as an isomorphism of $G$-modules. %meaning $\operatorname{Hom}_K(V,W)^G$ corresponds to $(\operatorname{Hom}_K(W,V)^\ast)^G$.
   Now let $B \in \operatorname{Hom}_K(W,V)^G$ be the inclusion map.
-  Since $G$ is linearly reductive, there exists an \linebreak$A \in \operatorname{Hom}_K(V,W)^G$ such that $k^{-1} \operatorname{tr}(A \circ B) \neq 0$.
+  Since $G$ is linearly reductive, there exists an $A \in \operatorname{Hom}_K(V,W)^G$ such that $ \operatorname{tr}( A \circ B) \neq 0$.
   Since $K$ is algebraically closed and since $W$ is irreducible, Schur's lemma (see \cite[1.7]{FH91}) gives us that $A \circ B$ must be a non-zero multiple of the identity map.
-  Therefore, if $Z$ is the kernel of $A$, which is a submodule of $V$ since $A$ is $G$-invariant, we have $V = W \oplus Z$ as a decomposition of representations.
+  Therefore, if $Z$ is the kernel of $A$, which is a submodule of $V$ since $A$ is $G$-invariant, we have $V = W \oplus Z$ as a decomposition of $G$-modules.
   
-  Now let us prove the claim for an arbitrary subrepresentations $W$ of $V$ by induction over $k := \operatorname{dim}W$.
+  Now let us prove the claim for an arbitrary submodules $W$ of $V$ by induction over $k := \operatorname{dim}W$.
   If $k=0$ the statement is trivial.
   Assume that for $k \in \mathbb{N}$ the statement is true for all $m \leq k$.
   Now let $\operatorname{dim}W = k +1$.
-  We choose a non-trivial irreducible submodule of $W$, say $W^\prime := \operatorname{span}G.w$ for some $w \in W \setminus \{0\}$.
+  We choose a non-trivial irreducible submodule of $W$, say $W^\prime := \operatorname{span}G.w$ for some $w \in W \setminus \{0\}$. %yougee
   By what we showed, there exists a submodule $Z^\prime$ of $V$ such that $V = W^\prime \oplus Z^\prime$.
   We also have that $W \cap Z^\prime$ is a submodule of $V$ and $W = W^\prime \oplus W \cap Z^\prime$.
   Since $W^\prime$ is non-trivial, we get $\operatorname{dim} W \cap Z^\prime \leq k$, and therefore by induction hypothesis there exists a submodule $Z$ of $Z^\prime$ such that $Z^\prime = W \cap Z^\prime \oplus Z$.
   We then have $V = W^\prime \oplus Z^\prime = W^\prime \oplus W \cap Z^\prime \oplus Z = W \oplus Z$.
-  This shows the forwards implication of our initial claim.
+  This shows the forwards implication of the theorem.
   
-  Now assume that for every rational representation $V$ of $G$ and subrepresentation $W$ of $V$ there exists a subrepresentation $Z$ of $V$ such that $V = W \oplus Z$.
+  Now assume that for every rational representation $V$ of $G$ and submodule $W$ of $V$ there exists a submodule $Z$ of $V$ such that $V = W \oplus Z$.
   Let $V$ be a rational representation of $G$.
   By our assumption there exists a subrepresentation $W$ of $V$ such that $V = V^G \oplus W$.
   If we have $v \in V^G \setminus \{0\}$, we can extend to a basis $B_{V^G}$ of $V^G$ with $v \in B_{V^G}$.
@@ -266,7 +283,7 @@ where $k \in \mathbb{N}$ is the dimension of $W$.
   We notice that $v_\varphi \in V^G$ and $\varphi(v_\varphi) = 1 \neq 0$, showing that $\left. b\right|_{(V^\ast)^G \times V^G}$ is non-degenerate in the right variable.
   This concludes that $G$ is linearly reductive.
   
-  We have now proven both implications of our claim.
+  We have now proven both implications of the theorem.
 \end{proof}
 
 \subsection{Hilbert's finiteness theorem}
@@ -277,14 +294,14 @@ This theorem gives us that for linearly reductive groups $G$, the invariant ring
 The main idea of the proof is the existence of the Reynolds operator $R \colon K[X] \twoheadrightarrow K[X]^G$, which we showed in theorem \ref{equiv}. 
 
 \begin{proposition}
-  Let $G$ be a linearly reductive group, and let $ R \colon K[X] \twoheadrightarrow K[X]^G $ be the Reynolds operator for an affine $G$-variety $X$.
-  If $f \in K[X]^G$ and $g \in K[X]$ we have $R(fg) = fR(g)$, that is, the Reynolds operator is a \textit{$K[X]^G$-module homomorphism}.  \\
+  Let $G$ be a linearly reductive group, and let \linebreak$ R \colon K[X] \twoheadrightarrow K[X]^G $ be the Reynolds operator for an affine $G$-variety $X$.
+  If $f \in K[X]^G$ and $g \in K[X]$ we have $R(fg) = fR(g)$, that is, the Reynolds\linebreak operator is a \textit{$K[X]^G$-module homomorphism}.  \\
   (See \cite[2.2.7]{DK15})
 \end{proposition}
 
 \begin{proof}
   Let $f \in K[X]^G$ and $g \in K[X]$.
-  By theorem \ref{equiv}, we can decompose \linebreak$V_g = V_g^G \oplus W_g$ uniquely, where $W_g$ is a submodule of $V_g$, and we also have $(W_g^\ast)^G = \{0\}$.
+  By theorem \ref{equiv}, we can decompose \linebreak$V_g = V_g^G \oplus W_g$ uniquely, where $W_g$ is a submodule of $V_g$, and we also have $(W_g^\ast)^G = \{0\}$.  %yougee
   $fV_g$ is also a $G$-module with submodules $fV_g^G$ and $fW_g$ and we notice that $(fV_g)^G = fV_g^G$.
   We easily check that the map $R_{V_g}^\prime \colon fV_g \rightarrow fV_g$, $fh \mapsto f R(h)$ is a $G$-invariant linear map with $\left. R_{fV_g}^\prime \right|_{(fV_g)^G} = \operatorname{id}_{(fV_g)^G}$, which by lemma \ref{lamm}(b) means that we have $R_{(fV_g)}^\prime = R_{(fV_g)}$, which implies that we have $R(fg) = fR(g)$, concluding that $R$ is a $K[X]^G$-module homomorphism.
 \end{proof}
@@ -306,150 +323,149 @@ This is all we need to prove Hilbert's finiteness theorem, which we will prove r
 \end{theorem}
 
 \begin{proof}
-  Let $I_{>0}$ denote the ideal generated by all non-constant invariants in $K[V]$.
-  Since $K[V]$ is noetherian (by Hilbert's Basissatz, see \cite[p.~131]{Bos13}), there exist finitely many linearly independent invariants $\{f_i\}_{i \in [r]} \subseteq K[V]^G$ such that $ \left( \{f_i\}_{i \in [r]} \right) = I_{i>0} $.
+  Let $I_{>0}$ denote the ideal generated by all non-constant invariants in $K[V]^G$.
+  Since $K[V]$ is noetherian (by Hilbert's Basissatz, see \cite[p.~131]{Bos13}), there exist finitely many linearly independent invariants $\{f_i\}_{i \in [r]} \subseteq K[V]^G$ such that $ \left( \{f_i\}_{i \in [r]} \right) = I_{>0} $.
   We claim $K[\{f_i\}_{i \in [r]}] = K[V]^G$.
+  
   The inclusion ``$\subseteq$'' is clear.
   To show is $\supseteq$''.
-  This is equivalent to showing that for all $d \in \mathbb{N}$ we have $K[V]^G_{<d} \subseteq K[\{f_i\}_{i \in [r]}] $.
+  This is equivalent to showing that for all $d \in \mathbb{N}$ we have $K[V]^G_{d} \subseteq K[\{f_i\}_{i \in [r]}] $.
   We will show our claim via induction over the degree $d$.
-  For $g \in K[V]^G_{<1} = K$ we are already done since $K \subseteq K[\{f_i\}_{i \in [r]}]$.
-  Now assume that for $d \in \mathbb{N}$ we have $K[V]^G_{<d} \subseteq K[\{f_i\}_{i \in [r]}]$.
-  Let $g \in K[V]^G_{< d+1}$.
+  For $g \in K[V]^G_{0} = K$ we are already done since $K \subseteq K[\{f_i\}_{i \in [r]}]$.
+  Now assume that for $d \in \mathbb{N}$ we have $K[V]^G_{c} \subseteq K[\{f_i\}_{i \in [r]}]$ for all $c \leq d$.
+  Let $g \in K[V]^G_{ d+1}$.
   By construction, $g \in I_{>0}$, therefore there exist $\{g_i\}_{i \in [r]} \subseteq K[V]$ such that $g = \Sigma_{i=1}^r g_i f_i$.
-  Since the $f_i$ are non-constant and linearly independent, and since $\operatorname{deg} g < d+1$, we must have $ \operatorname{deg} g_i < d $.
+  Since the $f_i$ are non-constant and linearly independent, and since $\operatorname{deg} g = d+1$, we must have $ \operatorname{deg} g_i \leq d $.
   We now make use of the Reynolds Operator:  We have
-  \begin{equation}
+  \begin{equation*}
       g = R(g)
       =  R \left( \sum_{i=1}^r g_i f_i \right)
       = \sum_{i=1}^r R( g_i) f_i \quad .
-  \end{equation}
-  Since $R$ maps $K[V]_{<d}$ to $K[V]^G_{<d}$, we have $R(g_i) \in K[V]^G_{<d} \subseteq K[\{f_i\}_{i \in [r]}]$ by our induction hypothesis.
+  \end{equation*}
+  Since the Reynolds operator $R$ maps $K[V]_{c}$ to $K[V]^G_{c}$ for all $c \in \mathbb{N}$, we have \linebreak$R(g_i) \in K[V]_{\leq d}^G \subseteq K[\{f_i\}_{i \in [r]}]$\footnote{$K[V]_{\leq d} = \bigoplus_{c=0}^d K[V]_c$ are the polynomials in $K[V]$ of degree at most $d$.} by our induction hypothesis.
   This finally implies $ g \in K[\{f_i\}_{i \in [r]}]$, which concludes our proof:
-  We have $K[V]^G = K[\{f_i\}_{i \in [r]}]$ which means that $K[V]^G$ is finitely generated, which was to show.
+  We have $K[V]^G = K[\{f_i\}_{i \in [r]}]$, which means that $K[V]^G$ is finitely generated, which was to show.
 \end{proof}
 
 \begin{dexample}
   % \textbf{($K$ needs to be algebraically closed for Zariski-denseness of diagonizable matrices...)}
   Let $K$ be an algebraically-closed field.
   Consider $\operatorname{GL}_n$ viewed as the group of all change-of-coordinates transformations for endomorphisms on $K^n$, that is the rational representation $V = K^{n\times n}$ with the action
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       \mu \colon && \operatorname{GL}_n \times V  & \longrightarrow V \\
-      && (\sigma,A) &\longmapsto \sigma A \sigma^{-1} \quad .
+      && (\sigma,A) &\longmapsto \sigma A \sigma^{-1} \; .
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   We will later show that $\operatorname{GL}_n$ is linearly reductive.
   Hilbert's finiteness theorem then gives us that $K[V]^{\operatorname{GL}_n}$ is finitely generated.
+  We will now look at what the invariant ring looks like in detail.
   
   What are the invariants?
   The invariants are exactly those polynomials that are independent of the choice of the basis.
   The most well-known invariant is the determinant.
   From this observation we can find even more:
-  We can follow that the characteristic polynomial of a matrix $A$, that is $\operatorname{det} (tI_n - A)$, does not change under a change of coordinates.
+  It follows that the characteristic polynomial of a matrix $A$, that is $\operatorname{det} (tI_n - A)$, does not change under a change of coordinates.
   If we write
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
-      \operatorname{det} (tI_n - A) = \sum_{i=0}^n p_i (A) t^i \quad ,
+      \operatorname{det} (tI_n - A) = \sum_{i=0}^n p_i (A) t^i \; ,
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   this means that every $p_i$ is an invariant polynomial in $K[V]$.
   This is how one usually proves that the trace, denoted by $\operatorname{tr}$, is an invariant polynomial after observing that $p_{n-1} = \operatorname{tr}$.
-  This raises the question if there other invariants than these $p_i$.
+  This raises the question if there exist other invariants than these $p_i$.
   It is in fact the case that we have $K[V]^{\operatorname{GL}_n} = K[\{p_i\}_{0\leq i\leq n}]$.
 \end{dexample}
 \begin{proof}
   Consider $D := \{\, \delta \in V \mid \delta \operatorname{diagonalizable} \,\} \subseteq K[V]$.
-  Since $M := \{\, A \in V \mid \operatorname{disc}(\operatorname{det}(tI_n - A)) \neq 0 \,\}$ is Zariski-open and therefore Zariski-dense in $V$, and since $M \subseteq D$, we also have that $D$ is Zariski-dense in $V$.
-  For this reason, we will look at the evaluation of an invariant polynomial $p \in K[V] $ only on elements in $D$, and can deduce what polynomial it is.
+  Since \linebreak$M := \{\, A \in V \mid \operatorname{disc}(\operatorname{det}(tI_n - A)) \neq 0 \,\}$\footnote{$\operatorname{disc}$ denotes the discriminant, see \cite[p.172-173]{Bos13}.} is Zariski-open and therefore Zariski-dense in $V$ due to $V$ being irreducible (see \cite[1.3.4, 1.3.5]{Gat17}), and since $M \subseteq D$, we also have that $D$ is Zariski-dense in $V$.
+  For this reason, we will look at the evaluation of an invariant polynomial $p \in K[V]^{\operatorname{GL}_n} $ only on elements in $D$, and can deduce what polynomial it is.
   
   Let $p \in K[V]^{\operatorname{GL_n}}$.
   We define a projection onto the diagonal:
-  \linebreak$\pi \colon K^{n \times n} \twoheadrightarrow K^n , [A_{i,j}]_{i,j \in [n]} \longmapsto (A_{i,i})_{i \in [n]} $.
+  \linebreak$\pi \colon K^{n \times n} \twoheadrightarrow K^n , [A_{i,j}]_{i,j \in [n]} \mapsto (A_{i,i})_{i \in [n]} $.
   % We also define an inclusion of $K^n$ into $K^{n,n}$:
   % $\iota \colon K^n \hookrightarrow K^{n,n}$, $(A_i)_{i \in [n]} \mapsto $
   % Now, for $A \in D$, there exists a $\sigma_A \in \operatorname{GL}_n$ such that $\sigma_A . A $ is diagonal.
   % If $\tilde{p} = p \left( [ \delta_{i,j} Z_{i,j}]_{i,j \in [n]} \right) \in K[K^n]$, then, since $p$ is an invariant, for all $A \in D$ we have
-  % \begin{equation}
+  % \begin{equation*}
   %   \begin{aligned}
   %     &p(A)&&= \sigma_A^{-1} . p (A)\\
   %     &&&= p(\sigma_A .A)\\
   %     &&&=  \tilde{p} ( \pi  (\sigma_A . A))
   %   \end{aligned}
-  % \end{equation}
+  % \end{equation*}
   % As long as $\sigma .A$ is diagonal, this is true regardless of the choice of $\sigma_A$.
-  Consider $\tilde{p} := p \circ \operatorname{diag}$\footnote{$\operatorname{diag} \colon K^n \rightarrow K^{n \times n}$, $(x_i)_{i\in[n]} \mapsto [\delta_{i,j}x_i]_{i,j \in [n]}$ is the embedding of $K^n$ in $K^{n\times n}$ as diagonal matrices.}.
+  Now consider the polynomial\linebreak $\tilde{p} := p \circ \operatorname{diag} \in K[K^n]$ \footnote{$\operatorname{diag} \colon K^n \rightarrow K^{n \times n}$, $(x_i)_{i\in[n]} \mapsto [\delta_{i,j}x_i]_{i,j \in [n]}$ is the embedding of $K^n$ in $K^{n\times n}$ as diagonal matrices.}.
   We claim that $\tilde{p}$ is $S_n$-invariant:
   If $M_\tau \in \operatorname{GL}_n$ is the permutation matrix corresponding to $\tau \in S_n$, then for all $\tau \in S_n$ and for all $ X \in K^n$ we have
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       \tau\cdot \tilde{p} (X)
       &= \tilde{p} (\tau^{-1}.X)
-      = p ( \operatorname{diag}(\tau^{-1}.X)
+      = p ( \operatorname{diag}(\tau^{-1}.X))
       = p( M_\tau^{-1} \cdot \operatorname{diag} (X)) \\
       &= M_\tau . p (\operatorname{diag}(X))
       = p (\operatorname{diag}(X))
       = \tilde{p} (X) \; .
     \end{aligned} 
-  \end{equation}
-  From the fundamental theorem of symmetric polynomials (see \cite[p.~164]{Bos13}) we can follow that $\tilde{p} \in \operatorname{span}\{e_i\}_{i=0}^n$, say $\tilde{p} = \Sigma_{i=0}^n \lambda_i e_i$, where $\{ e_i \}_{i=0}^n$ are the elementary symmetric polynomials of dimension $n$.
-  Now, for a choice of $\sigma_A \in \operatorname{GL}_n$ such that $\sigma_A . A$ is diagonal, we easily see that for $s(A) := \sigma_A . A$ we get $p = p \circ s = \tilde{p} \circ \pi \circ s$, therefore $p = \Sigma_{i=0}^n \lambda_i e_i \circ \pi \circ s$.
+  \end{equation*}
+  From the fundamental theorem of symmetric polynomials (see \cite[p.~164]{Bos13}), it follows that $\tilde{p} \in \operatorname{span}\{e_i\}_{i=0}^n$, say $\tilde{p} = \Sigma_{i=0}^n \lambda_i e_i$, where $\{ e_i \}_{i=0}^n$ are the elementary symmetric polynomials of dimension $n$.
+  Let us now define $s(A) := \sigma_A .A$, where for every $A \in D$ we choose some $\sigma_A \in \operatorname{GL}_n$ such that $\sigma_A .A$ is diagonal.
+  We see that since $p$ is an invariant, we have $p = p \circ s = \tilde{p} \circ \pi \circ s$, therefore \linebreak$p = \Sigma_{i=0}^n \lambda_i e_i \circ \pi \circ s$.
+  % Now, for a choice of $\sigma_A \in \operatorname{GL}_n$ such that $\sigma_A . A$ is diagonal, we easily see that for $s(A) := \sigma_A . A$ we get $p = p \circ s = \tilde{p} \circ \pi \circ s$, therefore $p = \Sigma_{i=0}^n \lambda_i e_i \circ \pi \circ s$.
   Now we want to show that $e_i \circ \pi \circ s = p_i$, which would conclude our claim.
   For all $A\in D$ we have
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
-      &\sum_{i=0}^n (e_i \circ \pi \circ s)(A)t^i&&=\operatorname{det}(t-\sigma_A.A)\\
-      &&&=\operatorname{det}(t-A)
-      &&=\sum_{i=0}^n p_i(A)t^i\\
+      \sum_{i=0}^n (e_i \circ \pi \circ s)(A)t^i
+      =\operatorname{det}(t-\sigma_A.A)
+      =\operatorname{det}(t-A)
+      =\sum_{i=0}^n p_i(A)t^i \; .
     \end{aligned}
-  \end{equation}
-  This shows $e_i \circ \pi \circ s = p_i$ for all $0\leq i \leq n$ and concludes our claim.
+  \end{equation*}
+  This shows $e_i \circ \pi \circ s = p_i$ for all $0\leq i \leq n$ and concludes our claim \linebreak$K[V]^{\operatorname{GL}_n} = K[\{p_i\}_{0\leq i\leq n}]$.
 \end{proof}
-
-  We have now directly shown that the invariant ring $K[V]^{\operatorname{GL}_n}$ is finitely generated.
-  We will later show that $\operatorname{GL}_n$ is linearly reductive.
-  Hilbert's finiteness theorem then gives us the immediate answer, though without giving us the generators of the invariant ring.
 
 \begin{dexample}\label{quad}
   Assume that $K$ is algebraically closed.
   Consider the group $G = \operatorname{SL}_n$ and the vector space $ V = \left\{ \, A \in K^{n \times n} \mid A^T = A \, \right\} $.
   Now we will look at the following action:
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       &\mu \colon & \operatorname{SL}_n &\times  V&&  \longrightarrow  &&V \\
-      && (  S  &,   A  )  &&\longmapsto&&  SAS^T
+      && (  S  &,   A  )  &&\longmapsto&&  SAS^T \; ,
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   which defines a rational representation of $\operatorname{SL}_n$.
-  We claim that \linebreak$K[V]^{\operatorname{SL}_n} = K[\operatorname{det}(Z)]$\footnote{$Z = [Z_{\operatorname{min}\{i,j\},\operatorname{max}\{i,j\}}]_{i,j \in [n]}$ is to be viewed as the symmetric matrix of the coordinate functions $\{Z_{i,j}\}_{i,j \in[n],i<j}$ of $V$.}.
+  After we show that $\operatorname{SL}_n$ is linearly reductive, Hilbert's finiteness theorem gives us that $K[V]^{\operatorname{SL}_n}$ is finitely generated.
+  We will again look at what the invariant ring exactly looks like.
+  We claim that $K[V]^{\operatorname{SL}_n} = K[\operatorname{det}(Z)]$ \footnote{$Z = [Z_{\operatorname{min}\{i,j\},\operatorname{max}\{i,j\}}]_{i,j \in [n]}$ is to be viewed as the symmetric matrix of the coordinate functions $\{Z_{i,j}\}_{i,j \in[n],i<j}$ of $V$.}.
 \end{dexample}
 \begin{proof}
   For $B \in K^{n,n}$, we define $A^\prime := \operatorname{diag}(b_i)_{i\in[n]}$ where $b_1 := \operatorname{det}(B)$ and $a_i := 1$ for $2\leq i\leq n$ as in corollary \ref{esel}.
-  
   Now assume that $f \in K[V]^{\operatorname{SL}_n}$.
   Define $h := (B \mapsto f(B^\prime)) \in K[\operatorname{det}(Z)]$.
   We claim that $f = h$.
   
-  Since $X := \{\, A \in V \mid \operatorname{det}(A) \neq 0 \,\}$ is Zariski-dense in $V$, we have $g_1(A) = g_2(A)$ for all $A \in X$ if and only if $g_1 = g_2$ for $g_1,g_2 \in K[V]$.
-  Now let $A \in X$.
-  There exists a $\sigma \in \operatorname{SL}_n$ such that $\sigma .A = \sigma A \sigma^T$ is a diagonal matrix, say $\sigma.A = \operatorname{diag}(\lambda_i)_{i\in[n]}$ (See \cite[p.~325]{Fis14}).
-  We have $\operatorname{det}(A) = \prod_{i=1}^n \lambda_i$.
+  Because $X := \{\, A \in V \mid \operatorname{det}(A) \neq 0 \,\}$ is Zariski-open and therefore Zariski-dense in $V$ (since $V$ is irreducible, see \cite[1.3.4, 1.3.5]{Gat17}), we have \linebreak$g_1(A) = g_2(A)$ for all $A \in X$ if and only if $g_1 = g_2$ for $g_1,g_2 \in K[V]$.
+  Now let \linebreak$A \in X$.
+  There exists a $\sigma \in \operatorname{SL}_n$ such that $\sigma .A = \sigma A \sigma^T$ is a\linebreak diagonal matrix, say $\sigma.A = \operatorname{diag}(\lambda_i)_{i\in[n]}$ (see \cite[p.~325]{Fis14}).
+  We then have \linebreak$\operatorname{det}(A)= \operatorname{det}(\sigma A\sigma^T) = \prod_{i=1}^n \lambda_i$.
   Since $A \in X$, we have $\lambda_i \neq 0$ for all $i \in [n]$.
-  Using that $K$ is algebraically closed, we define $\nu_1 := \left(\prod_{i=2}^n \lambda_i \right)^{1/2}$ and $\nu_i := \lambda_i^{-1/2}$ for $2\leq i\leq n$ and obtain $\tau := \operatorname{diag}(\nu_i)_{i\in[n]} \in \operatorname{SL}_n$.
-  This leads to us having $\tau.\operatorname{diag}(\lambda_i)_{i\in[n]} = A^\prime$, implying $f(A) = (\tau\sigma)^{-1}.f(A)  = f(A^\prime) = h(A)$, which shows $f = h \in K[\operatorname{det}(Z)]$.
+  \linebreak Using that $K$ is algebraically closed, we define $\nu_i := 1/(\lambda_i^{1/2})$ for $2\leq i\leq n$ (where $\lambda_i^{1/2}$ is any choice of a square root) and $\nu_1 := \prod_{i=2}^n \lambda_i^{1/2}$, from which we obtain $\tau := \operatorname{diag}(\nu_i)_{i\in[n]} \in \operatorname{SL}_n$.
+  This leads to us having $\tau.\operatorname{diag}(\lambda_i)_{i\in[n]} = A^\prime$, which implies that we have $f(A) = (\tau\sigma)^{-1}.f(A)  = f(A^\prime) = h(A)$,  showing \linebreak$f = h \in K[\operatorname{det}(Z)]$.
+  
   Conversely, it should be clear that we have $K[\operatorname{det}(Z)] \subseteq K[V]^{\operatorname{SL}_n}$, which concludes $K[\operatorname{det}(Z)] = K[V]^{\operatorname{SL}_n}$.
 \end{proof}
 
-
-As in the previous example, we have shown that the invariant ring $K[V]^{\operatorname{SL}_n}$ is finitely generated without Hilbert's finiteness theorem, which after we show that $\operatorname{SL}_n$ is linearly reductive, gives us the answer that the invariant ring is finitely generated more quickly.
-
 For linearly reductive groups $G$, we have so far only shown that $K[V]^G$ is finitely generated for rational $G$-representations $V$.
-It is in fact also true that $K[X]^G$ is finitely generated for affine $G$-varieties $X$, if $K$ is algebraically closed.
-In the following, we will prepare to show this.
+It is in fact also true that $K[X]^G$ is finitely generated for affine $G$-varieties $X$, if $K$ is algebraically closed, as we will soon show.
 
 \begin{lemma}\label{bloblo}
   Let $K$ be an algebraically closed filed and $V$ and $W$ be rational representations of a linearly reductive group $G$.
-  For a surjective $G$-equivariant linear map $A \colon V \twoheadrightarrow W$ we then have $A(V^G) = W^G$.  \\
+  For a surjective $G$-equivariant linear map $A \colon V \twoheadrightarrow W$ we have $A(V^G) = W^G$.  \\
   (See \cite[2.2.8]{DK15})
 \end{lemma}
 
@@ -457,17 +473,16 @@ In the following, we will prepare to show this.
   Let $A \colon V \twoheadrightarrow W$ be a surjective $G$-equivariant linear map.
   Let $Z := \operatorname{ker}A$, which is a subrepresentation of $V$ since $A$ is $G$-equivariant.
   Since $G$ is linearly reductive and since $K$ is algebraically closed, we can apply theorem \ref{decomp} and get a subrepresentation $W^\prime$ of $V$ such that $V = Z \oplus W^\prime$.
-  This yields an isomorphism of representations $\left. A \right|_{W^\prime} \colon W^\prime \xrightarrow{\sim} W$, which implies $A(V^G) = A(Z^G + {W^\prime}^G) = A({W^\prime}^G) = A(W^\prime)^G = W^G$.
+  This yields an isomorphism of $G$-modules $\left. A \right|_{W^\prime} \colon W^\prime \xrightarrow{\sim} W$, which implies $A(V^G) = A(Z^G + {W^\prime}^G) = A({W^\prime}^G) = A(W^\prime)^G = W^G$.
 \end{proof}
 
-To show that $K[X]^G$ is finitely generated for a linearly reductive group $G$ and an affine $G$-variety $X$, we want to reduce the problem to a ratoinal representation, for which we have already shown this statement in theorem \ref{hilbert}, Hilbert's finiteness theorem.
+To show that $K[X]^G$ is finitely generated for a linearly reductive group $G$ and an affine $G$-variety $X$, we want to reduce the problem to a rational representation, for which we have already shown this statement in theorem \ref{hilbert}, Hilbert's finiteness theorem.
 The following lemma will allow us to do exactly that.
 
 \begin{lemma}\label{emb}
-  See \cite[A1.9]{DK15}.
-  
   Let $X$ be an affine $G$-variety.
-  Then there exists a rational representation $V$ of $G$ and a $G$-equivariant embedding $i \colon X \hookrightarrow V$.
+  Then there exists a rational \linebreak$G$-representation $V$ and a $G$-equivariant embedding $i \colon X \hookrightarrow V$.  \\
+  (See \cite[A1.9]{DK15})
 \end{lemma}
 
 % \begin{corollary}
@@ -479,55 +494,59 @@ The following lemma will allow us to do exactly that.
 % \end{proof}
 
 \begin{proof}
-  We choose generators $\{f_i\}_{i \in [r]}$ of $K[X]$ and define $W := \sum_{i \in [r]} V_{f_i}$, which is a finite-dimensional $G$-stable subspace of $K[X]$ containing $\{f_i\}_{i \in [r]}$.
-  This gives us the $G$-invariant morphism of affine varieties $i \colon X \rightarrow W^\ast$, \linebreak$x \mapsto (w \mapsto w(x))$.
+  We choose generators $\{f_i\}_{i \in [r]}$ of $K[X]$ and define $W := \sum_{i \in [r]} V_{f_i}$, which is a finite-dimensional $G$-submodule of $K[X]$ containing $\{f_i\}_{i \in [r]}$. %yougee
+  This gives us the $G$-equivariant morphism of affine varieties $i \colon X \rightarrow W^\ast$, \linebreak$x \mapsto (w \mapsto w(x))$.
   This is injective, since $W$ contains a generating set of $K[X]$, which means that $i$ is an embedding.
 \end{proof}
 
 \begin{dexample}[The domain of the cross ratio]\label{domcr}
-  We would like to look at four distinct points in the projective line over a (algebraically closed) field $K$.
+  We would like to look at four distinct points in the projective line over an algebraically closed field $K$.
   Since the projective line isn't an affine variety, we will look at points in $K^2$ to make the situation affine and regular, which will make some things different from the setting in projective geometry.
   
   Consider $(K^2)^4$ and the coordinate functions $\{(X_i)_k\}_{i \in [4], k \in [2]}$.
   We write $X_i = \binom{(X_i)_1}{(X_i)_2}$ for $i \in [4]$.
   Define $q := \prod_{i,j \in [r], i<j} \operatorname{det}(X_i,X_j)$.
   As described in \ref{rabbi}, we have an affine variety
-  \begin{equation}
+  \begin{equation*}
     % \begin{aligned}
     %   &X&:=&\{\, (a,b,c,d) \in (K^2)^4 \mid (b_1c_2 - b_2c_1)(d_1a_2 - d_2a_1) \neq 0 \,\}\\
     %   &&&= \{\, (a,b,c,d) \in (K^2)^4 \mid \operatorname{det}(b,c)\operatorname{det}(d,a) \neq 0 \,\}
     % \end{aligned}
     X := \{\, (x_1,x_2,x_3,x_4) \in (K^2)^4 \mid q(x_1,x_2,x_3,x_4) \neq 0 \,\}
-  \end{equation}
+  \end{equation*}
   with the coordinate ring $K[X] = K[\{(X_i)_k\}_{i \in [4], k \in [2]},q^{-1}]$.
   Now consider the regular action of $\operatorname{GL}_2$ on $X$ via pointwise application, that is $\mu \colon \operatorname{GL}_2 \times X \rightarrow X$, $(\sigma,(x_1,x_2,x_3,x_4)) \mapsto (\sigma x_1,\sigma x_2,\sigma x_3,\sigma x_4)$.
+  Lemma \ref{emb} now gives us that there exists a $\operatorname{GL}_2$-equivariant embedding $i \colon X \hookrightarrow V$, where $V$ is a rational $G$-representation.
+  We will now give a concrete embedding.
+  
   The Rabinowitsch-trick gives us the inclusion $i \colon X \hookrightarrow K \times (K^2)^4$ as described in proposition \ref{rabbi}.
-  If we define an action on $K \times (K^2)^4$ by $(\sigma,(z,x_1,x_2,x_3,x_4)) \mapsto (\operatorname{det}(\sigma)^{-6}z,\sigma x_1,\sigma x_2,\sigma x_3,\sigma x_4)$, it should be clear that $i$ is a $\operatorname{GL}_2$-equivariant morphism of affine varieties.
+  If we now define an action on $K \times (K^2)^4$ by \linebreak$(\sigma,(z,x_1,x_2,x_3,x_4)) \mapsto (\operatorname{det}(\sigma)^{-6}z,\sigma x_1,\sigma x_2,\sigma x_3,\sigma x_4)$, it should be clear that $i$ is a $\operatorname{GL}_2$-equivariant morphism of affine varieties.
   
   We will later come back to this example when we discuss the cross ratio, whose domain will be described as $X$ in our affine setting.
 \end{dexample}
 
 \begin{lemma}\label{foremb}
-  See \cite[2.2.9]{DK15}.
-  
-  Assume that $K$ is algebraically closed and that $G$ is linearly reductive.
-  Let $X$ be an affine $G$-variety, $V$ a rational representation of $G$ and $i \colon X \hookrightarrow V$ a $G$-equivariant embedding.
-  The surjective $G$-equivariant ring homomorphism $i^\ast \colon K[V] \twoheadrightarrow K[X]$ then has the property $i^\ast (K[V]^G) = K[X]^G$.
+  Assume that $K$ is algebraically closed and that $G$ is linearly\linebreak reductive.
+  Let $X$ be an affine $G$-variety, $V$ a rational $G$-representation of and $i \colon X \hookrightarrow V$ a $G$-equivariant embedding.
+  The surjective $G$-equivariant ring\linebreak homomorphism $i^\ast \colon K[V] \twoheadrightarrow K[X]$ then has the property $i^\ast (K[V]^G) = K[X]^G$. \\
+  (See \cite[2.2.9]{DK15})
 \end{lemma}
 
 \begin{proof}
-  We obviously have $i^\ast(K[X]^G) \subseteq K[X]^G$.
+  We obviously have $i^\ast(K[V]^G) \subseteq K[X]^G$.
   Now let $f \in K[X]^G$.
-  We have that $V_f = \operatorname{span}(f)$ is a $G$-stable subspace of $K[X]$, and since $i^\ast$ is surjective, there exists a $g\in K[V]$ such that $i^\ast(g) = f$.
-  Since $i^\ast$ is $G$-equivariant, $\operatorname{span}g$ is a $G$-stable subspace of $K[V]$ with $i^\ast(\operatorname{span}g) = \operatorname{span}(f)$.
-  By lemma \ref{bloblo} we have $i^\ast ((\operatorname{span}g)^G) = (\operatorname{span}f)^G$, in particular $f \in i^\ast ((\operatorname{span}g)^G) \subseteq i^\ast(K[V]^G)$.
+  Since $i^\ast$ is surjective, there exists a $g \in K[V]$ such that $i^\ast (g) = f$.
+  We consider the finite-dimensional $G$-submodule $V_g \subseteq K[V]^G$, and we notice that since $i^\ast$ is $G$-equivariant, $W := i^\ast (V_g)$ is a finite-dimensional $G$-submodule of $K[X]$.  %yougee
+  % We have that $V_f = \operatorname{span}(f)$ is a $G$-submodule of $K[X]$, and since $i^\ast$ is surjective, there exists a $g\in K[V]$ such that $i^\ast(g) = f$.
+  % Since $i^\ast$ is $G$-equivariant, $\operatorname{span}g$ is a $G$-submodule of $K[V]$ with $i^\ast(\operatorname{span}g) = \operatorname{span}(f)$.
+  By lemma \ref{bloblo} we have $i^\ast (V_g^G) = W^G$, in particular $f \in i^\ast (V_g^G) \subseteq i^\ast(K[V]^G)$. %yougee
   This concludes $i^\ast(K[V]^G) = K[X]^G$.
 \end{proof}
 
 We now have the necessary tools to show a more general version of Hilbert's finiteness theorem.
 
-\begin{theorem}[Hilbert's finiteness theorem for affine varieties]
-  If $K$ is an algebraically closed field, $G$ a linearly reductive group and $X$ is an affine $G$-variety, $K[X]^G$ is finitely generated.  \\
+\begin{theorem}[Hilbert's finiteness theorem for affine varieties]\label{hil2}
+  If $K$ is an algebraically closed field, $G$ is a linearly reductive group and $X$ is an affine $G$-variety, $K[X]^G$ is finitely generated.  \\
   (See \cite[2.2.11]{DK15})
 \end{theorem}
 
@@ -538,20 +557,23 @@ We now have the necessary tools to show a more general version of Hilbert's fini
 \end{proof}
 
 \begin{dexample}[The domain of the cross ratio]\label{crinv}
-  Consider example \ref{domcr}, that is, we have the affine $\operatorname{GL}_2$-variety \linebreak$X := \{\, (x_1,x_2,x_3,x_4) \in (K^2)^4 \mid q(x_1,x_2,x_3,x_4) \neq 0 \,\}$  with the coordinate ring $K[X] = K[\{(X_i)_k\}_{i \in [4], k \in [2]},q^{-1}]$, where $q := \prod_{i,j \in [r], i<j} \operatorname{det}(X_i,X_j)$, and the regular action by pointwise application, that is the action \linebreak$\mu \colon \operatorname{GL}_2 \times X \rightarrow X$, $(\sigma,(x_1,x_2,x_3,x_4)) \mapsto (\sigma x_1,\sigma x_2,\sigma x_3,\sigma x_4)$.
+  Consider the affine\linebreak $\operatorname{GL}_2$-variety $X := \{\, (x_1,x_2,x_3,x_4) \in (K^2)^4 \mid q(x_1,x_2,x_3,x_4) \neq 0 \,\}$  with the coordinate ring $K[X] = K[\{(X_i)_k\}_{i \in [4], k \in [2]},q^{-1}]$, where $q := \prod_{i,j \in [r], i<j} \operatorname{det}(X_i,X_j)$, and the regular action by pointwise application, that is the action \linebreak$\mu \colon \operatorname{GL}_2 \times X \rightarrow X$, $(\sigma,(x_1,x_2,x_3,x_4)) \mapsto (\sigma x_1,\sigma x_2,\sigma x_3,\sigma x_4)$, as in example \ref{domcr}.
   Our condition $q(x_1,x_2,x_3,x_4) \neq 0$ is equivalent to saying that for $i\neq j$ we have $x_i \notin \operatorname{span}{x_j}$, which allows us to define the cross ratio $\operatorname{cr} \in K[X]$ as follows
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
-      \operatorname{cr} \colon&&X&\rightarrow K \\
+      \operatorname{cr} \colon&&X&\longrightarrow K \\
       &&(x_1,x_2,x_3,x_4) &\longmapsto \frac{\operatorname{det}(x_1,x_2)\operatorname{det}(x_3,x_4)}{\operatorname{det}(x_2,x_3)\operatorname{det}(x_4,x_1)}
     \end{aligned}
-  \end{equation}
-  This map, along with the maps $\{\operatorname{cr}(X_{\pi_1},X_{\pi_2},X_{\pi_3},X_{\pi_4})\}_{\pi \in S_4}$, is an invariant.
-  This is very important in projective geometry.
+  \end{equation*}
+  This map, along with the maps $\{\operatorname{cr}(X_{\pi_1},X_{\pi_2},X_{\pi_3},X_{\pi_4})\}_{\pi \in S_4}$, is an invariant, which is very important in projective geometry.
   
   This raises the question of what other invariants exist.
-  In this affine setting, Hilbert's finiteness theorem gives us that the ring of all invariants $K[X]$ is finitely generated, but it does not give us an idea of what they look like, or if invariants other than the ones mentioned exist.
+  Hilbert's finiteness theorem (\ref{hil2}) gives us that the ring of all invariants $K[X]^{\operatorname{GL}_2}$ is finitely\linebreak generated.
 \end{dexample}
+
+We still have the problem that Hilbert's finiteness theorem only gives us the existence of a finite generating set of the invariant ring, it does not give us an idea of what they look like.
+
+With Cayley's $\Omega$-process, we will later be able to get more concrete answers.
 
 \subsection{The Reynolds operator of a group}
 
@@ -564,15 +586,15 @@ We now have the necessary tools to show a more general version of Hilbert's fini
 %   We will prove in proposition \ref{ro} that this is in fact equivalent.
 % \end{remark} 
 
-In theorem \ref{equiv} we have learned about different characterizations of linearly reductive groups, but for a given linear algebraic group, it is still hard to concretely show that it is linearly reductive.
-We will now learn about an additional way to show that a given group is linearly reductive:  If, for a given linear algebraic group $G$, the \textit{Reynolds operator $R_G$ of $G$} exists (which will be defined shortly), we can show that $G$ is then linearly reductive.
+In theorem \ref{equiv} we have learned about different characterizations of linearly\linebreak reductive groups, but for a given linear algebraic group, it is still hard to\linebreak concretely show that it is linearly reductive.
+We will now learn about an\linebreak additional way to show that a given group is linearly reductive:  If, for a given linear algebraic group $G$, the \textit{Reynolds operator $R_G$ of $G$} exists (which will be defined shortly), we can show that $G$ is then linearly reductive.
 This directly motivates Cayley's $\Omega$-process.
 
 \begin{definition}[Reynolds operator of a group]\label{rengr}
-  Let $G$ be a linear algebraic group.
-  The multiplication $m \colon G\times G \rightarrow G$ makes $G$ a $G$-variety.
-  Assume that for this action there exists a Reynolds operator $R_G \colon K[G] \twoheadrightarrow K[G]^G = K$ which is $G$-invariant from the left and from the right, that is for all $\sigma \in G$ and $p \in K[G]$ we not only have $R_G(\sigma\cdot p)=R_G(p)$, but also $R_G(\sigma\dot{\phantom{.}}p)=R_G(p)$ (see definition \ref{rac}).
-  We call $R_G$ the \textbf{Reynolds operator of $G$}.
+  Let $G$ be a linear\linebreak algebraic group.
+  The multiplication $m \colon G\times G \rightarrow G$ makes $G$ a $G$-variety with the coordinate ring $K[G]$.
+  Assume that for this action there exists a Reynolds \linebreak operator $R_G \colon K[G] \twoheadrightarrow K[G]^G = K$ which is $G$-invariant from the left and from the right, that is for all $\sigma \in G$ and $p \in K[G]$ we not only have $R_G(\sigma\cdot p)=R_G(p)$, but also $R_G(\sigma\dot{\phantom{.}}p)=R_G(p)$ (see definition \ref{rac}).
+  We then call $R_G$ a \textbf{Reynolds \linebreak operator of $G$}.
 \end{definition}
 
 We notice that the Reynolds operator $R_G$ of a group $G$ is an element of the dual space of the coordinate ring $K[G]^\ast$.
@@ -588,11 +610,11 @@ In the following, we will define a $K$-algebra structure on $K[G]^\ast$, after w
 
 \begin{definition}
   Define the multiplication on $ K \left\lbrack G \right\rbrack^\ast $, denoted by $\ast$, as follows:  For $\alpha, \beta \in K \left\lbrack G \right\rbrack^\ast$, we define  
-  \begin{equation}
+  \begin{equation*}
     \alpha \ast \beta := \left( \alpha \otimes \beta \right) \circ m^\ast \; ,
-  \end{equation}
-  where $m \colon G\times G \rightarrow G$ is the group multiplication and $m^\ast \colon K[G] \rightarrow K[G]\otimes K[G]$ denotes the algebraic cohomomorphism as described in definition \ref{coh}.
-  Concretely, if for $f \in K \left\lbrack G \right\rbrack$ we have $m^\ast \left( f \right) = \Sigma_i g_i \otimes h_i \in K[G] \otimes K[G]$, we then get $\left( \alpha \ast \beta \right) \left( f \right) = \Sigma_i \alpha \left( g_i \right) \beta \left( h_i \right)$ for $\alpha,\beta \in K[G]^\ast$.  \\
+  \end{equation*}
+  where $m \colon G\times G \rightarrow G$ is the group multiplication and $m^\ast \colon K[G] \rightarrow K[G]\otimes K[G]$ denotes the algebraic cohomomorphism.
+  Concretely, if for $f \in K \left\lbrack G \right\rbrack$ we have $m^\ast \left( f \right) = \Sigma_i g_i \otimes h_i \in K[G] \otimes K[G]$, we get $\left( \alpha \ast \beta \right) \left( f \right) = \Sigma_i \alpha \left( g_i \right) \beta \left( h_i \right)$ for $\alpha,\beta \in K[G]^\ast$.  \\
   (See \cite[A.2.1]{DK15})
 \end{definition}
 % % BEGIN COMPLETE UTTER BULLSHIT PLEASE DON'T READ
@@ -601,31 +623,31 @@ In the following, we will define a $K$-algebra structure on $K[G]^\ast$, after w
 % Let $f \in K \left\lbrack G \right\rbrack$, $\alpha,\beta \in K \left\lbrack G \right\rbrack^\ast$.
 % Write $f= \Sigma_{E \in \mathbb{N}^{n \times n}} \quad \lambda_E \cdot X^E \cdot \operatorname{det}\left( X \right)^{-e}$.
 % Then we can compute:
-% \begin{equation}
+% \begin{equation*}
 %   m^\ast \left( f \right) = \sum_{E \in \mathbb{N}^{n \times n}} \lambda_E \cdot X^E \cdot \operatorname{det}\left( X \right)^{-e} \otimes X^E \cdot \operatorname{det}\left( X \right)^{-e}
-% \end{equation}
+% \end{equation*}
 % Note that $\operatorname{det}$ is multiplicative.
 % We then conclude:
-% \begin{equation}
+% \begin{equation*}
 %   \left( \alpha \ast \beta \right) \left( f \right) = \sum_{E \in \mathbb{N}^{n \times n} } \lambda_E \cdot \alpha \left( X^E \cdot \operatorname{det}\left( X \right)^{-e} \right) \cdot \beta \left( X^E \cdot \operatorname{det}\left( X \right)^{-e} \right)
-% \end{equation}
+% \end{equation*}
 % We here see that $\alpha \ast \beta \in K \left\lbrack G \right\rbrack^\ast$.
 %
 % % END COMPLETE UTTER BULLSHIT ARIGATOU GOZAIMASU
 
 \begin{proposition}
-  The multiplication $\ast$ turns $K \left\lbrack G \right\rbrack^\ast$ into an associative algebra with the neutral element $ \epsilon := \epsilon_e$ (Note: $\epsilon_\sigma \left( f \right) = f \left( \sigma \right)$ for $\sigma \in G$), where $e \in G$ is the neutral element of $G$.\\
+  The multiplication $\ast$ turns $K \left\lbrack G \right\rbrack^\ast$ into an associative $K$-algebra with the neutral element $ \epsilon := \epsilon_e$ (Note: $\epsilon_\sigma \left( f \right) = f \left( \sigma \right)$ for $\sigma \in G$), where $e \in G$ is the neutral element of $G$.\\
   (See \cite[A2.2]{DK15})
 \end{proposition}
 
 \begin{proof}
   From the associativity of the multiplication of the group $G$, that is for all $\alpha,\beta,\mu \in G$ we have $m(m(\alpha,\beta),\mu) = m(\alpha,m(\beta,\mu))$, we observe that
-  \begin{equation}
+  \begin{equation*}
     \left(m^\ast \otimes \operatorname{id} \right) \circ m^\ast = \left( \operatorname{id} \otimes m^\ast \right) \circ m^\ast
-  \end{equation}
+  \end{equation*}
   holds true.
-  Then, for $\delta, \gamma, \varphi \in K \left\lbrack G \right\rbrack^\ast$:
-  \begin{equation}
+  Then, for $\delta, \gamma, \varphi \in K \left\lbrack G \right\rbrack^\ast$ we obtain
+  \begin{equation*}
     \begin{aligned}
       \left( \delta \ast \gamma \right) \ast \varphi
       &= \left( \left( \left( \delta \otimes \gamma \right) \circ m^\ast \right) \otimes \varphi \right) \circ m^\ast \\
@@ -634,22 +656,22 @@ In the following, we will define a $K$-algebra structure on $K[G]^\ast$, after w
       &= \left( \delta \otimes \left( \left( \gamma \otimes \varphi \right) \circ m^\ast \right) \right) \circ m^\ast  
       = \delta \ast \left( \gamma \ast \varphi \right) \; ,
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   showing the associativity.
   % The second and third equations follow from associativity and are easily checked.  %(rewrite as described in the beginning of chapter \ref{pw})
   It should be clear that $\epsilon = \epsilon_e$ is the neutral element.
-  This concludes that $K \left\lbrack G \right\rbrack^\ast$ is an associative algebra.
+  This concludes that $K \left\lbrack G \right\rbrack^\ast$ is an associative $K$-algebra.
 \end{proof}
 
-For a given rational $G$-representation $V$, our motivation is to extend the action of $G$ on $V$ to an action of $K[G]^\ast$.
+For a given rational $G$-representation $V$, our motivation is to extend the action of $G$ on $V$ to an action of $K[G]^\ast$ on $V$.
 It will be an extension in the sense that we can embed $G$ into $K[G]^\ast$ as $\{\,e_\sigma \mid \sigma \in G \,\} \subseteq K[G]^\ast$.
 
 \begin{definition}\label{da}
   Let $\mu \colon G \times V \rightarrow V$ be a rational linear action, from which we obtain $\mu^\prime \colon V \rightarrow K[G]\otimes V$ as described in definition \ref{rr}, that is, we have $\mu(\sigma,v) = ((\epsilon_\sigma \otimes \operatorname{id})\circ\mu^\prime)(v)$ for all $\sigma \in G$ and $v \in V$, where $\epsilon_\sigma \colon K[G] \rightarrow K$, $p \mapsto p(\sigma)$ describes the evaluation homomorphism for $\sigma \in G$.
   For $\delta \in K[G]^\ast$ and for $v \in V$ we define
-  \begin{equation}
+  \begin{equation*}
     \delta \cdot v := \left(\left( \delta \otimes \operatorname{id} \right) \circ \mu^\prime \right) \left(v\right) \; .
-  \end{equation}
+  \end{equation*}
   \\
   (See \cite[A.2.9]{DK15})
 \end{definition}
@@ -661,14 +683,13 @@ It will be an extension in the sense that we can embed $G$ into $K[G]^\ast$ as $
 
 \begin{proof}
   First, we show that this definition defines a group action.
-  We define $\dot{m} \colon G \times G \rightarrow G$ by $(\sigma,\tau) \mapsto m(\tau,\sigma)$.
-  We then observe that
-  \begin{equation}
-    (\operatorname{id} \otimes \mu^\prime)\circ\mu^\prime = (\dot{m}^\ast \otimes \operatorname{id}) \circ \mu^\prime
-  \end{equation}
+  We define $\dot{m} \colon G \times G \rightarrow G$ by $(\sigma,\tau) \mapsto m(\tau,\sigma)$, and observe that
+  \begin{equation*}
+    (\operatorname{id} \otimes \mu^\prime)\circ\mu^\prime = (\dot{m}^\ast \otimes \operatorname{id}) \circ \mu^\prime \; ,
+  \end{equation*}
   using the fact that $\mu$ is an action.
   For any $\gamma,\delta \in G$ and $v \in V$ we therefore get
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
        \gamma \cdot (\delta \cdot v)
       &= ((\gamma \otimes \operatorname{id})\circ\mu^\prime\circ(\delta \otimes \operatorname{id})\circ\mu^\prime)(v)\\
@@ -677,7 +698,7 @@ It will be an extension in the sense that we can embed $G$ into $K[G]^\ast$ as $
       &= ((((\gamma\otimes\delta)\circ m^\ast)\otimes\operatorname{id})\circ\mu^\prime)(v)
       = (\gamma \ast \delta) \cdot v
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   
   % Let $v \in V$.                
   % By proposition \ref{locfin}, $V_v$ is a finite rational subrepresentation of $V$.
@@ -685,7 +706,7 @@ It will be an extension in the sense that we can embed $G$ into $K[G]^\ast$ as $
   % We claim that for all $i,j \in [r]$ we have $ m^\ast (p_{i,j}) = \Sigma_{k=1}^r p_{i,k} \otimes p_{k,j} $:
   % Let $\sigma,\tau \in G$ and let $j \in [r]$.
   % We then calculate
-  % \begin{equation}
+  % \begin{equation*}
   %   \begin{aligned}
   %     &\sum_{i=1}^r m^\ast(p_{i,j}) (\sigma,\tau) v_i
   %     &&= \sum_{i=1}^r p_{i,j} (\sigma\tau) v_i\\
@@ -695,10 +716,10 @@ It will be an extension in the sense that we can embed $G$ into $K[G]^\ast$ as $
   %     &&&= \sum_{k=1}^r p_{k,j}(\tau) \sum_{i=1}^r p_{i,k}(\sigma)v_i\\
   %     &&&= \sum_{i=1}^r \sum_{k=1}^r \left(p_{i,k}\otimes p_{k,j}\right)(\sigma,\tau)v_i
   %   \end{aligned}
-  % \end{equation}
+  % \end{equation*}
   % Since the $\{v_i\}_{i \in [r]}$ are linearly independent, we showed our claim that for all $i,j \in [r]$ we have $m^\ast (p_{i,j}) = \Sigma_{k=1}^r p_{i,k} \otimes p_{k,j}$.
   % For $\alpha,\beta \in K[G]^\ast$ and $j \in [r]$ we then get
-  % \begin{equation}
+  % \begin{equation*}
   %   \begin{aligned}
   %     & \alpha \cdot (\beta \cdot v_j)
   %     &&= \alpha \cdot \left( \sum_{k=1}^r \beta (p_{k,j}) v_k \right)\\
@@ -707,38 +728,38 @@ It will be an extension in the sense that we can embed $G$ into $K[G]^\ast$ as $
   %     &&&= \sum_{i=1}^r (\alpha \otimes \beta) (m^\ast (p_{i,j}))v_i
   %     &&&= (\alpha \ast \beta)\cdot v_j
   %   \end{aligned}
-  % \end{equation}
+  % \end{equation*}
   % By linearity we can follow that for all $\alpha,\beta \in K[G]^\ast$ we have $\alpha \cdot (\beta \cdot v) = (\alpha \ast \beta) \cdot v$.
   % It should also be clear that $\epsilon_e \cdot v = v$ for all $v \in V$.
-  This concludes that our definition yields an action.
-  Since all operations are linear, we also get that $V$ is a $K[G]^\ast$-algebra-module.
+  This shows that our definition yields an action.
+  Since all operations are linear, we can conclude that $V$ is a $K[G]^\ast$-module.
 \end{proof}
 
   If we look at definition \ref{rr}, we can see that for a given $G$-module $V$, this newly defined $K[G]^\ast$-action is an extension of the given $G$-action in the following way:
   The subgroup $\left\{\, \epsilon_\sigma \mid \sigma \in G \,\right\}$ of $K[G]^\ast$ is isomorphic to $G$, and its induced action coincides with the given action:
   For $\sigma \in G$ and for $v \in V$ we have:
-  \begin{equation}
+  \begin{equation*}
     \sigma . v = \epsilon_\sigma \cdot v
-  \end{equation}
+  \end{equation*}
 This extension enables us to let $R_G$ act on elements in $V$, which leads to a quite useful result.
 % \begin{remark}
 %   The subalgebra
-%   \begin{equation}
+%   \begin{equation*}
 %     \left\{\, \delta \in K[G]^\ast \mid \forall f,g \in K[G] : \delta (fg) = \delta (f) g(e) + f(e)\delta (g) \,\right\}
-%   \end{equation}
+%   \end{equation*}
 %   is called the \textbf{Lie algebra}.
 % \end{remark}
 
 \begin{theorem}\label{ro}
-  Let $G$ be a linear algebraic group for which a Reynolds operator exists as in definition \ref{rengr}, and let $G$ act regularly on an affine variety $X$, which induces a rational linear $G$-action on $K[X]$ as described in definition \ref{funrep}, which in turn gives $K[X]$ the structure a $K[G]^\ast$-algebra-module structure as described in definition \ref{da} and proposition \ref{do}.
+  Let $G$ be a linear algebraic group for which a Reynolds operator exists as in definition \ref{rengr}, and let $X$ be an affine $G$-variety, which induces $G$-module structure on $K[X]$ as described in definition \ref{funrep}, which in turn gives $K[X]$ the structure a $K[G]^\ast$-module as described in definition \ref{da} and proposition \ref{do}.
   We notice that we have $R_G \in K[G]^\ast$.
   Then the map
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       R \colon &&K[X] &&\longrightarrow&& K[X]^G  \\
       && f&& \longmapsto&& R_G \cdot f
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   defines the Reynolds operator.  \\
   (See \cite[4.5.10]{DK15})
 \end{theorem}
@@ -748,7 +769,7 @@ This extension enables us to let $R_G$ act on elements in $V$, which leads to a 
   Let $f \in K[X]$, $\sigma \in G$ and $x \in X$.
   Write $\bar{\mu}^\prime (f) = \Sigma_i p_i \otimes g_i \in K[G] \otimes K[X] $.
   Now we compute
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
       \sigma\cdot  \left( R_G \cdot f \right) (x)
       &= \left( R_G \cdot f \right) (\sigma^{-1}.x)
@@ -758,7 +779,7 @@ This extension enables us to let $R_G$ act on elements in $V$, which leads to a 
       &= (R_G \otimes \operatorname{id}) (\bar{\mu}^\prime (f)) (x)
       = (R_G \cdot f) (x) \; ,
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   where we make use of the $G$-invariance of $R_G$ and proposition \ref{rara}.
   This means that we have $R(K[X]) \subseteq K[X]^G$.
   
@@ -767,16 +788,16 @@ This extension enables us to let $R_G$ act on elements in $V$, which leads to a 
   
   Now let $\sigma \in G$, $ f \in K[X]$, and assume $\bar{\mu}^\prime(f) = \Sigma_{i=1}^r p_i \otimes g_i \in K[G] \otimes K[X]$.
   Making use of proposition \ref{roro}, we then get
-  \begin{equation}
+  \begin{equation*}
     \begin{aligned}
-      R_G \cdot \sigma\cdot f
+      R_G \cdot ( \sigma\cdot f)
       &= (R_G \otimes \operatorname{id}) \left(\bar{\mu}^\prime(\sigma\cdot f)\right)
       = (R_G \otimes \operatorname{id}) \left(\sum_{i=1}^r \sigma \dot{\phantom{.}}p_i \otimes g_i \right) \\
       &= \sum_{i=1}^r R_G(\sigma\dot{\phantom{.}}p_i)g_i
       = \sum_{i=1}^r R_G(p_i)g_i 
       = R_G \cdot f \; ,
     \end{aligned}
-  \end{equation}
+  \end{equation*}
   making use of proposition \ref{rac}.
 This shows that $R$ is $G$-invariant, which concludes that $R$ is the Reynolds operator.
 \end{proof}
@@ -786,9 +807,9 @@ This shows that $R$ is $G$-invariant, which concludes that $R$ is the Reynolds o
   The Reynolds operator of $G$ is unique by lemma \ref{lamm}(e).
 \end{corollary}
 
-This means that to prove that a group is linearly reductive, it suffices to show that the Reynolds operator of the group $G$ exists as described in definition \ref{rengr}.
+This means that to prove that a linear algebraic group $G$ is linearly reductive, it suffices to show that the Reynolds operator of $G$ exists as described in definition \ref{rengr}.
 Additionally, if we have the Reynolds operator $R_G$ of the group, we can then express the Reynolds operator $R \colon K[X] \rightarrow K[X]^G$ for any affine $G$-variety $X$ in terms of $R_G$.
-\textit{Cayley's $\Omega$-process} will give us an explicit formula for the Reynolds operator of the general linear group $\operatorname{GL}_n$.
+\textit{Cayley's $\Omega$-process} will give us an explicit formula for the Reynolds operator of the general linear group $\operatorname{GL}_n$, which means that we also have an explicit formula for the Reynolds operator of any affine $\operatorname{GL}_n$-variety.
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "roughdraft"
