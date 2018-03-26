@@ -15,7 +15,7 @@ This section closely follows chapter 2.2.1 in \cite{DK15}.
 \end{definition}
 
 This definition might be a little unintuitive at first.
-We will soon learn that $G$ is linearly reductive if and only if for every rational $G$-representation $V$ there exists a unique subrepresentation $W$ such that $V = V^G \oplus W$, and we have $(W^\ast)^G = \{0\}$.
+We will soon learn that $G$ is linearly reductive if and only if for every rational $G$-representation $V$ there exists a unique submodule $W$ such that $V = V^G \oplus W$, and we have $(W^\ast)^G = \{0\}$.
 We will also see that $G$ is linearly reductive if and only if for every affine $G$-variety there exists a Reynolds operator $R \colon K[X] \twoheadrightarrow K[X]^G$, whose definition we will give right now.
 
 % \begin{proposition}\label{dual}
@@ -53,7 +53,7 @@ We will also see that $G$ is linearly reductive if and only if for every affine 
 The following definition will give us the main tool with which we make the connection between linearly reductive groups and the existence of a Reynolds operator.
 
 \begin{definition}\label{reyrey}
-  Assume that $V$ is a rational $G$-representation such that there exists a unique subrepresentation $W$ of $V$ with $V = V^G \oplus W$.
+  Assume that $V$ is a rational $G$-representation such that there exists a unique submodule $W$ of $V$ with $V = V^G \oplus W$.
   We define $R_V \colon V \twoheadrightarrow V^G$ as the linear projection of $V$ onto $V^G$ along $W$.  \\
   (Compare to \cite[2.2.5 (b)$\implies$(c)]{DK15})
 \end{definition}
@@ -71,7 +71,7 @@ This will later help us to define a Reynolds Operator for linearly reductive gro
   For every rational representation $V$ of $G$ there exists a unique subrepresentation $W$ of $V$ such that $V = V^G \oplus W$, and for this $W$ we have $(W^\ast)^G = \{0\}$.
   The following properties hold:
   \begin{enumerate}[(a)]
-  \item If $V$ is a subrepresentation of a rational $G$-representation $V^\prime$, we then have $\left. R_{V^\prime} \right|_V = R_V$.
+  \item If $V$ is a submodule of a rational $G$-representation $V^\prime$, we then have $\left. R_{V^\prime} \right|_V = R_V$.
   \item Let $V$ be a rational $G$-representation.
     Now assume that $R^\prime_V \colon V \rightarrow Y$ is a $G$-invariant linear map with $ \left. R^\prime_V \right|_{V^G} = \operatorname{id}_{V^G}$, where $Y$ is a $G$-module such that $V$ is a submodule of $Y$.
     We then have $R^\prime_V = R_V$.
@@ -155,7 +155,7 @@ We characterize linearly reductive groups in three different ways, the most impo
   \begin{enumerate}[(a)]
   \item $G$ is linearly reductive
   \item For every rational representation $V$ of $G$ there exists a unique submodule $W$ with $V = V^G \oplus W$.
-    For this subrepresentation $W$ we have $(W^\ast)^G = \{0\}$.
+    For this submodule $W$ we have $(W^\ast)^G = \{0\}$.
     % This subrepresentation $W$ satisfies $\left( W^\ast \right)^G = \{0\}$.
   \item For every affine $G$-variety $X$ there exists a Reynolds operator \linebreak$R \colon K[X] \twoheadrightarrow K[X]^G $.
   \end{enumerate}
@@ -194,7 +194,7 @@ We characterize linearly reductive groups in three different ways, the most impo
   (b)$\implies$(c) \; Let $X$ be an affine $G$-variety.
   Let $f \in K[X]$.
   We define the map \linebreak$R \colon K[X] \rightarrow K[X]^G $, $ f \mapsto R_{V_f}(f)$. %yougee
-  For $f \in K[X]$ we denote by $W_f$ the unique subrepresentation of $V_f$ such that $V_f = V_f^G \oplus W_f$ as in (b). %yougee
+  For $f \in K[X]$ we denote by $W_f$ the unique submodule of $V_f$ such that $V_f = V_f^G \oplus W_f$ as in (b). %yougee
   This map is linear:
   Let $f,g \in K[X]$ and $\lambda \in K$.
   We notice that $V_f,V_g,V_{\lambda f + g} \subseteq V_f + V_g$, which together with lemma \ref{lamm}(a) gives us %yougee
@@ -271,7 +271,7 @@ We will now learn of an additional characterization for linearly reductive group
   
   Now assume that for every rational representation $V$ of $G$ and submodule $W$ of $V$ there exists a submodule $Z$ of $V$ such that $V = W \oplus Z$.
   Let $V$ be a rational representation of $G$.
-  By our assumption there exists a subrepresentation $W$ of $V$ such that $V = V^G \oplus W$.
+  By our assumption there exists a submodule $W$ of $V$ such that $V = V^G \oplus W$.
   If we have $v \in V^G \setminus \{0\}$, we can extend to a basis $B_{V^G}$ of $V^G$ with $v \in B_{V^G}$.
   Now we choose any basis $B_W$ of $W$ and can define $\varphi_v \in V^\ast$ to be the dual vector of $v$ with respect to the basis $B_{V^G} \cup B_W$ of $V$.
   We then have $\varphi_v \in (V^\ast)^G $ and $\varphi_v (v) = 1 \neq 0$.
@@ -440,7 +440,7 @@ This is all we need to prove Hilbert's finiteness theorem, which we will prove r
   \end{equation*}
   which defines a rational representation of $\operatorname{SL}_n$.
   After we show that $\operatorname{SL}_n$ is linearly reductive, Hilbert's finiteness theorem gives us that $K[V]^{\operatorname{SL}_n}$ is finitely generated.
-  We will again look at what the invariant ring exactly looks like.
+  We will now look at what the invariant ring exactly looks like.
   We claim that $K[V]^{\operatorname{SL}_n} = K[\operatorname{det}(Z)]$ \footnote{$Z = [Z_{\operatorname{min}\{i,j\},\operatorname{max}\{i,j\}}]_{i,j \in [n]}$ is to be viewed as the symmetric matrix of the coordinate functions $\{Z_{i,j}\}_{i,j \in[n],i<j}$ of $V$.}.
 \end{dexample}
 \begin{proof}
@@ -471,8 +471,8 @@ It is in fact also true that $K[X]^G$ is finitely generated for affine $G$-varie
 
 \begin{proof}
   Let $A \colon V \twoheadrightarrow W$ be a surjective $G$-equivariant linear map.
-  Let $Z := \operatorname{ker}A$, which is a subrepresentation of $V$ since $A$ is $G$-equivariant.
-  Since $G$ is linearly reductive and since $K$ is algebraically closed, we can apply theorem \ref{decomp} and get a subrepresentation $W^\prime$ of $V$ such that $V = Z \oplus W^\prime$.
+  Let $Z := \operatorname{ker}A$, which is a submodule of $V$ since $A$ is $G$-equivariant.
+  Since $G$ is linearly reductive and since $K$ is algebraically closed, we can apply theorem \ref{decomp} and get a submodule $W^\prime$ of $V$ such that $V = Z \oplus W^\prime$.
   This yields an isomorphism of $G$-modules $\left. A \right|_{W^\prime} \colon W^\prime \xrightarrow{\sim} W$, which implies $A(V^G) = A(Z^G + {W^\prime}^G) = A({W^\prime}^G) = A(W^\prime)^G = W^G$.
 \end{proof}
 
@@ -536,7 +536,7 @@ The following lemma will allow us to do exactly that.
   We obviously have $i^\ast(K[V]^G) \subseteq K[X]^G$.
   Now let $f \in K[X]^G$.
   Since $i^\ast$ is surjective, there exists a $g \in K[V]$ such that $i^\ast (g) = f$.
-  We consider the finite-dimensional $G$-submodule $V_g \subseteq K[V]^G$, and we notice that since $i^\ast$ is $G$-equivariant, $W := i^\ast (V_g)$ is a finite-dimensional $G$-submodule of $K[X]$.  %yougee
+  We consider the finite-dimensional $G$-submodule $V_g \subseteq K[V]$, and we notice that since $i^\ast$ is $G$-equivariant, $W := i^\ast (V_g)$ is a finite-dimensional $G$-submodule of $K[X]$.  %yougee
   % We have that $V_f = \operatorname{span}(f)$ is a $G$-submodule of $K[X]$, and since $i^\ast$ is surjective, there exists a $g\in K[V]$ such that $i^\ast(g) = f$.
   % Since $i^\ast$ is $G$-equivariant, $\operatorname{span}g$ is a $G$-submodule of $K[V]$ with $i^\ast(\operatorname{span}g) = \operatorname{span}(f)$.
   By lemma \ref{bloblo} we have $i^\ast (V_g^G) = W^G$, in particular $f \in i^\ast (V_g^G) \subseteq i^\ast(K[V]^G)$. %yougee

@@ -5,7 +5,7 @@ This section will be of less mathematical rigor and is meant to be a motivation 
 Our motivation for having a construction of the Reynolds operator was to not only see that $\operatorname{GL}_n$ is linearly reductive, but also to yield some concrete\linebreak invariants.
 It would also be very helpful if we could somehow produce a\linebreak generating set for the invariant ring.
 
-In example \ref{theex}, we saw that applying the Reynolds operator to any\linebreak polynomial does not always result in retrieving a non-constant invariant.
+In example \ref{theex}, we saw that applying the Reynolds operator to any\linebreak polynomial does not always result in retrieving a non-contant invariant.
 It\linebreak suggests that we somehow need to find the ``correct'' polynomials to apply the Reynolds operator to.
 The following proposition gives us exactly that.
 \begin{proposition}

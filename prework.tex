@@ -177,18 +177,18 @@ The main question of this work is how the ring of all invariants $K[X]^G$ looks 
 We will shortly see that for finite dimensional vector spaces, the terms\linebreak ``rational linear action'' and ``rational representation'' coincide, which justifies calling them both $G$-modules.
 
 \begin{definition}[locally finite]
-  For a vector space $V$, we call an action $\mu \colon G \times V \rightarrow V$ \textbf{locally finite} if and only if for every $v \in V$ there exists a $G$-stable\footnote{For an action of a group $G$ on a set $Y$, a subset $Y^\prime \subseteq Y$ is called $G$-stable if and only if we have $\sigma.y \in Y^\prime$ for all $\sigma \in G$ and $y \in Y^\prime$.} finite-dimensional vector space $U \subseteq V$ such that $v \in U$.
+  For a vector space $W$, we call an action $\mu \colon G \times W \rightarrow W$ \textbf{locally finite} if and only if for every $v \in W$ there exists a $G$-stable\footnote{For an action of a group $G$ on a set $Y$, a subset $Y^\prime \subseteq Y$ is called $G$-stable if and only if we have $\sigma.y \in Y^\prime$ for all $\sigma \in G$ and $y \in Y^\prime$.} finite-dimensional vector space $U \subseteq W$ such that $v \in U$.
 \end{definition}
 
 \begin{definition}
-  Let $V$ be a vector-space and $\mu \colon G \times V \rightarrow V$ an action.
-  For $v \in V$ we define $V_v := \operatorname{span} G.v$. %yougee
+  Let $W$ be a vector-space and $\mu \colon G \times W \rightarrow W$ an action.
+  For $v \in W$ we define $V_v := \operatorname{span} G.v = \operatorname{span} \{\, \sigma . v \mid \sigma \in G\,\}$. %yougee
 \end{definition}
 
 \begin{remark}
-  $V_v$ is always a $G$-stable subspace of $V$. %yougee
-  For any $G$-stable subspace $W \subseteq V$ with $v \in W$ we have $V_v \subseteq W$.
-  Therefore, an action $\mu \colon G \times V \rightarrow V$ is locally finite if and only if $V_v$ is finite-dimensional for all $v \in V$. %yougee
+  $V_v$ is always a $G$-stable subspace of $W$. %yougee
+  For any $G$-stable subspace $U \subseteq W$ with $v \in U$ we have $V_v \subseteq U$.
+  Therefore, an action $\mu \colon G \times W \rightarrow W$ is locally finite if and only if $V_v$ is finite-dimensional for all $v \in W$. %yougee
 \end{remark}
 
 We will now show the connection between rational linear actions and rational representations.
@@ -200,13 +200,12 @@ We will now show the connection between rational linear actions and rational rep
     finite-dimensional $G$-stable subspace $W$ is a rational \linebreak$G$-representation via $\left. \mu \right|_{G\times W}$.
   \item If $V$ is a rational representation via $\mu \colon G \times V \rightarrow V$, then $\mu$ is rational linear action.
   \end{enumerate}
-
   (Compare to \cite[A.1.8, 2.2.5]{DK15})
 \end{proposition}
 
 \begin{proof}
   (a) \; Assume that $\mu$ is a rational linear action.
-  Let $v \in V$ and write $\mu^\prime (v) = \Sigma_{i=1}^l f_i \otimes v_i$. %with $f_i$ linearly independant over $K$.
+  Let $v \in V$ and write $\mu^\prime (v) = \Sigma_{i=1}^l f_i \otimes v_i \in K[G] \otimes V$. %with $f_i$ linearly independant over $K$.
   We then easily see that $V_v \subseteq \operatorname{span}\{v_i\}_{i=1}^l$, showing that the action is locally finite. %yougee
   Since $\mu^\prime$ is linear, $\mu$ is also linear, therefore we immediately get that $W$ is a rational representation via $\left. \mu \right|_{G\times W}$.
 
